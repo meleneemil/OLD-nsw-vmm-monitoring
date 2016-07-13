@@ -1,0 +1,1389 @@
+/Software/qt/5.4/gcc_64/bin/uic mainwindow.ui -o ui_mainwindow.h
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o canvas.o canvas.cxx
+canvas.cxx:58: warning: unused parameter ‘e’
+canvas.cxx:73: warning: unused parameter ‘e’
+canvas.cxx:97: warning: unused parameter ‘e’
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o main.o main.cpp
+In file included from /Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:25,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic/atomic.hpp:22,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic.hpp:12,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/pthread/once_atomic.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/once.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread.hpp:17,
+                 from SrsNetworkDevice.h:19,
+                 from SrsFec.h:12,
+                 from DaqServerConfig.h:21,
+                 from main.cpp:22:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:556:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]::<anonymous struct>::to’
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:574:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]::<anonymous struct>::to’
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o frame.o frame.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o PropertyTreeParser.o PropertyTreeParser.cpp
+In file included from /Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:25,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic/atomic.hpp:22,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic.hpp:12,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/pthread/once_atomic.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/once.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread.hpp:17,
+                 from SrsNetworkDevice.h:19,
+                 from SrsFec.h:12,
+                 from DaqServerConfig.h:21,
+                 from PropertyTreeParser.h:12,
+                 from PropertyTreeParser.cpp:9:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:556:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]::<anonymous struct>::to’
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:574:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]::<anonymous struct>::to’
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o PropertyTreeParserDetector.o PropertyTreeParserDetector.cpp
+PropertyTreeParserDetector.cpp:278:10: warning: #warning forcing sequence number
+In file included from /Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:25,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic/atomic.hpp:22,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic.hpp:12,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/pthread/once_atomic.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/once.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread.hpp:17,
+                 from SrsNetworkDevice.h:19,
+                 from SrsFec.h:12,
+                 from DaqServerConfig.h:21,
+                 from PropertyTreeParser.h:12,
+                 from PropertyTreeParserDetector.h:12,
+                 from PropertyTreeParserDetector.cpp:9:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:556:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]::<anonymous struct>::to’
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:574:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]::<anonymous struct>::to’
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp: In member function ‘boost::shared_ptr<online::display::CDetBase> online::display::CPropertyTreeParserDetector::parse_ptree_det_chamber_node(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, boost::property_tree::basic_ptree<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&, boost::shared_ptr<online::display::CDetBase>)’:
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15563’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15563’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15563’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15563’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15563’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15563’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15563’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15563’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15563’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp: In member function ‘boost::shared_ptr<online::display::CDetBase> online::display::CPropertyTreeParserDetector::parse_ptree_det_detector_node(const boost::property_tree::ptree&)’:
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15731’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15731’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15731’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15731’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15731’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15731’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15731’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15731’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+/Software/boost/boost_1_60_0/include/boost/property_tree/detail/ptree_implementation.hpp:781: warning: dereferencing pointer ‘pretmp.15731’ does break strict-aliasing rules
+cc1plus: note: initialized from here
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o PropertyTreeParserSrs.o PropertyTreeParserSrs.cpp
+In file included from PropertyTreeParserSrs.cpp:13:
+SrsChipApv.h: In member function ‘bool online::display::SApvPedestal::EqualChannel::operator()(const online::display::SApvPedestal&) const’:
+SrsChipApv.h:74: warning: comparison between signed and unsigned integer expressions
+In file included from PropertyTreeParserSrs.cpp:14:
+SrsChipBnl.h: At global scope:
+SrsChipBnl.h:46: warning: unused parameter ‘srs_event_id’
+SrsChipBnl.h:46: warning: unused parameter ‘channels’
+In file included from PropertyTreeParserSrs.cpp:15:
+SrsChipMmDaqTest.h:43: warning: unused parameter ‘srs_event_id’
+SrsChipMmDaqTest.h:43: warning: unused parameter ‘channels’
+PropertyTreeParserSrs.cpp: In member function ‘void online::display::CPropertyTreeParserSrs::configure_chips(std::vector<boost::shared_ptr<online::display::CSrsChip>, std::allocator<boost::shared_ptr<online::display::CSrsChip> > >)’:
+PropertyTreeParserSrs.cpp:240: warning: unused variable ‘apv25_done’
+In file included from /Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:25,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic/atomic.hpp:22,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic.hpp:12,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/pthread/once_atomic.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/once.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread.hpp:17,
+                 from SrsNetworkDevice.h:19,
+                 from SrsFec.h:12,
+                 from DaqServerConfig.h:21,
+                 from PropertyTreeParser.h:12,
+                 from PropertyTreeParserSrs.h:12,
+                 from PropertyTreeParserSrs.cpp:9:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:556:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]::<anonymous struct>::to’
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:574:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]::<anonymous struct>::to’
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o PropertyTreeParserChamber.o PropertyTreeParserChamber.cpp
+In file included from /Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:25,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic/atomic.hpp:22,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic.hpp:12,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/pthread/once_atomic.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/once.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread.hpp:17,
+                 from SrsNetworkDevice.h:19,
+                 from SrsFec.h:12,
+                 from DaqServerConfig.h:21,
+                 from PropertyTreeParser.h:12,
+                 from PropertyTreeParserChamber.h:12,
+                 from PropertyTreeParserChamber.cpp:9:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:556:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]::<anonymous struct>::to’
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:574:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]::<anonymous struct>::to’
+PropertyTreeParserChamber.cpp: In member function ‘online::display::DetBasePtr online::display::CPropertyTreeParserChamber::parse_ptree_chamber_readout_node(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, boost::property_tree::basic_ptree<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&, online::display::DetBasePtr)’:
+PropertyTreeParserChamber.cpp:286: warning: ‘pitch’ may be used uninitialized in this function
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o DaqServerConfig.o DaqServerConfig.cpp
+In file included from /Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:25,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic/atomic.hpp:22,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic.hpp:12,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/pthread/once_atomic.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/once.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread.hpp:17,
+                 from SrsNetworkDevice.h:19,
+                 from SrsFec.h:12,
+                 from DaqServerConfig.h:21,
+                 from DaqServerConfig.cpp:9:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:556:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]::<anonymous struct>::to’
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:574:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]::<anonymous struct>::to’
+In file included from /Software/qt/5.4/gcc_64/include/QtCore/qobject.h:48,
+                 from /Software/qt/5.4/gcc_64/include/QtWidgets/qwidget.h:38,
+                 from /Software/qt/5.4/gcc_64/include/QtWidgets/qtabwidget.h:37,
+                 from /Software/qt/5.4/gcc_64/include/QtWidgets/QTabWidget:1,
+                 from mmDaqStartupWindow.h:13,
+                 from DaqServerConfig.h:13,
+                 from DaqServerConfig.cpp:9:
+/Software/qt/5.4/gcc_64/include/QtCore/qarraydata.h: In static member function ‘static int QMetaTypeId2<T>::qt_metatype_id() [with T = std::vector<QString, std::allocator<QString> >]’:
+/Software/qt/5.4/gcc_64/include/QtCore/qarraydata.h:96: warning: dereferencing pointer ‘<anonymous>’ does break strict-aliasing rules
+/Software/qt/5.4/gcc_64/include/QtCore/qbytearray.h:473: warning: dereferencing pointer ‘<anonymous>’ does break strict-aliasing rules
+/Software/qt/5.4/gcc_64/include/QtCore/qbytearray.h:468: warning: dereferencing pointer ‘<anonymous>’ does break strict-aliasing rules
+/Software/qt/5.4/gcc_64/include/QtCore/qbytearray.h:433: warning: dereferencing pointer ‘<anonymous>’ does break strict-aliasing rules
+/Software/qt/5.4/gcc_64/include/QtCore/qgenericatomic.h:90: warning: dereferencing pointer ‘<anonymous>’ does break strict-aliasing rules
+/Software/qt/5.4/gcc_64/include/QtCore/qbytearray.h:430: note: initialized from here
+/Software/qt/5.4/gcc_64/include/QtCore/qarraydata.h: In static member function ‘static int QMetaTypeId2<T>::qt_metatype_id() [with T = QVector<int>]’:
+/Software/qt/5.4/gcc_64/include/QtCore/qarraydata.h:96: warning: dereferencing pointer ‘<anonymous>’ does break strict-aliasing rules
+/Software/qt/5.4/gcc_64/include/QtCore/qbytearray.h:473: warning: dereferencing pointer ‘<anonymous>’ does break strict-aliasing rules
+/Software/qt/5.4/gcc_64/include/QtCore/qbytearray.h:468: warning: dereferencing pointer ‘<anonymous>’ does break strict-aliasing rules
+/Software/qt/5.4/gcc_64/include/QtCore/qbytearray.h:433: warning: dereferencing pointer ‘<anonymous>’ does break strict-aliasing rules
+/Software/qt/5.4/gcc_64/include/QtCore/qgenericatomic.h:90: warning: dereferencing pointer ‘<anonymous>’ does break strict-aliasing rules
+/Software/qt/5.4/gcc_64/include/QtCore/qbytearray.h:430: note: initialized from here
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o DetBase.o DetBase.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o DetChamber.o DetChamber.cpp
+In file included from /Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:25,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic/atomic.hpp:22,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic.hpp:12,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/pthread/once_atomic.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/once.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread.hpp:17,
+                 from SrsNetworkDevice.h:19,
+                 from SrsFec.h:12,
+                 from DaqServerConfig.h:21,
+                 from PropertyTreeParser.h:12,
+                 from PropertyTreeParserChamber.h:12,
+                 from DetChamber.cpp:11:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:556:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]::<anonymous struct>::to’
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:574:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]::<anonymous struct>::to’
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o DetConnector.o DetConnector.cpp
+DetConnector.cpp:295:73: warning: missing terminating ' character
+DetConnector.cpp:295:11: warning: #warning dantrim forcing chip seq to 0 for monitoring --> I don't think monitoring needs all of this infomration!!!!
+DetConnector.cpp:57: warning: unused parameter ‘daqconfig’
+DetConnector.cpp:343: warning: unused parameter ‘chip’
+In file included from /Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:25,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic/atomic.hpp:22,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic.hpp:12,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/pthread/once_atomic.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/once.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread.hpp:17,
+                 from SrsNetworkDevice.h:19,
+                 from SrsFec.h:12,
+                 from DaqServerConfig.h:21,
+                 from DetConnector.cpp:10:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:556:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]::<anonymous struct>::to’
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:574:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]::<anonymous struct>::to’
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o DetDetector.o DetDetector.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o DetLayer.o DetLayer.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o DetMultiLayer.o DetMultiLayer.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o DetReadout.o DetReadout.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o DetStripId.o DetStripId.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o EventBase.o EventBase.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SrsChip.o SrsChip.cpp
+SrsChip.cpp:167: warning: unused parameter ‘srs_event_id’
+SrsChip.cpp:167: warning: unused parameter ‘channels’
+SrsChip.cpp:183: warning: unused parameter ‘eb_buffer’
+In file included from /Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:25,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic/atomic.hpp:22,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic.hpp:12,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/pthread/once_atomic.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/once.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread.hpp:17,
+                 from SrsChip.cpp:21:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:556:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]::<anonymous struct>::to’
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:574:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]::<anonymous struct>::to’
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SrsChipApv.o SrsChipApv.cpp
+In file included from SrsChipApv.cpp:9:
+SrsChipApv.h: In member function ‘bool online::display::SApvPedestal::EqualChannel::operator()(const online::display::SApvPedestal&) const’:
+SrsChipApv.h:74: warning: comparison between signed and unsigned integer expressions
+SrsChipApv.cpp: In member function ‘virtual void online::display::CSrsChipApv::calculate_pedestals(const online::display::CSrsEventId&, online::display::SrsChannelList&)’:
+SrsChipApv.cpp:120: warning: unused variable ‘channo’
+SrsChipApv.cpp: At global scope:
+SrsChipApv.cpp:115: warning: unused parameter ‘srs_event_id’
+SrsChipApv.cpp:185: warning: unused parameter ‘channels’
+SrsChipApv.cpp:230: warning: unused parameter ‘channels’
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SrsChipBnl.o SrsChipBnl.cpp
+In file included from SrsChipBnl.cpp:9:
+SrsChipBnl.h:46: warning: unused parameter ‘srs_event_id’
+SrsChipBnl.h:46: warning: unused parameter ‘channels’
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SrsChipMmDaqTest.o SrsChipMmDaqTest.cpp
+In file included from SrsChipMmDaqTest.cpp:9:
+SrsChipMmDaqTest.h:43: warning: unused parameter ‘srs_event_id’
+SrsChipMmDaqTest.h:43: warning: unused parameter ‘channels’
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SrsChipId.o SrsChipId.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SrsChannelId.o SrsChannelId.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SrsChannel.o SrsChannel.cpp
+SrsChannel.cpp: In member function ‘double online::display::CSrsChannel::calculate_channel_pedestal()’:
+SrsChannel.cpp:54: warning: no return statement in function returning non-void
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SrsChannelData.o SrsChannelData.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SrsEventId.o SrsEventId.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SrsEventChannels.o SrsEventChannels.cpp
+SrsEventChannels.cpp: In function ‘std::ostream& online::display::operator<<(std::ostream&, const online::display::CSrsEventChannels&)’:
+SrsEventChannels.cpp:47: warning: unused variable ‘ii’
+In file included from /Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:25,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic/atomic.hpp:22,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic.hpp:12,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/pthread/once_atomic.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/once.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread.hpp:17,
+                 from EventBuilderInputBuffer.h:26,
+                 from SrsEventChannels.cpp:11:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:556:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]::<anonymous struct>::to’
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:574:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]::<anonymous struct>::to’
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SrsFec.o SrsFec.cpp
+SrsFec.cpp:59: warning: unused parameter ‘daqconfig’
+In file included from /Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:25,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic/atomic.hpp:22,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic.hpp:12,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/pthread/once_atomic.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/once.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread.hpp:17,
+                 from SrsNetworkDevice.h:19,
+                 from SrsFec.h:12,
+                 from SrsFec.cpp:9:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:556:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]::<anonymous struct>::to’
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:574:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]::<anonymous struct>::to’
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SrsBase.o SrsBase.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SrsNetworkDevice.o SrsNetworkDevice.cpp
+In file included from /Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:25,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic/atomic.hpp:22,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic.hpp:12,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/pthread/once_atomic.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/once.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread.hpp:17,
+                 from SrsNetworkDevice.h:19,
+                 from SrsNetworkDevice.cpp:9:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:556:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]::<anonymous struct>::to’
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:574:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]::<anonymous struct>::to’
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SRSEquipmentHeader.o SRSEquipmentHeader.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SharedEBBuffer.o SharedEBBuffer.cpp
+SharedEBBuffer.cpp: In member function ‘void online::display::CSharedEBBuffer::print() const’:
+SharedEBBuffer.cpp:77: warning: unused variable ‘ii’
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SharedBufferHandler.o SharedBufferHandler.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SharedChip.o SharedChip.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SharedChannel.o SharedChannel.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o SharedSrsChannelData.o SharedSrsChannelData.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o Logger.o Logger.cpp
+g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o pedestalsfileloader.o pedestalsfileloader.cpp
+pedestalsfileloader.cpp:48: warning: unused parameter ‘chipvec’
+In file included from /Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:25,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic/atomic.hpp:22,
+                 from /Software/boost/boost_1_60_0/include/boost/atomic.hpp:12,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/pthread/once_atomic.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread/once.hpp:20,
+                 from /Software/boost/boost_1_60_0/include/boost/thread.hpp:17,
+                 from SrsNetworkDevice.h:19,
+                 from SrsFec.h:12,
+                 from pedestalsfileloader.h:19,
+                 from pedestalsfileloader.cpp:10:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:556:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = long unsigned int, From = void*]::<anonymous struct>::to’
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp: In function ‘To boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]’:
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/atomic_template.hpp:574:   instantiated from here
+/Software/boost/boost_1_60_0/include/boost/atomic/detail/bitwise_cast.hpp:39: warning: missing initializer for member ‘boost::atomics::detail::bitwise_cast(const From&) [with To = void*, From = long unsigned int]::<anonymous struct>::to’
+gcc -c -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/Software/boost/boost_1_60_0/include -I/Software/root/include -I/Software/qt/5.4/gcc_64/include -I/Software/qt/5.4/gcc_64/include/QtWidgets -I/Software/qt/5.4/gcc_64/include/QtGui -I/Software/qt/5.4/gcc_64/include/QtNetwork -I/Software/qt/5.4/gcc_64/include/QtCore -I. -I. -I/Software/qt/5.4/gcc_64/mkspecs/linux-g++ -o pedestals.o pedestals.c
+In file included from /Software/root/include/Rtypes.h:30,
+                 from /Software/root/include/TObject.h:31,
+                 from /Software/root/include/TNamed.h:26,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/Rtypeinfo.h:32:20: error: typeinfo: No such file or directory
+In file included from /Software/root/include/Rtypes.h:30,
+                 from /Software/root/include/TObject.h:31,
+                 from /Software/root/include/TNamed.h:26,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/Rtypeinfo.h:33: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘std’
+In file included from /Software/root/include/TObject.h:31,
+                 from /Software/root/include/TNamed.h:26,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/Rtypes.h:44: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TClass’
+/Software/root/include/Rtypes.h:45: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBuffer’
+/Software/root/include/Rtypes.h:46: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TDirectory’
+/Software/root/include/Rtypes.h:47: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TMemberInspector’
+/Software/root/include/Rtypes.h:48: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TObject’
+/Software/root/include/Rtypes.h:49: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TNamed’
+/Software/root/include/Rtypes.h:50: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TRootIOCtor’
+/Software/root/include/Rtypes.h:51: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TCollection’
+/Software/root/include/Rtypes.h:52: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFileMergeInfo’
+/Software/root/include/Rtypes.h:53: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TString’
+/Software/root/include/Rtypes.h:83: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘Bool_t’
+/Software/root/include/Rtypes.h:114: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TClassStreamer’
+/Software/root/include/Rtypes.h:115: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TMemberStreamer’
+/Software/root/include/Rtypes.h:116: error: expected ‘)’ before ‘&’ token
+/Software/root/include/Rtypes.h:117: error: expected ‘)’ before ‘&’ token
+/Software/root/include/Rtypes.h:120: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualCollectionProxy’
+/Software/root/include/Rtypes.h:137: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘kTRUE’
+/Software/root/include/Rtypes.h:138: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘kFALSE’
+/Software/root/include/Rtypes.h:141: error: initializer element is not constant
+/Software/root/include/Rtypes.h:142: error: initializer element is not constant
+/Software/root/include/Rtypes.h:145: error: initializer element is not constant
+/Software/root/include/Rtypes.h:146: error: initializer element is not constant
+/Software/root/include/Rtypes.h:148: error: expected expression before ‘UInt_t’
+/Software/root/include/Rtypes.h:149: error: expected expression before ‘Int_t’
+/Software/root/include/Rtypes.h:150: error: initializer element is not constant
+/Software/root/include/Rtypes.h:152: error: expected expression before ‘ULong_t’
+/Software/root/include/Rtypes.h:153: error: expected expression before ‘Long_t’
+/Software/root/include/Rtypes.h:154: error: initializer element is not constant
+/Software/root/include/Rtypes.h:156: error: expected expression before ‘ULong64_t’
+/Software/root/include/Rtypes.h:157: error: expected expression before ‘Long64_t’
+/Software/root/include/Rtypes.h:158: error: initializer element is not constant
+/Software/root/include/Rtypes.h:179: error: expected declaration specifiers or ‘...’ before ‘TMemberInspector’
+/Software/root/include/Rtypes.h:180: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualIsAProxy’
+/Software/root/include/Rtypes.h:181: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+/Software/root/include/Rtypes.h:184: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+/Software/root/include/Rtypes.h:185: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+/Software/root/include/Rtypes.h:190: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘ROOT’
+In file included from /Software/root/include/Rtypes.h:270,
+                 from /Software/root/include/TObject.h:31,
+                 from /Software/root/include/TNamed.h:26,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TGenericClassInfo.h:15:18: error: vector: No such file or directory
+In file included from /Software/root/include/TGenericClassInfo.h:17,
+                 from /Software/root/include/Rtypes.h:270,
+                 from /Software/root/include/TObject.h:31,
+                 from /Software/root/include/TNamed.h:26,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TSchemaHelper.h:25:18: error: string: No such file or directory
+In file included from /Software/root/include/TGenericClassInfo.h:17,
+                 from /Software/root/include/Rtypes.h:270,
+                 from /Software/root/include/TObject.h:31,
+                 from /Software/root/include/TNamed.h:26,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TSchemaHelper.h:27: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘ROOT’
+In file included from /Software/root/include/Rtypes.h:270,
+                 from /Software/root/include/TObject.h:31,
+                 from /Software/root/include/TNamed.h:26,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TGenericClassInfo.h:24: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualIsAProxy’
+/Software/root/include/TGenericClassInfo.h:31: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘ROOT’
+In file included from /Software/root/include/TObject.h:31,
+                 from /Software/root/include/TNamed.h:26,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/Rtypes.h:276: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+In file included from /Software/root/include/TObject.h:34,
+                 from /Software/root/include/TNamed.h:26,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TStorage.h:34: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TStorage’
+/Software/root/include/TStorage.h:87: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TStorage’
+/Software/root/include/TStorage.h:89: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TStorage.h:91: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TStorage.h:93: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+In file included from /Software/root/include/TObject.h:37,
+                 from /Software/root/include/TNamed.h:26,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TVersionCheck.h:28: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVersionCheck’
+/Software/root/include/TVersionCheck.h:34: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘gVersionCheck’
+In file included from /Software/root/include/TObject.h:40,
+                 from /Software/root/include/TNamed.h:26,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/Riosfwd.h:33:24: error: iosfwd: No such file or directory
+In file included from /Software/root/include/TObject.h:40,
+                 from /Software/root/include/TNamed.h:26,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/Riosfwd.h:35: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘std’
+/Software/root/include/Riosfwd.h:36: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘std’
+/Software/root/include/Riosfwd.h:37: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘std’
+/Software/root/include/Riosfwd.h:38: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘std’
+/Software/root/include/Riosfwd.h:39: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘std’
+In file included from /Software/root/include/TNamed.h:26,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TObject.h:48: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TList’
+/Software/root/include/TObject.h:49: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBrowser’
+/Software/root/include/TObject.h:50: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBuffer’
+/Software/root/include/TObject.h:51: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TObjArray’
+/Software/root/include/TObject.h:52: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TMethod’
+/Software/root/include/TObject.h:53: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TTimer’
+/Software/root/include/TObject.h:56: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TObject’
+/Software/root/include/TObject.h:221: error: ‘TObject’ undeclared here (not in a function)
+/Software/root/include/TObject.h:221: error: expected ‘,’ or ‘}’ before ‘:’ token
+In file included from /Software/root/include/TObject.h:232,
+                 from /Software/root/include/TNamed.h:26,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TBuffer.h:28: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualStreamerInfo’
+/Software/root/include/TBuffer.h:29: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TStreamerElement’
+/Software/root/include/TBuffer.h:30: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TClass’
+/Software/root/include/TBuffer.h:31: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TString’
+/Software/root/include/TBuffer.h:32: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TProcessID’
+/Software/root/include/TBuffer.h:33: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TClonesArray’
+/Software/root/include/TBuffer.h:34: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TRefTable’
+/Software/root/include/TBuffer.h:35: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualArray’
+/Software/root/include/TBuffer.h:36: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TStreamerInfoActions’
+/Software/root/include/TBuffer.h:40: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBuffer’
+In file included from /Software/root/include/TObject.h:232,
+                 from /Software/root/include/TNamed.h:26,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TBuffer.h:330: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:331: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:332: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:333: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:334: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:335: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:336: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:337: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:338: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:339: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:340: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:341: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:342: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:343: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:344: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:346: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:347: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:348: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:349: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:350: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:351: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:352: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:353: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:354: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:355: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:356: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:357: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:358: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:359: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:360: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TBuffer.h:369: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+/Software/root/include/TBuffer.h:385: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+/Software/root/include/TBuffer.h:400: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+In file included from /Software/root/include/TString.h:36,
+                 from /Software/root/include/TNamed.h:29,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TMathBase.h:33:19: error: cstdlib: No such file or directory
+/Software/root/include/TMathBase.h:34:17: error: cmath: No such file or directory
+In file included from /Software/root/include/TString.h:36,
+                 from /Software/root/include/TNamed.h:29,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TMathBase.h:36: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TMath’
+/Software/root/include/TMathBase.h:96: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TMath’
+/Software/root/include/TMathBase.h:99: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TMath’
+/Software/root/include/TMathBase.h:104: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:107: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:110: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:113: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:120: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:123: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:126: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:131: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:134: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:137: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:140: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:143: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:150: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:159: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:162: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:165: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:168: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:171: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:174: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:177: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:180: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:183: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:186: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:191: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:194: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:197: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:200: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:203: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:206: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:209: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:212: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:215: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:218: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:223: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:226: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:229: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:232: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TMathBase.h:235: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+In file included from /Software/root/include/TNamed.h:29,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TString.h:46: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TRegexp’
+/Software/root/include/TString.h:47: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TPRegexp’
+/Software/root/include/TString.h:48: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TString’
+/Software/root/include/TString.h:49: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TSubString’
+/Software/root/include/TString.h:50: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TObjArray’
+/Software/root/include/TString.h:51: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualMutex’
+/Software/root/include/TString.h:52: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBufferFile’
+/Software/root/include/TString.h:54: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+/Software/root/include/TString.h:56: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:57: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:58: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:59: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:60: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:61: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:62: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:63: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:64: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:65: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:66: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:67: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:68: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:69: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:70: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:71: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:72: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:73: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:84: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TSubString’
+/Software/root/include/TString.h:135: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TString’
+In file included from /Software/root/include/TNamed.h:29,
+                 from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TString.h:440: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:441: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:445: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:447: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘ToLower’
+/Software/root/include/TString.h:448: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘ToUpper’
+/Software/root/include/TString.h:450: warning: type defaults to ‘int’ in declaration of ‘TString’
+/Software/root/include/TString.h:450: error: expected ‘;’, ‘,’ or ‘)’ before ‘&’ token
+/Software/root/include/TString.h:451: warning: type defaults to ‘int’ in declaration of ‘TString’
+/Software/root/include/TString.h:451: error: expected ‘;’, ‘,’ or ‘)’ before ‘*’ token
+/Software/root/include/TString.h:464: error: expected ‘;’, ‘,’ or ‘)’ before ‘=’ token
+/Software/root/include/TString.h:483: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:486: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:489: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:492: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:495: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:498: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:501: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:504: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:507: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:510: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:513: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:516: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:519: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:522: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:530: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:533: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:541: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:549: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TString’
+/Software/root/include/TString.h:552: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TString’
+/Software/root/include/TString.h:555: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TString’
+/Software/root/include/TString.h:558: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TString’
+/Software/root/include/TString.h:561: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TString’
+/Software/root/include/TString.h:564: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TString’
+/Software/root/include/TString.h:567: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TString’
+/Software/root/include/TString.h:570: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TString’
+/Software/root/include/TString.h:573: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TString.h:576: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TString.h:579: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TString.h:583: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:586: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:589: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:592: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:595: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:598: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:601: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:604: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:607: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:610: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:613: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:616: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:619: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:622: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:626: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:629: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:632: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:635: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:638: error: expected identifier or ‘(’ before ‘&’ token
+/Software/root/include/TString.h:641: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TString.h:644: error: expected identifier or ‘(’ before ‘&’ token
+/Software/root/include/TString.h:647: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TString.h:650: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TString.h:670: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TString.h:673: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TString.h:676: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TString.h:681: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:687: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:690: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:693: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:696: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:699: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:703: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:706: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:709: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:712: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:715: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:718: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:721: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:724: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:727: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:730: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:733: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:740: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:743: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:746: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:749: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:752: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:755: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TString.h:758: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+In file included from /Software/root/include/TDirectory.h:25,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TNamed.h:33: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TNamed’
+In file included from /Software/root/include/TCollection.h:30,
+                 from /Software/root/include/TSeqCollection.h:26,
+                 from /Software/root/include/TList.h:26,
+                 from /Software/root/include/TDirectory.h:28,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TIterator.h:29: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TCollection’
+/Software/root/include/TIterator.h:30: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TObject’
+/Software/root/include/TIterator.h:32: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TIterator’
+In file included from /Software/root/include/TSeqCollection.h:26,
+                 from /Software/root/include/TList.h:26,
+                 from /Software/root/include/TDirectory.h:28,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TCollection.h:38: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TClass’
+/Software/root/include/TCollection.h:39: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TObjectTable’
+/Software/root/include/TCollection.h:40: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualMutex’
+/Software/root/include/TCollection.h:41: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TIter’
+/Software/root/include/TCollection.h:43: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘kIterForward’
+/Software/root/include/TCollection.h:44: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘kIterBackward’
+/Software/root/include/TCollection.h:46: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+/Software/root/include/TCollection.h:48: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TCollection’
+/Software/root/include/TCollection.h:142: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TIter’
+/Software/root/include/TCollection.h:180: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+/Software/root/include/TCollection.h:192: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TCollection’
+/Software/root/include/TCollection.h:193: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TCollection’
+In file included from /Software/root/include/TList.h:26,
+                 from /Software/root/include/TDirectory.h:28,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TSeqCollection.h:30: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TSeqCollection’
+In file included from /Software/root/include/TDirectory.h:28,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TList.h:32:20: error: iterator: No such file or directory
+In file included from /Software/root/include/TDirectory.h:28,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TList.h:40: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘kSortAscending’
+/Software/root/include/TList.h:41: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘kSortDescending’
+/Software/root/include/TList.h:43: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TObjLink’
+/Software/root/include/TList.h:44: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TListIter’
+/Software/root/include/TList.h:47: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TList’
+/Software/root/include/TList.h:120: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TObjLink’
+/Software/root/include/TList.h:159: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TObjOptLink’
+/Software/root/include/TList.h:187: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TListIter’
+In file included from /Software/root/include/TDirectory.h:31,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TDatime.h:38: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TDatime’
+/Software/root/include/TDatime.h:97: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TDatime.h:100: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TDatime.h:102: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TDatime.h:104: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TDatime.h:106: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TDatime.h:108: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TDatime.h:110: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+In file included from /Software/root/include/TDirectory.h:34,
+                 from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TUUID.h:38: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBuffer’
+/Software/root/include/TUUID.h:39: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFile’
+/Software/root/include/TUUID.h:40: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TDirectory’
+/Software/root/include/TUUID.h:41: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TInetAddress’
+/Software/root/include/TUUID.h:42: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TDatime’
+/Software/root/include/TUUID.h:44: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TUUID’
+/Software/root/include/TUUID.h:93: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TUUID.h:97: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TUUID.h:99: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TUUID.h:102: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+In file included from /Software/root/include/TROOT.h:29,
+                 from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TDirectory.h:37: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBrowser’
+/Software/root/include/TDirectory.h:38: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TKey’
+/Software/root/include/TDirectory.h:39: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFile’
+/Software/root/include/TDirectory.h:41: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TDirectory’
+In file included from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TROOT.h:38: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TClass’
+/Software/root/include/TROOT.h:39: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TCanvas’
+/Software/root/include/TROOT.h:40: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TColor’
+/Software/root/include/TROOT.h:41: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TDataType’
+/Software/root/include/TROOT.h:42: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFile’
+/Software/root/include/TROOT.h:43: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TStyle’
+/Software/root/include/TROOT.h:44: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualPad’
+/Software/root/include/TROOT.h:45: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TApplication’
+/Software/root/include/TROOT.h:46: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TInterpreter’
+/Software/root/include/TROOT.h:47: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBrowser’
+/Software/root/include/TROOT.h:48: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TGlobal’
+/Software/root/include/TROOT.h:49: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFunction’
+/Software/root/include/TROOT.h:50: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFolder’
+/Software/root/include/TROOT.h:51: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TPluginManager’
+/Software/root/include/TROOT.h:52: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TProcessUUID’
+/Software/root/include/TROOT.h:53: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TClassGenerator’
+/Software/root/include/TROOT.h:54: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualMutex’
+/Software/root/include/TROOT.h:58: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+/Software/root/include/TROOT.h:60: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TROOT’
+In file included from pedestals.h:12,
+                 from pedestals.c:12:
+/Software/root/include/TROOT.h:295: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+/Software/root/include/TROOT.h:296: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘ROOT’
+In file included from /Software/root/include/TBranch.h:32,
+                 from /Software/root/include/TTree.h:30,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TObjArray.h:37: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TObjArrayIter’
+/Software/root/include/TObjArray.h:39: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TObjArray’
+/Software/root/include/TObjArray.h:124: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TObjArrayIter’
+In file included from /Software/root/include/TBranch.h:32,
+                 from /Software/root/include/TTree.h:30,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TObjArray.h:160: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TObjArray’
+/Software/root/include/TObjArray.h:167: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+In file included from /Software/root/include/TBranch.h:36,
+                 from /Software/root/include/TTree.h:30,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TAttFill.h:32: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TAttFill’
+/Software/root/include/TAttFill.h:57: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TAttFill’
+In file included from /Software/root/include/TDataType.h:26,
+                 from /Software/root/include/TBranch.h:40,
+                 from /Software/root/include/TTree.h:30,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TDictionary.h:50: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TDictAttributeMap’
+/Software/root/include/TDictionary.h:58: error: redefinition of typedef ‘MethodArgInfo_t’
+/Software/root/include/TDictionary.h:57: note: previous declaration of ‘MethodArgInfo_t’ was here
+In file included from /Software/root/include/TDictionary.h:63,
+                 from /Software/root/include/TDataType.h:26,
+                 from /Software/root/include/TBranch.h:40,
+                 from /Software/root/include/TTree.h:30,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/ESTLType.h:26: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘ROOT’
+In file included from /Software/root/include/TDataType.h:26,
+                 from /Software/root/include/TBranch.h:40,
+                 from /Software/root/include/TTree.h:30,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TDictionary.h:92: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TDictionary’
+In file included from /Software/root/include/TBranch.h:40,
+                 from /Software/root/include/TTree.h:30,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TDataType.h:45: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TDataType’
+In file included from /Software/root/include/TTree.h:30,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TBranch.h:43: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TTree’
+/Software/root/include/TBranch.h:44: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBasket’
+/Software/root/include/TBranch.h:45: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TLeaf’
+/Software/root/include/TBranch.h:46: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBrowser’
+/Software/root/include/TBranch.h:47: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TDirectory’
+/Software/root/include/TBranch.h:48: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFile’
+/Software/root/include/TBranch.h:49: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TClonesArray’
+/Software/root/include/TBranch.h:50: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TTreeCloner’
+/Software/root/include/TBranch.h:56: error: initializer element is not constant
+/Software/root/include/TBranch.h:58: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBranch’
+In file included from /Software/root/include/TTree.h:30,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TBranch.h:226: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TBranch.h:232: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TBranch.h:238: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+In file included from /Software/root/include/TTree.h:38,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TAttLine.h:32: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TAttLine’
+In file included from /Software/root/include/TTree.h:46,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TAttMarker.h:32: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TAttMarker’
+In file included from /Software/root/include/TArrayD.h:25,
+                 from /Software/root/include/TTree.h:50,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TArray.h:31: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBuffer’
+/Software/root/include/TArray.h:33: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TArray’
+/Software/root/include/TArray.h:66: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TArray.h:77: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TArray.h:79: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TArray’
+In file included from /Software/root/include/TTree.h:50,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TArrayD.h:29: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TArrayD’
+/Software/root/include/TArrayD.h:64: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TArrayD.h:75: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TArrayD.h:81: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TArrayD.h:87: error: expected identifier or ‘(’ before ‘&’ token
+/Software/root/include/TArrayD.h:94: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+In file included from /Software/root/include/TTree.h:54,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TArrayI.h:29: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TArrayI’
+/Software/root/include/TArrayI.h:64: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TArrayI.h:75: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TArrayI.h:81: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TArrayI.h:87: error: expected identifier or ‘(’ before ‘&’ token
+/Software/root/include/TArrayI.h:94: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+In file included from /Software/root/include/TClass.h:34,
+                 from /Software/root/include/TTree.h:62,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TObjString.h:32: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TObjString’
+In file included from /Software/root/include/TTree.h:62,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TClass.h:36:15: error: map: No such file or directory
+In file included from /Software/root/include/TTree.h:62,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TClass.h:44: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBaseClass’
+/Software/root/include/TClass.h:45: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBrowser’
+/Software/root/include/TClass.h:46: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TDataMember’
+/Software/root/include/TClass.h:47: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TMethod’
+/Software/root/include/TClass.h:48: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TRealData’
+/Software/root/include/TClass.h:49: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TCint’
+/Software/root/include/TClass.h:50: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBuffer’
+/Software/root/include/TClass.h:51: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualStreamerInfo’
+/Software/root/include/TClass.h:52: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualCollectionProxy’
+/Software/root/include/TClass.h:53: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TMethodCall’
+/Software/root/include/TClass.h:54: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualIsAProxy’
+/Software/root/include/TClass.h:55: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualRefProxy’
+/Software/root/include/TClass.h:56: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘THashTable’
+/Software/root/include/TClass.h:58: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘clang’
+/Software/root/include/TClass.h:62: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘ROOT’
+/Software/root/include/TClass.h:68: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘ROOT’
+/Software/root/include/TClass.h:71: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TClass.h:73: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TClass’
+In file included from /Software/root/include/TTree.h:62,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TClass.h:457: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘ROOT’
+In file included from /Software/root/include/TTree.h:66,
+                 from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TVirtualTreePlayer.h:28: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TClass’
+/Software/root/include/TVirtualTreePlayer.h:29: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TTree’
+/Software/root/include/TVirtualTreePlayer.h:30: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TH1’
+/Software/root/include/TVirtualTreePlayer.h:31: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TTreeFormula’
+/Software/root/include/TVirtualTreePlayer.h:32: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TSQLResult’
+/Software/root/include/TVirtualTreePlayer.h:33: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TSelector’
+/Software/root/include/TVirtualTreePlayer.h:34: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TPrincipal’
+/Software/root/include/TVirtualTreePlayer.h:35: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualIndex’
+/Software/root/include/TVirtualTreePlayer.h:38: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualTreePlayer’
+In file included from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TTree.h:69: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBranch’
+/Software/root/include/TTree.h:70: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBrowser’
+/Software/root/include/TTree.h:71: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFile’
+/Software/root/include/TTree.h:72: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TDirectory’
+/Software/root/include/TTree.h:73: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TLeaf’
+/Software/root/include/TTree.h:74: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TH1’
+/Software/root/include/TTree.h:75: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TTreeFormula’
+/Software/root/include/TTree.h:76: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TPolyMarker’
+/Software/root/include/TTree.h:77: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TEventList’
+/Software/root/include/TTree.h:78: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TEntryList’
+/Software/root/include/TTree.h:79: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TList’
+/Software/root/include/TTree.h:80: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TSQLResult’
+/Software/root/include/TTree.h:81: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TSelector’
+/Software/root/include/TTree.h:82: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TPrincipal’
+/Software/root/include/TTree.h:83: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFriendElement’
+/Software/root/include/TTree.h:84: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TCut’
+/Software/root/include/TTree.h:85: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualIndex’
+/Software/root/include/TTree.h:86: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBranchRef’
+/Software/root/include/TTree.h:87: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBasket’
+/Software/root/include/TTree.h:88: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TStreamerInfo’
+/Software/root/include/TTree.h:89: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TTreeCache’
+/Software/root/include/TTree.h:90: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TTreeCloner’
+/Software/root/include/TTree.h:91: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFileMergeInfo’
+/Software/root/include/TTree.h:92: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualPerfStats’
+/Software/root/include/TTree.h:94: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TTree’
+In file included from /Software/root/include/TChain.h:25,
+                 from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TTree.h:569: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TTreeFriendLeafIter’
+In file included from pedestals.h:13,
+                 from pedestals.c:12:
+/Software/root/include/TChain.h:28: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFile’
+/Software/root/include/TChain.h:29: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBrowser’
+/Software/root/include/TChain.h:30: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TCut’
+/Software/root/include/TChain.h:31: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TEntryList’
+/Software/root/include/TChain.h:32: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TEventList’
+/Software/root/include/TChain.h:33: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TCollection’
+/Software/root/include/TChain.h:35: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TChain’
+In file included from /Software/root/include/TFile.h:28,
+                 from pedestals.h:14,
+                 from pedestals.c:12:
+/Software/root/include/TDirectoryFile.h:28: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TList’
+/Software/root/include/TDirectoryFile.h:29: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBrowser’
+/Software/root/include/TDirectoryFile.h:30: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TKey’
+/Software/root/include/TDirectoryFile.h:31: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFile’
+/Software/root/include/TDirectoryFile.h:33: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TDirectoryFile’
+In file included from /Software/root/include/TMap.h:32,
+                 from /Software/root/include/TFile.h:31,
+                 from pedestals.h:14,
+                 from pedestals.c:12:
+/Software/root/include/THashTable.h:34: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TList’
+/Software/root/include/THashTable.h:35: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TListIter’
+/Software/root/include/THashTable.h:36: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘THashTableIter’
+/Software/root/include/THashTable.h:39: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘THashTable’
+/Software/root/include/THashTable.h:83: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/THashTable.h:91: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/THashTable.h:106: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘THashTableIter’
+In file included from /Software/root/include/TFile.h:31,
+                 from pedestals.h:14,
+                 from pedestals.c:12:
+/Software/root/include/TMap.h:38: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘THashTableIter’
+/Software/root/include/TMap.h:39: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TMapIter’
+/Software/root/include/TMap.h:40: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TPair’
+/Software/root/include/TMap.h:41: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBrowser’
+/Software/root/include/TMap.h:44: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TMap’
+/Software/root/include/TMap.h:106: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TPair’
+/Software/root/include/TMap.h:131: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TAssoc’
+/Software/root/include/TMap.h:148: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TMapIter’
+In file included from /Software/root/include/TFile.h:34,
+                 from pedestals.h:14,
+                 from pedestals.c:12:
+/Software/root/include/TUrl.h:38: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘THashList’
+/Software/root/include/TUrl.h:39: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TMap’
+/Software/root/include/TUrl.h:41: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TUrl’
+In file included from pedestals.h:14,
+                 from pedestals.c:12:
+/Software/root/include/TFile.h:37: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFree’
+/Software/root/include/TFile.h:38: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TArrayC’
+/Software/root/include/TFile.h:39: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TArchiveFile’
+/Software/root/include/TFile.h:40: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFileOpenHandle’
+/Software/root/include/TFile.h:41: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFileCacheRead’
+/Software/root/include/TFile.h:42: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFileCacheWrite’
+/Software/root/include/TFile.h:43: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TProcessID’
+/Software/root/include/TFile.h:44: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TStopwatch’
+/Software/root/include/TFile.h:45: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFilePrefetch’
+/Software/root/include/TFile.h:47: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFile’
+In file included from pedestals.h:14,
+                 from pedestals.c:12:
+/Software/root/include/TFile.h:325: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFileOpenHandle’
+/Software/root/include/TFile.h:357: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TFile.h:363: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TFile.h:369: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+In file included from pedestals.c:12:
+pedestals.h:23: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘pedestals’
+pedestals.h:70: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+pedestals.h:85: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+pedestals.h:91: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+pedestals.h:97: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+pedestals.h:110: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+pedestals.h:151: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘pedestals’
+pedestals.h:162: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+pedestals.h:169: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+In file included from /Software/root/include/TAxis.h:28,
+                 from /Software/root/include/TH1.h:25,
+                 from /Software/root/include/TH2.h:25,
+                 from pedestals.c:13:
+/Software/root/include/TAttAxis.h:32: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TAttAxis’
+In file included from /Software/root/include/TH1.h:25,
+                 from /Software/root/include/TH2.h:25,
+                 from pedestals.c:13:
+/Software/root/include/TAxis.h:34: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘THashList’
+/Software/root/include/TAxis.h:36: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TAxis’
+In file included from /Software/root/include/TH1.h:41,
+                 from /Software/root/include/TH2.h:25,
+                 from pedestals.c:13:
+/Software/root/include/TArrayC.h:29: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TArrayC’
+/Software/root/include/TArrayC.h:63: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TArrayC.h:74: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TArrayC.h:80: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TArrayC.h:86: error: expected identifier or ‘(’ before ‘&’ token
+/Software/root/include/TArrayC.h:93: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+In file included from /Software/root/include/TH1.h:44,
+                 from /Software/root/include/TH2.h:25,
+                 from pedestals.c:13:
+/Software/root/include/TArrayS.h:29: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TArrayS’
+/Software/root/include/TArrayS.h:63: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TArrayS.h:74: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TArrayS.h:80: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TArrayS.h:86: error: expected identifier or ‘(’ before ‘&’ token
+/Software/root/include/TArrayS.h:93: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+In file included from /Software/root/include/TH1.h:50,
+                 from /Software/root/include/TH2.h:25,
+                 from pedestals.c:13:
+/Software/root/include/TArrayF.h:29: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TArrayF’
+/Software/root/include/TArrayF.h:63: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TArrayF.h:74: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘&’ token
+/Software/root/include/TArrayF.h:80: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TArrayF.h:86: error: expected identifier or ‘(’ before ‘&’ token
+/Software/root/include/TArrayF.h:93: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+In file included from /Software/root/include/TH1.h:55,
+                 from /Software/root/include/TH2.h:25,
+                 from pedestals.c:13:
+/Software/root/include/Foption.h:51: error: expected specifier-qualifier-list before ‘Foption_t’
+In file included from /Software/root/include/TH1.h:58,
+                 from /Software/root/include/TH2.h:25,
+                 from pedestals.c:13:
+/Software/root/include/TVectorFfwd.h:24: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+/Software/root/include/TVectorFfwd.h:25: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+In file included from /Software/root/include/TH1.h:61,
+                 from /Software/root/include/TH2.h:25,
+                 from pedestals.c:13:
+/Software/root/include/TVectorDfwd.h:24: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+/Software/root/include/TVectorDfwd.h:25: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+In file included from /Software/root/include/TH2.h:25,
+                 from pedestals.c:13:
+/Software/root/include/TH1.h:66: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TF1’
+/Software/root/include/TH1.h:67: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TH1D’
+/Software/root/include/TH1.h:68: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBrowser’
+/Software/root/include/TH1.h:69: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TDirectory’
+/Software/root/include/TH1.h:70: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TList’
+/Software/root/include/TH1.h:71: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TCollection’
+/Software/root/include/TH1.h:72: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualFFT’
+/Software/root/include/TH1.h:73: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualHistPainter’
+In file included from /Software/root/include/TH1.h:75,
+                 from /Software/root/include/TH2.h:25,
+                 from pedestals.c:13:
+/Software/root/include/TFitResultPtr.h:29: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFitResult’
+/Software/root/include/TFitResultPtr.h:31: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFitResultPtr’
+In file included from /Software/root/include/TH2.h:25,
+                 from pedestals.c:13:
+/Software/root/include/TH1.h:77: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TH1’
+In file included from /Software/root/include/TH2.h:25,
+                 from pedestals.c:13:
+/Software/root/include/TH1.h:403: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TH1C’
+/Software/root/include/TH1.h:436: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:438: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:439: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:440: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:441: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:442: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:446: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TH1S’
+/Software/root/include/TH1.h:479: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:481: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:482: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:483: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:484: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:485: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:489: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TH1I’
+/Software/root/include/TH1.h:522: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:524: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:525: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:526: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:527: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:528: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:532: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TH1F’
+/Software/root/include/TH1.h:567: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:569: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:570: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:571: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:572: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:573: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:577: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TH1D’
+/Software/root/include/TH1.h:612: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:614: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:615: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:616: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:617: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:618: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TH1.h:620: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+/Software/root/include/TH1.h:621: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+In file included from /Software/root/include/TH2.h:28,
+                 from pedestals.c:13:
+/Software/root/include/TMatrixFBasefwd.h:27: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+/Software/root/include/TMatrixFBasefwd.h:28: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+In file included from /Software/root/include/TH2.h:31,
+                 from pedestals.c:13:
+/Software/root/include/TMatrixDBasefwd.h:27: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+/Software/root/include/TMatrixDBasefwd.h:28: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+In file included from pedestals.c:13:
+/Software/root/include/TH2.h:34: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TProfile’
+/Software/root/include/TH2.h:36: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TH2’
+In file included from pedestals.c:13:
+/Software/root/include/TH2.h:125: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TH2C’
+/Software/root/include/TH2.h:167: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TH2S’
+/Software/root/include/TH2.h:209: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TH2I’
+/Software/root/include/TH2.h:251: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TH2F’
+/Software/root/include/TH2.h:295: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TH2D’
+In file included from /Software/root/include/TStyle.h:38,
+                 from pedestals.c:14:
+/Software/root/include/TAttText.h:32: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TAttText’
+In file included from pedestals.c:14:
+/Software/root/include/TStyle.h:47: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBrowser’
+/Software/root/include/TStyle.h:49: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TStyle’
+/Software/root/include/TStyle.h:417: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+In file included from /Software/root/include/TVirtualPad.h:26,
+                 from /Software/root/include/TPad.h:26,
+                 from /Software/root/include/TCanvas.h:25,
+                 from pedestals.c:15:
+/Software/root/include/TAttPad.h:29: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TAttPad’
+In file included from /Software/root/include/TVirtualPad.h:30,
+                 from /Software/root/include/TPad.h:26,
+                 from /Software/root/include/TCanvas.h:25,
+                 from pedestals.c:15:
+/Software/root/include/TVirtualX.h:27:19: error: utility: No such file or directory
+In file included from /Software/root/include/TVirtualX.h:46,
+                 from /Software/root/include/TVirtualPad.h:30,
+                 from /Software/root/include/TPad.h:26,
+                 from /Software/root/include/TCanvas.h:25,
+                 from pedestals.c:15:
+/Software/root/include/GuiTypes.h:121: error: expected specifier-qualifier-list before ‘Bool_t’
+/Software/root/include/GuiTypes.h:144: error: expected specifier-qualifier-list before ‘Bool_t’
+/Software/root/include/GuiTypes.h:192: error: expected specifier-qualifier-list before ‘EGEventType’
+/Software/root/include/GuiTypes.h:242: error: expected specifier-qualifier-list before ‘EGraphicsFunction’
+In file included from /Software/root/include/TVirtualPad.h:30,
+                 from /Software/root/include/TPad.h:26,
+                 from /Software/root/include/TCanvas.h:25,
+                 from pedestals.c:15:
+/Software/root/include/TVirtualX.h:61: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TPoint’
+/Software/root/include/TVirtualX.h:62: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TString’
+/Software/root/include/TVirtualX.h:63: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TGWin32Command’
+/Software/root/include/TVirtualX.h:67: error: expected identifier or ‘(’ before string constant
+/Software/root/include/TVirtualX.h:70: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualX’
+In file included from /Software/root/include/TVirtualPad.h:30,
+                 from /Software/root/include/TPad.h:26,
+                 from /Software/root/include/TCanvas.h:25,
+                 from pedestals.c:15:
+/Software/root/include/TVirtualX.h:363: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+/Software/root/include/TVirtualX.h:365: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+In file included from /Software/root/include/TVirtualPad.h:42,
+                 from /Software/root/include/TPad.h:26,
+                 from /Software/root/include/TCanvas.h:25,
+                 from pedestals.c:15:
+/Software/root/include/TQObject.h:44: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TList’
+/Software/root/include/TQObject.h:45: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TObject’
+/Software/root/include/TQObject.h:46: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TQConnection’
+/Software/root/include/TQObject.h:47: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TClass’
+/Software/root/include/TQObject.h:49: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TQObject’
+/Software/root/include/TQObject.h:187: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TQObjSender’
+/Software/root/include/TQObject.h:216: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘ConnectCINT’
+In file included from /Software/root/include/TPad.h:26,
+                 from /Software/root/include/TCanvas.h:25,
+                 from pedestals.c:15:
+/Software/root/include/TVirtualPad.h:46: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TAxis’
+/Software/root/include/TVirtualPad.h:47: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TObject’
+/Software/root/include/TVirtualPad.h:48: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TObjLink’
+/Software/root/include/TVirtualPad.h:49: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TView’
+/Software/root/include/TVirtualPad.h:50: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TCanvas’
+/Software/root/include/TVirtualPad.h:51: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TCanvasImp’
+/Software/root/include/TVirtualPad.h:52: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TH1F’
+/Software/root/include/TVirtualPad.h:53: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TFrame’
+/Software/root/include/TVirtualPad.h:54: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TLegend’
+/Software/root/include/TVirtualPad.h:55: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBox’
+/Software/root/include/TVirtualPad.h:56: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualViewer3D’
+/Software/root/include/TVirtualPad.h:57: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualPadPainter’
+/Software/root/include/TVirtualPad.h:59: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualPad’
+In file included from /Software/root/include/TPad.h:26,
+                 from /Software/root/include/TCanvas.h:25,
+                 from pedestals.c:15:
+/Software/root/include/TVirtualPad.h:276: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TPickerStackGuard’
+In file included from /Software/root/include/TPad.h:29,
+                 from /Software/root/include/TCanvas.h:25,
+                 from pedestals.c:15:
+/Software/root/include/TAttBBox2D.h:34: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TPoint’
+/Software/root/include/TAttBBox2D.h:35: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TAttBBox2D’
+In file included from /Software/root/include/TPad.h:32,
+                 from /Software/root/include/TCanvas.h:25,
+                 from pedestals.c:15:
+/Software/root/include/TPoint.h:33: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TPoint’
+/Software/root/include/TPoint.h:59: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+/Software/root/include/TPoint.h:64: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘operator’
+In file included from /Software/root/include/TCanvas.h:25,
+                 from pedestals.c:15:
+/Software/root/include/TPad.h:38: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualViewer3D’
+/Software/root/include/TPad.h:39: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TVirtualPadPainter’
+/Software/root/include/TPad.h:40: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBrowser’
+/Software/root/include/TPad.h:41: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBox’
+/Software/root/include/TPad.h:42: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TLegend’
+/Software/root/include/TPad.h:43: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TArrow’
+/Software/root/include/TPad.h:46: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TPad’
+In file included from /Software/root/include/TCanvas.h:25,
+                 from pedestals.c:15:
+/Software/root/include/TPad.h:407: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TPad.h:415: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TPad.h:423: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TPad.h:431: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TPad.h:439: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TPad.h:447: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TPad.h:459: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TPad.h:471: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TPad.h:481: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TPad.h:493: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TPad.h:503: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TPad.h:515: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TPad.h:523: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TPad.h:531: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+In file included from /Software/root/include/TCanvas.h:29,
+                 from pedestals.c:15:
+/Software/root/include/TAttCanvas.h:28: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TAttCanvas’
+In file included from /Software/root/include/TCanvas.h:41,
+                 from pedestals.c:15:
+/Software/root/include/TCanvasImp.h:29: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TCanvas’
+/Software/root/include/TCanvasImp.h:32: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TCanvasImp’
+/Software/root/include/TCanvasImp.h:83: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TCanvasImp.h:84: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TCanvasImp.h:85: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TCanvasImp.h:87: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TCanvasImp.h:88: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TCanvasImp.h:89: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TCanvasImp.h:90: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TCanvasImp.h:91: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TCanvasImp.h:92: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TCanvasImp.h:93: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TCanvasImp.h:94: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TCanvasImp.h:95: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TCanvasImp.h:97: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TCanvasImp.h:98: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+/Software/root/include/TCanvasImp.h:99: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+In file included from pedestals.c:15:
+/Software/root/include/TCanvas.h:44: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TContextMenu’
+/Software/root/include/TCanvas.h:45: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TControlBar’
+/Software/root/include/TCanvas.h:46: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TBrowser’
+/Software/root/include/TCanvas.h:48: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘TCanvas’
+pedestals.c:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+make: *** [pedestals.o] Error 1
