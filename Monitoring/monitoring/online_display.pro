@@ -17,29 +17,30 @@ CONFIG += console
 CONFIG+=c++11
 
 #boostinclude=../../Readout_Software/include/boost
-boostinclude="/home/ak/boost_1_60_0/"
+boostinclude="/root/Desktop/nsw-vmm-monitoring/boost_1_60_0/"
 rootincludepath="/home/ak/ROOT534/include"
 
 INCLUDEPATH += $$boostinclude
 INCLUDEPATH += /opt/rh/devtoolset-1.1/root/usr/include
 DEPENDPATH += $$boostinclude
 
-INCLUDEPATH += $(ROOTSYS)/include
-win32:LIBS += -L$(ROOTSYS)/lib -llibCint -llibRIO -llibNet \
+INCLUDEPATH += /software/root_5.34.34_gcc44/include
+win32:LIBS += -L/software/root_5.34.34_gcc44/lib -llibCint -llibRIO -llibNet \
         -llibHist -llibGraf -llibGraf3d -llibGpad -llibTree \
         -llibRint -llibPostscript -llibMatrix -llibPhysics \
         -llibGui -llibMathCore \
                 -lRIO -lNet -lHist -lTree -lMatrix -lProof -lThread -lCore -lCint -lMathCore  -lTree -lm -ldl -rdynamic
-else:LIBS += -L$(ROOTSYS)/lib -lCore -lCint -lRIO -lNet \
+else:LIBS += -L/software/root_5.34.34_gcc44/lib -lCore -lCint -lRIO -lNet \
         -lHist -lGraf -lGraf3d -lGpad -lTree \
         -lRint -lPostscript -lMatrix -lPhysics \
         -lGui \ #-lMathCore \
         -lRIO -lNet -lHist -lTree -lMatrix -lProof -lThread -lCore -lCint -lMathCore  -lTree -lm -ldl  -rdynamic
 
 
-LIBS += -L/home/ak/boost_1_60_0/stage/lib -lboost_program_options -lboost_thread -lboost_system -lboost_filesystem -lboost_date_time -lpthread -lrt
+LIBS += -L/root/Desktop/nsw-vmm-monitoring/boost_1_60_0/stage/lib -lboost_program_options -lboost_thread -lboost_system -lboost_filesystem -lboost_date_time -lpthread -lrt
 
 QMAKE_CXX_FLAGS += -std=c++11
+
 
 HEADERS += canvas.h \
     #TQRootCanvas.h \

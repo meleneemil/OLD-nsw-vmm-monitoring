@@ -411,7 +411,7 @@ void CDaqServerConfig::configure(const QString &configFile)
     if(mainWindow!=NULL) {mainWindow->close(); mainWindow=NULL;}
     mainWindow = new MainWindow();
     mainWindow->setUpdatesEnabled(true);
-    mainWindow->setWindowTitle("mmDaq GUI v0.1");
+    mainWindow->setWindowTitle("mmDaq GUI v4.61b756 RC1");
     //mainWindow->rndm = new TRandom();
 
     m_config_path = configFile.toStdString();

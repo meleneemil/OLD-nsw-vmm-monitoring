@@ -376,11 +376,13 @@ QVBoxLayout* MainWindow::setUpRunControl()
     runSettingsLayout = new QHBoxLayout();
     runControlLayout = new QVBoxLayout();
     buttonLayout = new QHBoxLayout();
-    startButton = new QPushButton(QIcon(QString("button_play_icon.png")),"",0);
+//    startButton = new QPushButton(QIcon(QString("button_play_icon.png")),"",0);
+    startButton = new QPushButton("START",0);
     startButton->setIconSize(QSize(25,25));
     startPedestalsButton = new QPushButton(QIcon(QString("button_pedestals_icon.jpg")),"",0);
     startPedestalsButton->setIconSize(QSize(25,25));
-    stopButton = new QPushButton(QIcon(QString("button_stop_icon.png")),"",0);
+    stopButton = new QPushButton("STOP",0);
+//    stopButton = new QPushButton(QIcon(QString("button_stop_icon.png")),"",0);
     stopButton->setIconSize(QSize(25,25));
     pauseButton = new QPushButton(QIcon(QString("button_pause_icon.png")),"",0);
     configButton = new QPushButton(QIcon(QString("button_config_icon.png")),"",0);

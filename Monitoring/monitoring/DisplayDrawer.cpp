@@ -231,8 +231,8 @@ int DisplayDrawer::handleBufferedEvent(QString line_qstr)
     std::string chargeavgstr;
     std::string maxchargestr;
 
-    std::string tdo_str;
-    std::string pdo_str;
+    std::string bcid_str;
+    std::string extra_str;
 
 
 
@@ -305,12 +305,12 @@ int DisplayDrawer::handleBufferedEvent(QString line_qstr)
         else if(column == 12) {
             //std::cout<<"charge : "<<pinstr<<std::endl;
             //getChannelReadout(pinstr);
-            pdo_str = pinstr;
+            bcid_str = pinstr;
         }
         else if(column == 13) {
             //std::cout<<"charge : "<<pinstr<<std::endl;
             //getChannelReadout(pinstr);
-            tdo_str = pinstr;
+            extra_str = pinstr;
         }
         else {
             std::cout<<"Data format not recognised..."<<std::endl;
@@ -330,29 +330,18 @@ int DisplayDrawer::handleBufferedEvent(QString line_qstr)
     chip = atoi(chipstr.c_str());
     channel = atoi(channelstr.c_str());
 
-    int tdo=atof(tdo_str.c_str());
-    int pdo=atof(pdo_str.c_str());
-//    tdo=50;
-//    pdo=100;
+    int bcid = atoi(bcid_str.c_str());
+    int extra = atoi(extra_str.c_str());
 
-
-    //conversion of counts in volts for vmm1 chips data
-
-    //TO CHANGE: FEC NUMBER 3 FOR VMM1 CURRENTLY
-    if(fec==3)   {
-        charge*=3.3/16384;
-        time*=3.3/16384;
-    }
+//    int tdo=atof(tdo_str.c_str());
+//    int pdo=atof(pdo_str.c_str());
 
     //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! use atof(strinf.c_str()) to convert string to double for filling values ion the histograms
     //std::cout<<"++++++++++++++++++++++++++++++++++++++++++Filling readout++++++++++++++++++++++++++++++++++++++++++++"<<std::endl;
     //++++++++++++++++++++++++filling readout histograms (accessing them from class objects)+++++++++++++++++++++
-    fillReadoutHistos(chamberstr,readoutstr,atoi(stripstr.c_str()),charge,time, pdo,tdo);
-    //aikoulou: comment out on 12/5/2016. the functions are just comments.
-    //    fillChipHistos(fec, chip, channel, charge, time);
+    fillReadoutHistos(chamberstr,readoutstr,atoi(stripstr.c_str()),charge,time, bcid,extra);
     return 1;
 
-    //    jjjj++;
 }
 
 
@@ -360,7 +349,7 @@ int DisplayDrawer::handleBufferedEvent(QString line_qstr)
 //Get 1d/2d readout histogram to fill - Selecting from the histograms lists of each frame using a std::string
 //histoType selection key
 
-void DisplayDrawer::fillReadoutHistos(std::string chamberName, std::string readoutName, int strip, float charge, float time, int pdo, int tdo)
+void DisplayDrawer::fillReadoutHistos(std::string chamberName, std::string readoutName, int strip, float charge, float time, int bcid, int extra)
 {
     //    std::cout << "is here111--------------------------------------------------------";
     //aikoulou: debug
@@ -389,13 +378,13 @@ void DisplayDrawer::fillReadoutHistos(std::string chamberName, std::string reado
                             //                                    readout->getTimeStatisticsHisto()->SetBins(charge+1*500,0,charge+1);
                             readout->getTimeStatisticsHisto()->Fill(time);
                             readout->getChargeStatisticsHisto()->Fill(charge);
-                            readout->getPDOStatisticsHisto()->Fill(pdo);
-                            readout->getTDOStatisticsHisto()->Fill(tdo);
+                            readout->getPDOStatisticsHisto()->Fill(bcid);
+                            readout->getTDOStatisticsHisto()->Fill(extra);
                             //filling event display histograms
                             readout->getChargeEventHisto1d()->SetBinContent(strip,charge);
-                            readout->getPDOEventHisto1d()->SetBinContent(strip,pdo);
-                            readout->getTDOEventHisto1d()->SetBinContent(strip,tdo);
                             readout->getTimeEventHisto()->Fill(strip,time);
+                            readout->getPDOEventHisto1d()->SetBinContent(strip,bcid);
+                            readout->getTDOEventHisto1d()->SetBinContent(strip,extra);
                         }
                     }
 
@@ -408,47 +397,11 @@ void DisplayDrawer::fillReadoutHistos(std::string chamberName, std::string reado
 
 void DisplayDrawer::fillChipHistos(int fecNumber, int chipNumber, int channelNumber, float charge, float time)
 {
-    //    CSrsChipId *chipId(fecNumber, chipNumber);
-
-    //    for(int i=0; i<monitoringMainWindow->chamberTree->childCount(); i++)
-    //    {
-    //        for(int iChip=0; iChip<(monitoringMainWindow->chamberTree->child(i))->childCount();iChip++)    {
-    //            if((monitoringMainWindow->chamberTree->child(i))->child(iChip)->text(0).compare(name)==0)  {
-    //                QVariant chipVar = monitoringMainWindow->chamberTree->child(i)->child(iChip)->data(0,Qt::UserRole);
-    //                CSrsChip *chipvecptr = reinterpret_cast<CSrsChip* >(chipVar.value<void*>());
-    //                chipvecptr->getRawHisto()->Reset();
-    //                for(int iVec=0; iVec<rawVector.size(); iVec++)
-    //                {
-    //                    chipvecptr->getRawHisto()->GetXaxis()->SetRangeUser(0,rawVector.size());
-    //                    chipvecptr->getRawHisto()->GetYaxis()->SetRangeUser(
-    //                                rawVector.at(std::min_element(rawVector.begin(),rawVector.end())-rawVector.begin())-100,
-    //                                rawVector.at(std::max_element(rawVector.begin(),rawVector.end())-rawVector.begin())+100);
-    //                    chipvecptr->getRawHisto()->SetBinContent(iVec,rawVector.at(iVec));
-    //                }
-
-    //            }
-
-    //        }
-    //    }
-
 }
 
 
 TH2D *DisplayDrawer::fillChip2dHisto(std::string chipName, std::string histoType)
 {
-    //    Q_FOREACH(boost::shared_ptr<CSrsChip> chipvecptr, configuredChipvec) {
-    //        //std::cout<<chipvecptr->get_chip_id().chip_id()<<std::endl;
-    //        //std::cout<<"TH2D *CDaqServerConfig::fillChip2dHisto(std::string chipName, std::string histoType)"<<std::endl;
-    //        //std::cout<<chipvecptr->name().c_str()<<" : "<<chipName.c_str()<<std::endl;
-    //        //if(chipvecptr->name()==chipName.c_str())  {
-    //            //if(histoType == "Apv Raw")  {
-    //                //return chipvecptr->getRawHisto();
-    //                //std::cout<<"Chip "<<chipvecptr->name()<<" found"<<std::endl;
-    //                //std::cout<<"Filling "<<chipvecptr->getRawHisto()->GetTitle()<<std::endl;
-    //            //}
-    //        //}
-    //    }
-
     return 0;
 }
 
