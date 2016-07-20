@@ -57,17 +57,19 @@ void testSharedMemTool::sendData()
 
             boost::posix_time::ptime timeout(boost::posix_time::second_clock::universal_time() + boost::posix_time::seconds(5));
           //  if(m_shm_condition->timed_wait(lock, timeout)) {
-            if(!lock.timed_lock(timeout)) {
-                std::cout << " *** DATAWRITER : LOCK TIMED OUT *** " << std::endl;
-            }
-            else {
+            //aikoulou: commenting out the lock
+            //if(!lock.timed_lock(timeout)) {
+            //    std::cout << " *** DATAWRITER : LOCK TIMED OUT *** " << std::endl;
+            //}
+            //else
+            {
                 std::cout << "in else" << std::endl;
                 sendEventNumber();
-//                for(int iii=0;iii<100;iii++)
+
                     sendEventInfo();
 
                 m_shm_condition->notify_all();
-              //  m_shm_condition->wait(lock);
+//                m_shm_condition->wait(lock);
             }
             //    m_shm_condition->wait(lock);
 
