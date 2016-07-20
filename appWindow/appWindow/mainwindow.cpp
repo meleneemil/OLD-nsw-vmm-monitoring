@@ -26,5 +26,8 @@ void MainWindow::sendDataToSharedMemory()
 
 MainWindow::~MainWindow()
 {
+    boost::interprocess::shared_memory_object::remove("mmDaqSharedMemory");
+    boost::interprocess::named_condition::remove("mmDaqSharedCondition");
+
     delete ui;
 }
