@@ -115,51 +115,19 @@ void DisplayDrawer::changeActiveTab(int tabIndex)
     }
     else if(monitoringMainWindow->mainTabs->currentIndex()==1)  {
         drawStatisticsHistos();
-        //monitoringMainWindow->statisticsFrame->frameCanvas->show();
-        //monitoringMainWindow->statisticsFrame->frameCanvas->getCanvas()->Update();
     }
-    //    else if(monitoringMainWindow->mainTabs->currentIndex()==2)
-    //        monitoringMainWindow->statisticsFrame->frameCanvas->show();
-    //    else if(monitoringMainWindow->mainTabs->currentIndex()==3)
-    //        monitoringMainWindow->statisticsFrame->frameCanvas->show();
-    //    else if(monitoringMainWindow->mainTabs->currentIndex()==4)
-    //        monitoringMainWindow->statisticsFrame->frameCanvas->show();
-    else if(monitoringMainWindow->mainTabs->currentIndex()==5)  {
-        drawApvRawHistos();
-        //monitoringMainWindow->apvRawFrame->frameCanvas->show();
-        //monitoringMainWindow->apvRawFrame->frameCanvas->getCanvas()->Update();
-    }
-    //    else if(monitoringMainWindow->mainTabs->currentIndex()==6)  {
-    //monitoringMainWindow->statisticsFrame->frameCanvas->show();
-    //monitoringMainWindow->statisticsFrame->frameCanvas->getCanvas()->Update();
-    //    }
-    //    else if(monitoringMainWindow->mainTabs->currentIndex()==8)  {
-    //        drawPedestalsHistos();
-    //        //monitoringMainWindow->pedestalsFrame->frameCanvas->show();
-    //        //monitoringMainWindow->pedestalsFrame->frameCanvas->getCanvas()->Update();
-    //    }
-    //activeTabIndex=tabIndex;
 }
 
 void DisplayDrawer::fillHistograms()
 {
-    //    apvRawHistoFiller(); // TODO remove
     readoutHistoFiller();
 }
-
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //++++++++++++++++++++++++++++++++++++++++++++++Histogram Fillers+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
-
 void DisplayDrawer::apvRawHistoFiller()
 {
-    resetApvRawHistos_slot();
-    for(int iLine = 0; iLine<mem_rawData.size(); iLine++)
-    {
-        fill_chip_raw(mem_rawData.at(iLine).first,mem_rawData.at(iLine).second);
-    }
 }
 
 void DisplayDrawer::readoutHistoFiller()
@@ -174,26 +142,6 @@ void DisplayDrawer::readoutHistoFiller()
 
 void DisplayDrawer::fill_chip_raw(QString name, QVector<int> rawVector)
 {
-    for(int i=0; i<monitoringMainWindow->chamberTree->childCount(); i++)
-    {
-        for(int iChip=0; iChip<(monitoringMainWindow->chamberTree->child(i))->childCount();iChip++)    {
-            if((monitoringMainWindow->chamberTree->child(i))->child(iChip)->text(0).compare(name)==0)  {
-                QVariant chipVar = monitoringMainWindow->chamberTree->child(i)->child(iChip)->data(0,Qt::UserRole);
-                CSrsChip *chipvecptr = reinterpret_cast<CSrsChip* >(chipVar.value<void*>());
-                //chipvecptr->getRawHisto()->Reset();
-                for(int iVec=0; iVec<rawVector.size(); iVec++)
-                {
-                    chipvecptr->getRawHisto()->GetXaxis()->SetRangeUser(0,rawVector.size());
-                    chipvecptr->getRawHisto()->GetYaxis()->SetRangeUser(
-                                rawVector.at(std::min_element(rawVector.begin(),rawVector.end())-rawVector.begin())-100,
-                                rawVector.at(std::max_element(rawVector.begin(),rawVector.end())-rawVector.begin())+100);
-                    chipvecptr->getRawHisto()->SetBinContent(iVec,rawVector.at(iVec));
-                }
-
-            }
-
-        }
-    }
 }
 
 
@@ -512,79 +460,15 @@ void DisplayDrawer::drawEventHistos()
 
 void DisplayDrawer::drawApvRawHistos()
 {
-    int canvasIndex =1;
-    for(int i=0; i<monitoringMainWindow->chamberTree->childCount(); i++)
-    {
-        for(int iChip=0; iChip<(monitoringMainWindow->chamberTree->child(i))->childCount();iChip++)    {
-            if((monitoringMainWindow->chamberTree->child(i))->child(iChip)->text(0).contains("APV", Qt::CaseInsensitive)
-                    && (monitoringMainWindow->chamberTree->child(i))->child(iChip)->checkState(0)==2)  {
-                QVariant chipVar = monitoringMainWindow->chamberTree->child(i)->child(iChip)->data(0,Qt::UserRole);
-                CSrsChip *chipvecptr = reinterpret_cast<CSrsChip* >(chipVar.value<void*>());
-                monitoringMainWindow->apvRawFrame->draw1dHistogramInCanvas(chipvecptr->getRawHisto() ,canvasIndex);
-                //std::cout<<chipvecptr->getRawHisto()->GetTitle()<<std::endl;
-                canvasIndex++;
-
-            }
-
-        }
-    }
 
 }
 
 void DisplayDrawer::drawChipStatisticsHistos()
 {
-    //    int canvasIndex =1;
-    //    for(int i=0; i<monitoringMainWindow->chamberTree->childCount(); i++)
-    //    {
-    //        for(int iChip=0; iChip<(monitoringMainWindow->chamberTree->child(i))->childCount();iChip++)    {
-    //            if((monitoringMainWindow->chamberTree->child(i))->child(iChip)->text(0).contains("APV", Qt::CaseInsensitive)
-    //                    && (monitoringMainWindow->chamberTree->child(i))->child(iChip)->checkState(0)==2)  {
-    //                QVariant chipVar = monitoringMainWindow->chamberTree->child(i)->child(iChip)->data(0,Qt::UserRole);
-    //                CSrsChip *chipvecptr = reinterpret_cast<CSrsChip* >(chipVar.value<void*>());
-    //                monitoringMainWindow->apvRawFrame->draw1dHistogramInCanvas(chipvecptr->getRawHisto() ,canvasIndex);
-    //                //std::cout<<chipvecptr->getRawHisto()->GetTitle()<<std::endl;
-    //                canvasIndex++;
-
-    //            }
-
-    //        }
-    //    }
 }
 //not used currently, pedestal drawing is done on pedestalFileReader
 void DisplayDrawer::drawPedestalsHistos()
 {
-    int canvasIndex =1;
-    for(int i=0; i<monitoringMainWindow->chamberTree->childCount(); i++)
-    {
-        for(int iChip=0; iChip<(monitoringMainWindow->chamberTree->child(i))->childCount();iChip++)    {
-            if((monitoringMainWindow->chamberTree->child(i))->child(iChip)->text(0).contains("APV", Qt::CaseInsensitive)
-                    && (monitoringMainWindow->chamberTree->child(i))->child(iChip)->checkState(0)==2)  {
-                QVariant chipVar = monitoringMainWindow->chamberTree->child(i)->child(iChip)->data(0,Qt::UserRole);
-                CSrsChip *chipvecptr = reinterpret_cast<CSrsChip* >(chipVar.value<void*>());
-                chipvecptr->getChipPedestalMean()->SetMarkerStyle(34);
-                chipvecptr->getChipPedestalMean()->GetYaxis()->SetRangeUser(
-                            chipvecptr->getChipPedestalMean()->GetMean(2)-3*chipvecptr->getChipPedestalMean()->GetRMS(2),
-                            chipvecptr->getChipPedestalMean()->GetMean(2)+3*chipvecptr->getChipPedestalMean()->GetRMS(2)
-                            );
-
-                chipvecptr->getChipPedestalSigma()->SetMarkerStyle(28);
-                chipvecptr->getChipPedestalSigma()->GetYaxis()->SetRangeUser(
-                            chipvecptr->getChipPedestalSigma()->GetBinCenter(chipvecptr->getChipPedestalSigma()->FindFirstBinAbove(0.0000001,2))-20,
-                            chipvecptr->getChipPedestalSigma()->GetBinCenter(chipvecptr->getChipPedestalSigma()->FindLastBinAbove(0.000001,2))+20
-                            );
-                //                chipvecptr->getChipPedestalSigma()->GetYaxis()->SetRangeUser(
-                //                            chipvecptr->getChipPedestalSigma()->GetMean(2)-2*chipvecptr->getChipPedestalSigma()->GetRMS(2),
-                //                            chipvecptr->getChipPedestalSigma()->GetMean(2)+2*chipvecptr->getChipPedestalSigma()->GetRMS(2)
-                //                            );
-                monitoringMainWindow->pedestalsFrame->draw2dHistogramInCanvas(chipvecptr->getChipPedestalMean(),canvasIndex);
-                canvasIndex++;
-                monitoringMainWindow->pedestalsFrame->draw2dHistogramInCanvas(chipvecptr->getChipPedestalSigma(),canvasIndex);
-                canvasIndex++;
-            }
-
-        }
-    }
-
 }
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
