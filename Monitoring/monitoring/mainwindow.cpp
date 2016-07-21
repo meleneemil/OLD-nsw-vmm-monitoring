@@ -364,6 +364,7 @@ void MainWindow::setUpFrameEnvironment()
 //    addFrameToTabWidget(mainTabs,apvFrameTab,apvRawFrame,"VMM2 Raw");
     crossTalksFrame = new frame(crossTalksFrameTab);
     crossTalksFrame->frameType ="CrossTalks";
+
 //    addFrameToTabWidget(mainTabs,crossTalksFrameTab,crossTalksFrame,"CrossTalks");
     pedestalsFrame = new frame(pedestalsFrameTab);
     pedestalsFrame->frameType ="Pedestals";
