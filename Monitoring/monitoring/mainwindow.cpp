@@ -339,6 +339,7 @@ void MainWindow::setUpFrameEnvironment()
     daqStatisticsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     QWidget* pedestalsFrameTab = new QWidget();
     pedestalsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    pedestalsFrameTab->setHidden(1);
     QWidget* statisticsChipsFrameTab = new QWidget();
     statisticsChipsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
@@ -351,22 +352,22 @@ void MainWindow::setUpFrameEnvironment()
     addFrameToTabWidget(mainTabs,statisticsFrameTab,statisticsFrame,"Statistics");
     statisticsChipsFrame = new frame(statisticsChipsFrameTab);
     statisticsChipsFrame->frameType ="Chips Statistics";
-    addFrameToTabWidget(mainTabs,statisticsChipsFrameTab,statisticsChipsFrame,"Statistics Chips");
+//    addFrameToTabWidget(mainTabs,statisticsChipsFrameTab,statisticsChipsFrame,"Statistics Chips");
     statisticsAdvancedFrame = new frame(statisticsAdvancedFrameTab);
     statisticsAdvancedFrame->frameType ="Statistics Advanced";
-    addFrameToTabWidget(mainTabs,statisticsAdvancedFrameTab,statisticsAdvancedFrame,"Statistics Advanced");
+//    addFrameToTabWidget(mainTabs,statisticsAdvancedFrameTab,statisticsAdvancedFrame,"Statistics Advanced");
     daqStatisticsFrame = new frame(daqStatisticsFrameTab);
     daqStatisticsFrame->frameType ="DaqStatistics";
-    addFrameToTabWidget(mainTabs,daqStatisticsFrameTab,daqStatisticsFrame,"DAQ Statistics");
+//    addFrameToTabWidget(mainTabs,daqStatisticsFrameTab,daqStatisticsFrame,"DAQ Statistics");
     apvRawFrame = new frame(apvFrameTab);
     apvRawFrame->frameType ="Apv Raw";
-    addFrameToTabWidget(mainTabs,apvFrameTab,apvRawFrame,"VMM2 Raw");
+//    addFrameToTabWidget(mainTabs,apvFrameTab,apvRawFrame,"VMM2 Raw");
     crossTalksFrame = new frame(crossTalksFrameTab);
     crossTalksFrame->frameType ="CrossTalks";
-    addFrameToTabWidget(mainTabs,crossTalksFrameTab,crossTalksFrame,"CrossTalks");
+//    addFrameToTabWidget(mainTabs,crossTalksFrameTab,crossTalksFrame,"CrossTalks");
     pedestalsFrame = new frame(pedestalsFrameTab);
     pedestalsFrame->frameType ="Pedestals";
-    addFrameToTabWidget(mainTabs,pedestalsFrameTab,pedestalsFrame,"Pedestals");
+    //addFrameToTabWidget(mainTabs,pedestalsFrameTab,pedestalsFrame,"Pedestals");
 
 
 }

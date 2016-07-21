@@ -147,13 +147,17 @@ void ShmemReader::handleSharedData()
 {
 
     ShmemNamedMutexType shm_mutex(bipc::open_only, "mmDaqSharedMutex");
-    int time_ = 5;
+    //aikoulou, from 5 to 1
+    int time_ = 1;
     while(!service->stopping()) {
         {
             bptm::ptime timeout(bptm::second_clock::universal_time() + bptm::seconds(time_));
             ShmemNamedScopedLock lock(shm_mutex);
             if(m_shm_condition.timed_wait(lock, timeout)) {
                 read_event_number();
+                //aikoulou: try to unlock perhaps?
+                std::cout << "Trying to unlock"<<std::endl;
+                lock.unlock();
             }
             else {
                 std::cout << "ShmemReader::handleSharedData    timeout from scoped lock" << std::endl;

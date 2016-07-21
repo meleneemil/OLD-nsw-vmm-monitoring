@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <iostream>
+#include <QProcess>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -17,18 +19,24 @@ MainWindow::MainWindow(QWidget *parent) :
     m_testSharedMemTool->initializeSharedMemory();
 
     connect(sendData, SIGNAL(clicked()), this, SLOT(sendDataToSharedMemory()));
+
+
+
+
 }
 
 void MainWindow::sendDataToSharedMemory()
 {
+    //aikoulou trying something else
     m_testSharedMemTool->sendData();
+
 }
 
 MainWindow::~MainWindow()
 {
     boost::interprocess::shared_memory_object::remove("mmDaqSharedMemory");
     boost::interprocess::named_condition::remove("mmDaqSharedCondition");
-    boost::interprocess::named_mutex::remove("sem.mmDaqSharedMutex");
+    boost::interprocess::named_mutex::remove("mmDaqSharedMutex");
 
     delete ui;
 }

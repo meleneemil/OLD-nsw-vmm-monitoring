@@ -42,7 +42,7 @@ QRootCanvas::QRootCanvas(QWidget *parent) :
    //setMinimumSize(parent->width(),parent->height());//original (600,500)
 
    setUpdatesEnabled( kTRUE );
-   setMouseTracking(kTRUE);
+//   setMouseTracking(kTRUE);
 //   setMouseTracking(kFALSE);
 
    //setFocusPolicy( TabFocus );

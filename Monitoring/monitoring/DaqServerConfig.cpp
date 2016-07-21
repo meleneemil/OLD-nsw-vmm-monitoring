@@ -128,20 +128,6 @@ CDaqServerConfig::CDaqServerConfig() :
    connect(settingsWindow,SIGNAL(pedestalsFilePathIs(QString)), this, SLOT(setPedestalsFilePath(QString)));
    connect(settingsWindow,SIGNAL(pedestalsFileNameIs(QString)), this, SLOT(setPedestalsFileName(QString)));
    connect(this, SIGNAL(configWithFile(QString)),this,SLOT(configure(QString)));
-   //TODO REMOVE
-/*
- * To configFileNameIs den ginete pouthena emit
-   connect(mainStartUpWindow,SIGNAL(configFileNameIs(QString)), this, SLOT(setConfigFileName(QString)));
-
-
-   connect(mainStartUpWindow,SIGNAL(configFilePathIs(QString)), this, SLOT(setConfigFilePath(QString)));
-
-
-   connect(settingsWindow,SIGNAL(reconfigFilePathIs(QString)),this,SLOT(setConfigFilePath(QString)));
-   connect(settingsWindow,SIGNAL(pedestalsFilePathIs(QString)), this, SLOT(setPedestalsFilePath(QString)));
-   connect(settingsWindow,SIGNAL(pedestalsFileNameIs(QString)), this, SLOT(setPedestalsFileName(QString)));
-   connect(this, SIGNAL(configWithFile(QString)),this,SLOT(configure(QString)));
- */
 
    connect(this, SIGNAL(sendStartDaq(std::string)), this, SLOT(messageDaq(std::string)));
    connect(this, SIGNAL(sendStopDaq(std::string)), this, SLOT(messageDaq(std::string)));
@@ -152,51 +138,17 @@ CDaqServerConfig::CDaqServerConfig() :
 
 CDaqServerConfig::~CDaqServerConfig()
 {
-   //delete dataFile;
-   //delete memReader;
-   //delete pedestals;
-   //delete settingsWindow;
     delete dataFile;
     dataFile=0;
     delete pedestals;
     pedestals=0;
-//    delete activeTabIndex;
-//    activeTabIndex=0;
-//    delete eventNumber;
-//    eventNumber=0;
-//    delete chamberElements;
-//    chamberElements=0;
-//    delete apvChipsList;
-//    apvChipsList=0;
-//    delete chamberElementsPairs;
-//    chamberElementsPairs=0;
-//    delete m_daq_cfg;
-//    m_daq_cfg=0;
-//    delete m_srs_cfg;
-//    m_srs_cfg=0;
-//    delete m_det_cfg;
-//    m_det_cfg=0;
-//   delete m_daq_config_file;
-//   m_daq_config_file=0;
-//   delete m_srs_config_file;
-//   m_srs_config_file=0;
-//   delete m_det_config_file;
-//   m_det_config_file=0;
-//   delete m_config_path;
-//   m_config_path=0;
-//   delete m_srs_elements;
-//   m_srs_elements=0;
-//   delete m_detector;
-//   m_detector=0;
-//   delete m_apv_zs_threshold;
-//   m_apv_zs_threshold=0;
    delete mainWindow;
    mainWindow=0;
    delete memReader;
    memReader=0;
    //delete drawer;
    //drawer=0;
-   bip::shared_memory_object::remove("mmDaqSharedConfig");
+//   bip::shared_memory_object::remove("mmDaqSharedConfig");
 
 }
 
@@ -328,6 +280,10 @@ void CDaqServerConfig::transmitStartSignal()
         std::cout << "ShmemReader error : " << e.what() << " : mmDaqSharedMemory/mmDaqSharedCondition not found" << std::endl;
         std::cout <<"************************************************************"<<std::endl;
 
+    }
+    catch(...)
+    {
+        std::cout << "UNHANDLED Exception";
     };
 
 }

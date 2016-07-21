@@ -15,7 +15,7 @@ CXX           = g++
 DEFINES       = -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -g -std=c++0x -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I. -I../../../../boost_1_60_0 -I../../../../Qt5.4.2/5.4/gcc_64/include -I../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets -I../../../../Qt5.4.2/5.4/gcc_64/include/QtGui -I../../../../Qt5.4.2/5.4/gcc_64/include/QtCore -I. -I. -I../../../../Qt5.4.2/5.4/gcc_64/mkspecs/linux-g++
+INCPATH       = -I. -I../../../../boost_1_60_0 -I../../../../ROOT534/include -I../../../../Qt5.4.2/5.4/gcc_64/include -I../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets -I../../../../Qt5.4.2/5.4/gcc_64/include/QtGui -I../../../../Qt5.4.2/5.4/gcc_64/include/QtCore -I. -I. -I../../../../Qt5.4.2/5.4/gcc_64/mkspecs/linux-g++
 QMAKE         = /home/ak/Qt5.4.2/5.4/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -33,10 +33,10 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = appWindow1.0.0
-DISTDIR = /home/ak/mmddf/Monitoring_strip_down/appWindow/appWindow/.tmp/appWindow1.0.0
+DISTDIR = /home/ak/GIT/newMon2/appWindow/appWindow/.tmp/appWindow1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/home/ak/Qt5.4.2/5.4/gcc_64 -Wl,-rpath,/home/ak/Qt5.4.2/5.4/gcc_64/lib
-LIBS          = $(SUBLIBS) -L/home/ak/boost_1_60_0/stage/lib -lboost_thread -lboost_filesystem -lboost_system -lrt -L/home/ak/Qt5.4.2/5.4/gcc_64/lib -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
+LIBS          = $(SUBLIBS) -L/home/ak/boost_1_60_0/stage/lib -lboost_thread -lboost_filesystem -lboost_system -L/home/ak/ROOT534/lib -lGraf -lGraf3d -lGpad -lRint -lPostscript -lPhysics -lGui -Llib -lRIO -lNet -lHist -lMatrix -lProof -lThread -lCore -lCint -lMathCore -lTree -lm -ldl -lrt -pthread -rdynamic -g -L/home/ak/Qt5.4.2/5.4/gcc_64/lib -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -1418,7 +1418,7 @@ moc_mainwindow.cpp: ../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMainWindow
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QDir \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMap \
 		mainwindow.h
-	/home/ak/Qt5.4.2/5.4/gcc_64/bin/moc $(DEFINES) -I/home/ak/Qt5.4.2/5.4/gcc_64/mkspecs/linux-g++ -I/home/ak/mmddf/Monitoring_strip_down/appWindow/appWindow -I/home/ak/boost_1_60_0 -I/home/ak/Qt5.4.2/5.4/gcc_64/include -I/home/ak/Qt5.4.2/5.4/gcc_64/include/QtWidgets -I/home/ak/Qt5.4.2/5.4/gcc_64/include/QtGui -I/home/ak/Qt5.4.2/5.4/gcc_64/include/QtCore mainwindow.h -o moc_mainwindow.cpp
+	/home/ak/Qt5.4.2/5.4/gcc_64/bin/moc $(DEFINES) -I/home/ak/Qt5.4.2/5.4/gcc_64/mkspecs/linux-g++ -I/home/ak/GIT/newMon2/appWindow/appWindow -I/home/ak/boost_1_60_0 -I/home/ak/ROOT534/include -I/home/ak/Qt5.4.2/5.4/gcc_64/include -I/home/ak/Qt5.4.2/5.4/gcc_64/include/QtWidgets -I/home/ak/Qt5.4.2/5.4/gcc_64/include/QtGui -I/home/ak/Qt5.4.2/5.4/gcc_64/include/QtCore mainwindow.h -o moc_mainwindow.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -2350,7 +2350,45 @@ main.o: main.cpp mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QFileInfo \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QDir \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMap
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMap \
+		../../../../ROOT534/include/TROOT.h \
+		../../../../ROOT534/include/TDirectory.h \
+		../../../../ROOT534/include/TNamed.h \
+		../../../../ROOT534/include/TObject.h \
+		../../../../ROOT534/include/Rtypes.h \
+		../../../../ROOT534/include/RConfig.h \
+		../../../../ROOT534/include/RVersion.h \
+		../../../../ROOT534/include/DllImport.h \
+		../../../../ROOT534/include/Rtypeinfo.h \
+		../../../../ROOT534/include/snprintf.h \
+		../../../../ROOT534/include/strlcpy.h \
+		../../../../ROOT534/include/TGenericClassInfo.h \
+		../../../../ROOT534/include/TSchemaHelper.h \
+		../../../../ROOT534/include/TStorage.h \
+		../../../../ROOT534/include/TVersionCheck.h \
+		../../../../ROOT534/include/Riosfwd.h \
+		../../../../ROOT534/include/TBuffer.h \
+		../../../../ROOT534/include/TString.h \
+		../../../../ROOT534/include/TMathBase.h \
+		../../../../ROOT534/include/TList.h \
+		../../../../ROOT534/include/TSeqCollection.h \
+		../../../../ROOT534/include/TCollection.h \
+		../../../../ROOT534/include/TIterator.h \
+		../../../../ROOT534/include/TDatime.h \
+		../../../../ROOT534/include/TUUID.h \
+		../../../../ROOT534/include/TRint.h \
+		../../../../ROOT534/include/TApplication.h \
+		../../../../ROOT534/include/TQObject.h \
+		../../../../ROOT534/include/TQClass.h \
+		../../../../ROOT534/include/TClass.h \
+		../../../../ROOT534/include/TDictionary.h \
+		../../../../ROOT534/include/Property.h \
+		../../../../ROOT534/include/ESTLType.h \
+		../../../../ROOT534/include/TObjArray.h \
+		../../../../ROOT534/include/TObjString.h \
+		../../../../ROOT534/include/ThreadLocalStorage.h \
+		../../../../ROOT534/include/RConfigure.h \
+		../../../../ROOT534/include/TApplicationImp.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 mainwindow.o: mainwindow.cpp mainwindow.h \
