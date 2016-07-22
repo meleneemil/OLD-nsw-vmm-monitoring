@@ -58,11 +58,8 @@ ShmemReader::ShmemReader(std::vector<uint32_t> apvList, std::vector<std::string>
     m_shm_condition(bipc::open_only, "mmDaqSharedCondition"), terminate(false),
     readMutex(), dataLine(), apvChipsList(), apvChipIdList(), configuredChamberElements(chamberElements), configuredChipvec(chipvec), isProcessing(false), stripDataEvent(0), rawEvent(0), realEvent(false)
 {
-    //aikoulou: debug
-    //    std::cout << "call ShmemReader constractor" << std::endl;
     eventDisplayed = 0; // angelos
     if(m_shm_manager.check_sanity())    {
-        //terminate=false;
         fillApvChipsList(apvList,apvChips);
         //        connect_shared_memory();		ANGELOS
         mainDrawer = new DisplayDrawer(mainWindow);
@@ -72,12 +69,10 @@ ShmemReader::ShmemReader(std::vector<uint32_t> apvList, std::vector<std::string>
         qRegisterMetaType< QVector<QString> >("QVector<QString>");
         qRegisterMetaType< QVector<std::pair<QString, QVector<int> > > >("QVector<std::pair<QString, QVector<int> > >");
 
-
         //connectors for passing data from shared memory to local copies
         connect(this,SIGNAL(readEvent()),this,SLOT(read_event_number()));
         connect(this,SIGNAL(readRaw()),this,SLOT(read_raw_data()));
         connect(this,SIGNAL(readStrip()),this,SLOT(read_event_strips()));
-
 
         //connectors for controlling filling and drawing of the histograms from the displayDrawer
         connect(this,SIGNAL(runNumberIs(QString)),
@@ -90,7 +85,8 @@ ShmemReader::ShmemReader(std::vector<uint32_t> apvList, std::vector<std::string>
 
         online::display::CAsioService::MainLoopFunction f = boost::bind(&ShmemReader::handleSharedData, this);
         service->post(f);
-    }else
+    }
+    else
         std::cout<<"Shared Memory not found.../n mmDaq-server probably not running"<<std::endl;
 }
 
@@ -100,12 +96,6 @@ ShmemReader::~ShmemReader()
     service->stop();
     delete mainDrawer;
     mainDrawer = 0;
-    //delete readMutex;
-    //readMutex=0;
-    //    delete m_shm_manager;
-    //    m_shm_manager = 0;
-    //    delete m_shm_condition;
-    //    m_shm_condition=0;
 }
 
 void ShmemReader::connect_shared_memory()
@@ -168,69 +158,12 @@ void ShmemReader::handleSharedData()
         if(realEvent && stripDataEvent.size()!=0) {
             emit fillHistograms(rawEvent, stripDataEvent, eventDisplayed);
             emit drawHistograms();
-	    //aikoulou 8-6-2016
-	    stripDataEvent.clear();
+            //aikoulou 8-6-2016
+            stripDataEvent.clear();
         }
     }//while
 
 
-/* ORIGINAL
-    std::cout << "MONITORING RUNNING...Waiting for data on shared memory." << std::endl;
-
-    //    ShmemNamedMutexType shm_mutex(bipc::open_only, "mmDaqSharedMutex");
-
-    //new
-    //boost::interprocess::scoped_lock<bipc::interprocess_mutex> ipc_lock(m_shm_shared_data->mutex);
-
-    int timeInt=50;
-    while(!service->stopping() ) //&& m_shm_shared_data)
-    {
-        {//lock
-            //            ShmemNamedScopedLock lock(shm_mutex, bipc::defer_lock_type());
-            //            if (!lock.try_lock()) {
-            //               std::cout << "mmDaqSharedMutex failed lock" << std::endl;
-            //               sleep(1);
-            //               continue;
-            //            }
-            //            bptm::ptime timeout(bptm::second_clock::universal_time() + bptm::seconds(timeInt));
-            //lock
-            // ShmemNamedScopedLock lock(shm_mutex);
-            //new
-            //            if(!m_shm_shared_data->flag_new_event_data){
-            //                     m_shm_shared_data->cond_event.wait(ipc_lock);
-            //                     if(!isProcessing)   {
-            //                                         read_event_number();
-            //                                    }
-            //            }
-
-            //            if(m_shm_condition.timed_wait(lock, timeout))   {
-            usleep(1000*1000);
-            //                std::cout << "notified be daq" <<std::endl;
-            if(!isProcessing)   {
-                read_event_number();
-                //                }
-            }
-            //            else    {
-            //                //timeout
-            //                std::cout << "************************************************" <<std::endl;
-            //                std::cout << "timeout from shmemNamedScopedLock" <<std::endl;
-            //                std::cout << "no new data" <<std::endl;
-            //                std::cout << "************************************************" <<std::endl;
-            //                timeInt++;
-            //                continue;
-            //            }
-        }//unlock
-
-        if(realEvent && stripDataEvent.size()!=0) { // && rawEventData.size()!=0
-            std::cout<<"Emitting fill signal from ShmemReader"<<std::endl;
-            emit fillHistograms(rawEvent, stripDataEvent, eventDisplayed);
-            emit drawHistograms();
-            //aikoulou
-//            rawEvent.clear();
-            stripDataEvent.clear();
-        }
-    }
-*/
 }
 
 void ShmemReader::read_event_number()
@@ -240,23 +173,14 @@ void ShmemReader::read_event_number()
     qDebug(">>> read_event_number");
     res = m_shm_manager.find<uint64_t> ("mmDaqSharedEventNumber");
 
-    //    int dat_size = m_shm_manager.get_size();
-    //    int real_size = m_shm_manager.get_free_memory();
-    //   int user_size =  m_shm_manager.get_user_size();
-
-    //   qDebug("MEMORY SIZE = %i",dat_size);
-    //   qDebug("real_size SIZE = %i",real_size);
-    //   qDebug("user_size SIZE = %i",user_size);
-
-
 
     //std::cout << "RES int = " << res.second << std::endl;
-//    qDebug(">>> going to grab event No");
+    //    qDebug(">>> going to grab event No");
     realEvent=false;
     if(res.second == 1)
     {
         //std::cout << "found : evid = " << *res.first << std::endl;
-//        qDebug(">>> Here is event number");
+        //        qDebug(">>> Here is event number");
         if(eventDisplayed!=eventDisplayed_lastdisplayed)
         {
             std::cout << "eventDisplayed -->" << eventDisplayed << "<--" << std::endl;    //angelos
@@ -276,9 +200,6 @@ void ShmemReader::read_event_number()
             //emit drawHistograms();
         }
     }
-    else {
-        // std::cout << "ERR: mmDaqSharedEventNumber count = " << res.second << std::endl;
-    }
 
 }
 
@@ -296,23 +217,15 @@ void ShmemReader::read_event_strips()
     {
         stripDataEvent.clear();
         ShmemCharStringVector* vec = res_str.first;
-        //std::cout<<"number of strips with data : "<<vec->size()<<std::endl;
         std::cout<<"Strip data vector size is "<<vec->size()<<std::endl;
         for (size_t ii = 0; ii < vec->size(); ++ii) {
-            //std::cout << "vec : " << vec->at(ii) << std::endl;
             line_str = vec->at(ii).c_str();
             qDebug("DATA RCVD >>++++++++++++++++++++>>>");
             std::cout<<"+++++++++++"<<line_str<<"+++++++++++"<<std::endl;
             stripDataEvent.push_back(line_str);
             qDebug("DATA RCVD >>>+++++++++++++++++++>>");
-//            qDebug(QString(line_str));
-            //handleBufferedEvent(QString(line_str.c_str()));
         }
         vec->erase (vec->begin(), vec->end());
-        //        m_shm_manager.destroy<ShmemCharStringVector>("mmDaqSharedEventData"); //TODO remove data after read
-        //       readoutHistoFiller();
-        //       if(vec->size()!=0) emit drawHistograms();
-        //emit runReadoutHistoFiller();
 
     }
 
@@ -343,18 +256,13 @@ void ShmemReader::read_raw_data()
     if (res.second != 1) {
         std::cout << "ERR: mmDaqSharedRawData resvec.second=" << res.second << std::endl;
     }
-    //std::cout << "ShmemReader::read_raw_data() map size = : " << res.first->size() << std::endl;
     ShmemRawMap::iterator it = res.first->begin();
     std::cout<<"Raw data vector size is "<<res.first->size()<<std::endl;
     for (; it != res.first->end(); ++it) {
         std::pair<QString, QVector< int > > rawData;
         std::string apvChipName;
         QVector<int> rawVector;
-        //rawVector.fromStdVector(it->second);
-        //std::cout << "name: " << CSrsChipId(it->first).get_string() << std::endl;
-        //std::cout << "raw : " << it->second.size() << std::endl;
         apvChipName = getNameFromChipId(it->first);
-        //std::cout<<apvChipName<<std::endl;
 
         if(!apvChipName.empty()) {
             for(size_t ii = 0; ii < it->second.size(); ++ii)    {
@@ -367,21 +275,14 @@ void ShmemReader::read_raw_data()
             rawData.second=rawVector;
             rawEvent.push_back(rawData);
         }
-        //        if(!apvChipName.empty() && rawVector.size()>1)
-        //            emit fillApvRaw(QString(apvChipName.c_str()),rawVector);
-        //read_chip_raw(QString(apvChipName.c_str()),rawVector);
     }
 
 }
 
 std::string ShmemReader::getNameFromChipId(uint32_t chipId)
 {
-    //std::cout<<"Size of name List: "<<apvChipsList.size()<<std::endl;
-    //std::cout<<"Size of id list: "<<apvChipIdList.size()<<std::endl;
-    //return 0;
     for(int iList=0; iList<apvChipsList.size(); ++iList)
     {
-        //std::cout<<chipId<<" : "<<apvChipIdList.at(iList)<<std::endl;
         if(apvChipIdList.at(iList)==chipId)
             return apvChipsList.at(iList);
     }

@@ -125,8 +125,6 @@ public:
     QTabWidget *EventDisplay;
     QTabWidget *Statistics;
     QTabWidget *StatisticsAdvanced;
-    QTabWidget *ApvRaw;
-//    QTabWidget *CrossTalks;
     QTabWidget *DaqStatistics;
     QTabWidget *StatisticsChips;
 
