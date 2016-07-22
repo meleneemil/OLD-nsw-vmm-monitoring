@@ -29,13 +29,9 @@ namespace online {
       struct SApvPedestal {
          ///local channel number
          unsigned channel;
-         /// mean value of pedestal
          double mean;
-         ///standard deviation of pedestal
          double stddev;
          double sigma;
-         
-         ///running mean for monitoring of signal vs pedestal (check for shifts of pedestal)
          size_t counter;
          double running_mean;
          SApvPedestal() :  channel(0), mean(0.0), stddev(0.0), sigma(0.0){}
@@ -49,22 +45,7 @@ namespace online {
             sigma    += ( (curr.mean - prevmean) * (curr.mean - mean ) );
             
          }
-         
-         /*
-         //calculate for channel icurr_ch->first
-         double curr_mean  = icurr_ch->second[0];
-         double curr_stdev = icurr_ch->second[1];
-         //double curr_sigma = icurr_ch->second[2];
-         
-         double prevmean  = pedestal_map[icurr_ch->first][0];
-         double prevstdev = pedestal_map[icurr_ch->first][1];
-         
-         pedestal_map[icurr_ch->first][0] += (curr_mean - prevmean) / (m_event_counter_pedestals + 1); //mean of mean
-         pedestal_map[icurr_ch->first][1] += (curr_stdev - prevstdev) / (m_event_counter_pedestals + 1); //mean of stdev
-         pedestal_map[icurr_ch->first][2] += ( (curr_mean - prevmean) * (curr_mean - pedestal_map[icurr_ch->first][0] ) ); //sigma
-         
-            */
-         
+
          
          class EqualChannel : public std::unary_function<SApvPedestal, bool> {
             short chan_;
@@ -105,24 +86,12 @@ namespace online {
          virtual bool check_equipment_key(uint32_t eqkey); 
          
          virtual void process_event(SrsChannelList& channels);
-         
-         virtual void load_pedestal_file();
-         
+
          /// process udp data -raw format
          void process_event_raw(SrsChannelList& channels);
          
          /// process udp data - zero suppression on FEC format
          void process_event_zs(SrsChannelList& channels);
-         
-         
-         //pedestals - common filename
-         static std::string ApvPedestalFileName;
-         static void set_pedestal_filename(const std::string& filename);
-         
-
-         SApvPedestal get_pedestal(const uint32_t& channel_id) const;
-         void set_pedestal(const uint32_t& channel_id, const std::pair<double, double>&);
-         void clear_pedestals();
 
          
          //apv specific
@@ -140,20 +109,11 @@ namespace online {
 
          void set_peak_mode(bool enable);
          bool get_peak_mode() const;
-//         virtual CRootTreeFiller* get_root_tree_filler(CRootWriter* writer);
          
       protected:
          void correct_apv_crosstalk(SrsChannelList& channels);
          
-         
-         /// creates and fills tree for raw apv25 data, one tree for all apv25 chips
-//         static CRootTreeFillerApvRaw* m_root_tree_filler_apvraw;
-         
-         //apv specific
-//         ApvPedestalVect m_pedestals;
-         ApvPedestalMap m_pedestals_map;
-         
-         /// zero suppressed data can be in raw(vector of adc q) on in peak mode (q,t only)
+
          bool m_data_in_peak_mode;
       };
    }

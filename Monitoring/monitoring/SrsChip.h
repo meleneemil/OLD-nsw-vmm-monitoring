@@ -91,7 +91,6 @@ namespace online {
             virtual void process_event( SrsChannelList& ) { };
             /// get correct root tree filler for the chip type
 
-            virtual void load_pedestal_file() = 0;
 
 
 
@@ -104,7 +103,6 @@ namespace online {
             std::string to_string() const { return m_chip_id.get_string(); }
 
             void calculate_channel_qt(SrsChannelList& channels);
-            void insert_eventids_to_eb(boost::shared_ptr<CEventBuilderInputBuffer> eb_buffer);
 
             size_t total_number_channels();
 
@@ -126,8 +124,6 @@ namespace online {
       TH1D *getChipStatistcsHisto();
       TH1D *getChipChargeStatistcsHisto();
       TH1D *getChipTimeStatistcsHisto();
-//      TH2D* getChipPedestalMean();
-//      TH2D* getChipPedestalSigma();
 
 
       std::vector <TH1D*> chip1dHistos;
@@ -160,8 +156,6 @@ namespace online {
       TH1D* m_chip_charge_statistics_histo;
       TH1D* m_chip_time_statistics_histo;
 
-//      TH2D *m_chip_pedestal_mean;
-//      TH2D *m_chip_pedestal_sigma;
 
       std::vector <TH1D*> chipStatisticsHistos;
       std::vector <TH2D*> chipEventHistos;

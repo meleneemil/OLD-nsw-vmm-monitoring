@@ -38,44 +38,33 @@ m_chip_raw_histo(new TH1D(name.c_str(),name.c_str(),4000,0,4000)),
   m_chip_statistics_histo(new TH1D(std::string("Statistics_"+name).c_str(),std::string("Statistics_"+name).c_str(),620,0,620)),
   m_chip_charge_statistics_histo(new TH1D(std::string("Charge_"+name).c_str(),std::string("Charge_"+name).c_str(),400,0,2000)),
   m_chip_time_statistics_histo(new TH1D(std::string("Time_"+name).c_str(),std::string("Time_"+name).c_str(),400,0,800))
-//  m_chip_pedestal_mean(new TH2D(std::string("PedMean_"+name).c_str(),std::string("PedMean_"+name).c_str(),128,1,129,350,0,3500)),
-//  m_chip_pedestal_sigma(new TH2D(std::string("PedSigma_"+name).c_str(),std::string("PedSigma_"+name).c_str(),128,1,129,300,0,3000))
 {
 
 
-    //m_chip_raw_histo = new TH1D(name.c_str(),name.c_str(),4000,0,4000);
     m_chip_raw_histo->SetLineColor(kGreen+4);
-    //m_chip_raw_histo->SetFillColor(38);
     m_chip_raw_histo->SetTitleSize(0.04);
-    //m_chip_raw_histo->GetXaxis()->SetLabelSize(0.06);
 
-//    m_chip_statistics_histo = new TH1D(histoName,histoName,640,0,620);
     m_chip_statistics_histo->SetLineColor(38);
     m_chip_statistics_histo->SetFillColor(38);
     m_chip_statistics_histo->SetTitleSize(0.04);
     m_chip_statistics_histo->GetXaxis()->SetLabelSize(0.06);
 
-//    m_chip_charge_statistics_histo = new TH1D(chargehistoName,chargehistoName,300,0,3000);
     m_chip_charge_statistics_histo->SetLineColor(46);
     m_chip_charge_statistics_histo->SetFillColor(46);
     m_chip_charge_statistics_histo->GetXaxis()->SetLabelSize(0.06);
     m_chip_charge_statistics_histo->SetTitleSize(0.04);
 
-//    m_chip_time_statistics_histo = new TH1D(timehistoName,timehistoName,30,0,600);
     m_chip_time_statistics_histo->SetLineColor(8);
     m_chip_time_statistics_histo->SetFillColor(8);
     m_chip_time_statistics_histo->GetXaxis()->SetLabelSize(0.06);
     m_chip_time_statistics_histo->SetTitleSize(0.04);
 
-    // std::cout << "new chip " << m_chip_id.get_string() << " "  << name << std::endl;
 
     chip1dHistos.push_back(m_chip_statistics_histo);
     chip1dHistos.push_back(m_chip_charge_statistics_histo);
     chip1dHistos.push_back(m_chip_time_statistics_histo);
     chip1dHistos.push_back(m_chip_raw_histo);
 
-//    chip2dHistos.push_back(m_chip_pedestal_mean);
-//    chip2dHistos.push_back(m_chip_pedestal_sigma);
 }
 
 CSrsChip::~CSrsChip()
@@ -90,7 +79,6 @@ std::ostream& online::display::operator<< (std::ostream & out, const CSrsChip & 
    if (!chip.m_event_channels_flatmap.empty()) {
       SrsEventChannelsPtr evchans = chip.m_event_channels_flatmap.begin()->second;
       Q_FOREACH(SrsChannelPtr chan, evchans->channels()) {
-         //out << chip.m_chip_id.chip_id() << *chan;
       }
    }
    return out;
@@ -142,13 +130,6 @@ void CSrsChip::move_received_event_channels(const CSrsEventId& srs_event_id, Srs
    }
 
 
-//   SrsEventChannelsPtr ecp = m_event_channels_flatmap[event_id];
-//   if(!ecp) {
-//      ecp.reset(new CSrsEventChannels(srs_event_id, channels));
-//   }
-//   else {
-//      ecp->move_event_channels(channels);
-//   }
    evtfound->second->process(shared_from_this());
 }
 
@@ -161,60 +142,6 @@ void CSrsChip::calculate_channel_qt(SrsChannelList& channels)
 {
    std::for_each(channels.begin(), channels.end(), boost::bind(&CSrsChannel::calculate_qt, _1));
 }
-
-
-void CSrsChip::insert_eventids_to_eb( boost::shared_ptr<CEventBuilderInputBuffer> eb_buffer)
-{
-//   typedef std::pair<EBEventIdType, SrsEventChannelsPtr> SrsEventMapPair;
-
-//   boost::mutex::scoped_lock lock(m_chip_mutex);
-
-//   if (m_event_channels_flatmap.empty())
-//      return;
-
-
-//   for (SrsEventChannelsMap::const_iterator it = m_event_channels_flatmap.begin();
-//        it != m_event_channels_flatmap.end(); ++it) {
-////      std::cout << "CSrsChip::insert_eventids_to_eb() evid = " << it->first  << "chans = " << it->second->size() << std::endl;
-//      eb_buffer->insert_eventid(it->first);
-//   }
-
-////   Q_FOREACH(const SrsEventMapPair p, m_event_channels_flatmap) {
-////      eb_buffer->insert_eventid(p.first);
-////   }
-
-}
-
-
-//void CSrsChip::move_data_to_eb(EBEventIdType event_id,  boost::shared_ptr<CEventBuilderInputBuffer> eb_buffer)
-//{
-//
-//   SrsEventChannelsPtr ecp = m_event_channels_flatmap[event_id];
-//   if(ecp) {
-//      ecp->move_to_eb(eb_buffer);
-//   }
-//   boost::mutex::scoped_lock(m_chip_mutex);
-//   m_event_channels_flatmap.erase(event_id);
-//}
-
-
-/**
-// copy event data (once) and channels' data to root tree filler
-// */
-//void CSrsChip::prefill(const EBEventIdType& evid, CRootWriter* writer)
-//{
-////   std::cout << " CSrsChip::prefill() chip " << name() << " for evid =" << evid << std::endl;
-//   boost::mutex::scoped_lock lock(m_chip_mutex);
-//   typedef std::pair<EBEventIdType, SrsEventChannelsPtr> SrsEventChannelsMapType;
-//   SrsEventChannelsMap::iterator evtfound = std::find_if(m_event_channels_flatmap.begin(),
-//                                                         m_event_channels_flatmap.end(),
-//                                                         FirstComparator<SrsEventChannelsMapType>(evid));
-//   if (evtfound != m_event_channels_flatmap.end()) {
-//      CRootTreeFiller* filler = get_root_tree_filler(writer); // get correct filler for chip type
-//      evtfound->second->prefill(filler, m_connector);
-//      m_event_channels_flatmap.erase(evid);
-//   }
-//}
 
 
 
@@ -235,7 +162,6 @@ size_t CSrsChip::total_number_channels()
 void CSrsChip::connect_to_connector(boost::shared_ptr<CDetConnector> conn)
 {
 
-//   m_connector = boost::dynamic_pointer_cast<CDetConnector>(conn);
    m_connector = conn;
 
    std::cout << "CSrsChip::connect_to_connector()  chip " << name()
@@ -284,17 +210,6 @@ TH1D *CSrsChip::getChipTimeStatistcsHisto()
 }
 
 
-//TH2D* CSrsChip::getChipPedestalMean()
-//{
-//    return m_chip_pedestal_mean;
-//}
-
-//TH2D* CSrsChip::getChipPedestalSigma()
-//{
-//    return m_chip_pedestal_sigma;
-//}
-
-
 
 void CSrsChip::fill_histogram(std::vector <float> *fill_values_x, std::vector <float> *fill_values_y)
 {
@@ -304,8 +219,4 @@ void CSrsChip::fill_histogram(std::vector <float> *fill_values_x, std::vector <f
     }
 }
 
-//void CSrsChip::clear_histograms()
-//{
-//    m_chip_raw_histo->Reset();
-//}
 

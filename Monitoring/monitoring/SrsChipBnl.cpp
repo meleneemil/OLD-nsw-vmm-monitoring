@@ -16,7 +16,6 @@
 
 using namespace online::display;
 
-std::string CSrsChipBnl::BnlPedestalFileName = "";
 
 CSrsChipBnl::CSrsChipBnl(const CSrsChipId& chip_id, const std::string& name) :
 CSrsChip(chip_id, name)
@@ -36,12 +35,3 @@ bool CSrsChipBnl::check_equipment_key(uint32_t eqkey)
    || SRSEqHdrKeys::SRSEquipmentBnlMiniDaqCard == eqkey;
 }
 
-void CSrsChipBnl::set_pedestal_filename(const std::string& filename)
-{
-   CSrsChipBnl::BnlPedestalFileName = filename;
-}
-
-
-void CSrsChipBnl::load_pedestal_file()
-{
-}
