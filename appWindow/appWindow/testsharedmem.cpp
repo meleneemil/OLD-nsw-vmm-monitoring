@@ -5,6 +5,7 @@
 #include <string>
 #include "boost/date_time/posix_time/posix_time.hpp"
 
+int waiting_time = 10000;
 
 testSharedMemTool::testSharedMemTool() :
     previous_size(0),
@@ -59,17 +60,19 @@ void testSharedMemTool::sendData()
     //    m_shm_condition->notify_all();
 
     int n = 0;
-    while(n<10000) {
+    while(n<100000) {
 
-        usleep(100);
+//        if(n%1000==0)
+//        std::cout << "Done: "<< 1000/100000*100 <<"%\n";
+        usleep(2000-rand()%1900);
 
         try {
-            std::cout << "in try" << std::endl;
+//            std::cout << "in try" << std::endl;
 
             boost::posix_time::ptime timeout(boost::posix_time::second_clock::universal_time() + boost::posix_time::seconds(5));
             //  if(m_shm_condition->timed_wait(lock, timeout)) {
             if(!lock.timed_lock(timeout)) {
-                std::cout << " *** DATAWRITER : LOCK TIMED OUT *** " << std::endl;
+//                std::cout << " *** DATAWRITER : LOCK TIMED OUT *** " << std::endl;
 
                 //aikoulou: nah, doesnt work
 //                std::cout << " *** TRYING TO FORCE UNLOCK *** " << std::endl;
@@ -77,7 +80,7 @@ void testSharedMemTool::sendData()
             }
             else
             {
-                std::cout << "in else" << std::endl;
+//                std::cout << "in else" << std::endl;
                 sendEventNumber();
 
                 sendEventInfo();
@@ -88,9 +91,9 @@ void testSharedMemTool::sendData()
             //    m_shm_condition->wait(lock);
 
             if(lock) {
-                std::cout << " *** DATAWRITER : unlocking *** " << std::endl;
+//                std::cout << " *** DATAWRITER : unlocking *** " << std::endl;
                 lock.unlock();
-                std::cout << " *** DATAWRITER : SHM_MUTEX UNLCOKED *** " << std::endl;
+//                std::cout << " *** DATAWRITER : SHM_MUTEX UNLCOKED *** " << std::endl;
             }
         } // try
         catch(boost::interprocess::interprocess_exception &e) {
@@ -140,9 +143,11 @@ void testSharedMemTool::sendEventInfo()
     // std::cout << "testSharedMemTool::sendEventInfo    sending event " << n << std::endl;
     ShmemCharString local_string(m_shm_manager->get_allocator<ShmemCharAllocator>());
     if(previous_size >= m_shm_eventinfo_vector->size())
-        std::cout << "!! SHMEM VECTOR SIZE REDUCED !!" << std::endl;
+//        std::cout << "!! SHMEM VECTOR SIZE REDUCED !!" << std::endl;
     previous_size = m_shm_eventinfo_vector->size();
-    std::cout << " ********** SHMEM VECTOR SIZE: " << m_shm_eventinfo_vector->size() << " ********* " << std::endl;
+
+//    if(m_shm_eventinfo_vector->size()>199)
+//        std::cout << " ********** SHMEM VECTOR SIZE: " << m_shm_eventinfo_vector->size() << " ********* " << std::endl;
 
     //214     //    int dat_size = m_shm_manager.get_size();
     //215     //    int real_size = m_shm_manager.get_free_memory();
@@ -153,7 +158,7 @@ void testSharedMemTool::sendEventInfo()
     //220     //   qDebug("user_size SIZE = %i",user_size);
 
 
-    if(m_shm_eventinfo_vector->size() > 1000)
+    if(m_shm_eventinfo_vector->size() > 200)
     {
         //don't send more to memory, because it fills it up, so we wait until the memory is read=cleared to send again.
 

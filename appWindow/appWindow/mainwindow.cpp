@@ -19,17 +19,11 @@ MainWindow::MainWindow(QWidget *parent) :
     m_testSharedMemTool->initializeSharedMemory();
 
     connect(sendData, SIGNAL(clicked()), this, SLOT(sendDataToSharedMemory()));
-
-
-
-
 }
 
 void MainWindow::sendDataToSharedMemory()
 {
-    //aikoulou trying something else
     m_testSharedMemTool->sendData();
-
 }
 
 MainWindow::~MainWindow()
