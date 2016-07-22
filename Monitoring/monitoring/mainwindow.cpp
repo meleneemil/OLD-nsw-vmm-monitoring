@@ -37,8 +37,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow),
     panelLayout(0), loadFile(0), browseFile(0),
     buttonLayout(0), startButton(0), stopButton(0), pauseButton(0), configButton(0), settingsGeneral(0),
-    mainTabs(), rawTabs(), statisticsTabs(), rawChambers(), rawElectronics(), statisticsChambers(), statisticsElectronics(),
-    EventDisplay(0), Statistics(0), StatisticsAdvanced(0), ApvRaw(0), CrossTalks(0), DaqStatistics(0),
+    mainTabs(), /*rawTabs(),*/ statisticsTabs(), rawChambers(), rawElectronics(), statisticsChambers(), statisticsElectronics(),
+    EventDisplay(0), Statistics(0), StatisticsAdvanced(0), ApvRaw(0), /*CrossTalks(0), */DaqStatistics(0),
     mainTreeWidget(0), SrsTree(0), chamberTree(0),
     rawFrame(), eventDisplayFrame_rawChambers(), chipsFrame_rawElectronics(),
     beamProfileFrame_statisticsChambers(), chargeFrame_statisticsChambers(), timeFrame_statisticsChambers(),chipsFrame_statisticsElectronics()
@@ -249,14 +249,14 @@ void MainWindow::setUpTabEnvironment()
     Statistics = new QTabWidget();
     StatisticsAdvanced = new QTabWidget();
     ApvRaw = new QTabWidget();
-    CrossTalks = new QTabWidget();
+//    CrossTalks = new QTabWidget();
     DaqStatistics = new QTabWidget();
     StatisticsChips = new QTabWidget();
 
     Statistics->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     StatisticsAdvanced->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     ApvRaw->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    CrossTalks->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+//    CrossTalks->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     DaqStatistics->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     StatisticsChips->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     mainTabs->setCurrentIndex(0);
@@ -306,8 +306,8 @@ void MainWindow::setUpFrameEnvironment()
     statisticsAdvancedFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     QWidget* apvFrameTab = new QWidget();
     apvFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    QWidget* crossTalksFrameTab = new QWidget();
-    crossTalksFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+//    QWidget* crossTalksFrameTab = new QWidget();
+//    crossTalksFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     QWidget* daqStatisticsFrameTab = new QWidget();
     daqStatisticsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     QWidget* statisticsChipsFrameTab = new QWidget();
@@ -328,8 +328,8 @@ void MainWindow::setUpFrameEnvironment()
     daqStatisticsFrame->frameType ="DaqStatistics";
     apvRawFrame = new frame(apvFrameTab);
     apvRawFrame->frameType ="Apv Raw";
-    crossTalksFrame = new frame(crossTalksFrameTab);
-    crossTalksFrame->frameType ="CrossTalks";
+//    crossTalksFrame = new frame(crossTalksFrameTab);
+//    crossTalksFrame->frameType ="CrossTalks";
 
 
 }

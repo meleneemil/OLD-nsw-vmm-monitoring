@@ -109,7 +109,7 @@ public:
 //tab widgets for graphics
     //main tab widget
     QTabWidget *mainTabs;
-    QTabWidget *rawTabs;
+//    QTabWidget *rawTabs;
     QTabWidget *statisticsTabs;
 
     //tab widget for layer information
@@ -126,7 +126,7 @@ public:
     QTabWidget *Statistics;
     QTabWidget *StatisticsAdvanced;
     QTabWidget *ApvRaw;
-    QTabWidget *CrossTalks;
+//    QTabWidget *CrossTalks;
     QTabWidget *DaqStatistics;
     QTabWidget *StatisticsChips;
 
@@ -159,7 +159,7 @@ public:
     frame* statisticsFrame;
     frame* statisticsAdvancedFrame;
     frame* apvRawFrame;
-    frame* crossTalksFrame;
+//    frame* crossTalksFrame;
     frame* daqStatisticsFrame;
     frame* statisticsChipsFrame;
 

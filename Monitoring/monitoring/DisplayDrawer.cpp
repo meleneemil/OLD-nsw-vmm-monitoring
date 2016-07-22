@@ -45,7 +45,7 @@ DisplayDrawer::DisplayDrawer(
         MainWindow *mainWindow
         ) :
     service(new online::display::CAsioService(1)), monitoringMainWindow(), drawCondition(), drawMutex(),
-    mem_rawData(0), mem_stripData(0), mem_eventNumber(0), mem_eventNumber_str()
+    /*mem_rawData(0), */mem_stripData(0), mem_eventNumber(0), mem_eventNumber_str()
 {
     online::display::CAsioService::MainLoopFunction f = boost::bind(&DisplayDrawer::drawSharedData, this);
     //    if(false)//aikoulou debug
@@ -66,7 +66,7 @@ DisplayDrawer::~DisplayDrawer()
 
 void DisplayDrawer::NotifyFill(QVector<std::pair<QString, QVector<int> > > rawData, std::vector <std::string> stripData, int eventNumber)
 {
-    mem_rawData = rawData; //na figoun ta raw TODO
+//    mem_rawData = rawData; //na figoun ta raw TODO
 
 
     //aikoulou+ntekas: adjust to slot connection.
@@ -124,9 +124,6 @@ void DisplayDrawer::fillHistograms()
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //++++++++++++++++++++++++++++++++++++++++++++++Histogram Fillers+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-void DisplayDrawer::apvRawHistoFiller()
-{
-}
 
 void DisplayDrawer::readoutHistoFiller()
 {
@@ -136,10 +133,6 @@ void DisplayDrawer::readoutHistoFiller()
     {
         handleBufferedEvent(mem_stripData.at(iLine));
     }
-}
-
-void DisplayDrawer::fill_chip_raw(QString name, QVector<int> rawVector)
-{
 }
 
 
@@ -442,14 +435,6 @@ void DisplayDrawer::drawEventHistos()
 }
 
 
-//void DisplayDrawer::drawApvRawHistos()
-//{
-
-//}
-
-//void DisplayDrawer::drawChipStatisticsHistos()
-//{
-//}
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++Histogram Reseters+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -458,7 +443,6 @@ void DisplayDrawer::reset_slot()
     resetEventHistos_slot();
     //aikoulou: trying to make the plots resizable when stopped
     //    resetStatisticsHistos_slot();
-    resetApvRawHistos_slot();
 }
 
 void DisplayDrawer::resetStatisticsHistos_slot()
@@ -505,21 +489,6 @@ void DisplayDrawer::resetEventHistos_slot()
         }
     }
 }
-
-void DisplayDrawer::resetApvRawHistos_slot()
-{
-    for(int i=0; i<monitoringMainWindow->chamberTree->childCount(); i++)
-    {
-        for(int iChip=0; iChip<(monitoringMainWindow->chamberTree->child(i))->childCount();iChip++)    {
-            QVariant chipVar = monitoringMainWindow->chamberTree->child(i)->child(iChip)->data(0,Qt::UserRole);
-            CSrsChip *chipvecptr = reinterpret_cast<CSrsChip* >(chipVar.value<void*>());
-            chipvecptr->getRawHisto()->Reset();
-        }
-    }
-
-}
-
-
 
 
 

@@ -129,7 +129,6 @@ namespace online {
       std::vector <TH1D*> chip1dHistos;
       std::vector <TH2D*> chip2dHistos;
 
-      void fill_histogram(std::vector <float> *fill_values_x, std::vector <float> *fill_values_y);
       void clear_histogram();
 
 

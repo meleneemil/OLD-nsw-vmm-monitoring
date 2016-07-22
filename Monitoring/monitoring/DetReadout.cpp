@@ -258,16 +258,3 @@ std::vector <TH2D*> CDetReadout::getReadoutEventHistos()
 {
     return readoutEventHistos;
 }
-
-void CDetReadout::fill_histogram(std::vector <float> *fill_values_x, std::vector <float> *fill_values_y)
-{
-    for(size_t iHisto=0; iHisto<fill_values_x->size(); iHisto++)
-    {
-        m_readout_raw_histo->SetBinContent(fill_values_x->at(iHisto), fill_values_y->at(iHisto));
-    }
-}
-
-//void CDetReadout::clear_histograms()
-//{
-//    m_chip_raw_histo->Reset();
-//}

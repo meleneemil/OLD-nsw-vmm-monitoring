@@ -20,8 +20,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_DisplayDrawer_t {
-    QByteArrayData data[41];
-    char stringdata[564];
+    QByteArrayData data[35];
+    char stringdata[481];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -42,35 +42,29 @@ QT_MOC_LITERAL(8, 124, 10), // "NotifyDraw"
 QT_MOC_LITERAL(9, 135, 14), // "drawSharedData"
 QT_MOC_LITERAL(10, 150, 15), // "changeActiveTab"
 QT_MOC_LITERAL(11, 166, 8), // "tabIndex"
-QT_MOC_LITERAL(12, 175, 13), // "fill_chip_raw"
-QT_MOC_LITERAL(13, 189, 4), // "name"
-QT_MOC_LITERAL(14, 194, 12), // "QVector<int>"
-QT_MOC_LITERAL(15, 207, 9), // "rawVector"
-QT_MOC_LITERAL(16, 217, 17), // "apvRawHistoFiller"
-QT_MOC_LITERAL(17, 235, 18), // "readoutHistoFiller"
-QT_MOC_LITERAL(18, 254, 19), // "handleBufferedEvent"
-QT_MOC_LITERAL(19, 274, 9), // "line_qstr"
-QT_MOC_LITERAL(20, 284, 17), // "fillReadoutHistos"
-QT_MOC_LITERAL(21, 302, 11), // "std::string"
-QT_MOC_LITERAL(22, 314, 11), // "chamberName"
-QT_MOC_LITERAL(23, 326, 11), // "readoutName"
-QT_MOC_LITERAL(24, 338, 5), // "strip"
-QT_MOC_LITERAL(25, 344, 6), // "charge"
-QT_MOC_LITERAL(26, 351, 4), // "time"
-QT_MOC_LITERAL(27, 356, 3), // "pdo"
-QT_MOC_LITERAL(28, 360, 3), // "tdo"
-QT_MOC_LITERAL(29, 364, 14), // "fillChipHistos"
-QT_MOC_LITERAL(30, 379, 9), // "fecNumber"
-QT_MOC_LITERAL(31, 389, 10), // "chipNumber"
-QT_MOC_LITERAL(32, 400, 13), // "channelNumber"
-QT_MOC_LITERAL(33, 414, 14), // "fillHistograms"
-QT_MOC_LITERAL(34, 429, 14), // "drawHistograms"
-QT_MOC_LITERAL(35, 444, 20), // "drawStatisticsHistos"
-QT_MOC_LITERAL(36, 465, 15), // "drawEventHistos"
-QT_MOC_LITERAL(37, 481, 10), // "reset_slot"
-QT_MOC_LITERAL(38, 492, 26), // "resetStatisticsHistos_slot"
-QT_MOC_LITERAL(39, 519, 21), // "resetEventHistos_slot"
-QT_MOC_LITERAL(40, 541, 22) // "resetApvRawHistos_slot"
+QT_MOC_LITERAL(12, 175, 18), // "readoutHistoFiller"
+QT_MOC_LITERAL(13, 194, 19), // "handleBufferedEvent"
+QT_MOC_LITERAL(14, 214, 9), // "line_qstr"
+QT_MOC_LITERAL(15, 224, 17), // "fillReadoutHistos"
+QT_MOC_LITERAL(16, 242, 11), // "std::string"
+QT_MOC_LITERAL(17, 254, 11), // "chamberName"
+QT_MOC_LITERAL(18, 266, 11), // "readoutName"
+QT_MOC_LITERAL(19, 278, 5), // "strip"
+QT_MOC_LITERAL(20, 284, 6), // "charge"
+QT_MOC_LITERAL(21, 291, 4), // "time"
+QT_MOC_LITERAL(22, 296, 3), // "pdo"
+QT_MOC_LITERAL(23, 300, 3), // "tdo"
+QT_MOC_LITERAL(24, 304, 14), // "fillChipHistos"
+QT_MOC_LITERAL(25, 319, 9), // "fecNumber"
+QT_MOC_LITERAL(26, 329, 10), // "chipNumber"
+QT_MOC_LITERAL(27, 340, 13), // "channelNumber"
+QT_MOC_LITERAL(28, 354, 14), // "fillHistograms"
+QT_MOC_LITERAL(29, 369, 14), // "drawHistograms"
+QT_MOC_LITERAL(30, 384, 20), // "drawStatisticsHistos"
+QT_MOC_LITERAL(31, 405, 15), // "drawEventHistos"
+QT_MOC_LITERAL(32, 421, 10), // "reset_slot"
+QT_MOC_LITERAL(33, 432, 26), // "resetStatisticsHistos_slot"
+QT_MOC_LITERAL(34, 459, 21) // "resetEventHistos_slot"
 
     },
     "DisplayDrawer\0NotifyFill\0\0"
@@ -78,8 +72,6 @@ QT_MOC_LITERAL(40, 541, 22) // "resetApvRawHistos_slot"
     "rawData\0std::vector<std::string>\0"
     "stripData\0eventNumber\0NotifyDraw\0"
     "drawSharedData\0changeActiveTab\0tabIndex\0"
-    "fill_chip_raw\0name\0QVector<int>\0"
-    "rawVector\0apvRawHistoFiller\0"
     "readoutHistoFiller\0handleBufferedEvent\0"
     "line_qstr\0fillReadoutHistos\0std::string\0"
     "chamberName\0readoutName\0strip\0charge\0"
@@ -88,7 +80,7 @@ QT_MOC_LITERAL(40, 541, 22) // "resetApvRawHistos_slot"
     "drawHistograms\0drawStatisticsHistos\0"
     "drawEventHistos\0reset_slot\0"
     "resetStatisticsHistos_slot\0"
-    "resetEventHistos_slot\0resetApvRawHistos_slot"
+    "resetEventHistos_slot"
 };
 #undef QT_MOC_LITERAL
 
@@ -98,7 +90,7 @@ static const uint qt_meta_data_DisplayDrawer[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      18,   14, // methods
+      15,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -106,37 +98,31 @@ static const uint qt_meta_data_DisplayDrawer[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    3,  104,    2, 0x0a /* Public */,
-       8,    0,  111,    2, 0x0a /* Public */,
-       9,    0,  112,    2, 0x0a /* Public */,
-      10,    1,  113,    2, 0x0a /* Public */,
-      12,    2,  116,    2, 0x0a /* Public */,
-      16,    0,  121,    2, 0x0a /* Public */,
-      17,    0,  122,    2, 0x0a /* Public */,
-      18,    1,  123,    2, 0x0a /* Public */,
-      20,    7,  126,    2, 0x0a /* Public */,
-      29,    5,  141,    2, 0x0a /* Public */,
-      33,    0,  152,    2, 0x0a /* Public */,
-      34,    0,  153,    2, 0x0a /* Public */,
-      35,    0,  154,    2, 0x0a /* Public */,
-      36,    0,  155,    2, 0x0a /* Public */,
-      37,    0,  156,    2, 0x0a /* Public */,
-      38,    0,  157,    2, 0x0a /* Public */,
-      39,    0,  158,    2, 0x0a /* Public */,
-      40,    0,  159,    2, 0x0a /* Public */,
+       1,    3,   89,    2, 0x0a /* Public */,
+       8,    0,   96,    2, 0x0a /* Public */,
+       9,    0,   97,    2, 0x0a /* Public */,
+      10,    1,   98,    2, 0x0a /* Public */,
+      12,    0,  101,    2, 0x0a /* Public */,
+      13,    1,  102,    2, 0x0a /* Public */,
+      15,    7,  105,    2, 0x0a /* Public */,
+      24,    5,  120,    2, 0x0a /* Public */,
+      28,    0,  131,    2, 0x0a /* Public */,
+      29,    0,  132,    2, 0x0a /* Public */,
+      30,    0,  133,    2, 0x0a /* Public */,
+      31,    0,  134,    2, 0x0a /* Public */,
+      32,    0,  135,    2, 0x0a /* Public */,
+      33,    0,  136,    2, 0x0a /* Public */,
+      34,    0,  137,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3, 0x80000000 | 5, QMetaType::Int,    4,    6,    7,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int,   11,
-    QMetaType::Void, QMetaType::QString, 0x80000000 | 14,   13,   15,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Int, QMetaType::QString,   19,
-    QMetaType::Void, 0x80000000 | 21, 0x80000000 | 21, QMetaType::Int, QMetaType::Float, QMetaType::Float, QMetaType::Int, QMetaType::Int,   22,   23,   24,   25,   26,   27,   28,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Float, QMetaType::Float,   30,   31,   32,   25,   26,
-    QMetaType::Void,
+    QMetaType::Int, QMetaType::QString,   14,
+    QMetaType::Void, 0x80000000 | 16, 0x80000000 | 16, QMetaType::Int, QMetaType::Float, QMetaType::Float, QMetaType::Int, QMetaType::Int,   17,   18,   19,   20,   21,   22,   23,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Float, QMetaType::Float,   25,   26,   27,   20,   21,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -157,33 +143,19 @@ void DisplayDrawer::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 1: _t->NotifyDraw(); break;
         case 2: _t->drawSharedData(); break;
         case 3: _t->changeActiveTab((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 4: _t->fill_chip_raw((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QVector<int>(*)>(_a[2]))); break;
-        case 5: _t->apvRawHistoFiller(); break;
-        case 6: _t->readoutHistoFiller(); break;
-        case 7: { int _r = _t->handleBufferedEvent((*reinterpret_cast< QString(*)>(_a[1])));
+        case 4: _t->readoutHistoFiller(); break;
+        case 5: { int _r = _t->handleBufferedEvent((*reinterpret_cast< QString(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = _r; }  break;
-        case 8: _t->fillReadoutHistos((*reinterpret_cast< std::string(*)>(_a[1])),(*reinterpret_cast< std::string(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< float(*)>(_a[4])),(*reinterpret_cast< float(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6])),(*reinterpret_cast< int(*)>(_a[7]))); break;
-        case 9: _t->fillChipHistos((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< float(*)>(_a[4])),(*reinterpret_cast< float(*)>(_a[5]))); break;
-        case 10: _t->fillHistograms(); break;
-        case 11: _t->drawHistograms(); break;
-        case 12: _t->drawStatisticsHistos(); break;
-        case 13: _t->drawEventHistos(); break;
-        case 14: _t->reset_slot(); break;
-        case 15: _t->resetStatisticsHistos_slot(); break;
-        case 16: _t->resetEventHistos_slot(); break;
-        case 17: _t->resetApvRawHistos_slot(); break;
+        case 6: _t->fillReadoutHistos((*reinterpret_cast< std::string(*)>(_a[1])),(*reinterpret_cast< std::string(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< float(*)>(_a[4])),(*reinterpret_cast< float(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6])),(*reinterpret_cast< int(*)>(_a[7]))); break;
+        case 7: _t->fillChipHistos((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< float(*)>(_a[4])),(*reinterpret_cast< float(*)>(_a[5]))); break;
+        case 8: _t->fillHistograms(); break;
+        case 9: _t->drawHistograms(); break;
+        case 10: _t->drawStatisticsHistos(); break;
+        case 11: _t->drawEventHistos(); break;
+        case 12: _t->reset_slot(); break;
+        case 13: _t->resetStatisticsHistos_slot(); break;
+        case 14: _t->resetEventHistos_slot(); break;
         default: ;
-        }
-    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        switch (_id) {
-        default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-        case 4:
-            switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-            case 1:
-                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QVector<int> >(); break;
-            }
-            break;
         }
     }
 }
@@ -213,13 +185,13 @@ int DisplayDrawer::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 18)
+        if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        _id -= 15;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 18)
-            qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        if (_id < 15)
+            *reinterpret_cast<int*>(_a[0]) = -1;
+        _id -= 15;
     }
     return _id;
 }

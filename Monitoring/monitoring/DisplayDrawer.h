@@ -81,12 +81,11 @@ public:
 
     int activeTabIndex;
 
-    QVector< std::pair< QString, QVector<int> > > mem_rawData;
+//    QVector< std::pair< QString, QVector<int> > > mem_rawData;
     std::vector <QString> mem_stripData;
     int mem_eventNumber;
     QString mem_eventNumber_str;
 
-    //TH1D *fillChip1dHisto(std::string chipName, std::string histoType);
     TH2D *fillChip2dHisto(std::string chipName, std::string histoType);
 
 public slots:
@@ -99,8 +98,6 @@ public slots:
     //slot to change active tab to be drawn
 
     void changeActiveTab(int tabIndex);
-    void fill_chip_raw(QString name, QVector<int> rawVector);
-    void apvRawHistoFiller();
     void readoutHistoFiller();
     int handleBufferedEvent(QString line_qstr);
     void fillReadoutHistos(std::string chamberName, std::string readoutName, int strip, float charge, float time, int pdo, int tdo);
@@ -116,7 +113,6 @@ public slots:
     void reset_slot();
     void resetStatisticsHistos_slot();
     void resetEventHistos_slot();
-    void resetApvRawHistos_slot();
 
 };
 

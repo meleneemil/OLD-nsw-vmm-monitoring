@@ -68,7 +68,6 @@ namespace online {
 
       std::vector <TH1D*> getReadoutStatisticsHistos();
       std::vector <TH2D*> getReadoutEventHistos();
-      void fill_histogram(std::vector <float> *fill_values_x, std::vector <float> *fill_values_y);
       void clear_histogram();
 
       void setStrips(std::pair<int,int> strip_range, double pitch);

@@ -127,10 +127,6 @@ CDaqServerConfig::~CDaqServerConfig()
    mainWindow=0;
    delete memReader;
    memReader=0;
-   //delete drawer;
-   //drawer=0;
-//   bip::shared_memory_object::remove("mmDaqSharedConfig");
-
 }
 
 
@@ -498,7 +494,7 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
 
     //chips frame canvases setup
     int nOfChips = mappingChip1dElements.size();
-    int nOfApvChips = window->apvRawFrame->frameStatisticsHistos.size();
+//    int nOfApvChips = window->apvRawFrame->frameStatisticsHistos.size();
 
     divideFrameCanvases(nOfChips, window->statisticsChipsFrame);
     //make list items checkable boxes
@@ -601,8 +597,8 @@ void CDaqServerConfig::updateFrameCanvasesDivision_slot(QTreeWidgetItem* parentT
        selectDeselectChamberChildren(parentTreeItem);
        numberOfChipElements = mainWindow->getElementsNumberOfCheckedChambersApvChips(parentTreeItem);
        numberOfReadoutElements = numberOfReadoutsToDisplay(parentTreeItem->parent());
-       divideFrameCanvases(numberOfChipElements,mainWindow->apvRawFrame);
-       divideFrameCanvases(numberOfChipElements,mainWindow->statisticsChipsFrame);
+//       divideFrameCanvases(numberOfChipElements,mainWindow->apvRawFrame);
+//       divideFrameCanvases(numberOfChipElements,mainWindow->statisticsChipsFrame);
        divideFrameCanvases(numberOfReadoutElements,mainWindow->statisticsFrame);
        divideFrameCanvases(numberOfReadoutElements,mainWindow->eventDisplayFrame);
 
@@ -610,7 +606,7 @@ void CDaqServerConfig::updateFrameCanvasesDivision_slot(QTreeWidgetItem* parentT
     else //changing canvas divisions for chip histos
     {
        numberOfChipElements = mainWindow->getElementsNumberOfCheckedChambersApvChips(parentTreeItem->parent());
-       divideFrameCanvases(numberOfChipElements,mainWindow->apvRawFrame);
+//       divideFrameCanvases(numberOfChipElements,mainWindow->apvRawFrame);
        divideFrameCanvases(numberOfChipElements,mainWindow->statisticsChipsFrame);
     }
 
@@ -664,14 +660,6 @@ void CDaqServerConfig::divideFrameCanvases(int numberOfElements, frame* frameFor
     }
 
 
-
-    else if(frameForDivide->frameType == "CrossTalks") {
-        width=4;
-        if(numberOfElements%width == 0)
-            height = numberOfElements/width;
-        else
-            height = numberOfElements/width+1;
-    }
     else if(frameForDivide->frameType == "Daq Statistics") {
         width=3;
 
