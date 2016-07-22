@@ -197,7 +197,7 @@ public slots:
     virtual void reset_slot() {}
     virtual void handleBufferedEvent() {}
     virtual void openPedestalsFile() {}
-    virtual void loadPedestalsFile() {}
+//    virtual void loadPedestalsFile() {}
 
 
 

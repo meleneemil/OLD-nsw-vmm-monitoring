@@ -203,15 +203,13 @@ namespace online {
         //Slots for configuration of the GUI
         void setConfigFilePath(const QString &config_filePath);
         void setConfigFileName(const QString &config_fileName);
-        void setPedestalsFilePath(const QString &pedestals_filePath);
-        void setPedestalsFileName(const QString &pedestals_fileName);
 
         void configure(const QString &configFile);
 
         //++++++++++Slots for client+++++++++++++++++++++++
-        void messageDaq(std::string command);
-        void make_messages(std::vector<std::string>& messages, std::string buttonCommand);
-        void read_commands();
+//        void messageDaq(std::string command);
+//        void make_messages(std::vector<std::string>& messages, std::string buttonCommand);
+//        void read_commands();
         void transmitStartSignal();
         void transmitStopSignal();
         void openSettingsWindow();

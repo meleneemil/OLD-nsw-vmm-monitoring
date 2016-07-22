@@ -152,10 +152,10 @@ void mmDaqSettingsWindow::searchForPedestalsFile()
 }
 
 
-void mmDaqSettingsWindow::loadPedestalsFile()
-{
+//void mmDaqSettingsWindow::loadPedestalsFile()
+//{
 //        emit pedestalsFileNameIs(mainWindow->pedestalsFile->text().toStdString());
-}
+//}
 
 
 //void mmDaqSettingsWindow::transmitBrowseConfigClickedSignal()

@@ -3477,6 +3477,26 @@ moc_DaqServerConfig.cpp: mmDaqStartupWindow.h \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QAction \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qaction.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qactiongroup.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qeventloop.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QHeaderView \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMenuBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenubar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenu.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QStatusBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QToolBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtoolbar.h \
 		../../../../boost_1_60_0/boost/algorithm/cxx11/copy_if.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QThread \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qthread.h \
@@ -14268,6 +14288,15 @@ main.o: main.cpp ../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QAction \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QHeaderView \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMenuBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QStatusBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QToolBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtoolbar.h \
 		../../../../boost_1_60_0/boost/algorithm/cxx11/copy_if.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QThread \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qthread.h \
@@ -16797,6 +16826,26 @@ PropertyTreeParser.o: PropertyTreeParser.cpp PropertyTreeParser.h \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QAction \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qaction.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qactiongroup.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qeventloop.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QHeaderView \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMenuBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenubar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenu.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QStatusBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QToolBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtoolbar.h \
 		../../../../boost_1_60_0/boost/algorithm/cxx11/copy_if.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QThread \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qthread.h \
@@ -19081,6 +19130,26 @@ PropertyTreeParserDetector.o: PropertyTreeParserDetector.cpp PropertyTreeParserD
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QAction \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qaction.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qactiongroup.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qeventloop.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QHeaderView \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMenuBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenubar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenu.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QStatusBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QToolBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtoolbar.h \
 		../../../../boost_1_60_0/boost/algorithm/cxx11/copy_if.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QThread \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qthread.h \
@@ -21369,6 +21438,26 @@ PropertyTreeParserSrs.o: PropertyTreeParserSrs.cpp PropertyTreeParserSrs.h \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QAction \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qaction.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qactiongroup.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qeventloop.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QHeaderView \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMenuBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenubar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenu.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QStatusBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QToolBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtoolbar.h \
 		../../../../boost_1_60_0/boost/algorithm/cxx11/copy_if.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QThread \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qthread.h \
@@ -23658,6 +23747,26 @@ PropertyTreeParserChamber.o: PropertyTreeParserChamber.cpp PropertyTreeParserCha
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QAction \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qaction.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qactiongroup.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qeventloop.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QHeaderView \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMenuBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenubar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenu.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QStatusBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QToolBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtoolbar.h \
 		../../../../boost_1_60_0/boost/algorithm/cxx11/copy_if.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QThread \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qthread.h \
@@ -25945,6 +26054,26 @@ DaqServerConfig.o: DaqServerConfig.cpp DaqServerConfig.h \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QAction \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qaction.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qactiongroup.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qeventloop.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QHeaderView \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMenuBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenubar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenu.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QStatusBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QToolBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtoolbar.h \
 		../../../../boost_1_60_0/boost/algorithm/cxx11/copy_if.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QThread \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qthread.h \
@@ -28563,6 +28692,26 @@ DetChamber.o: DetChamber.cpp DetChamber.h \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QAction \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qaction.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qactiongroup.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qeventloop.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QHeaderView \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMenuBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenubar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenu.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QStatusBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QToolBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtoolbar.h \
 		../../../../boost_1_60_0/boost/algorithm/cxx11/copy_if.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QThread \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qthread.h \
@@ -30851,6 +31000,26 @@ DetConnector.o: DetConnector.cpp DetConnector.h \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QAction \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qaction.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qactiongroup.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qeventloop.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QHeaderView \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMenuBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenubar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenu.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QStatusBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QToolBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtoolbar.h \
 		../../../../boost_1_60_0/boost/algorithm/cxx11/copy_if.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QThread \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qthread.h \
@@ -33300,6 +33469,27 @@ SrsChip.o: SrsChip.cpp SrsChip.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QDebug \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QFileInfo \
 		ui_mainwindow.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QAction \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qaction.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qactiongroup.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qeventloop.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QHBoxLayout \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QHeaderView \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMenuBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenubar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenu.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QStatusBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QToolBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtoolbar.h \
 		DetDetector.h \
 		daqclient.h \
 		daqclientconfig.h \
@@ -42867,6 +43057,26 @@ SrsFec.o: SrsFec.cpp SrsFec.h \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QAction \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qaction.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qactiongroup.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qeventloop.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QHeaderView \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMenuBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenubar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenu.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QStatusBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QToolBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtoolbar.h \
 		../../../../boost_1_60_0/boost/algorithm/cxx11/copy_if.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QThread \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qthread.h \
@@ -51701,6 +51911,26 @@ pedestalsfileloader.o: pedestalsfileloader.cpp pedestalsfileloader.h \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QAction \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qaction.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qactiongroup.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qeventloop.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QHeaderView \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMenuBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenubar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenu.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QStatusBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QToolBar \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtoolbar.h \
 		../../../../boost_1_60_0/boost/algorithm/cxx11/copy_if.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QThread \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qthread.h \

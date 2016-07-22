@@ -125,16 +125,10 @@ CDaqServerConfig::CDaqServerConfig() :
    connect(mainStartUpWindow,SIGNAL(configFileNameIs(QString)), this, SLOT(setConfigFileName(QString)));
    connect(mainStartUpWindow,SIGNAL(configFilePathIs(QString)), this, SLOT(setConfigFilePath(QString)));
    connect(settingsWindow,SIGNAL(reconfigFilePathIs(QString)),this,SLOT(setConfigFilePath(QString)));
-   connect(settingsWindow,SIGNAL(pedestalsFilePathIs(QString)), this, SLOT(setPedestalsFilePath(QString)));
-   connect(settingsWindow,SIGNAL(pedestalsFileNameIs(QString)), this, SLOT(setPedestalsFileName(QString)));
    connect(this, SIGNAL(configWithFile(QString)),this,SLOT(configure(QString)));
-
-   connect(this, SIGNAL(sendStartDaq(std::string)), this, SLOT(messageDaq(std::string)));
-   connect(this, SIGNAL(sendStopDaq(std::string)), this, SLOT(messageDaq(std::string)));
 
    QObject::connect( qApp, SIGNAL(lastWindowClosed()), qApp, SLOT(quit()) );
 }
-
 
 CDaqServerConfig::~CDaqServerConfig()
 {
@@ -168,86 +162,6 @@ void CDaqServerConfig::displayStartupWindow()
     mainStartUpWindow->setWindowTitle("Startup mmDaq GUI");
     mainStartUpWindow->setGeometry(500,400,250,100);
     mainStartUpWindow->show();
-}
-
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//+++++++++++++++++++++++++++++++++++++Server-Client Communication Section+++++++++++++++++++++++++++++++++++++++++
-
-void CDaqServerConfig::messageDaq(std::string command)
-{
-    try {
-        std::vector<std::string> messages;
-        make_messages(messages,command);
-        bip::message_queue ipc_queue(bip::open_only, "mmdaq3_srv_command");
-//ANGELOS
-                                                   
-       	bip::named_mutex named_mtx(bip::open_or_create, "msg_queue_mutex");
-		bip::named_condition named_cnd(bip::open_or_create, "cnd_msg_queue_mutex");
-		bip::scoped_lock<bip::named_mutex> lock(named_mtx, bip::try_to_lock);
-	
-	
-		if(lock){
-	        Q_FOREACH (const std::string& msg, messages) {
-    	        ipc_queue.send(msg.data(), msg.size(), 0);
-                 std::cout << "sent:'" << msg << "'" <<  std::endl;
-        	}
-        }
-        
-        
-        named_cnd.notify_all();
-//    	named_cnd.wait(lock);
-
-        boost::system_time const timeout=boost::get_system_time()+ boost::posix_time::milliseconds(3000);
-        if(named_cnd.timed_wait(lock,timeout))
-		    	std::cout << "unlocked-------------------------------------------------\n";
-else
-            std::cout << "Unlock FAILED. Continuing...?? -------------------------------------------------\n";
-
-        //ANGELOS
-        //TODO add mutex here
-    }
-    catch (bip::interprocess_exception & e) {
-            std::stringstream ss;
-            ss << "mmdaq-server not running:  icp queue error: " << e.what();
-            std::cout << "mmdaq-server not running:  icp queue error: " << e.what() << std::endl;
-    };
-
-}
-
-void CDaqServerConfig::make_messages(std::vector<std::string>& messages,std::string buttonCommand)
-{
-  
-   read_commands();
-
-   if(buttonCommand == "stop")
-       messages.push_back(message_stop.toStdString());
-   else if(buttonCommand == "start")
-   {
-       messages.push_back(message_config_path.toStdString());
-       messages.push_back(message_pedestal_path.toStdString());
-       messages.push_back(message_zsapv.toStdString());
-       messages.push_back(message_commentForDaq.toStdString());
-       messages.push_back(message_nosave.toStdString());
-       messages.push_back(message_runType.toStdString());
-   }
-}
-
-void CDaqServerConfig::read_commands()
-{
-    message_pedestal_path=pedestal_path;
-    if(mainWindow->radioPhysics->isChecked())
-        message_runType = "run=physics";
-    else if(mainWindow->radioPedestals->isChecked())
-        message_runType = "run=pedestal";
-
-    if(mainWindow->saveCheckBox->isChecked())
-        message_nosave = "nosave=false";
-    else
-        message_nosave = "nosave=true";
-
-    message_zsapv = QString("zsapv=")+settingsWindow->zeroSuppressionBox->text();
-    message_commentForDaq = QString("comment=")+mainWindow->commentLine->text();
-    message_stop = "stop=";
 }
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -345,21 +259,7 @@ void CDaqServerConfig::setConfigFileName(const QString &config_fileName)
     input_config_fileName = config_fileName;
 }
 
-void CDaqServerConfig::setPedestalsFilePath(const QString &pedestals_filePath)
-{
-    pedestal_path="pedestal=";
-    qDebug()<<"Got pedestals File Path :"<<pedestals_filePath;
-    pedestals->definePedestalsFileName(pedestals_filePath.toStdString());//load pedestals file and draw pedestals histograms
-    pedestal_path = pedestal_path+pedestals_filePath;
-    message_pedestal_path = pedestal_path;
-    emit pedestalsFileNameIs(pedestals_filePath.toStdString());
-}
 
-void CDaqServerConfig::setPedestalsFileName(const QString &pedestals_fileName)
-{
-    qDebug()<<"Got pedestals File Name :"<<pedestals_fileName;
-    pedestal_fileName = pedestal_fileName+pedestals_fileName;
-}
 
 //read configuration file
 void CDaqServerConfig::configure(const QString &configFile)

@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_mmDaqSettingsWindow_t {
-    QByteArrayData data[15];
-    char stringdata[307];
+    QByteArrayData data[14];
+    char stringdata[289];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,19 +39,18 @@ QT_MOC_LITERAL(6, 105, 21), // "rebrowseConfigClicked"
 QT_MOC_LITERAL(7, 127, 19), // "reloadConfigClicked"
 QT_MOC_LITERAL(8, 147, 18), // "reconfigFilePathIs"
 QT_MOC_LITERAL(9, 166, 18), // "reconfigFileNameIs"
-QT_MOC_LITERAL(10, 185, 17), // "loadPedestalsFile"
-QT_MOC_LITERAL(11, 203, 19), // "searchForConfigFile"
-QT_MOC_LITERAL(12, 223, 28), // "transmitConfigFileNameSignal"
-QT_MOC_LITERAL(13, 252, 22), // "searchForPedestalsFile"
-QT_MOC_LITERAL(14, 275, 31) // "transmitPedestalsFileNameSignal"
+QT_MOC_LITERAL(10, 185, 19), // "searchForConfigFile"
+QT_MOC_LITERAL(11, 205, 28), // "transmitConfigFileNameSignal"
+QT_MOC_LITERAL(12, 234, 22), // "searchForPedestalsFile"
+QT_MOC_LITERAL(13, 257, 31) // "transmitPedestalsFileNameSignal"
 
     },
     "mmDaqSettingsWindow\0browsePedestalsClicked\0"
     "\0loadPedestalsClicked\0pedestalsFilePathIs\0"
     "pedestalsFileNameIs\0rebrowseConfigClicked\0"
     "reloadConfigClicked\0reconfigFilePathIs\0"
-    "reconfigFileNameIs\0loadPedestalsFile\0"
-    "searchForConfigFile\0transmitConfigFileNameSignal\0"
+    "reconfigFileNameIs\0searchForConfigFile\0"
+    "transmitConfigFileNameSignal\0"
     "searchForPedestalsFile\0"
     "transmitPedestalsFileNameSignal"
 };
@@ -63,7 +62,7 @@ static const uint qt_meta_data_mmDaqSettingsWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      13,   14, // methods
+      12,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -71,21 +70,20 @@ static const uint qt_meta_data_mmDaqSettingsWindow[] = {
        8,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   79,    2, 0x06 /* Public */,
-       3,    0,   80,    2, 0x06 /* Public */,
-       4,    1,   81,    2, 0x06 /* Public */,
-       5,    1,   84,    2, 0x06 /* Public */,
-       6,    0,   87,    2, 0x06 /* Public */,
-       7,    0,   88,    2, 0x06 /* Public */,
-       8,    1,   89,    2, 0x06 /* Public */,
-       9,    1,   92,    2, 0x06 /* Public */,
+       1,    0,   74,    2, 0x06 /* Public */,
+       3,    0,   75,    2, 0x06 /* Public */,
+       4,    1,   76,    2, 0x06 /* Public */,
+       5,    1,   79,    2, 0x06 /* Public */,
+       6,    0,   82,    2, 0x06 /* Public */,
+       7,    0,   83,    2, 0x06 /* Public */,
+       8,    1,   84,    2, 0x06 /* Public */,
+       9,    1,   87,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      10,    0,   95,    2, 0x0a /* Public */,
-      11,    0,   96,    2, 0x0a /* Public */,
-      12,    0,   97,    2, 0x0a /* Public */,
-      13,    0,   98,    2, 0x0a /* Public */,
-      14,    0,   99,    2, 0x0a /* Public */,
+      10,    0,   90,    2, 0x0a /* Public */,
+      11,    0,   91,    2, 0x0a /* Public */,
+      12,    0,   92,    2, 0x0a /* Public */,
+      13,    0,   93,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -98,7 +96,6 @@ static const uint qt_meta_data_mmDaqSettingsWindow[] = {
     QMetaType::Void, QMetaType::QString,    2,
 
  // slots: parameters
-    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -120,11 +117,10 @@ void mmDaqSettingsWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         case 5: _t->reloadConfigClicked(); break;
         case 6: _t->reconfigFilePathIs((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 7: _t->reconfigFileNameIs((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 8: _t->loadPedestalsFile(); break;
-        case 9: _t->searchForConfigFile(); break;
-        case 10: _t->transmitConfigFileNameSignal(); break;
-        case 11: _t->searchForPedestalsFile(); break;
-        case 12: _t->transmitPedestalsFileNameSignal(); break;
+        case 8: _t->searchForConfigFile(); break;
+        case 9: _t->transmitConfigFileNameSignal(); break;
+        case 10: _t->searchForPedestalsFile(); break;
+        case 11: _t->transmitPedestalsFileNameSignal(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -206,13 +202,13 @@ int mmDaqSettingsWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 13)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 13;
+        _id -= 12;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 13)
+        if (_id < 12)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 13;
+        _id -= 12;
     }
     return _id;
 }

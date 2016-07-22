@@ -63,7 +63,7 @@ public slots:
 //    void transmitBrowsePedestalsClickedSignal();
 //    void transmitLoadPedestalsClickedSignal();
     //void openPedestalsFile();
-    void loadPedestalsFile();
+//    void loadPedestalsFile();
 
     //void transmitBrowseConfigClickedSignal();
     //void transmitLoadConfigClickedSignal();
