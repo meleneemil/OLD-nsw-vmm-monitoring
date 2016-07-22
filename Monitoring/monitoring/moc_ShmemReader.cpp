@@ -20,8 +20,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_ShmemReader_t {
-    QByteArrayData data[27];
-    char stringdata[384];
+    QByteArrayData data[23];
+    char stringdata[328];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -49,14 +49,10 @@ QT_MOC_LITERAL(15, 215, 16), // "handleSharedData"
 QT_MOC_LITERAL(16, 232, 17), // "read_event_number"
 QT_MOC_LITERAL(17, 250, 13), // "read_raw_data"
 QT_MOC_LITERAL(18, 264, 17), // "read_event_strips"
-QT_MOC_LITERAL(19, 282, 16), // "fillApvChipsList"
-QT_MOC_LITERAL(20, 299, 21), // "std::vector<uint32_t>"
-QT_MOC_LITERAL(21, 321, 7), // "apvList"
-QT_MOC_LITERAL(22, 329, 8), // "apvChips"
-QT_MOC_LITERAL(23, 338, 17), // "getNameFromChipId"
-QT_MOC_LITERAL(24, 356, 11), // "std::string"
-QT_MOC_LITERAL(25, 368, 8), // "uint32_t"
-QT_MOC_LITERAL(26, 377, 6) // "chipId"
+QT_MOC_LITERAL(19, 282, 17), // "getNameFromChipId"
+QT_MOC_LITERAL(20, 300, 11), // "std::string"
+QT_MOC_LITERAL(21, 312, 8), // "uint32_t"
+QT_MOC_LITERAL(22, 321, 6) // "chipId"
 
     },
     "ShmemReader\0readEvent\0\0readRaw\0readStrip\0"
@@ -67,10 +63,8 @@ QT_MOC_LITERAL(26, 377, 6) // "chipId"
     "line\0newLine\0newEventReceived\0"
     "drawHistograms\0handleSharedData\0"
     "read_event_number\0read_raw_data\0"
-    "read_event_strips\0fillApvChipsList\0"
-    "std::vector<uint32_t>\0apvList\0apvChips\0"
-    "getNameFromChipId\0std::string\0uint32_t\0"
-    "chipId"
+    "read_event_strips\0getNameFromChipId\0"
+    "std::string\0uint32_t\0chipId"
 };
 #undef QT_MOC_LITERAL
 
@@ -80,7 +74,7 @@ static const uint qt_meta_data_ShmemReader[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      16,   14, // methods
+      15,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -88,24 +82,23 @@ static const uint qt_meta_data_ShmemReader[] = {
       10,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   94,    2, 0x06 /* Public */,
-       3,    0,   95,    2, 0x06 /* Public */,
-       4,    0,   96,    2, 0x06 /* Public */,
-       5,    3,   97,    2, 0x06 /* Public */,
-       8,    1,  104,    2, 0x06 /* Public */,
-       9,    0,  107,    2, 0x06 /* Public */,
-      10,    1,  108,    2, 0x06 /* Public */,
-      12,    0,  111,    2, 0x06 /* Public */,
-      13,    1,  112,    2, 0x06 /* Public */,
-      14,    0,  115,    2, 0x06 /* Public */,
+       1,    0,   89,    2, 0x06 /* Public */,
+       3,    0,   90,    2, 0x06 /* Public */,
+       4,    0,   91,    2, 0x06 /* Public */,
+       5,    3,   92,    2, 0x06 /* Public */,
+       8,    1,   99,    2, 0x06 /* Public */,
+       9,    0,  102,    2, 0x06 /* Public */,
+      10,    1,  103,    2, 0x06 /* Public */,
+      12,    0,  106,    2, 0x06 /* Public */,
+      13,    1,  107,    2, 0x06 /* Public */,
+      14,    0,  110,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      15,    0,  116,    2, 0x0a /* Public */,
-      16,    0,  117,    2, 0x0a /* Public */,
-      17,    0,  118,    2, 0x0a /* Public */,
-      18,    0,  119,    2, 0x0a /* Public */,
-      19,    2,  120,    2, 0x0a /* Public */,
-      23,    1,  125,    2, 0x0a /* Public */,
+      15,    0,  111,    2, 0x0a /* Public */,
+      16,    0,  112,    2, 0x0a /* Public */,
+      17,    0,  113,    2, 0x0a /* Public */,
+      18,    0,  114,    2, 0x0a /* Public */,
+      19,    1,  115,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -124,8 +117,7 @@ static const uint qt_meta_data_ShmemReader[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 20, 0x80000000 | 7,   21,   22,
-    0x80000000 | 24, 0x80000000 | 25,   26,
+    0x80000000 | 20, 0x80000000 | 21,   22,
 
        0        // eod
 };
@@ -149,8 +141,7 @@ void ShmemReader::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 11: _t->read_event_number(); break;
         case 12: _t->read_raw_data(); break;
         case 13: _t->read_event_strips(); break;
-        case 14: _t->fillApvChipsList((*reinterpret_cast< std::vector<uint32_t>(*)>(_a[1])),(*reinterpret_cast< std::vector<std::string>(*)>(_a[2]))); break;
-        case 15: { std::string _r = _t->getNameFromChipId((*reinterpret_cast< uint32_t(*)>(_a[1])));
+        case 14: { std::string _r = _t->getNameFromChipId((*reinterpret_cast< uint32_t(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< std::string*>(_a[0]) = _r; }  break;
         default: ;
         }
@@ -245,13 +236,13 @@ int ShmemReader::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 16)
+        if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 16;
+        _id -= 15;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 16)
+        if (_id < 15)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 16;
+        _id -= 15;
     }
     return _id;
 }

@@ -44,7 +44,8 @@ bool FAKEDATA=false;
 int FAKE_EVENT_NO=0;
 
 
-ShmemReader::ShmemReader(std::vector<uint32_t> apvList, std::vector<std::string> apvChips,
+ShmemReader::ShmemReader(/*std::vector<uint32_t> apvList, */
+                         std::vector<std::string> apvChips,
                          std::vector<boost::shared_ptr<online::display::CSrsChip> > chipvec,
                          std::vector<std::pair<boost::shared_ptr<online::display::CDetChamber>,
                          std::vector<boost::shared_ptr<online::display::CDetReadout> > > > chamberElements,
@@ -56,11 +57,11 @@ ShmemReader::ShmemReader(std::vector<uint32_t> apvList, std::vector<std::string>
     m_shm_shared_data(0), shmem(), shCond(), mainWindow(window), mainDrawer(0), service(new online::display::CAsioService(1)),
     m_shm_manager(bipc::open_only, "mmDaqSharedMemory") ,
     m_shm_condition(bipc::open_only, "mmDaqSharedCondition"), terminate(false),
-    readMutex(), dataLine(), apvChipsList(), apvChipIdList(), configuredChamberElements(chamberElements), configuredChipvec(chipvec), isProcessing(false), stripDataEvent(0), rawEvent(0), realEvent(false)
+    readMutex(), dataLine(),/* apvChipsList(), apvChipIdList(), */configuredChamberElements(chamberElements), configuredChipvec(chipvec), isProcessing(false), stripDataEvent(0), rawEvent(0), realEvent(false)
 {
     eventDisplayed = 0; // angelos
     if(m_shm_manager.check_sanity())    {
-        fillApvChipsList(apvList,apvChips);
+//        fillApvChipsList(apvList,apvChips);
         //        connect_shared_memory();		ANGELOS
         mainDrawer = new DisplayDrawer(mainWindow);
 
@@ -234,17 +235,7 @@ void ShmemReader::read_event_strips()
     }
 }
 
-//function to pass list of apv chips from the configuration to the memory reader
-void ShmemReader::fillApvChipsList(std::vector<uint32_t> apvList, std::vector<std::string> apvChips)
-{
-    if(apvChipsList.size()!=0) apvChipsList.clear();
-    for(int iChip=0; iChip<apvList.size(); iChip++)
-    {
-        apvChipsList.push_back(apvChips.at(iChip));
-        apvChipIdList.push_back(apvList.at(iChip));
-    }
-    std::cout<<"Chips to read for data : "<<apvChipsList.size()<<std::endl;
-}
+
 
 //read all chips from raw data segment
 void ShmemReader::read_raw_data()

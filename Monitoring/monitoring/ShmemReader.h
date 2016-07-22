@@ -120,7 +120,9 @@ class ShmemReader : public QObject
     Q_OBJECT
 
 public:
-    ShmemReader(std::vector<uint32_t> apvList, std::vector<std::string> apvChips, std::vector<boost::shared_ptr<online::display::CSrsChip> > chipvec,
+    ShmemReader(/*std::vector<uint32_t> apvList,*/
+                std::vector<std::string> apvChips,
+                std::vector<boost::shared_ptr<online::display::CSrsChip> > chipvec,
                 std::vector<std::pair<boost::shared_ptr<online::display::CDetChamber>, std::vector<boost::shared_ptr<online::display::CDetReadout> > > > chamberElements,
                 MainWindow *window,
                 std::vector < std::pair < QTreeWidgetItem*, std::pair <std::vector<std::string>, std::vector <TH1D *> > > > mappingChip1dElements,
@@ -195,7 +197,7 @@ public slots:
     void read_raw_data();
     void read_event_strips();
 
-    void fillApvChipsList(std::vector<uint32_t> apvList,std::vector<std::string > apvChips);
+//    void fillApvChipsList(std::vector<uint32_t> apvList,std::vector<std::string > apvChips);
     std::string getNameFromChipId(uint32_t chipId);
 signals:
     void readEvent();
