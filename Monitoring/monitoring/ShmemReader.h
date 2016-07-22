@@ -120,8 +120,8 @@ class ShmemReader : public QObject
     Q_OBJECT
 
 public:
-    ShmemReader(std::vector<uint32_t> apvList, std::vector<std::string> apvChips, std::vector<boost::shared_ptr<online::display::CSrsChip> > chipvec,
-                std::vector<std::pair<boost::shared_ptr<online::display::CDetChamber>, std::vector<boost::shared_ptr<online::display::CDetReadout> > > > chamberElements,
+    ShmemReader(std::vector<std::pair<boost::shared_ptr<online::display::CDetChamber>,
+                std::vector<boost::shared_ptr<online::display::CDetReadout> > > > chamberElements,
                 MainWindow *window,
                 std::vector < std::pair < QTreeWidgetItem*, std::pair <std::vector<std::string>, std::vector <TH1D *> > > > mappingChip1dElements,
                 std::vector < std::pair < QTreeWidgetItem*, std::pair <std::vector<std::string>, std::vector <TH2D *> > > > mappingChip2dElements,
@@ -131,19 +131,19 @@ public:
     ~ShmemReader();
 
     struct SPublisherIpcData {
-             boost::interprocess::interprocess_mutex mutex;
-             boost::interprocess::interprocess_condition cond_event;
-             bool flag_new_config;
-             bool flag_new_event_data;
-             int server_state;
+        boost::interprocess::interprocess_mutex mutex;
+        boost::interprocess::interprocess_condition cond_event;
+        bool flag_new_config;
+        bool flag_new_event_data;
+        int server_state;
 
-             SPublisherIpcData() :
-             mutex(),
-             cond_event(),
-             flag_new_config(false),
-             flag_new_event_data(false),
-             server_state(0)
-             {}
+        SPublisherIpcData() :
+            mutex(),
+            cond_event(),
+            flag_new_config(false),
+            flag_new_event_data(false),
+            server_state(0)
+        {}
     };
 
     /// memory shared by DAQ server
@@ -166,22 +166,15 @@ public:
     bipc::managed_shared_memory m_shm_manager;
     ShmemNamedCondition m_shm_condition;
     bool terminate;
-//    boost::posix_time::ptime timeout;
-
-    //boost::condition_variable readCondition;
     boost::mutex readMutex;
     std::string dataLine;
-    std::vector<std::string> apvChipsList;
     std::vector<uint32_t> apvChipIdList;
     std::vector<std::pair<boost::shared_ptr<online::display::CDetChamber>, std::vector<boost::shared_ptr<online::display::CDetReadout> > > > configuredChamberElements;
-    std::vector<boost::shared_ptr<online::display::CSrsChip> > configuredChipvec;
     std::vector <std::string> stripDataEvent;
     QVector<std::pair<QString, QVector<int> > > rawEvent;
     int eventDisplayed;
 
 
-    //QTimer *readingTimer;
-    //std::ifstream *file;
 
     void connect_shared_memory();
     void setCondition();
@@ -197,24 +190,8 @@ public slots:
 
     void handleSharedData();
     void read_event_number();
-    void read_raw_data();
     void read_event_strips();
 
-    void fillApvChipsList(std::vector<uint32_t> apvList,std::vector<std::string > apvChips);
-    std::string getNameFromChipId(uint32_t chipId);
-//    void read_chip_raw(QString name, QVector<int> rawVector);
-//    int handleBufferedEvent(QString line_qstr);
-
-
-    //void read_chip_raw(apvChipId name);
-
-//    void readoutHistoFiller();
-
-//    void fillReadoutHistos(std::string chamberName, std::string readoutName, int strip, int charge, int time);
-//    TH1D *fillReadout1dHisto(std::string chamberName, std::string readoutName, std::string histoType);
-//    TH2D *fillReadout2dHisto(std::string chamberName, std::string readoutName, std::string histoType);
-//    TH1D *fillChip1dHisto(std::string chipName, std::string histoType);
-//    TH2D *fillChip2dHisto(std::string chipName, std::string histoType);
 
 
 signals:
@@ -225,7 +202,6 @@ signals:
     void fillHistograms(QVector<std::pair<QString, QVector<int> > >, std::vector <std::string>, int);
 
     void runNumberIs(QString);
-    void fillApvRaw(QString, QVector<int>);
     void runReadoutHistoFiller();
     void fillReadout(QString line);
     void newLine();

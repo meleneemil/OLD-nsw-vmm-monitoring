@@ -84,7 +84,7 @@ namespace bptm = boost::posix_time;
 
 
 CDaqServerConfig::CDaqServerConfig() :
-    mainWindow(),memReader(0), dataFile(0),activeTabIndex(0), eventNumber(0), chamberElementsPairs(), chamberElements(), apvChipsList(),
+    mainWindow(),memReader(0), dataFile(0),activeTabIndex(0), eventNumber(0), chamberElementsPairs(), chamberElements(),
     m_daq_cfg(),
     m_srs_cfg(),
     m_det_cfg(),
@@ -154,8 +154,13 @@ void CDaqServerConfig::transmitStartSignal()
 {
 
     try{
-        memReader = new ShmemReader(apvChipIdsList, apvChipsList, locate_srs_chips(), chamberElements,
-                                    mainWindow, mappingChip1dElements, mappingChip2dElements, mappingReadout1dElements, mappingReadout2dElements);
+        memReader = new ShmemReader(locate_srs_chips(),
+                                    chamberElements,
+                                    mainWindow,
+                                    mappingChip1dElements,
+                                    mappingChip2dElements,
+                                    mappingReadout1dElements,
+                                    mappingReadout2dElements);
 
         qRegisterMetaType< QVector<int> >("QVector<int>");
         qRegisterMetaType< std::string >("std::string");
@@ -489,7 +494,6 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
 
     //chamber frame canvases setup
     divideFrameCanvases(nOfReadouts, window->statisticsFrame);
-    divideFrameCanvases(nOfReadouts, window->statisticsAdvancedFrame);
     divideFrameCanvases(nOfReadouts, window->eventDisplayFrame);
 
     //chips frame canvases setup
@@ -500,7 +504,6 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
     makeListItemsCheckable(chambersList);
     std::cout<<"Number of Chambers : "<<chambersList.size()<<std::endl;
     std::cout<<"Number of readouts : "<<nOfReadouts<<std::endl;
-    std::cout<<"Number of APV chips : "<<apvChipsList.size()<<std::endl;
 
     return chambersList;
 }

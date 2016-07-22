@@ -44,9 +44,7 @@ bool FAKEDATA=false;
 int FAKE_EVENT_NO=0;
 
 
-ShmemReader::ShmemReader(std::vector<uint32_t> apvList, std::vector<std::string> apvChips,
-                         std::vector<boost::shared_ptr<online::display::CSrsChip> > chipvec,
-                         std::vector<std::pair<boost::shared_ptr<online::display::CDetChamber>,
+ShmemReader::ShmemReader(std::vector<std::pair<boost::shared_ptr<online::display::CDetChamber>,
                          std::vector<boost::shared_ptr<online::display::CDetReadout> > > > chamberElements,
                          MainWindow *window,
                          std::vector < std::pair < QTreeWidgetItem*, std::pair <std::vector<std::string>, std::vector <TH1D *> > > > mappingChip1dElements,
@@ -56,11 +54,11 @@ ShmemReader::ShmemReader(std::vector<uint32_t> apvList, std::vector<std::string>
     m_shm_shared_data(0), shmem(), shCond(), mainWindow(window), mainDrawer(0), service(new online::display::CAsioService(1)),
     m_shm_manager(bipc::open_only, "mmDaqSharedMemory") ,
     m_shm_condition(bipc::open_only, "mmDaqSharedCondition"), terminate(false),
-    readMutex(), dataLine(), apvChipsList(), apvChipIdList(), configuredChamberElements(chamberElements), configuredChipvec(chipvec), isProcessing(false), stripDataEvent(0), rawEvent(0), realEvent(false)
+    readMutex(), dataLine(),  apvChipIdList(), configuredChamberElements(chamberElements),  isProcessing(false), stripDataEvent(0), rawEvent(0), realEvent(false)
 {
     eventDisplayed = 0; // angelos
     if(m_shm_manager.check_sanity())    {
-        fillApvChipsList(apvList,apvChips);
+
         //        connect_shared_memory();		ANGELOS
         mainDrawer = new DisplayDrawer(mainWindow);
 
@@ -71,7 +69,6 @@ ShmemReader::ShmemReader(std::vector<uint32_t> apvList, std::vector<std::string>
 
         //connectors for passing data from shared memory to local copies
         connect(this,SIGNAL(readEvent()),this,SLOT(read_event_number()));
-        connect(this,SIGNAL(readRaw()),this,SLOT(read_raw_data()));
         connect(this,SIGNAL(readStrip()),this,SLOT(read_event_strips()));
 
         //connectors for controlling filling and drawing of the histograms from the displayDrawer
@@ -192,12 +189,8 @@ void ShmemReader::read_event_number()
             eventDisplayed = *res.first;
             realEvent=true;
             std::cout<<"Trigger # : "<<(int)*res.first<<std::endl;
-            //emit drawHistograms();
-            //                read_raw_data(); //den xriazete
 
             read_event_strips();
-            //emit newEventReceived(QString::number(*res.first));
-            //emit drawHistograms();
         }
     }
 
@@ -232,60 +225,5 @@ void ShmemReader::read_event_strips()
     else {
         std::cout << "ERR: mmDaqSharedEventData resvec.second=" << res_str.second << std::endl;
     }
-}
-
-//function to pass list of apv chips from the configuration to the memory reader
-void ShmemReader::fillApvChipsList(std::vector<uint32_t> apvList, std::vector<std::string> apvChips)
-{
-    if(apvChipsList.size()!=0) apvChipsList.clear();
-    for(int iChip=0; iChip<apvList.size(); iChip++)
-    {
-        apvChipsList.push_back(apvChips.at(iChip));
-        apvChipIdList.push_back(apvList.at(iChip));
-    }
-    std::cout<<"Chips to read for data : "<<apvChipsList.size()<<std::endl;
-}
-
-//read all chips from raw data segment
-void ShmemReader::read_raw_data()
-{
-    std::pair<ShmemRawMap*, size_t>
-            res = m_shm_manager.find< ShmemRawMap >( "mmDaqSharedRawData" ) ;
-
-    int16_t rawValue;
-    if (res.second != 1) {
-        std::cout << "ERR: mmDaqSharedRawData resvec.second=" << res.second << std::endl;
-    }
-    ShmemRawMap::iterator it = res.first->begin();
-    std::cout<<"Raw data vector size is "<<res.first->size()<<std::endl;
-    for (; it != res.first->end(); ++it) {
-        std::pair<QString, QVector< int > > rawData;
-        std::string apvChipName;
-        QVector<int> rawVector;
-        apvChipName = getNameFromChipId(it->first);
-
-        if(!apvChipName.empty()) {
-            for(size_t ii = 0; ii < it->second.size(); ++ii)    {
-                rawValue = static_cast<int16_t>(it->second.at(ii));
-                rawVector.push_back(rawValue);
-            }
-        }
-        if(rawVector.size()>1)  {
-            rawData.first=QString(apvChipName.c_str());
-            rawData.second=rawVector;
-            rawEvent.push_back(rawData);
-        }
-    }
-
-}
-
-std::string ShmemReader::getNameFromChipId(uint32_t chipId)
-{
-    for(int iList=0; iList<apvChipsList.size(); ++iList)
-    {
-        if(apvChipIdList.at(iList)==chipId)
-            return apvChipsList.at(iList);
-    }
-    return std::string();
 }
 
