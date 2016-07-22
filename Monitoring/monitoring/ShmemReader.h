@@ -120,8 +120,8 @@ class ShmemReader : public QObject
     Q_OBJECT
 
 public:
-    ShmemReader(std::vector<std::pair<boost::shared_ptr<online::display::CDetChamber>,
-                std::vector<boost::shared_ptr<online::display::CDetReadout> > > > chamberElements,
+    ShmemReader(std::vector<uint32_t> apvList, std::vector<std::string> apvChips, std::vector<boost::shared_ptr<online::display::CSrsChip> > chipvec,
+                std::vector<std::pair<boost::shared_ptr<online::display::CDetChamber>, std::vector<boost::shared_ptr<online::display::CDetReadout> > > > chamberElements,
                 MainWindow *window,
                 std::vector < std::pair < QTreeWidgetItem*, std::pair <std::vector<std::string>, std::vector <TH1D *> > > > mappingChip1dElements,
                 std::vector < std::pair < QTreeWidgetItem*, std::pair <std::vector<std::string>, std::vector <TH2D *> > > > mappingChip2dElements,
@@ -131,19 +131,19 @@ public:
     ~ShmemReader();
 
     struct SPublisherIpcData {
-        boost::interprocess::interprocess_mutex mutex;
-        boost::interprocess::interprocess_condition cond_event;
-        bool flag_new_config;
-        bool flag_new_event_data;
-        int server_state;
+             boost::interprocess::interprocess_mutex mutex;
+             boost::interprocess::interprocess_condition cond_event;
+             bool flag_new_config;
+             bool flag_new_event_data;
+             int server_state;
 
-        SPublisherIpcData() :
-            mutex(),
-            cond_event(),
-            flag_new_config(false),
-            flag_new_event_data(false),
-            server_state(0)
-        {}
+             SPublisherIpcData() :
+             mutex(),
+             cond_event(),
+             flag_new_config(false),
+             flag_new_event_data(false),
+             server_state(0)
+             {}
     };
 
     /// memory shared by DAQ server
@@ -159,17 +159,19 @@ public:
     const char *shmem;
     const char *shCond;
 
-    //online::display::CDaqServerConfig *currentConfiguration;
     MainWindow *mainWindow;
     DisplayDrawer *mainDrawer;
     online::display::CAsioService *service;
     bipc::managed_shared_memory m_shm_manager;
     ShmemNamedCondition m_shm_condition;
     bool terminate;
+
     boost::mutex readMutex;
     std::string dataLine;
+    std::vector<std::string> apvChipsList;
     std::vector<uint32_t> apvChipIdList;
     std::vector<std::pair<boost::shared_ptr<online::display::CDetChamber>, std::vector<boost::shared_ptr<online::display::CDetReadout> > > > configuredChamberElements;
+    std::vector<boost::shared_ptr<online::display::CSrsChip> > configuredChipvec;
     std::vector <std::string> stripDataEvent;
     QVector<std::pair<QString, QVector<int> > > rawEvent;
     int eventDisplayed;
@@ -190,10 +192,11 @@ public slots:
 
     void handleSharedData();
     void read_event_number();
+    void read_raw_data();
     void read_event_strips();
 
-
-
+    void fillApvChipsList(std::vector<uint32_t> apvList,std::vector<std::string > apvChips);
+    std::string getNameFromChipId(uint32_t chipId);
 signals:
     void readEvent();
     void readRaw();

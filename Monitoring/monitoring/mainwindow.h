@@ -155,6 +155,8 @@ public:
 
     frame* eventDisplayFrame;
     frame* statisticsFrame;
+    frame* statisticsAdvancedFrame;
+    frame* daqStatisticsFrame;
     frame* statisticsChipsFrame;
 
     QString filename;

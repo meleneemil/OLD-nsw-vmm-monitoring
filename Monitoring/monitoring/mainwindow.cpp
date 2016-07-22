@@ -299,8 +299,14 @@ void MainWindow::setUpFrameEnvironment()
     eventDisplayFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     QWidget* statisticsFrameTab = new QWidget();
     statisticsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    QWidget* statisticsAdvancedFrameTab = new QWidget();
+    statisticsAdvancedFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     QWidget* apvFrameTab = new QWidget();
     apvFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+//    QWidget* crossTalksFrameTab = new QWidget();
+//    crossTalksFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    QWidget* daqStatisticsFrameTab = new QWidget();
+    daqStatisticsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     QWidget* statisticsChipsFrameTab = new QWidget();
     statisticsChipsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
@@ -313,6 +319,10 @@ void MainWindow::setUpFrameEnvironment()
     addFrameToTabWidget(mainTabs,statisticsFrameTab,statisticsFrame,"Statistics");
     statisticsChipsFrame = new frame(statisticsChipsFrameTab);
     statisticsChipsFrame->frameType ="Chips Statistics";
+    statisticsAdvancedFrame = new frame(statisticsAdvancedFrameTab);
+    statisticsAdvancedFrame->frameType ="Statistics Advanced";
+    daqStatisticsFrame = new frame(daqStatisticsFrameTab);
+    daqStatisticsFrame->frameType ="DaqStatistics";
 
 
 }

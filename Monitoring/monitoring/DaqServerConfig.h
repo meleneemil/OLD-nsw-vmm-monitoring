@@ -134,6 +134,8 @@ namespace online {
          QTimer *timer;
          std::pair<boost::shared_ptr<CDetChamber>, std::vector<boost::shared_ptr<CDetReadout> > > chamberElementsPairs;
          std::vector<std::pair<boost::shared_ptr<CDetChamber>, std::vector<boost::shared_ptr<CDetReadout> > > > chamberElements;
+         std::vector<std::string> apvChipsList;
+         std::vector<uint32_t> apvChipIdsList;
 //         std::vector<std::string> bnlChipsList;
 
          template <class T>

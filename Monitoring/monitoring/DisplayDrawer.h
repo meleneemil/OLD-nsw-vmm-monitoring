@@ -12,6 +12,8 @@
 
 #include "AsioService.h"
 #include "mainwindow.h"
+//#include "ShmemReader.h"
+//#include "DaqServerConfig.h"
 
 #include <QObject>
 #include <QWaitCondition>
@@ -71,6 +73,7 @@ public:
 
     online::display::CAsioService *service;
     MainWindow *monitoringMainWindow;
+    //ShmemReader *memReader;
 
     QWaitCondition fillCondition;
     QWaitCondition drawCondition;
