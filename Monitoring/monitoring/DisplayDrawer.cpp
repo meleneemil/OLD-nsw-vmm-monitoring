@@ -324,19 +324,15 @@ TH2D *DisplayDrawer::fillChip2dHisto(std::string chipName, std::string histoType
 //draw histograms slot for displaying on active tab only
 void DisplayDrawer::drawHistograms()
 {
-    //    qDebug("### @DRAWHISTS - TAB = %i", monitoringMainWindow->mainTabs->currentIndex());
-    //std::cout<<"Draw signal Received"<<std::endl;
     if(monitoringMainWindow->mainTabs->currentIndex()==0)   {
         drawEventHistos();
         //        resetEventHistos_slot();
-        //drawTimeEventHistos();
         //        monitoringMainWindow->eventDisplayFrame->frameCanvas->getCanvas()->Modified();
         //        monitoringMainWindow->eventDisplayFrame->frameCanvas->getCanvas()->Update();
     }
     else if(monitoringMainWindow->mainTabs->currentIndex()==1)   {
         drawStatisticsHistos();
         //drawChargeStatisticsHistos();
-        //drawTimeStatisticsHistos();
         //monitoringMainWindow->statisticsFrame->frameCanvas->getCanvas()->Modified();
         //monitoringMainWindow->statisticsFrame->frameCanvas->getCanvas()->Update();
     }

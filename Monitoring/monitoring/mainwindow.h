@@ -34,11 +34,7 @@
 #ifndef Q_MOC_RUN
 #endif
 
-//#include "DaqServerConfig.h"
-
 #include "TRandom.h"
-
-
 
 namespace Ui {
 class MainWindow;

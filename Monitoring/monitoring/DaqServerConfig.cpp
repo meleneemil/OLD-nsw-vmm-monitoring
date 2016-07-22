@@ -322,7 +322,7 @@ void CDaqServerConfig::read_detector_config_file(const std::string& filename)
       std::cout << "Failed configuring detector:\n";
       std::cout << re.what() << std::endl;
    }
-         
+
 //   //TODO: check consistency
 //   //TODO: add chips to fecs:  CSrsFec::add_chip(boost::shared_ptr<CSrsChip> chip_ptr)
 }
