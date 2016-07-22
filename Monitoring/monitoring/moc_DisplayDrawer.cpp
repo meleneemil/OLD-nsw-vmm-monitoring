@@ -20,8 +20,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_DisplayDrawer_t {
-    QByteArrayData data[43];
-    char stringdata[606];
+    QByteArrayData data[41];
+    char stringdata[564];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -67,12 +67,10 @@ QT_MOC_LITERAL(33, 414, 14), // "fillHistograms"
 QT_MOC_LITERAL(34, 429, 14), // "drawHistograms"
 QT_MOC_LITERAL(35, 444, 20), // "drawStatisticsHistos"
 QT_MOC_LITERAL(36, 465, 15), // "drawEventHistos"
-QT_MOC_LITERAL(37, 481, 16), // "drawApvRawHistos"
-QT_MOC_LITERAL(38, 498, 24), // "drawChipStatisticsHistos"
-QT_MOC_LITERAL(39, 523, 10), // "reset_slot"
-QT_MOC_LITERAL(40, 534, 26), // "resetStatisticsHistos_slot"
-QT_MOC_LITERAL(41, 561, 21), // "resetEventHistos_slot"
-QT_MOC_LITERAL(42, 583, 22) // "resetApvRawHistos_slot"
+QT_MOC_LITERAL(37, 481, 10), // "reset_slot"
+QT_MOC_LITERAL(38, 492, 26), // "resetStatisticsHistos_slot"
+QT_MOC_LITERAL(39, 519, 21), // "resetEventHistos_slot"
+QT_MOC_LITERAL(40, 541, 22) // "resetApvRawHistos_slot"
 
     },
     "DisplayDrawer\0NotifyFill\0\0"
@@ -88,8 +86,7 @@ QT_MOC_LITERAL(42, 583, 22) // "resetApvRawHistos_slot"
     "time\0pdo\0tdo\0fillChipHistos\0fecNumber\0"
     "chipNumber\0channelNumber\0fillHistograms\0"
     "drawHistograms\0drawStatisticsHistos\0"
-    "drawEventHistos\0drawApvRawHistos\0"
-    "drawChipStatisticsHistos\0reset_slot\0"
+    "drawEventHistos\0reset_slot\0"
     "resetStatisticsHistos_slot\0"
     "resetEventHistos_slot\0resetApvRawHistos_slot"
 };
@@ -101,7 +98,7 @@ static const uint qt_meta_data_DisplayDrawer[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      20,   14, // methods
+      18,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -109,26 +106,24 @@ static const uint qt_meta_data_DisplayDrawer[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    3,  114,    2, 0x0a /* Public */,
-       8,    0,  121,    2, 0x0a /* Public */,
-       9,    0,  122,    2, 0x0a /* Public */,
-      10,    1,  123,    2, 0x0a /* Public */,
-      12,    2,  126,    2, 0x0a /* Public */,
-      16,    0,  131,    2, 0x0a /* Public */,
-      17,    0,  132,    2, 0x0a /* Public */,
-      18,    1,  133,    2, 0x0a /* Public */,
-      20,    7,  136,    2, 0x0a /* Public */,
-      29,    5,  151,    2, 0x0a /* Public */,
-      33,    0,  162,    2, 0x0a /* Public */,
-      34,    0,  163,    2, 0x0a /* Public */,
-      35,    0,  164,    2, 0x0a /* Public */,
-      36,    0,  165,    2, 0x0a /* Public */,
-      37,    0,  166,    2, 0x0a /* Public */,
-      38,    0,  167,    2, 0x0a /* Public */,
-      39,    0,  168,    2, 0x0a /* Public */,
-      40,    0,  169,    2, 0x0a /* Public */,
-      41,    0,  170,    2, 0x0a /* Public */,
-      42,    0,  171,    2, 0x0a /* Public */,
+       1,    3,  104,    2, 0x0a /* Public */,
+       8,    0,  111,    2, 0x0a /* Public */,
+       9,    0,  112,    2, 0x0a /* Public */,
+      10,    1,  113,    2, 0x0a /* Public */,
+      12,    2,  116,    2, 0x0a /* Public */,
+      16,    0,  121,    2, 0x0a /* Public */,
+      17,    0,  122,    2, 0x0a /* Public */,
+      18,    1,  123,    2, 0x0a /* Public */,
+      20,    7,  126,    2, 0x0a /* Public */,
+      29,    5,  141,    2, 0x0a /* Public */,
+      33,    0,  152,    2, 0x0a /* Public */,
+      34,    0,  153,    2, 0x0a /* Public */,
+      35,    0,  154,    2, 0x0a /* Public */,
+      36,    0,  155,    2, 0x0a /* Public */,
+      37,    0,  156,    2, 0x0a /* Public */,
+      38,    0,  157,    2, 0x0a /* Public */,
+      39,    0,  158,    2, 0x0a /* Public */,
+      40,    0,  159,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3, 0x80000000 | 5, QMetaType::Int,    4,    6,    7,
@@ -141,8 +136,6 @@ static const uint qt_meta_data_DisplayDrawer[] = {
     QMetaType::Int, QMetaType::QString,   19,
     QMetaType::Void, 0x80000000 | 21, 0x80000000 | 21, QMetaType::Int, QMetaType::Float, QMetaType::Float, QMetaType::Int, QMetaType::Int,   22,   23,   24,   25,   26,   27,   28,
     QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Float, QMetaType::Float,   30,   31,   32,   25,   26,
-    QMetaType::Void,
-    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -175,12 +168,10 @@ void DisplayDrawer::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 11: _t->drawHistograms(); break;
         case 12: _t->drawStatisticsHistos(); break;
         case 13: _t->drawEventHistos(); break;
-        case 14: _t->drawApvRawHistos(); break;
-        case 15: _t->drawChipStatisticsHistos(); break;
-        case 16: _t->reset_slot(); break;
-        case 17: _t->resetStatisticsHistos_slot(); break;
-        case 18: _t->resetEventHistos_slot(); break;
-        case 19: _t->resetApvRawHistos_slot(); break;
+        case 14: _t->reset_slot(); break;
+        case 15: _t->resetStatisticsHistos_slot(); break;
+        case 16: _t->resetEventHistos_slot(); break;
+        case 17: _t->resetApvRawHistos_slot(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -222,13 +213,13 @@ int DisplayDrawer::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 20)
+        if (_id < 18)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 20;
+        _id -= 18;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 20)
+        if (_id < 18)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 20;
+        _id -= 18;
     }
     return _id;
 }

@@ -20,7 +20,6 @@
 #include "DetReadout.h"
 #include "DetChamber.h"
 #include "frame.h"
-//#include "pedestalsfileloader.h"
 
 #include <QObject>
 #include <QTreeWidget>
@@ -94,7 +93,7 @@ namespace bptm = boost::posix_time;
 
 
 CDaqServerConfig::CDaqServerConfig() :
-    mainWindow(),memReader(0), dataFile(0),/* pedestals(0), */activeTabIndex(0), eventNumber(0), chamberElementsPairs(), chamberElements(), apvChipsList(),
+    mainWindow(),memReader(0), dataFile(0),activeTabIndex(0), eventNumber(0), chamberElementsPairs(), chamberElements(), apvChipsList(),
     m_daq_cfg(),
     m_srs_cfg(),
     m_det_cfg(),
@@ -109,7 +108,6 @@ CDaqServerConfig::CDaqServerConfig() :
 
 {
 
-//   pedestal_path="pedestal=";
    mainStartUpWindow = new mmDaqStartupWindow(0);
 
    settingsWindow = new mmDaqSettingsWindow();
@@ -134,8 +132,6 @@ CDaqServerConfig::~CDaqServerConfig()
 {
     delete dataFile;
     dataFile=0;
-//    delete pedestals;
-//    pedestals=0;
    delete mainWindow;
    mainWindow=0;
    delete memReader;
@@ -326,6 +322,7 @@ void CDaqServerConfig::read_config_file(const std::string& filename)
 
 void CDaqServerConfig::read_srs_config_file(const std::string& filename)
 {
+
     m_srs_elements.clear();
    read_xml(filename, m_srs_cfg, boost::property_tree::xml_parser::trim_whitespace );
       
@@ -337,7 +334,7 @@ void CDaqServerConfig::read_srs_config_file(const std::string& filename)
       std::cout << "Failed configuring srs:\n";
       std::cout << re.what() << std::endl;
    }
-   
+
 }
 
 
@@ -529,14 +526,12 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
     int nOfChips = mappingChip1dElements.size();
     int nOfApvChips = window->apvRawFrame->frameStatisticsHistos.size();
 
-//    divideFrameCanvases(nOfApvChips, window->apvRawFrame);
-//    divideFrameCanvases(nOfApvChips, window->pedestalsFrame);
     divideFrameCanvases(nOfChips, window->statisticsChipsFrame);
     //make list items checkable boxes
     makeListItemsCheckable(chambersList);
     std::cout<<"Number of Chambers : "<<chambersList.size()<<std::endl;
     std::cout<<"Number of readouts : "<<nOfReadouts<<std::endl;
-    std::cout<<"Number of VMM1 chips : "<<bnlChipsList.size()<<std::endl;
+//    std::cout<<"Number of VMM1 chips : "<<bnlChipsList.size()<<std::endl;
     std::cout<<"Number of APV chips : "<<apvChipsList.size()<<std::endl;
     //std::cout<<"Number of APV raw histograms : "<<window->apvRawFrame->frameStatisticsHistos.size()<<std::endl;
 
@@ -547,11 +542,6 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
 //put chip elements under chamber elements (classification)
 QList<QTreeWidgetItem*> CDaqServerConfig::classifyChips(std::vector<boost::shared_ptr<CSrsChip> > chipvec, QTreeWidgetItem* parentChamberElement, DetBasePtr chambvecptr, MainWindow *window)
 {
-    //apvChipsList.clear();
-    //window->apvRawFrame->frameStatisticsHistos.clear();
-//    window->pedestalsFrame->frameEventHistos.clear();
-//    window->pedestalsFrame->frameEventHistos.clear();
-
     //variables to fill the mapping list
     std::pair < QTreeWidgetItem*, std::pair <std::vector<std::string>, std::vector <TH1D *> > > mappingListElements1d;
     std::pair <std::vector<std::string>, std::vector <TH1D *> > mappingTreeElements1d;
@@ -580,8 +570,6 @@ QList<QTreeWidgetItem*> CDaqServerConfig::classifyChips(std::vector<boost::share
                       apvChipsList.push_back(chipvecptr->name());
                       apvChipIdsList.push_back(chipvecptr->get_chip_id().chip_id());
                       window->apvRawFrame->frameStatisticsHistos.push_back(chipvecptr->getRawHisto());
-//                      window->pedestalsFrame->frameEventHistos.push_back(chipvecptr->getChipPedestalMean());
-//                      window->pedestalsFrame->frameEventHistos.push_back(chipvecptr->getChipPedestalSigma());
                     }
 
                     if(QString(chipvecptr->name().c_str()).contains("VMM2"))   {
@@ -646,15 +634,10 @@ void CDaqServerConfig::updateFrameCanvasesDivision_slot(QTreeWidgetItem* parentT
 
     if(parentTreeItem->parent()->text(0) == "Chamber Elements") //changing canvas divisions for readout histos
     {
-       //numberOfChamberElements = mainWindow->getElementsNumberOfCheckedChildren(parentTreeItem->parent());
        selectDeselectChamberChildren(parentTreeItem);
        numberOfChipElements = mainWindow->getElementsNumberOfCheckedChambersApvChips(parentTreeItem);
        numberOfReadoutElements = numberOfReadoutsToDisplay(parentTreeItem->parent());
-       //std::cout<<"Selecting - Deselecting "<<parentTreeItem->parent()->text(0).toStdString()<<std::endl;
-       //std::cout<<"Number of Chambers : "<<chamberElements.size()<<std::endl;
-       //std::cout<<"Number of Readouts : "<<numberOfReadoutElements<<std::endl;
        divideFrameCanvases(numberOfChipElements,mainWindow->apvRawFrame);
-//       divideFrameCanvases(numberOfChipElements,mainWindow->pedestalsFrame);
        divideFrameCanvases(numberOfChipElements,mainWindow->statisticsChipsFrame);
        divideFrameCanvases(numberOfReadoutElements,mainWindow->statisticsFrame);
        divideFrameCanvases(numberOfReadoutElements,mainWindow->eventDisplayFrame);
@@ -663,10 +646,7 @@ void CDaqServerConfig::updateFrameCanvasesDivision_slot(QTreeWidgetItem* parentT
     else //changing canvas divisions for chip histos
     {
        numberOfChipElements = mainWindow->getElementsNumberOfCheckedChambersApvChips(parentTreeItem->parent());
-       //std::cout<<"Selecting - Deselecting Chips from chamber "<<parentTreeItem->parent()->text(0).toStdString()<<std::endl;
-       //std::cout<<"Number of Chips Elements : "<<numberOfChipElements<<std::endl;
        divideFrameCanvases(numberOfChipElements,mainWindow->apvRawFrame);
-//       divideFrameCanvases(numberOfChipElements,mainWindow->pedestalsFrame);
        divideFrameCanvases(numberOfChipElements,mainWindow->statisticsChipsFrame);
     }
 
@@ -719,11 +699,6 @@ void CDaqServerConfig::divideFrameCanvases(int numberOfElements, frame* frameFor
         }
     }
 
-//    else if(frameForDivide->frameType == "Pedestals")    {
-//        //width=4;
-//        width=2;
-//        height=numberOfElements;
-//    }
 
 
     else if(frameForDivide->frameType == "CrossTalks") {
@@ -740,11 +715,6 @@ void CDaqServerConfig::divideFrameCanvases(int numberOfElements, frame* frameFor
 
     frameForDivide->divideCanvases(width,height);
 
-    //pedestal histos drawing when changing chip selection
-//    if(/*memReader==NULL && */pedestals)
-//        pedestals->drawPedestalsHistos();
-//    else
-//        memReader->mainDrawer->drawPedestalsHistos();
 }
 
 

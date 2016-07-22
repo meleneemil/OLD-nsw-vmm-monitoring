@@ -60,7 +60,7 @@ void testSharedMemTool::sendData()
     //    m_shm_condition->notify_all();
 
     int n = 0;
-    while(n<100000) {
+    while(n<100) {
 
 //        if(n%1000==0)
 //        std::cout << "Done: "<< 1000/100000*100 <<"%\n";

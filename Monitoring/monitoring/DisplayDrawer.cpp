@@ -32,7 +32,6 @@
 #include "DetTypes.h"
 #include "SrsFec.h"
 #include "SrsChip.h"
-//#include "pedestalsfileloader.h"
 #include "filereader.h"
 #include "ShmemReader.h"
 #include "DisplayDrawer.h"
@@ -374,20 +373,6 @@ void DisplayDrawer::drawHistograms()
         //monitoringMainWindow->statisticsFrame->frameCanvas->getCanvas()->Modified();
         //monitoringMainWindow->statisticsFrame->frameCanvas->getCanvas()->Update();
     }
-    //else if(monitoringMainWindow->mainTabs->currentIndex()==2)  {
-    //drawChipStatisticsHistos();
-    //monitoringMainWindow->apvRawFrame->frameCanvas->getCanvas()->Modified();
-
-    //}
-
-    //    else if(monitoringMainWindow->mainTabs->currentIndex()==5)   {
-    //        drawApvRawHistos();
-    //monitoringMainWindow->apvRawFrame->frameCanvas->getCanvas()->Update();
-    //    }
-
-    //    else if(monitoringMainWindow->mainTabs->currentIndex()==8)  {
-    //        drawPedestalsHistos();
-    //    }
 }
 
 void DisplayDrawer::drawStatisticsHistos()
@@ -458,16 +443,12 @@ void DisplayDrawer::drawEventHistos()
 }
 
 
-void DisplayDrawer::drawApvRawHistos()
-{
+//void DisplayDrawer::drawApvRawHistos()
+//{
 
-}
+//}
 
-void DisplayDrawer::drawChipStatisticsHistos()
-{
-}
-//not used currently, pedestal drawing is done on pedestalFileReader
-//void DisplayDrawer::drawPedestalsHistos()
+//void DisplayDrawer::drawChipStatisticsHistos()
 //{
 //}
 

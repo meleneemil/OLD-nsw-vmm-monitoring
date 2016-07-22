@@ -20,7 +20,6 @@
 #include "DetTypes.h"
 #include "SrsFec.h"
 #include "SrsChip.h"
-#include "pedestalsfileloader.h"
 #include "filereader.h"
 #include "ShmemReader.h"
 #include "DisplayDrawer.h"
@@ -109,10 +108,6 @@ typedef bipc::vector<int16_t, ShmemInt16Allocator>        ShmemInt16Vector;
 
 namespace online {
    namespace display {
-      //class pedestalsFileLoader;
-      //class CSrsBase;
-      //class CSrsNetworkDevice;
-      //class CSrsChip;
       class CDaqServerConfig : public QObject
       {
 
@@ -147,7 +142,6 @@ namespace online {
          ShmemReader* memReader;
          DisplayDrawer* drawer;
          fileReader* dataFile;
-         pedestalsFileLoader *pedestals;
          int activeTabIndex;
          QWaitCondition guiUpdateCondition;
          QMutex *guiUpdateMutex;
@@ -182,22 +176,10 @@ namespace online {
          void divideFrameCanvases(int numberOfElements, frame* frameForDivide);
 
 
-//         bool isChip1dHistoDisplayEnabled(TH1D* histo);
-//         bool isChip2dHistoDisplayEnabled(TH2D* histo);
-//         bool isReadout1dHistoDisplayEnabled(TH1D* histo);
-//         bool isReadout2dHistoDisplayEnabled(TH2D* histo);
-
-         //void fillSrsTabGui(MainWindow *window);
 
          QList<QTreeWidgetItem *> buildDetectorTreeGui();
          QList<QTreeWidgetItem *> buildChamberTreeGui(MainWindow *window);
          QList<QTreeWidgetItem*> classifyChips(std::vector<boost::shared_ptr<CSrsChip> > chipvec, QTreeWidgetItem* parentChamber, DetBasePtr chambvecptr, MainWindow *window);
-
-         //CDetReadout *getChannelReadout(std::string ChannelId);
-//        TH1D *fillReadout1dHisto(std::string chamberName, std::string readoutName, std::string histoType);
-//        TH2D *fillReadout2dHisto(std::string chamberName, std::string readoutName, std::string histoType);
-//        TH1D *fillChip1dHisto(std::string chipName, std::string histoType);
-//        TH2D *fillChip2dHisto(std::string chipName, std::string histoType);
 
       public slots:
         //Slots for configuration of the GUI
@@ -207,13 +189,9 @@ namespace online {
         void configure(const QString &configFile);
 
         //++++++++++Slots for client+++++++++++++++++++++++
-//        void messageDaq(std::string command);
-//        void make_messages(std::vector<std::string>& messages, std::string buttonCommand);
-//        void read_commands();
         void transmitStartSignal();
         void transmitStopSignal();
         void openSettingsWindow();
-//        void changeActiveTab(int tabIndex);
 
 
 
@@ -221,23 +199,12 @@ namespace online {
         void updateFrameCanvasesDivision_slot(QTreeWidgetItem* parentTreeItem);
         void selectDeselectChamberChildren(QTreeWidgetItem* parentTreeWidget);
         int numberOfReadoutsToDisplay(QTreeWidgetItem *parentTreeWidget);
-//        void handleSharedData();
-//        void read_event_number();
-//        void read_event_strips();
-//        void read_raw_data();
-//        void read_chip_raw(QString name, QVector<int> rawVector);
-//        int handleBufferedEvent(std::string line_str);
-
-        //void openPedestalsFile();
-        //void loadPedestalsFile();
 
       signals:
         void sendStartDaq(std::string command);
-        void sendStartPedestalsDaq(std::string command);
         void sendStopDaq(std::string command);
         void sendConfigDaq(std::string command);
         void configWithFile(const QString &);
-        void pedestalsFileNameIs(std::string);
 
       private:
          void read_config_file(const std::string& filename);
@@ -247,19 +214,10 @@ namespace online {
          void makeListItemsCheckable(QList<QTreeWidgetItem*> list);
 
 
-//         long id_number_from_string(const std::string& idstr) const;
-
-//         std::vector<std::string> m_args;
-//         bool m_bad_config;
-//         boost::program_options::variables_map m_varmap;
          boost::property_tree::ptree m_daq_cfg;
          boost::property_tree::ptree m_srs_cfg;
          boost::property_tree::ptree m_det_cfg;
-         
-//         std::string m_receiver_ip;
-//         int         m_receiver_port;
-//         std::string m_command_ip;
-//         int         m_command_port;
+
          
          std::string m_daq_config_file;
          std::string m_srs_config_file;

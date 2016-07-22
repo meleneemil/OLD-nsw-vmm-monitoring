@@ -50,16 +50,6 @@ const std::vector<SrsBasePtr>& CPropertyTreeParserSrs::make_srs_elements()
 {
    
    Q_FOREACH(const bpt::ptree::value_type &v, ptree_.get_child("srs")) {
-      /* if (v.first == "sru") {
-         try {
-            SrsBasePtr sru = parse_ptree_srs_node<CSrsSru>(v);
-            push_new_srs_element(sru);
-         } catch (std::exception& e) {
-            std::cout << "---> ERROR creating SRU" << std::endl;
-            throw;
-         }
-      }
-      else */
       if (v.first == "fec") {
          try {
             SrsBasePtr fec = parse_ptree_srs_node<CSrsFec>(v);
@@ -74,14 +64,6 @@ const std::vector<SrsBasePtr>& CPropertyTreeParserSrs::make_srs_elements()
             parse_ptree_srs_node_apv25(v);
          } catch (std::exception& e) {
             std::cout << "ERROR: srs config:  parsing APV25 node" << std::endl;
-            //throw;
-         }
-      }
-      else if (v.first == "BNL") {
-         try {
-            parse_ptree_srs_node_bnl(v);
-         } catch (std::exception& e) {
-            std::cout << "ERROR: srs config:  parsing BNL node" << std::endl;
             //throw;
          }
       }
@@ -159,9 +141,9 @@ boost::shared_ptr<CSrsChip> CPropertyTreeParserSrs::parse_ptree_srs_chip_node(co
       chipptr.reset(new CSrsChipBnl(CSrsChipId(0, id_number_from_string(idstr)), namestr) );   
       //TODO: rename class VMM1 ?
    }
-   else if (typestr == "TESTER") {
-        chipptr.reset(new CSrsChipMmDaqTest(CSrsChipId(0, id_number_from_string(idstr)), namestr) );
-     }
+//   else if (typestr == "TESTER") {
+//        chipptr.reset(new CSrsChipMmDaqTest(CSrsChipId(0, id_number_from_string(idstr)), namestr) );
+//     }
    else {
       throw std::runtime_error("Unknown SRS chip type");
    }

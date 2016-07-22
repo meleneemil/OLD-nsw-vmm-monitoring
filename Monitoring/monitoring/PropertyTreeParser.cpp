@@ -29,8 +29,6 @@ CPropertyTreeParser::~CPropertyTreeParser()
    
 }
 
-
-
 long CPropertyTreeParser::id_number_from_string(const std::string& idstr) const
 {
    long fid = -1;
