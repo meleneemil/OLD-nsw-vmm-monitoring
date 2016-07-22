@@ -11,7 +11,6 @@
 //#include "EventBuilder.h"
 //#include "SrsEventBuilder.h"
 #include "SrsChip.h"
-#include "Logger.h"
 #include "DaqServerConfig.h"
 
 
@@ -137,63 +136,6 @@ void CSrsFec::increment_counter_decode_fec()
    m_counter_error_decode_fec_header += 1;  
 }
 
-
-/**
- decode fec layer and insert data frame to the device's data queue 
- start event builder if end of event
- */
-/*
-void CSrsFec::insert_receiver_data(boost::shared_ptr<CUDPFrame> udpframe) 
-{
-   try {
-//      decode_udp_frame(udpframe); // this is still udp receiver thread, check performance and queue sizes
-//      if (udpframe->is_end_of_event()) {    
-//         std::stringstream ss;
-//         ss << " CSrsFec " << uid() <<" : received EoE #" << m_event_number << " m_input_buffer.size()=" << m_input_buffer.size();
-//         CLogger::instance()->msg(ss.str());
-//         m_event_number+=1;
-//      }
-//      else {
-//         //fafa frames are not in the buffer
-//         //lock inbuffer from udpreceiver thread
-//         udpframe->set_event_number(m_event_number);
-//         boost::mutex::scoped_lock(m_in_buffer_mutex);
-//         m_input_buffer.push_back(udpframe); 
-//      }
-      
-      
-      //fafa frames are not in the buffer
-      //lock inbuffer from udpreceiver thread
-      udpframe->set_event_number(m_event_number);
-
-      {
-         boost::mutex::scoped_lock lock(m_in_buffer_mutex);
-         m_input_buffer.push_back(udpframe);         
-      }
-
-      
-      run_event_builder();
-//      build_srs_event();
-      
-   } catch (std::exception& ex) {
-      m_counter_error_decode_udp += 1;
-
-      std::cout << "CSrsFec : error decoding udp frame " << m_counter_error_decode_udp << ". dropping frame \n";
-      //std::cout << ex.what() << std::endl;
-   }
-}
-*/
-
-///**
-// decode SRS FEC headers in the udp frame
-// */
-//void CSrsFec::decode_udp_frame(boost::shared_ptr<CUDPFrame> udpframe) 
-//{
-//   std::cout << "CSrsFec::decode_udp_frame( by CSrsFec::SrsTimeStampMode)" << std::endl;
-//   udpframe->decode(CSrsFec::SrsTimeStampMode);
-//}
-
-
 /**
  search for chip by id or name
  */
@@ -244,57 +186,5 @@ boost::shared_ptr<CSrsChip> CSrsFec::locate_chip(long chip_id, const std::string
    
    return boost::shared_ptr<CSrsChip>();
 }
-
-
-
-/**
- build event from any number of udp frames in the buffer, within fec's service thread
- frame knows its HW type, we ask it to provide correct Event class.
- must not throw
-*/
-
-void CSrsFec::build_srs_event()
-{
-//   CLogger::instance()->msg("CSrsFec::build_srs_event()");
-//   std::list<UDPFramePtr> buffer;
-//   {
-//      //move all input udp frames to tmp buffer
-//      boost::mutex::scoped_lock lock(m_in_buffer_mutex);
-//      // get only ready udp frames
-//      std::list<boost::shared_ptr<CUDPFrame> >::iterator first_notready =
-//      std::partition(m_input_buffer.begin(), m_input_buffer.end(), CUDPFrame::CheckReady() );
-//      buffer.splice(buffer.end(), m_input_buffer, m_input_buffer.begin(), first_notready);
-//   }
-   
-//   m_counter_error_decode_fec_header += std::count_if(buffer.begin(), buffer.end(),
-//                                                      boost::bind(&CUDPFrame::error_decode_fec_header, _1));
-//   buffer.remove_if(boost::bind(&CUDPFrame::error_decode_fec_header, _1) );
-   
-//   try {
-//      //in serial create equipment events (process equipment data in frames)
-//      Q_FOREACH(UDPFramePtr frame, buffer) {
-//         CSrsEventBuilder::create_event(frame);
-//         //channel data sorted by eventId are now in the chips
-//      }
-//      m_event_builder->notify();
-      
-//   } catch (bad_udp_data& badudp) {
-//      m_counter_error_create_event += 1;
-//      std::cout << "Dropping event ! CSrsFec::build_srs_event(): error creating FEC event :\n";
-//      std::cout << badudp.what() << std::endl;
-//   } catch (std::range_error& re) {
-//      m_counter_error_create_event += 1;
-//      std::cout << "Dropping event ! CSrsFec::build_srs_event(): error creating FEC event :\n";
-//      std::cout << re.what() << std::endl;
-//   } catch (std::runtime_error& re) {
-//      m_counter_error_create_event += 1;
-//      std::cout << "Dropping event ! CSrsFec::build_srs_event(): error creating FEC event :\n";
-//      std::cout << re.what() << std::endl;
-//   }
-   
-//   //udp frames not in events disappear here
-//   //events disappear here
-}
-
 
 

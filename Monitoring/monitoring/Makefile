@@ -84,7 +84,6 @@ SOURCES       = canvas.cxx \
 		SharedChip.cpp \
 		SharedChannel.cpp \
 		SharedSrsChannelData.cpp \
-		Logger.cpp \
 		filereader.cpp \
 		AsioService.cpp \
 		ShmemReader.cpp \
@@ -135,7 +134,6 @@ OBJECTS       = canvas.o \
 		SharedChip.o \
 		SharedChannel.o \
 		SharedSrsChannelData.o \
-		Logger.o \
 		filereader.o \
 		AsioService.o \
 		ShmemReader.o \
@@ -311,7 +309,6 @@ DIST          = ../../../../Qt5.4.2/5.4/gcc_64/mkspecs/features/spec_pre.prf \
 		SharedChip.h \
 		SharedChannel.h \
 		SharedSrsChannelData.h \
-		Logger.h \
 		filereader.h \
 		AsioService.h \
 		ShmemReader.h \
@@ -353,7 +350,6 @@ DIST          = ../../../../Qt5.4.2/5.4/gcc_64/mkspecs/features/spec_pre.prf \
 		SharedChip.cpp \
 		SharedChannel.cpp \
 		SharedSrsChannelData.cpp \
-		Logger.cpp \
 		filereader.cpp \
 		AsioService.cpp \
 		ShmemReader.cpp \
@@ -655,8 +651,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents canvas.h frame.h mainwindow.h PropertyTreeParser.h PropertyTreeParserDetector.h PropertyTreeParserSrs.h PropertyTreeParserChamber.h DaqServerConfig.h DetTypes.h DetBase.h DetChamber.h DetConnector.h DetDetector.h DetLayer.h DetMultiLayer.h DetReadout.h DetStripId.h EventTypes.h EventBase.h SrsTypes.h SrsChip.h SrsChipApv.h SrsChipBnl.h SrsChipMmDaqTest.h SrsChannelId.h SrsChannel.h SrsChannelData.h SrsChipId.h SrsEventId.h SrsEventChannels.h SrsFec.h SrsBase.h SrsNetworkDevice.h SRSEquipmentHeader.h SharedEBBuffer.h SharedBufferHandler.h SharedTypes.h SharedChip.h SharedChannel.h SharedSrsChannelData.h Logger.h filereader.h AsioService.h ShmemReader.h mmDaqSettingsWindow.h mmDaqStartupWindow.h DisplayDrawer.h $(DISTDIR)/
-	$(COPY_FILE) --parents canvas.cxx main.cpp frame.cpp PropertyTreeParser.cpp PropertyTreeParserDetector.cpp PropertyTreeParserSrs.cpp PropertyTreeParserChamber.cpp DaqServerConfig.cpp DetBase.cpp DetChamber.cpp DetConnector.cpp DetDetector.cpp DetLayer.cpp DetMultiLayer.cpp DetReadout.cpp DetStripId.cpp EventBase.cpp SrsChip.cpp SrsChipApv.cpp SrsChipBnl.cpp SrsChipMmDaqTest.cpp SrsChipId.cpp SrsChannelId.cpp SrsChannel.cpp SrsChannelData.cpp SrsEventId.cpp SrsEventChannels.cpp SrsFec.cpp SrsBase.cpp SrsNetworkDevice.cpp SRSEquipmentHeader.cpp SharedEBBuffer.cpp SharedBufferHandler.cpp SharedChip.cpp SharedChannel.cpp SharedSrsChannelData.cpp Logger.cpp filereader.cpp AsioService.cpp ShmemReader.cpp mmDaqSettingsWindow.cpp mmDaqStartupWindow.cpp DisplayDrawer.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents canvas.h frame.h mainwindow.h PropertyTreeParser.h PropertyTreeParserDetector.h PropertyTreeParserSrs.h PropertyTreeParserChamber.h DaqServerConfig.h DetTypes.h DetBase.h DetChamber.h DetConnector.h DetDetector.h DetLayer.h DetMultiLayer.h DetReadout.h DetStripId.h EventTypes.h EventBase.h SrsTypes.h SrsChip.h SrsChipApv.h SrsChipBnl.h SrsChipMmDaqTest.h SrsChannelId.h SrsChannel.h SrsChannelData.h SrsChipId.h SrsEventId.h SrsEventChannels.h SrsFec.h SrsBase.h SrsNetworkDevice.h SRSEquipmentHeader.h SharedEBBuffer.h SharedBufferHandler.h SharedTypes.h SharedChip.h SharedChannel.h SharedSrsChannelData.h filereader.h AsioService.h ShmemReader.h mmDaqSettingsWindow.h mmDaqStartupWindow.h DisplayDrawer.h $(DISTDIR)/
+	$(COPY_FILE) --parents canvas.cxx main.cpp frame.cpp PropertyTreeParser.cpp PropertyTreeParserDetector.cpp PropertyTreeParserSrs.cpp PropertyTreeParserChamber.cpp DaqServerConfig.cpp DetBase.cpp DetChamber.cpp DetConnector.cpp DetDetector.cpp DetLayer.cpp DetMultiLayer.cpp DetReadout.cpp DetStripId.cpp EventBase.cpp SrsChip.cpp SrsChipApv.cpp SrsChipBnl.cpp SrsChipMmDaqTest.cpp SrsChipId.cpp SrsChannelId.cpp SrsChannel.cpp SrsChannelData.cpp SrsEventId.cpp SrsEventChannels.cpp SrsFec.cpp SrsBase.cpp SrsNetworkDevice.cpp SRSEquipmentHeader.cpp SharedEBBuffer.cpp SharedBufferHandler.cpp SharedChip.cpp SharedChannel.cpp SharedSrsChannelData.cpp filereader.cpp AsioService.cpp ShmemReader.cpp mmDaqSettingsWindow.cpp mmDaqStartupWindow.cpp DisplayDrawer.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.ui $(DISTDIR)/
 
 
@@ -9868,8 +9864,6 @@ main.o: main.cpp ../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qfiledevice.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qtouchdevice.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmessagebox.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qdialog.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenubar.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmenu.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtGui/qicon.h \
@@ -9981,6 +9975,7 @@ main.o: main.cpp ../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qfiledialog.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qdir.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qfileinfo.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qdialog.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QDir \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QDebug \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QFileInfo \
@@ -19163,8 +19158,7 @@ PropertyTreeParserSrs.o: PropertyTreeParserSrs.cpp PropertyTreeParserSrs.h \
 		SrsSru.h \
 		SrsChipApv.h \
 		SrsChipBnl.h \
-		SrsChipMmDaqTest.h \
-		Logger.h
+		SrsChipMmDaqTest.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o PropertyTreeParserSrs.o PropertyTreeParserSrs.cpp
 
 PropertyTreeParserChamber.o: PropertyTreeParserChamber.cpp PropertyTreeParserChamber.h \
@@ -23744,7 +23738,6 @@ DaqServerConfig.o: DaqServerConfig.cpp DaqServerConfig.h \
 		SrsChannel.h \
 		SrsChannelId.h \
 		SrsChannelData.h \
-		Logger.h \
 		DetDetector.h \
 		DetConnector.h \
 		DetStripId.h \
@@ -23760,8 +23753,7 @@ DaqServerConfig.o: DaqServerConfig.cpp DaqServerConfig.h \
 		PropertyTreeParserDetector.h \
 		PropertyTreeParser.h \
 		PropertyTreeParserChamber.h \
-		PropertyTreeParserSrs.h \
-		../../../../boost_1_60_0/boost/interprocess/ipc/message_queue.hpp
+		PropertyTreeParserSrs.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o DaqServerConfig.o DaqServerConfig.cpp
 
 DetBase.o: DetBase.cpp DetBase.h \
@@ -33115,10 +33107,6 @@ SrsChipApv.o: SrsChipApv.cpp SrsChipApv.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtabwidget.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qrubberband.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtreewidgetitemiterator.h \
-		SrsChannelApvRaw.h \
-		SrsChannel.h \
-		SrsChannelId.h \
-		SrsChannelData.h \
 		SrsEventChannels.h \
 		SRSEquipmentHeader.h \
 		../../../../boost_1_60_0/boost/bind.hpp \
@@ -40231,7 +40219,6 @@ SrsFec.o: SrsFec.cpp SrsFec.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtabwidget.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qrubberband.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtreewidgetitemiterator.h \
-		Logger.h \
 		DaqServerConfig.h \
 		mmDaqStartupWindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QTabWidget \
@@ -40972,288 +40959,7 @@ SrsBase.o: SrsBase.cpp SrsBase.h \
 		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_convertible.hpp \
 		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_nullptr_t.hpp \
 		../../../../boost_1_60_0/boost/smart_ptr/detail/operator_bool.hpp \
-		SrsChipId.h \
-		Logger.h \
-		../../../../boost_1_60_0/boost/thread/mutex.hpp \
-		../../../../boost_1_60_0/boost/thread/detail/platform.hpp \
-		../../../../boost_1_60_0/boost/config/requires_threads.hpp \
-		../../../../boost_1_60_0/boost/thread/win32/mutex.hpp \
-		../../../../boost_1_60_0/boost/thread/win32/basic_timed_mutex.hpp \
-		../../../../boost_1_60_0/boost/thread/win32/thread_primitives.hpp \
-		../../../../boost_1_60_0/boost/thread/detail/config.hpp \
-		../../../../boost_1_60_0/boost/config/auto_link.hpp \
-		../../../../boost_1_60_0/boost/thread/exceptions.hpp \
-		../../../../boost_1_60_0/boost/system/system_error.hpp \
-		../../../../boost_1_60_0/boost/system/error_code.hpp \
-		../../../../boost_1_60_0/boost/system/config.hpp \
-		../../../../boost_1_60_0/boost/system/api_config.hpp \
-		../../../../boost_1_60_0/boost/noncopyable.hpp \
-		../../../../boost_1_60_0/boost/core/noncopyable.hpp \
-		../../../../boost_1_60_0/boost/utility/enable_if.hpp \
-		../../../../boost_1_60_0/boost/core/enable_if.hpp \
-		../../../../boost_1_60_0/boost/cerrno.hpp \
-		../../../../boost_1_60_0/boost/config/abi_prefix.hpp \
-		../../../../boost_1_60_0/boost/config/abi_suffix.hpp \
-		../../../../boost_1_60_0/boost/system/detail/error_code.ipp \
-		../../../../boost_1_60_0/boost/config/warning_disable.hpp \
-		../../../../boost_1_60_0/boost/system/detail/local_free_on_destruction.hpp \
-		../../../../boost_1_60_0/boost/detail/interlocked.hpp \
-		../../../../boost_1_60_0/boost/thread/win32/interlocked_read.hpp \
-		../../../../boost_1_60_0/boost/thread/thread_time.hpp \
-		../../../../boost_1_60_0/boost/date_time/time_clock.hpp \
-		../../../../boost_1_60_0/boost/date_time/c_time.hpp \
-		../../../../boost_1_60_0/boost/date_time/compiler_config.hpp \
-		../../../../boost_1_60_0/boost/date_time/locale_config.hpp \
-		../../../../boost_1_60_0/boost/date_time/microsec_time_clock.hpp \
-		../../../../boost_1_60_0/boost/date_time/filetime_functions.hpp \
-		../../../../boost_1_60_0/boost/date_time/time.hpp \
-		../../../../boost_1_60_0/boost/operators.hpp \
-		../../../../boost_1_60_0/boost/date_time/time_defs.hpp \
-		../../../../boost_1_60_0/boost/date_time/special_defs.hpp \
-		../../../../boost_1_60_0/boost/date_time/date_defs.hpp \
-		../../../../boost_1_60_0/boost/date_time/posix_time/posix_time_types.hpp \
-		../../../../boost_1_60_0/boost/date_time/posix_time/ptime.hpp \
-		../../../../boost_1_60_0/boost/date_time/posix_time/posix_time_system.hpp \
-		../../../../boost_1_60_0/boost/date_time/posix_time/posix_time_config.hpp \
-		../../../../boost_1_60_0/boost/config/no_tr1/cmath.hpp \
-		../../../../boost_1_60_0/boost/date_time/time_duration.hpp \
-		../../../../boost_1_60_0/boost/date_time/time_resolution_traits.hpp \
-		../../../../boost_1_60_0/boost/date_time/int_adapter.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/gregorian_types.hpp \
-		../../../../boost_1_60_0/boost/date_time/date.hpp \
-		../../../../boost_1_60_0/boost/date_time/year_month_day.hpp \
-		../../../../boost_1_60_0/boost/date_time/period.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_calendar.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_weekday.hpp \
-		../../../../boost_1_60_0/boost/date_time/constrained_value.hpp \
-		../../../../boost_1_60_0/boost/mpl/if.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/value_wknd.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/static_cast.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/workaround.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/integral.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/msvc.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/eti.hpp \
-		../../../../boost_1_60_0/boost/mpl/int.hpp \
-		../../../../boost_1_60_0/boost/mpl/int_fwd.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/adl_barrier.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/adl.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/intel.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/gcc.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/nttp_decl.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/nttp.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/cat.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/config/config.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/integral_wrapper.hpp \
-		../../../../boost_1_60_0/boost/mpl/integral_c_tag.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/static_constant.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/na_spec.hpp \
-		../../../../boost_1_60_0/boost/mpl/lambda_fwd.hpp \
-		../../../../boost_1_60_0/boost/mpl/void_fwd.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/na.hpp \
-		../../../../boost_1_60_0/boost/mpl/bool.hpp \
-		../../../../boost_1_60_0/boost/mpl/bool_fwd.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/na_fwd.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/ctps.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/lambda.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/ttp.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/lambda_arity_param.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/template_arity_fwd.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/arity.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/dtp.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/preprocessor/params.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/preprocessor.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/comma_if.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/punctuation/comma_if.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/control/if.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/control/iif.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/logical/bool.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/facilities/empty.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/punctuation/comma.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/repeat.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/repetition/repeat.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/debug/error.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/detail/auto_rec.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/detail/dmc/auto_rec.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/tuple/eat.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/inc.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/arithmetic/inc.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/preprocessor/enum.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/preprocessor/def_params_tail.hpp \
-		../../../../boost_1_60_0/boost/mpl/limits/arity.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/logical/and.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/logical/bitand.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/identity.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/facilities/identity.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/empty.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/preprocessor/filter_params.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/preprocessor/sub.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/preprocessor/tuple.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/arithmetic/sub.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/arithmetic/dec.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/control/while.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/fold_left.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/detail/edg/fold_left.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/control/expr_iif.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/adt.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/detail/is_binary.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/detail/check.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/logical/compl.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/detail/dmc/fold_left.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/tuple/elem.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/facilities/expand.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/facilities/overload.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/variadic/size.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/tuple/rem.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/tuple/detail/is_single_return.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/facilities/is_1.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/facilities/is_empty.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/facilities/is_empty_variadic.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/punctuation/is_begin_parens.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/punctuation/detail/is_begin_parens.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/facilities/detail/is_empty.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/detail/split.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/tuple/size.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/variadic/elem.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/detail/fold_left.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/fold_right.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/detail/edg/fold_right.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/detail/fold_right.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/reverse.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/control/detail/edg/while.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/control/detail/msvc/while.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/control/detail/dmc/while.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/control/detail/while.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/arithmetic/add.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/overload_resolution.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/lambda_support.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/yes_no.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/arrays.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/tuple/to_list.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/for_each_i.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/repetition/for.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/repetition/detail/edg/for.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/repetition/detail/msvc/for.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/repetition/detail/dmc/for.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/repetition/detail/for.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_base_of.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_base_and_derived.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_day_of_year.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian_calendar.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian_calendar.ipp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_ymd.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_day.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_year.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_month.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_duration.hpp \
-		../../../../boost_1_60_0/boost/date_time/date_duration.hpp \
-		../../../../boost_1_60_0/boost/date_time/date_duration_types.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_duration_types.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_date.hpp \
-		../../../../boost_1_60_0/boost/date_time/adjust_functors.hpp \
-		../../../../boost_1_60_0/boost/date_time/wrapping_int.hpp \
-		../../../../boost_1_60_0/boost/date_time/date_generators.hpp \
-		../../../../boost_1_60_0/boost/date_time/date_clock_device.hpp \
-		../../../../boost_1_60_0/boost/date_time/date_iterator.hpp \
-		../../../../boost_1_60_0/boost/date_time/time_system_split.hpp \
-		../../../../boost_1_60_0/boost/date_time/time_system_counted.hpp \
-		../../../../boost_1_60_0/boost/date_time/posix_time/date_duration_operators.hpp \
-		../../../../boost_1_60_0/boost/date_time/posix_time/posix_time_duration.hpp \
-		../../../../boost_1_60_0/boost/date_time/posix_time/time_period.hpp \
-		../../../../boost_1_60_0/boost/date_time/time_iterator.hpp \
-		../../../../boost_1_60_0/boost/date_time/dst_rules.hpp \
-		../../../../boost_1_60_0/boost/thread/xtime.hpp \
-		../../../../boost_1_60_0/boost/date_time/posix_time/conversion.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/conversion.hpp \
-		../../../../boost_1_60_0/boost/chrono/system_clocks.hpp \
-		../../../../boost_1_60_0/boost/chrono/config.hpp \
-		../../../../boost_1_60_0/boost/chrono/duration.hpp \
-		../../../../boost_1_60_0/boost/chrono/detail/static_assert.hpp \
-		../../../../boost_1_60_0/boost/mpl/assert.hpp \
-		../../../../boost_1_60_0/boost/mpl/not.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/nested_type_wknd.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/gpu.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/pp_counter.hpp \
-		../../../../boost_1_60_0/boost/mpl/logical.hpp \
-		../../../../boost_1_60_0/boost/mpl/or.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/use_preprocessed.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/include_preprocessed.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/compiler.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/stringize.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/logical_op.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/preprocessor/ext_params.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/dec.hpp \
-		../../../../boost_1_60_0/boost/mpl/and.hpp \
-		../../../../boost_1_60_0/boost/ratio/ratio.hpp \
-		../../../../boost_1_60_0/boost/ratio/config.hpp \
-		../../../../boost_1_60_0/boost/ratio/detail/mpl/abs.hpp \
-		../../../../boost_1_60_0/boost/mpl/integral_c.hpp \
-		../../../../boost_1_60_0/boost/mpl/integral_c_fwd.hpp \
-		../../../../boost_1_60_0/boost/ratio/detail/mpl/sign.hpp \
-		../../../../boost_1_60_0/boost/ratio/detail/mpl/gcd.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/largest_int.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/dependent_nttp.hpp \
-		../../../../boost_1_60_0/boost/ratio/detail/mpl/lcm.hpp \
-		../../../../boost_1_60_0/boost/integer_traits.hpp \
-		../../../../boost_1_60_0/boost/ratio/ratio_fwd.hpp \
-		../../../../boost_1_60_0/boost/ratio/detail/overflow_helpers.hpp \
-		../../../../boost_1_60_0/boost/rational.hpp \
-		../../../../boost_1_60_0/boost/call_traits.hpp \
-		../../../../boost_1_60_0/boost/detail/call_traits.hpp \
-		../../../../boost_1_60_0/boost/integer/common_factor_rt.hpp \
-		../../../../boost_1_60_0/boost/integer_fwd.hpp \
-		../../../../boost_1_60_0/boost/ratio/mpl/rational_c_tag.hpp \
-		../../../../boost_1_60_0/boost/type_traits/common_type.hpp \
-		../../../../boost_1_60_0/boost/type_traits/decay.hpp \
-		../../../../boost_1_60_0/boost/type_traits/remove_bounds.hpp \
-		../../../../boost_1_60_0/boost/type_traits/remove_extent.hpp \
-		../../../../boost_1_60_0/boost/type_traits/add_pointer.hpp \
-		../../../../boost_1_60_0/boost/type_traits/detail/common_type_impl.hpp \
-		../../../../boost_1_60_0/boost/type_traits/detail/common_arithmetic_type.hpp \
-		../../../../boost_1_60_0/boost/type_traits/detail/composite_pointer_type.hpp \
-		../../../../boost_1_60_0/boost/type_traits/copy_cv.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_const.hpp \
-		../../../../boost_1_60_0/boost/type_traits/add_const.hpp \
-		../../../../boost_1_60_0/boost/type_traits/add_volatile.hpp \
-		../../../../boost_1_60_0/boost/type_traits/detail/composite_member_pointer_type.hpp \
-		../../../../boost_1_60_0/boost/type_traits/remove_pointer.hpp \
-		../../../../boost_1_60_0/boost/type_traits/type_identity.hpp \
-		../../../../boost_1_60_0/boost/type_traits/detail/mp_defer.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_unsigned.hpp \
-		../../../../boost_1_60_0/boost/chrono/detail/is_evenly_divisible_by.hpp \
-		../../../../boost_1_60_0/boost/chrono/time_point.hpp \
-		../../../../boost_1_60_0/boost/chrono/detail/system.hpp \
-		../../../../boost_1_60_0/boost/chrono/clock_string.hpp \
-		../../../../boost_1_60_0/boost/chrono/detail/inlined/chrono.hpp \
-		../../../../boost_1_60_0/boost/chrono/chrono.hpp \
-		../../../../boost_1_60_0/boost/chrono/detail/inlined/win/chrono.hpp \
-		../../../../boost_1_60_0/boost/detail/winapi/time.hpp \
-		../../../../boost_1_60_0/boost/detail/winapi/basic_types.hpp \
-		../../../../boost_1_60_0/boost/detail/winapi/config.hpp \
-		../../../../boost_1_60_0/boost/detail/winapi/timers.hpp \
-		../../../../boost_1_60_0/boost/detail/winapi/GetLastError.hpp \
-		../../../../boost_1_60_0/boost/chrono/detail/inlined/mac/chrono.hpp \
-		../../../../boost_1_60_0/boost/chrono/detail/inlined/posix/chrono.hpp \
-		../../../../boost_1_60_0/boost/chrono/ceil.hpp \
-		../../../../boost_1_60_0/boost/thread/lock_types.hpp \
-		../../../../boost_1_60_0/boost/thread/detail/move.hpp \
-		../../../../boost_1_60_0/boost/thread/detail/delete.hpp \
-		../../../../boost_1_60_0/boost/move/utility.hpp \
-		../../../../boost_1_60_0/boost/move/detail/config_begin.hpp \
-		../../../../boost_1_60_0/boost/move/utility_core.hpp \
-		../../../../boost_1_60_0/boost/move/core.hpp \
-		../../../../boost_1_60_0/boost/move/detail/workaround.hpp \
-		../../../../boost_1_60_0/boost/move/detail/type_traits.hpp \
-		../../../../boost_1_60_0/boost/move/detail/meta_utils.hpp \
-		../../../../boost_1_60_0/boost/move/detail/meta_utils_core.hpp \
-		../../../../boost_1_60_0/boost/move/detail/config_end.hpp \
-		../../../../boost_1_60_0/boost/move/traits.hpp \
-		../../../../boost_1_60_0/boost/thread/lock_options.hpp \
-		../../../../boost_1_60_0/boost/thread/lockable_traits.hpp \
-		../../../../boost_1_60_0/boost/thread/is_locked_by_this_thread.hpp \
-		../../../../boost_1_60_0/boost/thread/pthread/mutex.hpp \
-		../../../../boost_1_60_0/boost/core/ignore_unused.hpp \
-		../../../../boost_1_60_0/boost/thread/pthread/timespec.hpp \
-		../../../../boost_1_60_0/boost/thread/pthread/pthread_mutex_scoped_lock.hpp
+		SrsChipId.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o SrsBase.o SrsBase.cpp
 
 SrsNetworkDevice.o: SrsNetworkDevice.cpp SrsNetworkDevice.h \
@@ -46676,573 +46382,6 @@ SharedSrsChannelData.o: SharedSrsChannelData.cpp SharedSrsChannelData.h \
 		SrsChannelData.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o SharedSrsChannelData.o SharedSrsChannelData.cpp
 
-Logger.o: Logger.cpp Logger.h \
-		../../../../boost_1_60_0/boost/thread/mutex.hpp \
-		../../../../boost_1_60_0/boost/thread/detail/platform.hpp \
-		../../../../boost_1_60_0/boost/config.hpp \
-		../../../../boost_1_60_0/boost/config/user.hpp \
-		../../../../boost_1_60_0/boost/config/select_compiler_config.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/nvcc.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/gcc_xml.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/cray.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/common_edg.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/comeau.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/pathscale.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/intel.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/visualc.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/gcc.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/clang.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/digitalmars.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/kai.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/sgi_mipspro.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/compaq_cxx.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/greenhills.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/codegear.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/borland.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/metrowerks.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/sunpro_cc.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/hp_acc.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/mpw.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/vacpp.hpp \
-		../../../../boost_1_60_0/boost/config/compiler/pgi.hpp \
-		../../../../boost_1_60_0/boost/config/select_stdlib_config.hpp \
-		../../../../boost_1_60_0/boost/config/stdlib/stlport.hpp \
-		../../../../boost_1_60_0/boost/config/stdlib/libcomo.hpp \
-		../../../../boost_1_60_0/boost/config/no_tr1/utility.hpp \
-		../../../../boost_1_60_0/boost/config/stdlib/roguewave.hpp \
-		../../../../boost_1_60_0/boost/config/stdlib/libcpp.hpp \
-		../../../../boost_1_60_0/boost/config/stdlib/libstdcpp3.hpp \
-		../../../../boost_1_60_0/boost/config/stdlib/sgi.hpp \
-		../../../../boost_1_60_0/boost/config/stdlib/msl.hpp \
-		../../../../boost_1_60_0/boost/config/posix_features.hpp \
-		../../../../boost_1_60_0/boost/config/stdlib/vacpp.hpp \
-		../../../../boost_1_60_0/boost/config/stdlib/modena.hpp \
-		../../../../boost_1_60_0/boost/config/stdlib/dinkumware.hpp \
-		../../../../boost_1_60_0/boost/config/select_platform_config.hpp \
-		../../../../boost_1_60_0/boost/config/platform/linux.hpp \
-		../../../../boost_1_60_0/boost/config/platform/bsd.hpp \
-		../../../../boost_1_60_0/boost/config/platform/solaris.hpp \
-		../../../../boost_1_60_0/boost/config/platform/irix.hpp \
-		../../../../boost_1_60_0/boost/config/platform/hpux.hpp \
-		../../../../boost_1_60_0/boost/config/platform/cygwin.hpp \
-		../../../../boost_1_60_0/boost/config/platform/win32.hpp \
-		../../../../boost_1_60_0/boost/config/platform/beos.hpp \
-		../../../../boost_1_60_0/boost/config/platform/macos.hpp \
-		../../../../boost_1_60_0/boost/config/platform/aix.hpp \
-		../../../../boost_1_60_0/boost/config/platform/amigaos.hpp \
-		../../../../boost_1_60_0/boost/config/platform/qnxnto.hpp \
-		../../../../boost_1_60_0/boost/config/platform/vxworks.hpp \
-		../../../../boost_1_60_0/boost/config/platform/symbian.hpp \
-		../../../../boost_1_60_0/boost/config/platform/cray.hpp \
-		../../../../boost_1_60_0/boost/config/platform/vms.hpp \
-		../../../../boost_1_60_0/boost/config/suffix.hpp \
-		../../../../boost_1_60_0/boost/config/requires_threads.hpp \
-		../../../../boost_1_60_0/boost/thread/win32/mutex.hpp \
-		../../../../boost_1_60_0/boost/thread/win32/basic_timed_mutex.hpp \
-		../../../../boost_1_60_0/boost/assert.hpp \
-		../../../../boost_1_60_0/boost/current_function.hpp \
-		../../../../boost_1_60_0/boost/thread/win32/thread_primitives.hpp \
-		../../../../boost_1_60_0/boost/thread/detail/config.hpp \
-		../../../../boost_1_60_0/boost/detail/workaround.hpp \
-		../../../../boost_1_60_0/boost/config/auto_link.hpp \
-		../../../../boost_1_60_0/boost/version.hpp \
-		../../../../boost_1_60_0/boost/predef/platform.h \
-		../../../../boost_1_60_0/boost/predef/platform/mingw.h \
-		../../../../boost_1_60_0/boost/predef/version_number.h \
-		../../../../boost_1_60_0/boost/predef/make.h \
-		../../../../boost_1_60_0/boost/predef/detail/test.h \
-		../../../../boost_1_60_0/boost/predef/detail/platform_detected.h \
-		../../../../boost_1_60_0/boost/predef/platform/windows_desktop.h \
-		../../../../boost_1_60_0/boost/predef/os/windows.h \
-		../../../../boost_1_60_0/boost/predef/detail/os_detected.h \
-		../../../../boost_1_60_0/boost/predef/platform/windows_store.h \
-		../../../../boost_1_60_0/boost/predef/platform/windows_phone.h \
-		../../../../boost_1_60_0/boost/predef/platform/windows_runtime.h \
-		../../../../boost_1_60_0/boost/throw_exception.hpp \
-		../../../../boost_1_60_0/boost/exception/exception.hpp \
-		../../../../boost_1_60_0/boost/thread/exceptions.hpp \
-		../../../../boost_1_60_0/boost/system/system_error.hpp \
-		../../../../boost_1_60_0/boost/system/error_code.hpp \
-		../../../../boost_1_60_0/boost/system/config.hpp \
-		../../../../boost_1_60_0/boost/system/api_config.hpp \
-		../../../../boost_1_60_0/boost/cstdint.hpp \
-		../../../../boost_1_60_0/boost/limits.hpp \
-		../../../../boost_1_60_0/boost/noncopyable.hpp \
-		../../../../boost_1_60_0/boost/core/noncopyable.hpp \
-		../../../../boost_1_60_0/boost/utility/enable_if.hpp \
-		../../../../boost_1_60_0/boost/core/enable_if.hpp \
-		../../../../boost_1_60_0/boost/cerrno.hpp \
-		../../../../boost_1_60_0/boost/config/abi_prefix.hpp \
-		../../../../boost_1_60_0/boost/config/abi_suffix.hpp \
-		../../../../boost_1_60_0/boost/system/detail/error_code.ipp \
-		../../../../boost_1_60_0/boost/config/warning_disable.hpp \
-		../../../../boost_1_60_0/boost/system/detail/local_free_on_destruction.hpp \
-		../../../../boost_1_60_0/boost/detail/interlocked.hpp \
-		../../../../boost_1_60_0/boost/thread/win32/interlocked_read.hpp \
-		../../../../boost_1_60_0/boost/thread/thread_time.hpp \
-		../../../../boost_1_60_0/boost/date_time/time_clock.hpp \
-		../../../../boost_1_60_0/boost/date_time/c_time.hpp \
-		../../../../boost_1_60_0/boost/date_time/compiler_config.hpp \
-		../../../../boost_1_60_0/boost/date_time/locale_config.hpp \
-		../../../../boost_1_60_0/boost/shared_ptr.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/shared_ptr.hpp \
-		../../../../boost_1_60_0/boost/config/no_tr1/memory.hpp \
-		../../../../boost_1_60_0/boost/checked_delete.hpp \
-		../../../../boost_1_60_0/boost/core/checked_delete.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/shared_count.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/bad_weak_ptr.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_has_sync.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base_nt.hpp \
-		../../../../boost_1_60_0/boost/detail/sp_typeinfo.hpp \
-		../../../../boost_1_60_0/boost/core/typeinfo.hpp \
-		../../../../boost_1_60_0/boost/core/demangle.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base_std_atomic.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base_spin.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/spinlock_pool.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/spinlock.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/spinlock_std_atomic.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/yield_k.hpp \
-		../../../../boost_1_60_0/boost/predef.h \
-		../../../../boost_1_60_0/boost/predef/language.h \
-		../../../../boost_1_60_0/boost/predef/language/stdc.h \
-		../../../../boost_1_60_0/boost/predef/language/stdcpp.h \
-		../../../../boost_1_60_0/boost/predef/language/objc.h \
-		../../../../boost_1_60_0/boost/predef/architecture.h \
-		../../../../boost_1_60_0/boost/predef/architecture/alpha.h \
-		../../../../boost_1_60_0/boost/predef/architecture/arm.h \
-		../../../../boost_1_60_0/boost/predef/architecture/blackfin.h \
-		../../../../boost_1_60_0/boost/predef/architecture/convex.h \
-		../../../../boost_1_60_0/boost/predef/architecture/ia64.h \
-		../../../../boost_1_60_0/boost/predef/architecture/m68k.h \
-		../../../../boost_1_60_0/boost/predef/architecture/mips.h \
-		../../../../boost_1_60_0/boost/predef/architecture/parisc.h \
-		../../../../boost_1_60_0/boost/predef/architecture/ppc.h \
-		../../../../boost_1_60_0/boost/predef/architecture/pyramid.h \
-		../../../../boost_1_60_0/boost/predef/architecture/rs6k.h \
-		../../../../boost_1_60_0/boost/predef/architecture/sparc.h \
-		../../../../boost_1_60_0/boost/predef/architecture/superh.h \
-		../../../../boost_1_60_0/boost/predef/architecture/sys370.h \
-		../../../../boost_1_60_0/boost/predef/architecture/sys390.h \
-		../../../../boost_1_60_0/boost/predef/architecture/x86.h \
-		../../../../boost_1_60_0/boost/predef/architecture/x86/32.h \
-		../../../../boost_1_60_0/boost/predef/architecture/x86/64.h \
-		../../../../boost_1_60_0/boost/predef/architecture/z.h \
-		../../../../boost_1_60_0/boost/predef/compiler.h \
-		../../../../boost_1_60_0/boost/predef/compiler/borland.h \
-		../../../../boost_1_60_0/boost/predef/detail/comp_detected.h \
-		../../../../boost_1_60_0/boost/predef/compiler/clang.h \
-		../../../../boost_1_60_0/boost/predef/compiler/comeau.h \
-		../../../../boost_1_60_0/boost/predef/compiler/compaq.h \
-		../../../../boost_1_60_0/boost/predef/compiler/diab.h \
-		../../../../boost_1_60_0/boost/predef/compiler/digitalmars.h \
-		../../../../boost_1_60_0/boost/predef/compiler/dignus.h \
-		../../../../boost_1_60_0/boost/predef/compiler/edg.h \
-		../../../../boost_1_60_0/boost/predef/compiler/ekopath.h \
-		../../../../boost_1_60_0/boost/predef/compiler/gcc_xml.h \
-		../../../../boost_1_60_0/boost/predef/compiler/gcc.h \
-		../../../../boost_1_60_0/boost/predef/compiler/greenhills.h \
-		../../../../boost_1_60_0/boost/predef/compiler/hp_acc.h \
-		../../../../boost_1_60_0/boost/predef/compiler/iar.h \
-		../../../../boost_1_60_0/boost/predef/compiler/ibm.h \
-		../../../../boost_1_60_0/boost/predef/compiler/intel.h \
-		../../../../boost_1_60_0/boost/predef/compiler/kai.h \
-		../../../../boost_1_60_0/boost/predef/compiler/llvm.h \
-		../../../../boost_1_60_0/boost/predef/compiler/metaware.h \
-		../../../../boost_1_60_0/boost/predef/compiler/metrowerks.h \
-		../../../../boost_1_60_0/boost/predef/compiler/microtec.h \
-		../../../../boost_1_60_0/boost/predef/compiler/mpw.h \
-		../../../../boost_1_60_0/boost/predef/compiler/palm.h \
-		../../../../boost_1_60_0/boost/predef/compiler/pgi.h \
-		../../../../boost_1_60_0/boost/predef/compiler/sgi_mipspro.h \
-		../../../../boost_1_60_0/boost/predef/compiler/sunpro.h \
-		../../../../boost_1_60_0/boost/predef/compiler/tendra.h \
-		../../../../boost_1_60_0/boost/predef/compiler/visualc.h \
-		../../../../boost_1_60_0/boost/predef/compiler/watcom.h \
-		../../../../boost_1_60_0/boost/predef/library.h \
-		../../../../boost_1_60_0/boost/predef/library/c.h \
-		../../../../boost_1_60_0/boost/predef/library/c/_prefix.h \
-		../../../../boost_1_60_0/boost/predef/detail/_cassert.h \
-		../../../../boost_1_60_0/boost/predef/library/c/gnu.h \
-		../../../../boost_1_60_0/boost/predef/library/c/uc.h \
-		../../../../boost_1_60_0/boost/predef/library/c/vms.h \
-		../../../../boost_1_60_0/boost/predef/library/c/zos.h \
-		../../../../boost_1_60_0/boost/predef/library/std.h \
-		../../../../boost_1_60_0/boost/predef/library/std/_prefix.h \
-		../../../../boost_1_60_0/boost/predef/detail/_exception.h \
-		../../../../boost_1_60_0/boost/predef/library/std/cxx.h \
-		../../../../boost_1_60_0/boost/predef/library/std/dinkumware.h \
-		../../../../boost_1_60_0/boost/predef/library/std/libcomo.h \
-		../../../../boost_1_60_0/boost/predef/library/std/modena.h \
-		../../../../boost_1_60_0/boost/predef/library/std/msl.h \
-		../../../../boost_1_60_0/boost/predef/library/std/roguewave.h \
-		../../../../boost_1_60_0/boost/predef/library/std/sgi.h \
-		../../../../boost_1_60_0/boost/predef/library/std/stdcpp3.h \
-		../../../../boost_1_60_0/boost/predef/library/std/stlport.h \
-		../../../../boost_1_60_0/boost/predef/library/std/vacpp.h \
-		../../../../boost_1_60_0/boost/predef/os.h \
-		../../../../boost_1_60_0/boost/predef/os/aix.h \
-		../../../../boost_1_60_0/boost/predef/os/amigaos.h \
-		../../../../boost_1_60_0/boost/predef/os/android.h \
-		../../../../boost_1_60_0/boost/predef/os/beos.h \
-		../../../../boost_1_60_0/boost/predef/os/bsd.h \
-		../../../../boost_1_60_0/boost/predef/os/macos.h \
-		../../../../boost_1_60_0/boost/predef/os/ios.h \
-		../../../../boost_1_60_0/boost/predef/os/bsd/bsdi.h \
-		../../../../boost_1_60_0/boost/predef/os/bsd/dragonfly.h \
-		../../../../boost_1_60_0/boost/predef/os/bsd/free.h \
-		../../../../boost_1_60_0/boost/predef/os/bsd/open.h \
-		../../../../boost_1_60_0/boost/predef/os/bsd/net.h \
-		../../../../boost_1_60_0/boost/predef/os/cygwin.h \
-		../../../../boost_1_60_0/boost/predef/os/haiku.h \
-		../../../../boost_1_60_0/boost/predef/os/hpux.h \
-		../../../../boost_1_60_0/boost/predef/os/irix.h \
-		../../../../boost_1_60_0/boost/predef/os/linux.h \
-		../../../../boost_1_60_0/boost/predef/os/os400.h \
-		../../../../boost_1_60_0/boost/predef/os/qnxnto.h \
-		../../../../boost_1_60_0/boost/predef/os/solaris.h \
-		../../../../boost_1_60_0/boost/predef/os/unix.h \
-		../../../../boost_1_60_0/boost/predef/os/vms.h \
-		../../../../boost_1_60_0/boost/predef/other.h \
-		../../../../boost_1_60_0/boost/predef/other/endian.h \
-		../../../../boost_1_60_0/boost/predef/hardware.h \
-		../../../../boost_1_60_0/boost/predef/hardware/simd.h \
-		../../../../boost_1_60_0/boost/predef/hardware/simd/x86.h \
-		../../../../boost_1_60_0/boost/predef/hardware/simd/x86/versions.h \
-		../../../../boost_1_60_0/boost/predef/hardware/simd/x86_amd.h \
-		../../../../boost_1_60_0/boost/predef/hardware/simd/x86_amd/versions.h \
-		../../../../boost_1_60_0/boost/predef/hardware/simd/arm.h \
-		../../../../boost_1_60_0/boost/predef/hardware/simd/arm/versions.h \
-		../../../../boost_1_60_0/boost/predef/hardware/simd/ppc.h \
-		../../../../boost_1_60_0/boost/predef/hardware/simd/ppc/versions.h \
-		../../../../boost_1_60_0/boost/predef/version.h \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/spinlock_sync.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/spinlock_pt.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/spinlock_gcc_arm.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/spinlock_w32.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_interlocked.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/spinlock_nt.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base_pt.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base_clang.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base_snc_ps3.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base_gcc_x86.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base_acc_ia64.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base_gcc_ia64.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base_vacpp_ppc.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base_cw_ppc.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base_gcc_ppc.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base_gcc_mips.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base_sync.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base_gcc_sparc.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base_w32.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_base_aix.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_counted_impl.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/quick_allocator.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/lightweight_mutex.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/lwm_nop.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/lwm_pthreads.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/lwm_win32_cs.hpp \
-		../../../../boost_1_60_0/boost/type_traits/type_with_alignment.hpp \
-		../../../../boost_1_60_0/boost/type_traits/alignment_of.hpp \
-		../../../../boost_1_60_0/boost/type_traits/intrinsics.hpp \
-		../../../../boost_1_60_0/boost/type_traits/detail/config.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_same.hpp \
-		../../../../boost_1_60_0/boost/type_traits/integral_constant.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_reference.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_lvalue_reference.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_rvalue_reference.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_volatile.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_void.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_pod.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_scalar.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_arithmetic.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_integral.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_floating_point.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_enum.hpp \
-		../../../../boost_1_60_0/boost/type_traits/add_reference.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_convertible.hpp \
-		../../../../boost_1_60_0/boost/type_traits/detail/yes_no_type.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_array.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_abstract.hpp \
-		../../../../boost_1_60_0/boost/static_assert.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_class.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_union.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_function.hpp \
-		../../../../boost_1_60_0/boost/type_traits/detail/is_function_ptr_helper.hpp \
-		../../../../boost_1_60_0/boost/type_traits/detail/is_function_ptr_tester.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_polymorphic.hpp \
-		../../../../boost_1_60_0/boost/type_traits/add_lvalue_reference.hpp \
-		../../../../boost_1_60_0/boost/type_traits/add_rvalue_reference.hpp \
-		../../../../boost_1_60_0/boost/type_traits/remove_reference.hpp \
-		../../../../boost_1_60_0/boost/type_traits/declval.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_pointer.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_member_pointer.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_member_function_pointer.hpp \
-		../../../../boost_1_60_0/boost/type_traits/detail/is_mem_fun_pointer_impl.hpp \
-		../../../../boost_1_60_0/boost/type_traits/remove_cv.hpp \
-		../../../../boost_1_60_0/boost/type_traits/detail/is_mem_fun_pointer_tester.hpp \
-		../../../../boost_1_60_0/boost/type_traits/conditional.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
-		../../../../boost_1_60_0/boost/core/addressof.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_convertible.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/sp_nullptr_t.hpp \
-		../../../../boost_1_60_0/boost/smart_ptr/detail/operator_bool.hpp \
-		../../../../boost_1_60_0/boost/date_time/microsec_time_clock.hpp \
-		../../../../boost_1_60_0/boost/date_time/filetime_functions.hpp \
-		../../../../boost_1_60_0/boost/date_time/time.hpp \
-		../../../../boost_1_60_0/boost/operators.hpp \
-		../../../../boost_1_60_0/boost/date_time/time_defs.hpp \
-		../../../../boost_1_60_0/boost/date_time/special_defs.hpp \
-		../../../../boost_1_60_0/boost/date_time/date_defs.hpp \
-		../../../../boost_1_60_0/boost/date_time/posix_time/posix_time_types.hpp \
-		../../../../boost_1_60_0/boost/date_time/posix_time/ptime.hpp \
-		../../../../boost_1_60_0/boost/date_time/posix_time/posix_time_system.hpp \
-		../../../../boost_1_60_0/boost/date_time/posix_time/posix_time_config.hpp \
-		../../../../boost_1_60_0/boost/config/no_tr1/cmath.hpp \
-		../../../../boost_1_60_0/boost/date_time/time_duration.hpp \
-		../../../../boost_1_60_0/boost/date_time/time_resolution_traits.hpp \
-		../../../../boost_1_60_0/boost/date_time/int_adapter.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/gregorian_types.hpp \
-		../../../../boost_1_60_0/boost/date_time/date.hpp \
-		../../../../boost_1_60_0/boost/date_time/year_month_day.hpp \
-		../../../../boost_1_60_0/boost/date_time/period.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_calendar.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_weekday.hpp \
-		../../../../boost_1_60_0/boost/date_time/constrained_value.hpp \
-		../../../../boost_1_60_0/boost/mpl/if.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/value_wknd.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/static_cast.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/workaround.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/integral.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/msvc.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/eti.hpp \
-		../../../../boost_1_60_0/boost/mpl/int.hpp \
-		../../../../boost_1_60_0/boost/mpl/int_fwd.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/adl_barrier.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/adl.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/intel.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/gcc.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/nttp_decl.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/nttp.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/cat.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/config/config.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/integral_wrapper.hpp \
-		../../../../boost_1_60_0/boost/mpl/integral_c_tag.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/static_constant.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/na_spec.hpp \
-		../../../../boost_1_60_0/boost/mpl/lambda_fwd.hpp \
-		../../../../boost_1_60_0/boost/mpl/void_fwd.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/na.hpp \
-		../../../../boost_1_60_0/boost/mpl/bool.hpp \
-		../../../../boost_1_60_0/boost/mpl/bool_fwd.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/na_fwd.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/ctps.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/lambda.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/ttp.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/lambda_arity_param.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/template_arity_fwd.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/arity.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/dtp.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/preprocessor/params.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/preprocessor.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/comma_if.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/punctuation/comma_if.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/control/if.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/control/iif.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/logical/bool.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/facilities/empty.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/punctuation/comma.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/repeat.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/repetition/repeat.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/debug/error.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/detail/auto_rec.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/detail/dmc/auto_rec.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/tuple/eat.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/inc.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/arithmetic/inc.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/preprocessor/enum.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/preprocessor/def_params_tail.hpp \
-		../../../../boost_1_60_0/boost/mpl/limits/arity.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/logical/and.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/logical/bitand.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/identity.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/facilities/identity.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/empty.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/preprocessor/filter_params.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/preprocessor/sub.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/preprocessor/tuple.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/arithmetic/sub.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/arithmetic/dec.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/control/while.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/fold_left.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/detail/edg/fold_left.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/control/expr_iif.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/adt.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/detail/is_binary.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/detail/check.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/logical/compl.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/detail/dmc/fold_left.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/tuple/elem.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/facilities/expand.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/facilities/overload.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/variadic/size.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/tuple/rem.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/tuple/detail/is_single_return.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/facilities/is_1.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/facilities/is_empty.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/facilities/is_empty_variadic.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/punctuation/is_begin_parens.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/punctuation/detail/is_begin_parens.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/facilities/detail/is_empty.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/detail/split.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/tuple/size.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/variadic/elem.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/detail/fold_left.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/fold_right.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/detail/edg/fold_right.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/detail/fold_right.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/reverse.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/control/detail/edg/while.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/control/detail/msvc/while.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/control/detail/dmc/while.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/control/detail/while.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/arithmetic/add.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/overload_resolution.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/lambda_support.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/yes_no.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/arrays.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/tuple/to_list.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/list/for_each_i.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/repetition/for.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/repetition/detail/edg/for.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/repetition/detail/msvc/for.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/repetition/detail/dmc/for.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/repetition/detail/for.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_base_of.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_base_and_derived.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_day_of_year.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian_calendar.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian_calendar.ipp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_ymd.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_day.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_year.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_month.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_duration.hpp \
-		../../../../boost_1_60_0/boost/date_time/date_duration.hpp \
-		../../../../boost_1_60_0/boost/date_time/date_duration_types.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_duration_types.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/greg_date.hpp \
-		../../../../boost_1_60_0/boost/date_time/adjust_functors.hpp \
-		../../../../boost_1_60_0/boost/date_time/wrapping_int.hpp \
-		../../../../boost_1_60_0/boost/date_time/date_generators.hpp \
-		../../../../boost_1_60_0/boost/date_time/date_clock_device.hpp \
-		../../../../boost_1_60_0/boost/date_time/date_iterator.hpp \
-		../../../../boost_1_60_0/boost/date_time/time_system_split.hpp \
-		../../../../boost_1_60_0/boost/date_time/time_system_counted.hpp \
-		../../../../boost_1_60_0/boost/date_time/posix_time/date_duration_operators.hpp \
-		../../../../boost_1_60_0/boost/date_time/posix_time/posix_time_duration.hpp \
-		../../../../boost_1_60_0/boost/date_time/posix_time/time_period.hpp \
-		../../../../boost_1_60_0/boost/date_time/time_iterator.hpp \
-		../../../../boost_1_60_0/boost/date_time/dst_rules.hpp \
-		../../../../boost_1_60_0/boost/thread/xtime.hpp \
-		../../../../boost_1_60_0/boost/date_time/posix_time/conversion.hpp \
-		../../../../boost_1_60_0/boost/date_time/gregorian/conversion.hpp \
-		../../../../boost_1_60_0/boost/chrono/system_clocks.hpp \
-		../../../../boost_1_60_0/boost/chrono/config.hpp \
-		../../../../boost_1_60_0/boost/chrono/duration.hpp \
-		../../../../boost_1_60_0/boost/chrono/detail/static_assert.hpp \
-		../../../../boost_1_60_0/boost/mpl/assert.hpp \
-		../../../../boost_1_60_0/boost/mpl/not.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/nested_type_wknd.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/gpu.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/pp_counter.hpp \
-		../../../../boost_1_60_0/boost/mpl/logical.hpp \
-		../../../../boost_1_60_0/boost/mpl/or.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/use_preprocessed.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/include_preprocessed.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/compiler.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/stringize.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/logical_op.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/preprocessor/ext_params.hpp \
-		../../../../boost_1_60_0/boost/preprocessor/dec.hpp \
-		../../../../boost_1_60_0/boost/mpl/and.hpp \
-		../../../../boost_1_60_0/boost/ratio/ratio.hpp \
-		../../../../boost_1_60_0/boost/ratio/config.hpp \
-		../../../../boost_1_60_0/boost/ratio/detail/mpl/abs.hpp \
-		../../../../boost_1_60_0/boost/mpl/integral_c.hpp \
-		../../../../boost_1_60_0/boost/mpl/integral_c_fwd.hpp \
-		../../../../boost_1_60_0/boost/ratio/detail/mpl/sign.hpp \
-		../../../../boost_1_60_0/boost/ratio/detail/mpl/gcd.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/largest_int.hpp \
-		../../../../boost_1_60_0/boost/mpl/aux_/config/dependent_nttp.hpp \
-		../../../../boost_1_60_0/boost/ratio/detail/mpl/lcm.hpp \
-		../../../../boost_1_60_0/boost/integer_traits.hpp \
-		../../../../boost_1_60_0/boost/ratio/ratio_fwd.hpp \
-		../../../../boost_1_60_0/boost/ratio/detail/overflow_helpers.hpp \
-		../../../../boost_1_60_0/boost/rational.hpp \
-		../../../../boost_1_60_0/boost/call_traits.hpp \
-		../../../../boost_1_60_0/boost/detail/call_traits.hpp \
-		../../../../boost_1_60_0/boost/integer/common_factor_rt.hpp \
-		../../../../boost_1_60_0/boost/integer_fwd.hpp \
-		../../../../boost_1_60_0/boost/ratio/mpl/rational_c_tag.hpp \
-		../../../../boost_1_60_0/boost/type_traits/common_type.hpp \
-		../../../../boost_1_60_0/boost/type_traits/decay.hpp \
-		../../../../boost_1_60_0/boost/type_traits/remove_bounds.hpp \
-		../../../../boost_1_60_0/boost/type_traits/remove_extent.hpp \
-		../../../../boost_1_60_0/boost/type_traits/add_pointer.hpp \
-		../../../../boost_1_60_0/boost/type_traits/detail/common_type_impl.hpp \
-		../../../../boost_1_60_0/boost/type_traits/detail/common_arithmetic_type.hpp \
-		../../../../boost_1_60_0/boost/type_traits/detail/composite_pointer_type.hpp \
-		../../../../boost_1_60_0/boost/type_traits/copy_cv.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_const.hpp \
-		../../../../boost_1_60_0/boost/type_traits/add_const.hpp \
-		../../../../boost_1_60_0/boost/type_traits/add_volatile.hpp \
-		../../../../boost_1_60_0/boost/type_traits/detail/composite_member_pointer_type.hpp \
-		../../../../boost_1_60_0/boost/type_traits/remove_pointer.hpp \
-		../../../../boost_1_60_0/boost/type_traits/type_identity.hpp \
-		../../../../boost_1_60_0/boost/type_traits/detail/mp_defer.hpp \
-		../../../../boost_1_60_0/boost/type_traits/is_unsigned.hpp \
-		../../../../boost_1_60_0/boost/chrono/detail/is_evenly_divisible_by.hpp \
-		../../../../boost_1_60_0/boost/chrono/time_point.hpp \
-		../../../../boost_1_60_0/boost/chrono/detail/system.hpp \
-		../../../../boost_1_60_0/boost/chrono/clock_string.hpp \
-		../../../../boost_1_60_0/boost/chrono/detail/inlined/chrono.hpp \
-		../../../../boost_1_60_0/boost/chrono/chrono.hpp \
-		../../../../boost_1_60_0/boost/chrono/detail/inlined/win/chrono.hpp \
-		../../../../boost_1_60_0/boost/detail/winapi/time.hpp \
-		../../../../boost_1_60_0/boost/detail/winapi/basic_types.hpp \
-		../../../../boost_1_60_0/boost/detail/winapi/config.hpp \
-		../../../../boost_1_60_0/boost/detail/winapi/timers.hpp \
-		../../../../boost_1_60_0/boost/detail/winapi/GetLastError.hpp \
-		../../../../boost_1_60_0/boost/chrono/detail/inlined/mac/chrono.hpp \
-		../../../../boost_1_60_0/boost/chrono/detail/inlined/posix/chrono.hpp \
-		../../../../boost_1_60_0/boost/chrono/ceil.hpp \
-		../../../../boost_1_60_0/boost/thread/lock_types.hpp \
-		../../../../boost_1_60_0/boost/thread/detail/move.hpp \
-		../../../../boost_1_60_0/boost/thread/detail/delete.hpp \
-		../../../../boost_1_60_0/boost/move/utility.hpp \
-		../../../../boost_1_60_0/boost/move/detail/config_begin.hpp \
-		../../../../boost_1_60_0/boost/move/utility_core.hpp \
-		../../../../boost_1_60_0/boost/move/core.hpp \
-		../../../../boost_1_60_0/boost/move/detail/workaround.hpp \
-		../../../../boost_1_60_0/boost/move/detail/type_traits.hpp \
-		../../../../boost_1_60_0/boost/move/detail/meta_utils.hpp \
-		../../../../boost_1_60_0/boost/move/detail/meta_utils_core.hpp \
-		../../../../boost_1_60_0/boost/move/detail/config_end.hpp \
-		../../../../boost_1_60_0/boost/move/traits.hpp \
-		../../../../boost_1_60_0/boost/thread/lock_options.hpp \
-		../../../../boost_1_60_0/boost/thread/lockable_traits.hpp \
-		../../../../boost_1_60_0/boost/thread/is_locked_by_this_thread.hpp \
-		../../../../boost_1_60_0/boost/thread/pthread/mutex.hpp \
-		../../../../boost_1_60_0/boost/core/ignore_unused.hpp \
-		../../../../boost_1_60_0/boost/thread/pthread/timespec.hpp \
-		../../../../boost_1_60_0/boost/thread/pthread/pthread_mutex_scoped_lock.hpp \
-		../../../../boost_1_60_0/boost/thread/recursive_mutex.hpp \
-		../../../../boost_1_60_0/boost/thread/win32/recursive_mutex.hpp \
-		../../../../boost_1_60_0/boost/thread/win32/basic_recursive_mutex.hpp \
-		../../../../boost_1_60_0/boost/thread/pthread/recursive_mutex.hpp
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Logger.o Logger.cpp
-
 filereader.o: filereader.cpp filereader.h \
 		AsioService.h \
 		../../../../boost_1_60_0/boost/asio.hpp \
@@ -49216,15 +48355,7 @@ filereader.o: filereader.cpp filereader.h \
 		../../../../boost_1_60_0/boost/algorithm/string/detail/find_format_all.hpp \
 		../../../../boost_1_60_0/boost/algorithm/string/formatter.hpp \
 		../../../../boost_1_60_0/boost/algorithm/string/detail/formatter.hpp \
-		../../../../boost_1_60_0/boost/algorithm/string/erase.hpp \
-		../../../../boost_1_60_0/boost/interprocess/ipc/message_queue.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/interprocess_condition.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/detail/locks.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/posix/condition.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/condition.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/semaphore.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/detail/condition_algorithm_8a.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/spin/condition.hpp
+		../../../../boost_1_60_0/boost/algorithm/string/erase.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o filereader.o filereader.cpp
 
 AsioService.o: AsioService.cpp AsioService.h \
@@ -52759,8 +51890,7 @@ ShmemReader.o: ShmemReader.cpp ShmemReader.h \
 		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
 		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
 		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
-		../../../../boost_1_60_0/boost/program_options/version.hpp \
-		../../../../boost_1_60_0/boost/interprocess/ipc/message_queue.hpp
+		../../../../boost_1_60_0/boost/program_options/version.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ShmemReader.o ShmemReader.cpp
 
 mmDaqSettingsWindow.o: mmDaqSettingsWindow.cpp mmDaqSettingsWindow.h \
@@ -55321,7 +54451,6 @@ DisplayDrawer.o: DisplayDrawer.cpp DisplayDrawer.h \
 		../../../../ROOT534/include/TBox.h \
 		../../../../ROOT534/include/TColor.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QTreeWidgetItem \
-		Logger.h \
 		DetBase.h \
 		DetTypes.h \
 		DetDetector.h \

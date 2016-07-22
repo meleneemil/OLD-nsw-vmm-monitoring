@@ -14,7 +14,6 @@
 #include "SrsChipBnl.h"
 #include "SrsChipMmDaqTest.h"
 
-#include "Logger.h"
 
 #include <QObject>
 
@@ -78,7 +77,6 @@ const std::vector<SrsBasePtr>& CPropertyTreeParserSrs::make_srs_elements()
 void CPropertyTreeParserSrs::push_new_srs_element(SrsBasePtr elem)
 {
    if (std::binary_search(srs_elements_.begin(), srs_elements_.end(), elem, CSrsBase::IdNumberCompare())) {
-      CLogger::instance()->error("Duplicate SRS id number");
       throw std::runtime_error("Duplicate SRS id number");
    }
    srs_elements_.push_back(elem);

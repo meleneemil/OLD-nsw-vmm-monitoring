@@ -26,7 +26,6 @@
 
 #include <boost/asio.hpp>
 #include <boost/bind.hpp>
-#include <boost/interprocess/ipc/message_queue.hpp>
 #include <boost/algorithm/string.hpp>
 
 #include <iostream>

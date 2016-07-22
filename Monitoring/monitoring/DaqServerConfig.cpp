@@ -6,7 +6,6 @@
 #include "SrsChannel.h"
 #include "SrsChannelId.h"
 #include "SrsChip.h"
-#include "Logger.h"
 #include "DetBase.h"
 #include "DetDetector.h"
 #include "DetConnector.h"
@@ -66,7 +65,6 @@
 
 #include <boost/asio.hpp>
 #include <boost/bind.hpp>
-#include <boost/interprocess/ipc/message_queue.hpp>
 #include <boost/algorithm/string.hpp>
 
 
@@ -158,9 +156,6 @@ void CDaqServerConfig::displayStartupWindow()
 
 void CDaqServerConfig::transmitStartSignal()
 {
-    std::string command = "start";
-    //aikoulou: comment out
-//    emit sendStartDaq(command);
 
     try{
         memReader = new ShmemReader(apvChipIdsList, apvChipsList, locate_srs_chips(), chamberElements,
@@ -177,12 +172,9 @@ void CDaqServerConfig::transmitStartSignal()
 
     }
     catch (bip::interprocess_exception & e) {
-//        std::stringstream ss;
-//        ss << "ShmemReader error : " << e.what() ;
         std::cout <<"************************************************************"<<std::endl;
         std::cout << "ShmemReader error : " << e.what() << " : mmDaqSharedMemory/mmDaqSharedCondition not found" << std::endl;
         std::cout <<"************************************************************"<<std::endl;
-
     }
     catch(...)
     {
@@ -193,10 +185,6 @@ void CDaqServerConfig::transmitStartSignal()
 
 void CDaqServerConfig::transmitStopSignal()
 {
-    //message mmdaq3-server to stop
-    std::string command = "stop";
-    //aikoulou: comment out
-//    emit sendStopDaq(command);
 
     //++++++++++++++++++++++++clearing reader and memory objects for cpu usage 0 on idle++++++++++++++++++
     std::cout<<"Terminating Mem Reading services"<<std::endl;
@@ -208,7 +196,6 @@ void CDaqServerConfig::transmitStopSignal()
     memReader->service->stopping(true);
     memReader->service->stop();
     memReader=0;
-    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     //button status change
     mainWindow->configButton->setEnabled(1);
@@ -234,7 +221,6 @@ void CDaqServerConfig::setConfigFilePath(const QString &config_filePath)
 {
     qDebug()<<"Got config File Path :"<<config_filePath;
     input_config_path = config_filePath;
-    message_config_path = QString("configure=")+config_filePath;
     if(QFile::exists(input_config_path)) {
         emit configWithFile(config_filePath);
         mainStartUpWindow->close();

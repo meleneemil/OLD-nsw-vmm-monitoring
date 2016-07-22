@@ -14,7 +14,6 @@
 #include "SrsChannel.h"
 #include "SrsChannelId.h"
 #include "SrsChip.h"
-#include "Logger.h"
 #include "DetBase.h"
 #include "DetDetector.h"
 #include "DetConnector.h"

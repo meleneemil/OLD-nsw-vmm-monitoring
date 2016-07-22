@@ -210,12 +210,6 @@ namespace online {
 //commands for messaging the daq
          QString input_config_path;
          QString input_config_fileName;
-         QString message_config_path;
-         QString message_runType;
-         QString message_zsapv;
-         QString message_commentForDaq;
-         QString message_nosave;
-         QString message_stop;
 
 
          /**
@@ -230,10 +224,7 @@ namespace online {
          ///zero suppress threshold for APV chips
          double m_apv_zs_threshold;
          
-         
-         //interprocess
-         
-         boost::interprocess::managed_shared_memory m_shared_segment;
+
       };
       
       

@@ -8,7 +8,6 @@
 
 
 #include <qstatusbar.h>
-#include <qmessagebox.h>
 #include <qmenubar.h>
 #include <qapplication.h>
 #include <qimage.h>
@@ -40,13 +39,6 @@ int main(int argc, char** argv)
 
     TApplication rootapp("mmDaq Online Monitoring", &argc, argv);
     QApplication app(argc,argv);
-
-    //++++++++++++++++++specify a new font+++++++++++++++++++++++++++++++++++
-    //QFont newFont("Sans", 6, QFont::Bold, true);
-    //set font of application
-    //app.setFont(newFont);
-    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
     app.setWindowIcon(QIcon("media/display.png"));
 
     CDaqServerConfig *displayConfigurator = new CDaqServerConfig();

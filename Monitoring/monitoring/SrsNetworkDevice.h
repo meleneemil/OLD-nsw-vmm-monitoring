@@ -39,9 +39,7 @@ namespace online {
       public:
          CSrsNetworkDevice(size_t idnum, const std::string& name, boost::asio::ip::address ip_address);
          virtual ~CSrsNetworkDevice();
- //        virtual void insert_receiver_data(boost::shared_ptr<CUDPFrame> ) {};
          virtual void next_event() {}
- //        virtual void decode_udp_frame(boost::shared_ptr<CUDPFrame> ) {};
          virtual void reset() = 0;
          virtual void configure(const CDaqServerConfig* daqconfig) = 0;
          void print() const;
@@ -50,15 +48,12 @@ namespace online {
          void register_builder(boost::shared_ptr<CEventBuilder> builder);
          void deregister_builder();
          class IpAddressEquals;
-         
-         void run_event_builder();
+
          
       protected:
-         virtual void build_srs_event();
          void clear();
          
          boost::asio::ip::address m_ip_address;
-//         std::list<boost::shared_ptr<CUDPFrame> > m_input_buffer;
          boost::mutex m_in_buffer_mutex;
          boost::shared_ptr<CEventBuilder> m_event_builder;
          

@@ -73,7 +73,6 @@ namespace online {
          friend class CDaqServerMonitor;
 
       protected:
-         virtual void build_srs_event();
          
          boost::condition_variable m_eb_condition;
          

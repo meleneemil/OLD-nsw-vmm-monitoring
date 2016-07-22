@@ -63,17 +63,3 @@ void CSrsNetworkDevice::deregister_builder()
 {
    m_event_builder.reset();
 }
-
-void CSrsNetworkDevice::run_event_builder()
-{
-   std::cout << "CSrsNetworkDevice::run_event_builder()" << std::endl;
-   if (m_event_builder) {
-      m_io_service.post(boost::bind(&CSrsNetworkDevice::build_srs_event, this));
-   }
-   
-}
-
-void CSrsNetworkDevice::build_srs_event()
-{
-   std::cout << "CSrsNetworkDevice::build_srs_event() not implemented - should have been dispatched" << std::endl;
-}

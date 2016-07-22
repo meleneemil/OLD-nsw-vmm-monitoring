@@ -70,7 +70,6 @@ HEADERS += canvas.h \
     SharedChip.h \
     SharedChannel.h \
     SharedSrsChannelData.h \
-    Logger.h \
     filereader.h \
     AsioService.h \
     ShmemReader.h \
@@ -114,7 +113,6 @@ SOURCES += canvas.cxx main.cpp \
     SharedChip.cpp \
     SharedChannel.cpp \
     SharedSrsChannelData.cpp \
-    Logger.cpp \
     filereader.cpp \
     AsioService.cpp \
     ShmemReader.cpp \

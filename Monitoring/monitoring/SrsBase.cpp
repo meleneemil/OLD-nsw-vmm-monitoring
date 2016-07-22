@@ -8,7 +8,6 @@
 
 #include "SrsBase.h"
 #include "SrsChipId.h"
-#include "Logger.h"
 
 #include <iostream>
 #include <stdexcept>
@@ -43,7 +42,6 @@ boost::shared_ptr<CSrsChip> CSrsBase::get_srs_chip(int chip_no)
 {
    std::stringstream ss;
    ss << "CSrsBase::get_srs_chip(): chip number " << chip_no << " out of range for srs device id=" << m_uid << " '" << m_name << "'";
-   CLogger::instance()->warn(ss.str());
    throw std::out_of_range(ss.str());
 }
 
