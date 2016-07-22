@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_online__display__mmDaqStartupWindow_t {
-    QByteArrayData data[8];
-    char stringdata[158];
+    QByteArrayData data[7];
+    char stringdata[141];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,17 +32,16 @@ static const qt_meta_stringdata_online__display__mmDaqStartupWindow_t qt_meta_st
 QT_MOC_LITERAL(0, 0, 35), // "online::display::mmDaqStartup..."
 QT_MOC_LITERAL(1, 36, 16), // "configFilePathIs"
 QT_MOC_LITERAL(2, 53, 0), // ""
-QT_MOC_LITERAL(3, 54, 16), // "configFileNameIs"
-QT_MOC_LITERAL(4, 71, 24), // "setUpConfigFileSelection"
-QT_MOC_LITERAL(5, 96, 12), // "QVBoxLayout*"
-QT_MOC_LITERAL(6, 109, 19), // "searchForConfigFile"
-QT_MOC_LITERAL(7, 129, 28) // "transmitConfigFileNameSignal"
+QT_MOC_LITERAL(3, 54, 24), // "setUpConfigFileSelection"
+QT_MOC_LITERAL(4, 79, 12), // "QVBoxLayout*"
+QT_MOC_LITERAL(5, 92, 19), // "searchForConfigFile"
+QT_MOC_LITERAL(6, 112, 28) // "transmitConfigFileNameSignal"
 
     },
     "online::display::mmDaqStartupWindow\0"
-    "configFilePathIs\0\0configFileNameIs\0"
-    "setUpConfigFileSelection\0QVBoxLayout*\0"
-    "searchForConfigFile\0transmitConfigFileNameSignal"
+    "configFilePathIs\0\0setUpConfigFileSelection\0"
+    "QVBoxLayout*\0searchForConfigFile\0"
+    "transmitConfigFileNameSignal"
 };
 #undef QT_MOC_LITERAL
 
@@ -52,28 +51,26 @@ static const uint qt_meta_data_online__display__mmDaqStartupWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       2,       // signalCount
+       1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   39,    2, 0x06 /* Public */,
-       3,    1,   42,    2, 0x06 /* Public */,
+       1,    1,   34,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       4,    0,   45,    2, 0x0a /* Public */,
-       6,    0,   46,    2, 0x0a /* Public */,
-       7,    0,   47,    2, 0x0a /* Public */,
+       3,    0,   37,    2, 0x0a /* Public */,
+       5,    0,   38,    2, 0x0a /* Public */,
+       6,    0,   39,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    2,
-    QMetaType::Void, QMetaType::QString,    2,
 
  // slots: parameters
-    0x80000000 | 5,
+    0x80000000 | 4,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -86,11 +83,10 @@ void online::display::mmDaqStartupWindow::qt_static_metacall(QObject *_o, QMetaO
         mmDaqStartupWindow *_t = static_cast<mmDaqStartupWindow *>(_o);
         switch (_id) {
         case 0: _t->configFilePathIs((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 1: _t->configFileNameIs((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 2: { QVBoxLayout* _r = _t->setUpConfigFileSelection();
+        case 1: { QVBoxLayout* _r = _t->setUpConfigFileSelection();
             if (_a[0]) *reinterpret_cast< QVBoxLayout**>(_a[0]) = _r; }  break;
-        case 3: _t->searchForConfigFile(); break;
-        case 4: _t->transmitConfigFileNameSignal(); break;
+        case 2: _t->searchForConfigFile(); break;
+        case 3: _t->transmitConfigFileNameSignal(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -100,12 +96,6 @@ void online::display::mmDaqStartupWindow::qt_static_metacall(QObject *_o, QMetaO
             typedef void (mmDaqStartupWindow::*_t)(const QString & );
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&mmDaqStartupWindow::configFilePathIs)) {
                 *result = 0;
-            }
-        }
-        {
-            typedef void (mmDaqStartupWindow::*_t)(const QString & );
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&mmDaqStartupWindow::configFileNameIs)) {
-                *result = 1;
             }
         }
     }
@@ -136,13 +126,13 @@ int online::display::mmDaqStartupWindow::qt_metacall(QMetaObject::Call _c, int _
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 4;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 4)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 5;
+        _id -= 4;
     }
     return _id;
 }
@@ -152,12 +142,5 @@ void online::display::mmDaqStartupWindow::configFilePathIs(const QString & _t1)
 {
     void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
-}
-
-// SIGNAL 1
-void online::display::mmDaqStartupWindow::configFileNameIs(const QString & _t1)
-{
-    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
-    QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 QT_END_MOC_NAMESPACE

@@ -73,7 +73,6 @@ public:
 
     online::display::CAsioService *service;
     MainWindow *monitoringMainWindow;
-    //ShmemReader *memReader;
 
     QWaitCondition fillCondition;
     QWaitCondition drawCondition;
@@ -81,7 +80,6 @@ public:
 
     int activeTabIndex;
 
-//    QVector< std::pair< QString, QVector<int> > > mem_rawData;
     std::vector <QString> mem_stripData;
     int mem_eventNumber;
     QString mem_eventNumber_str;

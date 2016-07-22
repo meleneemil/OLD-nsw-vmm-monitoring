@@ -109,7 +109,7 @@ CDaqServerConfig::CDaqServerConfig() :
 //connect signals for configuration of the GUI and the DAQ
 
    //TODO REMOVE
-   connect(mainStartUpWindow,SIGNAL(configFileNameIs(QString)), this, SLOT(setConfigFileName(QString)));
+//   connect(mainStartUpWindow,SIGNAL(configFileNameIs(QString)), this, SLOT(setConfigFileName(QString)));
    connect(mainStartUpWindow,SIGNAL(configFilePathIs(QString)), this, SLOT(setConfigFilePath(QString)));
    connect(settingsWindow,SIGNAL(reconfigFilePathIs(QString)),this,SLOT(setConfigFilePath(QString)));
    connect(this, SIGNAL(configWithFile(QString)),this,SLOT(configure(QString)));

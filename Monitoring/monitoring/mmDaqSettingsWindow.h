@@ -71,7 +71,7 @@ signals:
     void rebrowseConfigClicked();
     void reloadConfigClicked();
     void reconfigFilePathIs(const QString &);
-    void reconfigFileNameIs(const QString &);
+//    void reconfigFileNameIs(const QString &);
 };
 
 #endif // MMDAQSETTINGSWINDOW_H

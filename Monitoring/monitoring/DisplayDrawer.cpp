@@ -50,8 +50,6 @@ DisplayDrawer::DisplayDrawer(
     //    if(false)//aikoulou debug
     service->post(f);
     monitoringMainWindow = mainWindow;
-    //connect(this,SIGNAL(runNumberIs(QString)),monitoringMainWindow->runNumberLabel_update,SLOT(setText(QString)),Qt::QueuedConnection);
-    //    connect(monitoringMainWindow->mainTabs, SIGNAL(currentChanged(int)),this,SLOT(changeActiveTab(int)));//aikoulou: was commented. leave it so ;)
     //aikoulou: comment outin. don't want to reset when stopping.
     connect(monitoringMainWindow,SIGNAL(stopDaqClicked()),this,SLOT(reset_slot()));
 }
@@ -143,7 +141,6 @@ int DisplayDrawer::handleBufferedEvent(QString line_qstr)
     tokenizer::iterator tok_iter = tokens.begin();
 
     //aikoulou: debug
-    //    std::cout << "<--\n";
     //containers for reading .bin file elements
     //elements' names
     std::string pinstr;
@@ -165,9 +162,6 @@ int DisplayDrawer::handleBufferedEvent(QString line_qstr)
 
     std::string bcid_str;
     std::string extra_str;
-
-
-
 
     float charge=0;
     int time=0;
@@ -283,10 +277,6 @@ int DisplayDrawer::handleBufferedEvent(QString line_qstr)
 
 void DisplayDrawer::fillReadoutHistos(std::string chamberName, std::string readoutName, int strip, float charge, float time, int bcid, int extra)
 {
-    //    std::cout << "is here111--------------------------------------------------------";
-    //aikoulou: debug
-    //std::cout << "chamberName -->" << chamberName << "\nreadoutName -->" << readoutName <<
-    //                 "\nstrip -->" << strip <<  "\ncharge -->" << charge << "\ntime -->" << time << "\n";
 
     for(size_t i=0; i<monitoringMainWindow->chamberTree->childCount(); ++i)
     {
@@ -299,15 +289,7 @@ void DisplayDrawer::fillReadoutHistos(std::string chamberName, std::string reado
                     Q_FOREACH(DetBasePtr baseptr, layervecptr->get_children()) {
                         boost::shared_ptr<CDetReadout> readout = boost::dynamic_pointer_cast<CDetReadout>(baseptr);
                         if(readout->name()==readoutName)    {
-                            //filling statistics histograms
-                            //aikoulou: debug
-                            //                            std::cout << "chamberName ------------>" << chamberName << "\nreadoutName -->" << readoutName <<
-                            //                                         "\nstrip -->" << strip <<  "\ncharge -->" << charge << "\ntime -->" << time << "\n";
                             readout->getStatisticsHisto()->Fill(strip);
-                            //                                if(readout->getTimeStatisticsHisto()->GetBinContent(readout->getTimeStatisticsHisto()->GetMaximumBin())<time)
-                            //                                    readout->getTimeStatisticsHisto()->SetBins(time+1*500,0,time+1);
-                            //                                if(readout->getChargeStatisticsHisto()->GetBinContent(readout->getChargeStatisticsHisto()->GetMaximumBin())<charge)
-                            //                                    readout->getTimeStatisticsHisto()->SetBins(charge+1*500,0,charge+1);
                             readout->getTimeStatisticsHisto()->Fill(time);
                             readout->getChargeStatisticsHisto()->Fill(charge);
                             readout->getPDOStatisticsHisto()->Fill(bcid);
@@ -367,11 +349,8 @@ void DisplayDrawer::drawStatisticsHistos()
     for(size_t i=0; i<monitoringMainWindow->chamberTree->childCount(); ++i)
     {
         if(monitoringMainWindow->chamberTree->child(i)->checkState(0)==2)   {
-            //            reinterpret_cast<void*> (chambvecptr.get())
-            //            * reinterpret_cast(boost::shared_ptr<A>*)(var);
             QVariant chamberVar = monitoringMainWindow->chamberTree->child(i)->data(0,Qt::UserRole);
             CDetBase *chambptr = reinterpret_cast<CDetBase *>(chamberVar.value<void*>());
-            //boost::shared_ptr<CDetChamber> chamber = boost::dynamic_pointer_cast<CDetChamber>(*chambvecptr);
             Q_FOREACH(DetBasePtr mlayervecptr,chambptr->get_children()) {
                 Q_FOREACH(DetBasePtr layervecptr, mlayervecptr->get_children()) {
                     Q_FOREACH(DetBasePtr baseptr, layervecptr->get_children()) {
@@ -401,11 +380,9 @@ void DisplayDrawer::drawEventHistos()
     int canvasIndex =1;
     for(size_t i=0; i<monitoringMainWindow->chamberTree->childCount(); ++i)
     {
-        //        qDebug()<<" #######   monitoringMainWindow->chamberTree->child(i)->checkState(0) = "<<monitoringMainWindow->chamberTree->child(i)->checkState(0);
         if(monitoringMainWindow->chamberTree->child(i)->checkState(0)==2)   {
             QVariant chamberVar = monitoringMainWindow->chamberTree->child(i)->data(0,Qt::UserRole);
             CDetBase *chambptr = reinterpret_cast<CDetBase *>(chamberVar.value<void*>());
-            //boost::shared_ptr<CDetChamber> chamber = boost::dynamic_pointer_cast<CDetChamber>(*chambvecptr);
             Q_FOREACH(DetBasePtr mlayervecptr,chambptr->get_children()) {
                 Q_FOREACH(DetBasePtr layervecptr, mlayervecptr->get_children()) {
                     Q_FOREACH(DetBasePtr baseptr, layervecptr->get_children()) {

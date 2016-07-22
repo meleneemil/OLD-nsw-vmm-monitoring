@@ -59,7 +59,6 @@ public slots:
 
 signals:
     void configFilePathIs(const QString &);
-    void configFileNameIs(const QString &);
 
 
 };

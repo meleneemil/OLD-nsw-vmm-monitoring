@@ -50,8 +50,8 @@ ShmemReader::ShmemReader(
                          MainWindow *window) :
     mainWindow(window), mainDrawer(0), service(new online::display::CAsioService(1)),
     m_shm_manager(bipc::open_only, "mmDaqSharedMemory") ,
-    m_shm_condition(bipc::open_only, "mmDaqSharedCondition"), terminate(false),
-    configuredChamberElements(chamberElements), isProcessing(false), stripDataEvent(0), realEvent(false)
+    m_shm_condition(bipc::open_only, "mmDaqSharedCondition"),
+    configuredChamberElements(chamberElements), stripDataEvent(0), realEvent(false)
 {
     eventDisplayed = 0;
     if(m_shm_manager.check_sanity())    {
@@ -62,14 +62,6 @@ ShmemReader::ShmemReader(
         qRegisterMetaType< QVector<int> >("QVector<int>");
         qRegisterMetaType< QVector<QString> >("QVector<QString>");
         qRegisterMetaType< QVector<std::pair<QString, QVector<int> > > >("QVector<std::pair<QString, QVector<int> > >");
-
-        //connectors for passing data from shared memory to local copies
-        connect(this,SIGNAL(readEvent()),this,SLOT(read_event_number()));
-        connect(this,SIGNAL(readStrip()),this,SLOT(read_event_strips()));
-
-        //connectors for controlling filling and drawing of the histograms from the displayDrawer
-        connect(this,SIGNAL(runNumberIs(QString)),
-                mainDrawer->monitoringMainWindow->runNumberLabel_update,SLOT(setText(QString)),Qt::QueuedConnection);
 
         connect(this, SIGNAL(fillHistograms(std::vector<std::string>,int)),
                 mainDrawer,SLOT(NotifyFill(std::vector<std::string>,int)),Qt::DirectConnection);
@@ -93,7 +85,6 @@ ShmemReader::~ShmemReader()
 
 void ShmemReader::connect_shared_memory()
 {
-
     //connecting shared memory with daq
     try{
         boost::scoped_ptr<IpcShmemObjectType> obj(new
@@ -102,29 +93,22 @@ void ShmemReader::connect_shared_memory()
                                                                      bipc::read_write));
         m_shm_object.swap(obj);
 
-
         //Map the whole shared memory in this process
         boost::scoped_ptr<IpcShmemMappedRegion> reg(new bipc::mapped_region(*m_shm_object,
-                                                                            boost::interprocess::read_write ));
-
+                                                                           boost::interprocess::read_write ));
         m_shm_mapped_region.swap(reg);
-
 
         //Get the address of the mapped region
         void * addr = m_shm_mapped_region->get_address();
-
-
     }
 
     catch(...) {
         std::cout << "TODO : CShmemReader() connect_shared_memory() *** exception ***" << std::endl;
     }
-
 }
 
 void ShmemReader::handleSharedData()
 {
-
     ShmemNamedMutexType shm_mutex(bipc::open_only, "mmDaqSharedMutex");
     //aikoulou, from 5 to 1
     int time_ = 1;
@@ -152,7 +136,6 @@ void ShmemReader::handleSharedData()
             stripDataEvent.clear();
         }
     }//while
-
 
 }
 
@@ -184,15 +167,11 @@ void ShmemReader::read_event_number()
 
 }
 
-
-
-
 void ShmemReader::read_event_strips()
 {
 
     std::pair<ShmemCharStringVector*, size_t> res_str;
     res_str = m_shm_manager.find<ShmemCharStringVector> ("mmDaqSharedEventData");
-    qDebug() << "void ShmemReader::read_event_strips RES vec = " << res_str.second;
     std::string line_str;
     if(res_str.second == 1)
     {

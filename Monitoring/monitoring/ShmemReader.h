@@ -163,7 +163,6 @@ public:
     online::display::CAsioService *service;
     bipc::managed_shared_memory m_shm_manager;
     ShmemNamedCondition m_shm_condition;
-    bool terminate;
 
     std::vector<std::string> apvChipsList;
     std::vector<uint32_t> apvChipIdList;
@@ -181,7 +180,6 @@ public:
     void mainLoop();
 
 private:
-    bool isProcessing;
     bool realEvent;
 public slots:
 
@@ -191,12 +189,9 @@ public slots:
 
     std::string getNameFromChipId(uint32_t chipId);
 signals:
-    void readEvent();
-    void readStrip();
 
     void fillHistograms(std::vector <std::string>, int);
 
-    void runNumberIs(QString);
     void runReadoutHistoFiller();
     void fillReadout(QString line);
     void newLine();

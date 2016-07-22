@@ -28,7 +28,6 @@ void mmDaqSettingsWindow::transmitConfigFileNameSignal()
     qDebug()<<"transmiting config file signal";
     qDebug()<<configFileFullPath;
 
-    //emit configFileNameIs(configFileName);
     emit reconfigFilePathIs(configFileFullPath);
 }
 
