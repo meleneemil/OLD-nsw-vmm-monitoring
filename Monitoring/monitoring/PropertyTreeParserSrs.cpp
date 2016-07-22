@@ -137,13 +137,10 @@ boost::shared_ptr<CSrsChip> CPropertyTreeParserSrs::parse_ptree_srs_chip_node(co
    
    if (typestr == "chip") {
       chipptr.reset(new CSrsChipApv(CSrsChipId(0, id_number_from_string(idstr)), namestr) );   
-   } else if (typestr == "VMM1") {
+   } /*else if (typestr == "VMM1") {
       chipptr.reset(new CSrsChipBnl(CSrsChipId(0, id_number_from_string(idstr)), namestr) );   
       //TODO: rename class VMM1 ?
-   }
-//   else if (typestr == "TESTER") {
-//        chipptr.reset(new CSrsChipMmDaqTest(CSrsChipId(0, id_number_from_string(idstr)), namestr) );
-//     }
+   }*/
    else {
       throw std::runtime_error("Unknown SRS chip type");
    }
