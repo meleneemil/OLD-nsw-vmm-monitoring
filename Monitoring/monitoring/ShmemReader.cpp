@@ -44,9 +44,7 @@ bool FAKEDATA=false;
 int FAKE_EVENT_NO=0;
 
 
-ShmemReader::ShmemReader(/*std::vector<uint32_t> apvList, */
-                         std::vector<std::string> apvChips,
-                         std::vector<boost::shared_ptr<online::display::CSrsChip> > chipvec,
+ShmemReader::ShmemReader(
                          std::vector<std::pair<boost::shared_ptr<online::display::CDetChamber>,
                          std::vector<boost::shared_ptr<online::display::CDetReadout> > > > chamberElements,
                          MainWindow *window,
@@ -57,7 +55,7 @@ ShmemReader::ShmemReader(/*std::vector<uint32_t> apvList, */
     m_shm_shared_data(0), shmem(), shCond(), mainWindow(window), mainDrawer(0), service(new online::display::CAsioService(1)),
     m_shm_manager(bipc::open_only, "mmDaqSharedMemory") ,
     m_shm_condition(bipc::open_only, "mmDaqSharedCondition"), terminate(false),
-    readMutex(), dataLine(),/* apvChipsList(), apvChipIdList(), */configuredChamberElements(chamberElements), configuredChipvec(chipvec), isProcessing(false), stripDataEvent(0), rawEvent(0), realEvent(false)
+    readMutex(), dataLine(),/* apvChipsList(), apvChipIdList(), */configuredChamberElements(chamberElements), isProcessing(false), stripDataEvent(0), rawEvent(0), realEvent(false)
 {
     eventDisplayed = 0; // angelos
     if(m_shm_manager.check_sanity())    {

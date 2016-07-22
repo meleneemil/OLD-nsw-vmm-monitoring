@@ -154,10 +154,7 @@ void CDaqServerConfig::transmitStartSignal()
 {
 
     try{
-        memReader = new ShmemReader(/*apvChipIdsList, */
-                                    apvChipsList,
-                                    locate_srs_chips(),
-                                    chamberElements,
+        memReader = new ShmemReader(chamberElements,
                                     mainWindow, mappingChip1dElements, mappingChip2dElements, mappingReadout1dElements, mappingReadout2dElements);
 
         qRegisterMetaType< QVector<int> >("QVector<int>");
