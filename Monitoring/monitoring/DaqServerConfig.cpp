@@ -93,9 +93,7 @@ CDaqServerConfig::CDaqServerConfig() :
     m_det_config_file(),
     m_config_path(),
     m_srs_elements(),
-    m_detector(),
-    m_apv_zs_threshold(0)
-    //m_shared_segment()
+    m_detector()
 
 {
 
@@ -155,7 +153,7 @@ void CDaqServerConfig::transmitStartSignal()
 
     try{
         memReader = new ShmemReader(chamberElements,
-                                    mainWindow, mappingChip1dElements, mappingChip2dElements, mappingReadout1dElements, mappingReadout2dElements);
+                                    mainWindow/*, mappingChip1dElements, mappingChip2dElements, mappingReadout1dElements, mappingReadout2dElements*/);
 
         qRegisterMetaType< QVector<int> >("QVector<int>");
         qRegisterMetaType< std::string >("std::string");

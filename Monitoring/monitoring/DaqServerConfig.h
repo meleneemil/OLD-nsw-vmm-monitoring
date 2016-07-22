@@ -207,7 +207,7 @@ namespace online {
          std::string m_det_config_file;
 
          boost::filesystem::path m_config_path;
-//commands for messaging the daq
+
          QString input_config_path;
          QString input_config_fileName;
 
@@ -220,9 +220,7 @@ namespace online {
           this is current detector configuration
           */
          boost::shared_ptr<CDetBase> m_detector;
-         
-         ///zero suppress threshold for APV chips
-         double m_apv_zs_threshold;
+
          
 
       };
