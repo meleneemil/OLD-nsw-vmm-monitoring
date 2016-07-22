@@ -3208,147 +3208,162 @@ moc_DaqServerConfig.cpp: mmDaqStartupWindow.h \
 		../../../../boost_1_60_0/boost/algorithm/string/erase.hpp \
 		../../../../boost_1_60_0/boost/date_time/posix_time/time_parsers.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QTreeWidgetItem \
-		pedestalsfileloader.h \
-		frame.h \
-		canvas.h \
+		filereader.h \
+		AsioService.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
+		ShmemReader.h \
 		mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMainWindow \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmainwindow.h \
+		frame.h \
+		canvas.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QCheckBox \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
-		pedestals.h \
-		$(ROOTSYS)/include/TROOT.h \
-		../../../../ROOT534/include/TDirectory.h \
-		../../../../ROOT534/include/TList.h \
-		../../../../ROOT534/include/TDatime.h \
-		../../../../ROOT534/include/TUUID.h \
-		$(ROOTSYS)/include/TChain.h \
-		../../../../ROOT534/include/TTree.h \
-		../../../../ROOT534/include/TBranch.h \
-		../../../../ROOT534/include/TDataType.h \
-		../../../../ROOT534/include/TVirtualTreePlayer.h \
-		$(ROOTSYS)/include/TFile.h \
-		../../../../ROOT534/include/TDirectoryFile.h \
-		../../../../ROOT534/include/TMap.h \
-		../../../../ROOT534/include/THashTable.h \
-		../../../../ROOT534/include/TUrl.h \
-		apv_raw_ped.h \
-		../../../../boost_1_60_0/boost/program_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
-		../../../../boost_1_60_0/boost/program_options/config.hpp \
-		../../../../boost_1_60_0/boost/program_options/errors.hpp \
-		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/option.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
-		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
-		../../../../boost_1_60_0/boost/program_options/version.hpp \
-		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		DisplayDrawer.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
+		../../../../boost_1_60_0/boost/filesystem.hpp \
+		../../../../boost_1_60_0/boost/filesystem/config.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
+		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
+		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
+		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
+		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
+		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
+		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
+		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
+		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
+		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_begin.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/workaround.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_end.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
-		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/creation_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/exceptions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
+		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
+		../../../../boost_1_60_0/boost/container/string.hpp \
+		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
+		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
+		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
+		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
+		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
+		../../../../boost_1_60_0/boost/intrusive/options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
+		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
+		../../../../boost_1_60_0/boost/container/map.hpp \
+		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
+		../../../../boost_1_60_0/boost/container/options.hpp \
+		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
+		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
+		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
+		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
 		../../../../boost_1_60_0/boost/interprocess/segment_manager.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/transform_iterator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/nothrow.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/segment_manager_helper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/in_place_interface.hpp \
-		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/named_proxy.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/variadic_templates_tools.hpp \
 		../../../../boost_1_60_0/boost/interprocess/offset_ptr.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/cast_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/indexes/iset_index.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
 		../../../../boost_1_60_0/boost/intrusive/set.hpp \
-		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
-		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
-		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/allocator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/allocation_type.hpp \
-		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
-		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/detail/allocator_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/detail/mem_algo_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/math_functions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/version_type.hpp \
 		../../../../boost_1_60_0/boost/interprocess/smart_ptr/deleter.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/managed_open_or_create_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mapped_region.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/sync_utils.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/mutex.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/detail/common_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_begin.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map_fwd.hpp \
@@ -3366,27 +3381,7 @@ moc_DaqServerConfig.cpp: mmDaqStartupWindow.h \
 		../../../../boost_1_60_0/boost/unordered/detail/extract_key.hpp \
 		../../../../boost_1_60_0/boost/unordered/detail/unique.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_end.hpp \
-		../../../../boost_1_60_0/boost/container/map.hpp \
-		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
-		../../../../boost_1_60_0/boost/container/options.hpp \
-		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
-		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
-		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
-		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
-		../../../../boost_1_60_0/boost/container/string.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/interprocess_tester.hpp \
-		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/rbtree_best_fit.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/mutex_family.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/interprocess_mutex.hpp \
@@ -3399,34 +3394,6 @@ moc_DaqServerConfig.cpp: mmDaqStartupWindow.h \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/null_mutex.hpp \
-		../../../../boost_1_60_0/boost/filesystem.hpp \
-		../../../../boost_1_60_0/boost/filesystem/config.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
-		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
-		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
-		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
-		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
-		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
-		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
-		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
-		filereader.h \
-		AsioService.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
-		ShmemReader.h \
-		DisplayDrawer.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
-		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/string.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/containers_fwd.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/named_condition.hpp \
@@ -3469,6 +3436,21 @@ moc_DaqServerConfig.cpp: mmDaqStartupWindow.h \
 		../../../../boost_1_60_0/boost/algorithm/string/detail/find_iterator.hpp \
 		../../../../boost_1_60_0/boost/algorithm/string/join.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
+		../../../../boost_1_60_0/boost/program_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
+		../../../../boost_1_60_0/boost/program_options/config.hpp \
+		../../../../boost_1_60_0/boost/program_options/errors.hpp \
+		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/option.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
+		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
+		../../../../boost_1_60_0/boost/program_options/version.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
@@ -11835,125 +11817,155 @@ main.o: main.cpp ../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
 		../../../../boost_1_60_0/boost/algorithm/string/erase.hpp \
 		../../../../boost_1_60_0/boost/date_time/posix_time/time_parsers.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QTreeWidgetItem \
-		pedestalsfileloader.h \
-		pedestals.h \
-		$(ROOTSYS)/include/TROOT.h \
-		../../../../ROOT534/include/TDirectory.h \
-		../../../../ROOT534/include/TList.h \
-		../../../../ROOT534/include/TDatime.h \
-		../../../../ROOT534/include/TUUID.h \
-		$(ROOTSYS)/include/TChain.h \
-		../../../../ROOT534/include/TTree.h \
-		../../../../ROOT534/include/TBranch.h \
-		../../../../ROOT534/include/TDataType.h \
-		../../../../ROOT534/include/TVirtualTreePlayer.h \
-		$(ROOTSYS)/include/TFile.h \
-		../../../../ROOT534/include/TDirectoryFile.h \
-		../../../../ROOT534/include/TMap.h \
-		../../../../ROOT534/include/THashTable.h \
-		../../../../ROOT534/include/TUrl.h \
-		apv_raw_ped.h \
-		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		filereader.h \
+		AsioService.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
+		ShmemReader.h \
+		DisplayDrawer.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
+		../../../../boost_1_60_0/boost/filesystem.hpp \
+		../../../../boost_1_60_0/boost/filesystem/config.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
+		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
+		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
+		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
+		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
+		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
+		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
+		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
+		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
+		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_begin.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/workaround.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_end.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
-		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/creation_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/exceptions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
+		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
+		../../../../boost_1_60_0/boost/container/string.hpp \
+		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
+		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
+		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
+		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
+		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
+		../../../../boost_1_60_0/boost/intrusive/options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
+		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
+		../../../../boost_1_60_0/boost/container/map.hpp \
+		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
+		../../../../boost_1_60_0/boost/container/options.hpp \
+		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
+		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
+		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
+		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
 		../../../../boost_1_60_0/boost/interprocess/segment_manager.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/transform_iterator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/nothrow.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/segment_manager_helper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/in_place_interface.hpp \
-		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/named_proxy.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/variadic_templates_tools.hpp \
 		../../../../boost_1_60_0/boost/interprocess/offset_ptr.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/cast_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/indexes/iset_index.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
 		../../../../boost_1_60_0/boost/intrusive/set.hpp \
-		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
-		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
-		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/allocator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/allocation_type.hpp \
-		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
-		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/detail/allocator_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/detail/mem_algo_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/math_functions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/version_type.hpp \
 		../../../../boost_1_60_0/boost/interprocess/smart_ptr/deleter.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/managed_open_or_create_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mapped_region.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/sync_utils.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/mutex.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/detail/common_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_begin.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map_fwd.hpp \
@@ -11971,27 +11983,7 @@ main.o: main.cpp ../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
 		../../../../boost_1_60_0/boost/unordered/detail/extract_key.hpp \
 		../../../../boost_1_60_0/boost/unordered/detail/unique.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_end.hpp \
-		../../../../boost_1_60_0/boost/container/map.hpp \
-		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
-		../../../../boost_1_60_0/boost/container/options.hpp \
-		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
-		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
-		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
-		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
-		../../../../boost_1_60_0/boost/container/string.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/interprocess_tester.hpp \
-		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/rbtree_best_fit.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/mutex_family.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/interprocess_mutex.hpp \
@@ -12004,34 +11996,6 @@ main.o: main.cpp ../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/null_mutex.hpp \
-		../../../../boost_1_60_0/boost/filesystem.hpp \
-		../../../../boost_1_60_0/boost/filesystem/config.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
-		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
-		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
-		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
-		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
-		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
-		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
-		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
-		filereader.h \
-		AsioService.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
-		ShmemReader.h \
-		DisplayDrawer.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
-		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/string.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/containers_fwd.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/named_condition.hpp \
@@ -14351,147 +14315,162 @@ PropertyTreeParser.o: PropertyTreeParser.cpp PropertyTreeParser.h \
 		../../../../boost_1_60_0/boost/algorithm/string/erase.hpp \
 		../../../../boost_1_60_0/boost/date_time/posix_time/time_parsers.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QTreeWidgetItem \
-		pedestalsfileloader.h \
-		frame.h \
-		canvas.h \
+		filereader.h \
+		AsioService.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
+		ShmemReader.h \
 		mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMainWindow \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmainwindow.h \
+		frame.h \
+		canvas.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QCheckBox \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
-		pedestals.h \
-		$(ROOTSYS)/include/TROOT.h \
-		../../../../ROOT534/include/TDirectory.h \
-		../../../../ROOT534/include/TList.h \
-		../../../../ROOT534/include/TDatime.h \
-		../../../../ROOT534/include/TUUID.h \
-		$(ROOTSYS)/include/TChain.h \
-		../../../../ROOT534/include/TTree.h \
-		../../../../ROOT534/include/TBranch.h \
-		../../../../ROOT534/include/TDataType.h \
-		../../../../ROOT534/include/TVirtualTreePlayer.h \
-		$(ROOTSYS)/include/TFile.h \
-		../../../../ROOT534/include/TDirectoryFile.h \
-		../../../../ROOT534/include/TMap.h \
-		../../../../ROOT534/include/THashTable.h \
-		../../../../ROOT534/include/TUrl.h \
-		apv_raw_ped.h \
-		../../../../boost_1_60_0/boost/program_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
-		../../../../boost_1_60_0/boost/program_options/config.hpp \
-		../../../../boost_1_60_0/boost/program_options/errors.hpp \
-		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/option.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
-		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
-		../../../../boost_1_60_0/boost/program_options/version.hpp \
-		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		DisplayDrawer.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
+		../../../../boost_1_60_0/boost/filesystem.hpp \
+		../../../../boost_1_60_0/boost/filesystem/config.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
+		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
+		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
+		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
+		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
+		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
+		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
+		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
+		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
+		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_begin.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/workaround.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_end.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
-		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/creation_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/exceptions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
+		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
+		../../../../boost_1_60_0/boost/container/string.hpp \
+		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
+		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
+		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
+		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
+		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
+		../../../../boost_1_60_0/boost/intrusive/options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
+		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
+		../../../../boost_1_60_0/boost/container/map.hpp \
+		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
+		../../../../boost_1_60_0/boost/container/options.hpp \
+		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
+		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
+		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
+		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
 		../../../../boost_1_60_0/boost/interprocess/segment_manager.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/transform_iterator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/nothrow.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/segment_manager_helper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/in_place_interface.hpp \
-		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/named_proxy.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/variadic_templates_tools.hpp \
 		../../../../boost_1_60_0/boost/interprocess/offset_ptr.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/cast_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/indexes/iset_index.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
 		../../../../boost_1_60_0/boost/intrusive/set.hpp \
-		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
-		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
-		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/allocator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/allocation_type.hpp \
-		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
-		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/detail/allocator_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/detail/mem_algo_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/math_functions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/version_type.hpp \
 		../../../../boost_1_60_0/boost/interprocess/smart_ptr/deleter.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/managed_open_or_create_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mapped_region.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/sync_utils.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/mutex.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/detail/common_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_begin.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map_fwd.hpp \
@@ -14509,27 +14488,7 @@ PropertyTreeParser.o: PropertyTreeParser.cpp PropertyTreeParser.h \
 		../../../../boost_1_60_0/boost/unordered/detail/extract_key.hpp \
 		../../../../boost_1_60_0/boost/unordered/detail/unique.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_end.hpp \
-		../../../../boost_1_60_0/boost/container/map.hpp \
-		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
-		../../../../boost_1_60_0/boost/container/options.hpp \
-		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
-		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
-		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
-		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
-		../../../../boost_1_60_0/boost/container/string.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/interprocess_tester.hpp \
-		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/rbtree_best_fit.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/mutex_family.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/interprocess_mutex.hpp \
@@ -14542,34 +14501,6 @@ PropertyTreeParser.o: PropertyTreeParser.cpp PropertyTreeParser.h \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/null_mutex.hpp \
-		../../../../boost_1_60_0/boost/filesystem.hpp \
-		../../../../boost_1_60_0/boost/filesystem/config.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
-		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
-		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
-		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
-		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
-		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
-		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
-		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
-		filereader.h \
-		AsioService.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
-		ShmemReader.h \
-		DisplayDrawer.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
-		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/string.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/containers_fwd.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/named_condition.hpp \
@@ -14612,6 +14543,21 @@ PropertyTreeParser.o: PropertyTreeParser.cpp PropertyTreeParser.h \
 		../../../../boost_1_60_0/boost/algorithm/string/detail/find_iterator.hpp \
 		../../../../boost_1_60_0/boost/algorithm/string/join.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
+		../../../../boost_1_60_0/boost/program_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
+		../../../../boost_1_60_0/boost/program_options/config.hpp \
+		../../../../boost_1_60_0/boost/program_options/errors.hpp \
+		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/option.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
+		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
+		../../../../boost_1_60_0/boost/program_options/version.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
@@ -16655,147 +16601,162 @@ PropertyTreeParserDetector.o: PropertyTreeParserDetector.cpp PropertyTreeParserD
 		../../../../boost_1_60_0/boost/algorithm/string/erase.hpp \
 		../../../../boost_1_60_0/boost/date_time/posix_time/time_parsers.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QTreeWidgetItem \
-		pedestalsfileloader.h \
-		frame.h \
-		canvas.h \
+		filereader.h \
+		AsioService.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
+		ShmemReader.h \
 		mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMainWindow \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmainwindow.h \
+		frame.h \
+		canvas.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QCheckBox \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
-		pedestals.h \
-		$(ROOTSYS)/include/TROOT.h \
-		../../../../ROOT534/include/TDirectory.h \
-		../../../../ROOT534/include/TList.h \
-		../../../../ROOT534/include/TDatime.h \
-		../../../../ROOT534/include/TUUID.h \
-		$(ROOTSYS)/include/TChain.h \
-		../../../../ROOT534/include/TTree.h \
-		../../../../ROOT534/include/TBranch.h \
-		../../../../ROOT534/include/TDataType.h \
-		../../../../ROOT534/include/TVirtualTreePlayer.h \
-		$(ROOTSYS)/include/TFile.h \
-		../../../../ROOT534/include/TDirectoryFile.h \
-		../../../../ROOT534/include/TMap.h \
-		../../../../ROOT534/include/THashTable.h \
-		../../../../ROOT534/include/TUrl.h \
-		apv_raw_ped.h \
-		../../../../boost_1_60_0/boost/program_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
-		../../../../boost_1_60_0/boost/program_options/config.hpp \
-		../../../../boost_1_60_0/boost/program_options/errors.hpp \
-		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/option.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
-		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
-		../../../../boost_1_60_0/boost/program_options/version.hpp \
-		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		DisplayDrawer.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
+		../../../../boost_1_60_0/boost/filesystem.hpp \
+		../../../../boost_1_60_0/boost/filesystem/config.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
+		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
+		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
+		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
+		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
+		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
+		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
+		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
+		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
+		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_begin.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/workaround.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_end.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
-		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/creation_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/exceptions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
+		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
+		../../../../boost_1_60_0/boost/container/string.hpp \
+		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
+		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
+		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
+		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
+		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
+		../../../../boost_1_60_0/boost/intrusive/options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
+		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
+		../../../../boost_1_60_0/boost/container/map.hpp \
+		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
+		../../../../boost_1_60_0/boost/container/options.hpp \
+		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
+		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
+		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
+		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
 		../../../../boost_1_60_0/boost/interprocess/segment_manager.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/transform_iterator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/nothrow.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/segment_manager_helper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/in_place_interface.hpp \
-		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/named_proxy.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/variadic_templates_tools.hpp \
 		../../../../boost_1_60_0/boost/interprocess/offset_ptr.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/cast_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/indexes/iset_index.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
 		../../../../boost_1_60_0/boost/intrusive/set.hpp \
-		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
-		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
-		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/allocator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/allocation_type.hpp \
-		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
-		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/detail/allocator_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/detail/mem_algo_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/math_functions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/version_type.hpp \
 		../../../../boost_1_60_0/boost/interprocess/smart_ptr/deleter.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/managed_open_or_create_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mapped_region.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/sync_utils.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/mutex.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/detail/common_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_begin.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map_fwd.hpp \
@@ -16813,27 +16774,7 @@ PropertyTreeParserDetector.o: PropertyTreeParserDetector.cpp PropertyTreeParserD
 		../../../../boost_1_60_0/boost/unordered/detail/extract_key.hpp \
 		../../../../boost_1_60_0/boost/unordered/detail/unique.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_end.hpp \
-		../../../../boost_1_60_0/boost/container/map.hpp \
-		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
-		../../../../boost_1_60_0/boost/container/options.hpp \
-		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
-		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
-		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
-		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
-		../../../../boost_1_60_0/boost/container/string.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/interprocess_tester.hpp \
-		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/rbtree_best_fit.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/mutex_family.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/interprocess_mutex.hpp \
@@ -16846,34 +16787,6 @@ PropertyTreeParserDetector.o: PropertyTreeParserDetector.cpp PropertyTreeParserD
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/null_mutex.hpp \
-		../../../../boost_1_60_0/boost/filesystem.hpp \
-		../../../../boost_1_60_0/boost/filesystem/config.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
-		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
-		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
-		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
-		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
-		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
-		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
-		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
-		filereader.h \
-		AsioService.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
-		ShmemReader.h \
-		DisplayDrawer.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
-		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/string.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/containers_fwd.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/named_condition.hpp \
@@ -16916,6 +16829,21 @@ PropertyTreeParserDetector.o: PropertyTreeParserDetector.cpp PropertyTreeParserD
 		../../../../boost_1_60_0/boost/algorithm/string/detail/find_iterator.hpp \
 		../../../../boost_1_60_0/boost/algorithm/string/join.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
+		../../../../boost_1_60_0/boost/program_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
+		../../../../boost_1_60_0/boost/program_options/config.hpp \
+		../../../../boost_1_60_0/boost/program_options/errors.hpp \
+		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/option.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
+		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
+		../../../../boost_1_60_0/boost/program_options/version.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
@@ -18963,147 +18891,162 @@ PropertyTreeParserSrs.o: PropertyTreeParserSrs.cpp PropertyTreeParserSrs.h \
 		../../../../boost_1_60_0/boost/algorithm/string/erase.hpp \
 		../../../../boost_1_60_0/boost/date_time/posix_time/time_parsers.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QTreeWidgetItem \
-		pedestalsfileloader.h \
-		frame.h \
-		canvas.h \
+		filereader.h \
+		AsioService.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
+		ShmemReader.h \
 		mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMainWindow \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmainwindow.h \
+		frame.h \
+		canvas.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QCheckBox \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
-		pedestals.h \
-		$(ROOTSYS)/include/TROOT.h \
-		../../../../ROOT534/include/TDirectory.h \
-		../../../../ROOT534/include/TList.h \
-		../../../../ROOT534/include/TDatime.h \
-		../../../../ROOT534/include/TUUID.h \
-		$(ROOTSYS)/include/TChain.h \
-		../../../../ROOT534/include/TTree.h \
-		../../../../ROOT534/include/TBranch.h \
-		../../../../ROOT534/include/TDataType.h \
-		../../../../ROOT534/include/TVirtualTreePlayer.h \
-		$(ROOTSYS)/include/TFile.h \
-		../../../../ROOT534/include/TDirectoryFile.h \
-		../../../../ROOT534/include/TMap.h \
-		../../../../ROOT534/include/THashTable.h \
-		../../../../ROOT534/include/TUrl.h \
-		apv_raw_ped.h \
-		../../../../boost_1_60_0/boost/program_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
-		../../../../boost_1_60_0/boost/program_options/config.hpp \
-		../../../../boost_1_60_0/boost/program_options/errors.hpp \
-		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/option.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
-		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
-		../../../../boost_1_60_0/boost/program_options/version.hpp \
-		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		DisplayDrawer.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
+		../../../../boost_1_60_0/boost/filesystem.hpp \
+		../../../../boost_1_60_0/boost/filesystem/config.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
+		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
+		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
+		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
+		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
+		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
+		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
+		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
+		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
+		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_begin.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/workaround.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_end.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
-		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/creation_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/exceptions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
+		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
+		../../../../boost_1_60_0/boost/container/string.hpp \
+		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
+		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
+		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
+		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
+		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
+		../../../../boost_1_60_0/boost/intrusive/options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
+		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
+		../../../../boost_1_60_0/boost/container/map.hpp \
+		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
+		../../../../boost_1_60_0/boost/container/options.hpp \
+		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
+		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
+		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
+		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
 		../../../../boost_1_60_0/boost/interprocess/segment_manager.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/transform_iterator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/nothrow.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/segment_manager_helper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/in_place_interface.hpp \
-		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/named_proxy.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/variadic_templates_tools.hpp \
 		../../../../boost_1_60_0/boost/interprocess/offset_ptr.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/cast_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/indexes/iset_index.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
 		../../../../boost_1_60_0/boost/intrusive/set.hpp \
-		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
-		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
-		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/allocator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/allocation_type.hpp \
-		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
-		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/detail/allocator_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/detail/mem_algo_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/math_functions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/version_type.hpp \
 		../../../../boost_1_60_0/boost/interprocess/smart_ptr/deleter.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/managed_open_or_create_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mapped_region.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/sync_utils.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/mutex.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/detail/common_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_begin.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map_fwd.hpp \
@@ -19121,27 +19064,7 @@ PropertyTreeParserSrs.o: PropertyTreeParserSrs.cpp PropertyTreeParserSrs.h \
 		../../../../boost_1_60_0/boost/unordered/detail/extract_key.hpp \
 		../../../../boost_1_60_0/boost/unordered/detail/unique.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_end.hpp \
-		../../../../boost_1_60_0/boost/container/map.hpp \
-		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
-		../../../../boost_1_60_0/boost/container/options.hpp \
-		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
-		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
-		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
-		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
-		../../../../boost_1_60_0/boost/container/string.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/interprocess_tester.hpp \
-		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/rbtree_best_fit.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/mutex_family.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/interprocess_mutex.hpp \
@@ -19154,34 +19077,6 @@ PropertyTreeParserSrs.o: PropertyTreeParserSrs.cpp PropertyTreeParserSrs.h \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/null_mutex.hpp \
-		../../../../boost_1_60_0/boost/filesystem.hpp \
-		../../../../boost_1_60_0/boost/filesystem/config.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
-		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
-		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
-		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
-		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
-		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
-		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
-		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
-		filereader.h \
-		AsioService.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
-		ShmemReader.h \
-		DisplayDrawer.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
-		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/string.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/containers_fwd.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/named_condition.hpp \
@@ -19224,6 +19119,21 @@ PropertyTreeParserSrs.o: PropertyTreeParserSrs.cpp PropertyTreeParserSrs.h \
 		../../../../boost_1_60_0/boost/algorithm/string/detail/find_iterator.hpp \
 		../../../../boost_1_60_0/boost/algorithm/string/join.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
+		../../../../boost_1_60_0/boost/program_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
+		../../../../boost_1_60_0/boost/program_options/config.hpp \
+		../../../../boost_1_60_0/boost/program_options/errors.hpp \
+		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/option.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
+		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
+		../../../../boost_1_60_0/boost/program_options/version.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
@@ -21272,147 +21182,162 @@ PropertyTreeParserChamber.o: PropertyTreeParserChamber.cpp PropertyTreeParserCha
 		../../../../boost_1_60_0/boost/algorithm/string/erase.hpp \
 		../../../../boost_1_60_0/boost/date_time/posix_time/time_parsers.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QTreeWidgetItem \
-		pedestalsfileloader.h \
-		frame.h \
-		canvas.h \
+		filereader.h \
+		AsioService.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
+		ShmemReader.h \
 		mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMainWindow \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmainwindow.h \
+		frame.h \
+		canvas.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QCheckBox \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
-		pedestals.h \
-		$(ROOTSYS)/include/TROOT.h \
-		../../../../ROOT534/include/TDirectory.h \
-		../../../../ROOT534/include/TList.h \
-		../../../../ROOT534/include/TDatime.h \
-		../../../../ROOT534/include/TUUID.h \
-		$(ROOTSYS)/include/TChain.h \
-		../../../../ROOT534/include/TTree.h \
-		../../../../ROOT534/include/TBranch.h \
-		../../../../ROOT534/include/TDataType.h \
-		../../../../ROOT534/include/TVirtualTreePlayer.h \
-		$(ROOTSYS)/include/TFile.h \
-		../../../../ROOT534/include/TDirectoryFile.h \
-		../../../../ROOT534/include/TMap.h \
-		../../../../ROOT534/include/THashTable.h \
-		../../../../ROOT534/include/TUrl.h \
-		apv_raw_ped.h \
-		../../../../boost_1_60_0/boost/program_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
-		../../../../boost_1_60_0/boost/program_options/config.hpp \
-		../../../../boost_1_60_0/boost/program_options/errors.hpp \
-		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/option.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
-		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
-		../../../../boost_1_60_0/boost/program_options/version.hpp \
-		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		DisplayDrawer.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
+		../../../../boost_1_60_0/boost/filesystem.hpp \
+		../../../../boost_1_60_0/boost/filesystem/config.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
+		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
+		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
+		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
+		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
+		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
+		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
+		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
+		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
+		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_begin.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/workaround.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_end.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
-		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/creation_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/exceptions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
+		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
+		../../../../boost_1_60_0/boost/container/string.hpp \
+		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
+		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
+		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
+		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
+		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
+		../../../../boost_1_60_0/boost/intrusive/options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
+		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
+		../../../../boost_1_60_0/boost/container/map.hpp \
+		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
+		../../../../boost_1_60_0/boost/container/options.hpp \
+		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
+		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
+		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
+		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
 		../../../../boost_1_60_0/boost/interprocess/segment_manager.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/transform_iterator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/nothrow.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/segment_manager_helper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/in_place_interface.hpp \
-		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/named_proxy.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/variadic_templates_tools.hpp \
 		../../../../boost_1_60_0/boost/interprocess/offset_ptr.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/cast_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/indexes/iset_index.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
 		../../../../boost_1_60_0/boost/intrusive/set.hpp \
-		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
-		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
-		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/allocator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/allocation_type.hpp \
-		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
-		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/detail/allocator_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/detail/mem_algo_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/math_functions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/version_type.hpp \
 		../../../../boost_1_60_0/boost/interprocess/smart_ptr/deleter.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/managed_open_or_create_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mapped_region.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/sync_utils.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/mutex.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/detail/common_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_begin.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map_fwd.hpp \
@@ -21430,27 +21355,7 @@ PropertyTreeParserChamber.o: PropertyTreeParserChamber.cpp PropertyTreeParserCha
 		../../../../boost_1_60_0/boost/unordered/detail/extract_key.hpp \
 		../../../../boost_1_60_0/boost/unordered/detail/unique.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_end.hpp \
-		../../../../boost_1_60_0/boost/container/map.hpp \
-		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
-		../../../../boost_1_60_0/boost/container/options.hpp \
-		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
-		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
-		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
-		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
-		../../../../boost_1_60_0/boost/container/string.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/interprocess_tester.hpp \
-		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/rbtree_best_fit.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/mutex_family.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/interprocess_mutex.hpp \
@@ -21463,34 +21368,6 @@ PropertyTreeParserChamber.o: PropertyTreeParserChamber.cpp PropertyTreeParserCha
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/null_mutex.hpp \
-		../../../../boost_1_60_0/boost/filesystem.hpp \
-		../../../../boost_1_60_0/boost/filesystem/config.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
-		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
-		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
-		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
-		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
-		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
-		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
-		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
-		filereader.h \
-		AsioService.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
-		ShmemReader.h \
-		DisplayDrawer.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
-		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/string.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/containers_fwd.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/named_condition.hpp \
@@ -21533,6 +21410,21 @@ PropertyTreeParserChamber.o: PropertyTreeParserChamber.cpp PropertyTreeParserCha
 		../../../../boost_1_60_0/boost/algorithm/string/detail/find_iterator.hpp \
 		../../../../boost_1_60_0/boost/algorithm/string/join.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
+		../../../../boost_1_60_0/boost/program_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
+		../../../../boost_1_60_0/boost/program_options/config.hpp \
+		../../../../boost_1_60_0/boost/program_options/errors.hpp \
+		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/option.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
+		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
+		../../../../boost_1_60_0/boost/program_options/version.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
@@ -23579,147 +23471,162 @@ DaqServerConfig.o: DaqServerConfig.cpp DaqServerConfig.h \
 		../../../../boost_1_60_0/boost/algorithm/string/erase.hpp \
 		../../../../boost_1_60_0/boost/date_time/posix_time/time_parsers.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QTreeWidgetItem \
-		pedestalsfileloader.h \
-		frame.h \
-		canvas.h \
+		filereader.h \
+		AsioService.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
+		ShmemReader.h \
 		mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMainWindow \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmainwindow.h \
+		frame.h \
+		canvas.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QCheckBox \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
-		pedestals.h \
-		$(ROOTSYS)/include/TROOT.h \
-		../../../../ROOT534/include/TDirectory.h \
-		../../../../ROOT534/include/TList.h \
-		../../../../ROOT534/include/TDatime.h \
-		../../../../ROOT534/include/TUUID.h \
-		$(ROOTSYS)/include/TChain.h \
-		../../../../ROOT534/include/TTree.h \
-		../../../../ROOT534/include/TBranch.h \
-		../../../../ROOT534/include/TDataType.h \
-		../../../../ROOT534/include/TVirtualTreePlayer.h \
-		$(ROOTSYS)/include/TFile.h \
-		../../../../ROOT534/include/TDirectoryFile.h \
-		../../../../ROOT534/include/TMap.h \
-		../../../../ROOT534/include/THashTable.h \
-		../../../../ROOT534/include/TUrl.h \
-		apv_raw_ped.h \
-		../../../../boost_1_60_0/boost/program_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
-		../../../../boost_1_60_0/boost/program_options/config.hpp \
-		../../../../boost_1_60_0/boost/program_options/errors.hpp \
-		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/option.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
-		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
-		../../../../boost_1_60_0/boost/program_options/version.hpp \
-		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		DisplayDrawer.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
+		../../../../boost_1_60_0/boost/filesystem.hpp \
+		../../../../boost_1_60_0/boost/filesystem/config.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
+		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
+		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
+		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
+		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
+		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
+		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
+		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
+		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
+		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_begin.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/workaround.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_end.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
-		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/creation_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/exceptions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
+		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
+		../../../../boost_1_60_0/boost/container/string.hpp \
+		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
+		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
+		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
+		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
+		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
+		../../../../boost_1_60_0/boost/intrusive/options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
+		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
+		../../../../boost_1_60_0/boost/container/map.hpp \
+		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
+		../../../../boost_1_60_0/boost/container/options.hpp \
+		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
+		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
+		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
+		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
 		../../../../boost_1_60_0/boost/interprocess/segment_manager.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/transform_iterator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/nothrow.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/segment_manager_helper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/in_place_interface.hpp \
-		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/named_proxy.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/variadic_templates_tools.hpp \
 		../../../../boost_1_60_0/boost/interprocess/offset_ptr.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/cast_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/indexes/iset_index.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
 		../../../../boost_1_60_0/boost/intrusive/set.hpp \
-		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
-		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
-		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/allocator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/allocation_type.hpp \
-		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
-		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/detail/allocator_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/detail/mem_algo_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/math_functions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/version_type.hpp \
 		../../../../boost_1_60_0/boost/interprocess/smart_ptr/deleter.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/managed_open_or_create_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mapped_region.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/sync_utils.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/mutex.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/detail/common_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_begin.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map_fwd.hpp \
@@ -23737,27 +23644,7 @@ DaqServerConfig.o: DaqServerConfig.cpp DaqServerConfig.h \
 		../../../../boost_1_60_0/boost/unordered/detail/extract_key.hpp \
 		../../../../boost_1_60_0/boost/unordered/detail/unique.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_end.hpp \
-		../../../../boost_1_60_0/boost/container/map.hpp \
-		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
-		../../../../boost_1_60_0/boost/container/options.hpp \
-		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
-		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
-		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
-		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
-		../../../../boost_1_60_0/boost/container/string.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/interprocess_tester.hpp \
-		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/rbtree_best_fit.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/mutex_family.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/interprocess_mutex.hpp \
@@ -23770,34 +23657,6 @@ DaqServerConfig.o: DaqServerConfig.cpp DaqServerConfig.h \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/null_mutex.hpp \
-		../../../../boost_1_60_0/boost/filesystem.hpp \
-		../../../../boost_1_60_0/boost/filesystem/config.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
-		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
-		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
-		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
-		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
-		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
-		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
-		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
-		filereader.h \
-		AsioService.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
-		ShmemReader.h \
-		DisplayDrawer.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
-		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/string.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/containers_fwd.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/named_condition.hpp \
@@ -23840,6 +23699,21 @@ DaqServerConfig.o: DaqServerConfig.cpp DaqServerConfig.h \
 		../../../../boost_1_60_0/boost/algorithm/string/detail/find_iterator.hpp \
 		../../../../boost_1_60_0/boost/algorithm/string/join.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
+		../../../../boost_1_60_0/boost/program_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
+		../../../../boost_1_60_0/boost/program_options/config.hpp \
+		../../../../boost_1_60_0/boost/program_options/errors.hpp \
+		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/option.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
+		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
+		../../../../boost_1_60_0/boost/program_options/version.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
@@ -26217,147 +26091,162 @@ DetChamber.o: DetChamber.cpp DetChamber.h \
 		../../../../boost_1_60_0/boost/algorithm/string/erase.hpp \
 		../../../../boost_1_60_0/boost/date_time/posix_time/time_parsers.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QTreeWidgetItem \
-		pedestalsfileloader.h \
-		frame.h \
-		canvas.h \
+		filereader.h \
+		AsioService.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
+		ShmemReader.h \
 		mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMainWindow \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmainwindow.h \
+		frame.h \
+		canvas.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QCheckBox \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
-		pedestals.h \
-		$(ROOTSYS)/include/TROOT.h \
-		../../../../ROOT534/include/TDirectory.h \
-		../../../../ROOT534/include/TList.h \
-		../../../../ROOT534/include/TDatime.h \
-		../../../../ROOT534/include/TUUID.h \
-		$(ROOTSYS)/include/TChain.h \
-		../../../../ROOT534/include/TTree.h \
-		../../../../ROOT534/include/TBranch.h \
-		../../../../ROOT534/include/TDataType.h \
-		../../../../ROOT534/include/TVirtualTreePlayer.h \
-		$(ROOTSYS)/include/TFile.h \
-		../../../../ROOT534/include/TDirectoryFile.h \
-		../../../../ROOT534/include/TMap.h \
-		../../../../ROOT534/include/THashTable.h \
-		../../../../ROOT534/include/TUrl.h \
-		apv_raw_ped.h \
-		../../../../boost_1_60_0/boost/program_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
-		../../../../boost_1_60_0/boost/program_options/config.hpp \
-		../../../../boost_1_60_0/boost/program_options/errors.hpp \
-		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/option.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
-		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
-		../../../../boost_1_60_0/boost/program_options/version.hpp \
-		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		DisplayDrawer.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
+		../../../../boost_1_60_0/boost/filesystem.hpp \
+		../../../../boost_1_60_0/boost/filesystem/config.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
+		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
+		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
+		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
+		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
+		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
+		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
+		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
+		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
+		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_begin.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/workaround.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_end.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
-		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/creation_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/exceptions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
+		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
+		../../../../boost_1_60_0/boost/container/string.hpp \
+		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
+		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
+		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
+		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
+		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
+		../../../../boost_1_60_0/boost/intrusive/options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
+		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
+		../../../../boost_1_60_0/boost/container/map.hpp \
+		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
+		../../../../boost_1_60_0/boost/container/options.hpp \
+		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
+		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
+		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
+		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
 		../../../../boost_1_60_0/boost/interprocess/segment_manager.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/transform_iterator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/nothrow.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/segment_manager_helper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/in_place_interface.hpp \
-		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/named_proxy.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/variadic_templates_tools.hpp \
 		../../../../boost_1_60_0/boost/interprocess/offset_ptr.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/cast_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/indexes/iset_index.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
 		../../../../boost_1_60_0/boost/intrusive/set.hpp \
-		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
-		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
-		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/allocator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/allocation_type.hpp \
-		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
-		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/detail/allocator_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/detail/mem_algo_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/math_functions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/version_type.hpp \
 		../../../../boost_1_60_0/boost/interprocess/smart_ptr/deleter.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/managed_open_or_create_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mapped_region.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/sync_utils.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/mutex.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/detail/common_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_begin.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map_fwd.hpp \
@@ -26375,27 +26264,7 @@ DetChamber.o: DetChamber.cpp DetChamber.h \
 		../../../../boost_1_60_0/boost/unordered/detail/extract_key.hpp \
 		../../../../boost_1_60_0/boost/unordered/detail/unique.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_end.hpp \
-		../../../../boost_1_60_0/boost/container/map.hpp \
-		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
-		../../../../boost_1_60_0/boost/container/options.hpp \
-		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
-		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
-		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
-		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
-		../../../../boost_1_60_0/boost/container/string.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/interprocess_tester.hpp \
-		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/rbtree_best_fit.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/mutex_family.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/interprocess_mutex.hpp \
@@ -26408,34 +26277,6 @@ DetChamber.o: DetChamber.cpp DetChamber.h \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/null_mutex.hpp \
-		../../../../boost_1_60_0/boost/filesystem.hpp \
-		../../../../boost_1_60_0/boost/filesystem/config.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
-		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
-		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
-		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
-		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
-		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
-		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
-		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
-		filereader.h \
-		AsioService.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
-		ShmemReader.h \
-		DisplayDrawer.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
-		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/string.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/containers_fwd.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/named_condition.hpp \
@@ -26478,6 +26319,21 @@ DetChamber.o: DetChamber.cpp DetChamber.h \
 		../../../../boost_1_60_0/boost/algorithm/string/detail/find_iterator.hpp \
 		../../../../boost_1_60_0/boost/algorithm/string/join.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
+		../../../../boost_1_60_0/boost/program_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
+		../../../../boost_1_60_0/boost/program_options/config.hpp \
+		../../../../boost_1_60_0/boost/program_options/errors.hpp \
+		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/option.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
+		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
+		../../../../boost_1_60_0/boost/program_options/version.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
@@ -28525,147 +28381,162 @@ DetConnector.o: DetConnector.cpp DetConnector.h \
 		../../../../boost_1_60_0/boost/algorithm/string/erase.hpp \
 		../../../../boost_1_60_0/boost/date_time/posix_time/time_parsers.hpp \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QTreeWidgetItem \
-		pedestalsfileloader.h \
-		frame.h \
-		canvas.h \
+		filereader.h \
+		AsioService.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
+		ShmemReader.h \
 		mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMainWindow \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmainwindow.h \
+		frame.h \
+		canvas.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QCheckBox \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
-		pedestals.h \
-		$(ROOTSYS)/include/TROOT.h \
-		../../../../ROOT534/include/TDirectory.h \
-		../../../../ROOT534/include/TList.h \
-		../../../../ROOT534/include/TDatime.h \
-		../../../../ROOT534/include/TUUID.h \
-		$(ROOTSYS)/include/TChain.h \
-		../../../../ROOT534/include/TTree.h \
-		../../../../ROOT534/include/TBranch.h \
-		../../../../ROOT534/include/TDataType.h \
-		../../../../ROOT534/include/TVirtualTreePlayer.h \
-		$(ROOTSYS)/include/TFile.h \
-		../../../../ROOT534/include/TDirectoryFile.h \
-		../../../../ROOT534/include/TMap.h \
-		../../../../ROOT534/include/THashTable.h \
-		../../../../ROOT534/include/TUrl.h \
-		apv_raw_ped.h \
-		../../../../boost_1_60_0/boost/program_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
-		../../../../boost_1_60_0/boost/program_options/config.hpp \
-		../../../../boost_1_60_0/boost/program_options/errors.hpp \
-		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/option.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
-		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
-		../../../../boost_1_60_0/boost/program_options/version.hpp \
-		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		DisplayDrawer.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
+		../../../../boost_1_60_0/boost/filesystem.hpp \
+		../../../../boost_1_60_0/boost/filesystem/config.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
+		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
+		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
+		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
+		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
+		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
+		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
+		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
+		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
+		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_begin.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/workaround.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_end.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
-		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/creation_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/exceptions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
+		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
+		../../../../boost_1_60_0/boost/container/string.hpp \
+		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
+		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
+		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
+		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
+		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
+		../../../../boost_1_60_0/boost/intrusive/options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
+		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
+		../../../../boost_1_60_0/boost/container/map.hpp \
+		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
+		../../../../boost_1_60_0/boost/container/options.hpp \
+		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
+		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
+		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
+		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
 		../../../../boost_1_60_0/boost/interprocess/segment_manager.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/transform_iterator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/nothrow.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/segment_manager_helper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/in_place_interface.hpp \
-		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/named_proxy.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/variadic_templates_tools.hpp \
 		../../../../boost_1_60_0/boost/interprocess/offset_ptr.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/cast_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/indexes/iset_index.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
 		../../../../boost_1_60_0/boost/intrusive/set.hpp \
-		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
-		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
-		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/allocator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/allocation_type.hpp \
-		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
-		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/detail/allocator_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/detail/mem_algo_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/math_functions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/version_type.hpp \
 		../../../../boost_1_60_0/boost/interprocess/smart_ptr/deleter.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/managed_open_or_create_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mapped_region.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/sync_utils.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/mutex.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/detail/common_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_begin.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map_fwd.hpp \
@@ -28683,27 +28554,7 @@ DetConnector.o: DetConnector.cpp DetConnector.h \
 		../../../../boost_1_60_0/boost/unordered/detail/extract_key.hpp \
 		../../../../boost_1_60_0/boost/unordered/detail/unique.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_end.hpp \
-		../../../../boost_1_60_0/boost/container/map.hpp \
-		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
-		../../../../boost_1_60_0/boost/container/options.hpp \
-		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
-		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
-		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
-		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
-		../../../../boost_1_60_0/boost/container/string.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/interprocess_tester.hpp \
-		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/rbtree_best_fit.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/mutex_family.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/interprocess_mutex.hpp \
@@ -28716,34 +28567,6 @@ DetConnector.o: DetConnector.cpp DetConnector.h \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/null_mutex.hpp \
-		../../../../boost_1_60_0/boost/filesystem.hpp \
-		../../../../boost_1_60_0/boost/filesystem/config.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
-		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
-		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
-		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
-		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
-		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
-		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
-		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
-		filereader.h \
-		AsioService.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
-		ShmemReader.h \
-		DisplayDrawer.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
-		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/string.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/containers_fwd.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/named_condition.hpp \
@@ -28786,6 +28609,21 @@ DetConnector.o: DetConnector.cpp DetConnector.h \
 		../../../../boost_1_60_0/boost/algorithm/string/detail/find_iterator.hpp \
 		../../../../boost_1_60_0/boost/algorithm/string/join.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
+		../../../../boost_1_60_0/boost/program_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
+		../../../../boost_1_60_0/boost/program_options/config.hpp \
+		../../../../boost_1_60_0/boost/program_options/errors.hpp \
+		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/option.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
+		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
+		../../../../boost_1_60_0/boost/program_options/version.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \
@@ -40582,147 +40420,162 @@ SrsFec.o: SrsFec.cpp SrsFec.h \
 		../../../../boost_1_60_0/boost/multi_index/member.hpp \
 		../../../../boost_1_60_0/boost/property_tree/detail/ptree_implementation.hpp \
 		DetReadout.h \
-		pedestalsfileloader.h \
-		frame.h \
-		canvas.h \
+		filereader.h \
+		AsioService.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
+		ShmemReader.h \
 		mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMainWindow \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qmainwindow.h \
+		frame.h \
+		canvas.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QCheckBox \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
-		pedestals.h \
-		$(ROOTSYS)/include/TROOT.h \
-		../../../../ROOT534/include/TDirectory.h \
-		../../../../ROOT534/include/TList.h \
-		../../../../ROOT534/include/TDatime.h \
-		../../../../ROOT534/include/TUUID.h \
-		$(ROOTSYS)/include/TChain.h \
-		../../../../ROOT534/include/TTree.h \
-		../../../../ROOT534/include/TBranch.h \
-		../../../../ROOT534/include/TDataType.h \
-		../../../../ROOT534/include/TVirtualTreePlayer.h \
-		$(ROOTSYS)/include/TFile.h \
-		../../../../ROOT534/include/TDirectoryFile.h \
-		../../../../ROOT534/include/TMap.h \
-		../../../../ROOT534/include/THashTable.h \
-		../../../../ROOT534/include/TUrl.h \
-		apv_raw_ped.h \
-		../../../../boost_1_60_0/boost/program_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
-		../../../../boost_1_60_0/boost/program_options/config.hpp \
-		../../../../boost_1_60_0/boost/program_options/errors.hpp \
-		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
-		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
-		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/option.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
-		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
-		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
-		../../../../boost_1_60_0/boost/program_options/version.hpp \
-		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		DisplayDrawer.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
+		../../../../boost_1_60_0/boost/filesystem.hpp \
+		../../../../boost_1_60_0/boost/filesystem/config.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path.hpp \
+		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
+		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
+		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
+		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
+		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
+		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
+		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
+		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
+		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
+		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
+		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_begin.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/workaround.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_end.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
-		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/creation_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/exceptions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/errors.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/win32_api.hpp \
+		../../../../boost_1_60_0/boost/interprocess/interprocess_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/std_fwd.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_file_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/permissions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
+		../../../../boost_1_60_0/boost/container/string.hpp \
+		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
+		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
+		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
+		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
+		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
+		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
+		../../../../boost_1_60_0/boost/intrusive/options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
+		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
+		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/mpl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
+		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/type_traits.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
+		../../../../boost_1_60_0/boost/container/map.hpp \
+		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
+		../../../../boost_1_60_0/boost/container/options.hpp \
+		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
+		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
+		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
+		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
+		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
+		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
+		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
+		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
+		../../../../boost_1_60_0/boost/interprocess/managed_shared_memory.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/managed_memory_impl.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/utilities.hpp \
+		../../../../boost_1_60_0/boost/interprocess/detail/min_max.hpp \
 		../../../../boost_1_60_0/boost/interprocess/segment_manager.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/transform_iterator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/nothrow.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/segment_manager_helper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/in_place_interface.hpp \
-		../../../../boost_1_60_0/boost/container/detail/minimal_char_traits_header.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/named_proxy.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/variadic_templates_tools.hpp \
 		../../../../boost_1_60_0/boost/interprocess/offset_ptr.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/cast_tags.hpp \
 		../../../../boost_1_60_0/boost/interprocess/indexes/iset_index.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/minimal_less_equal_header.hpp \
 		../../../../boost_1_60_0/boost/intrusive/set.hpp \
-		../../../../boost_1_60_0/boost/intrusive/intrusive_fwd.hpp \
-		../../../../boost_1_60_0/boost/intrusive/link_mode.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/rbtree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/rbtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/assert.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/algo_type.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/bstree_algorithms_base.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/uncast.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/math.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/ebo_functor_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pointer_plus_bits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/pack_options.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/generic_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bstree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/bs_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/iiterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/is_stateful_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/function_detector.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/empty_node_checker.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/default_header_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/exception_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/node_cloner_disposer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/key_nodeptr_comp.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/simple_disposers.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/size_holder.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/tree_value_compare.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/get_value_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/hook_traits.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/parent_from_member.hpp \
-		../../../../boost_1_60_0/boost/intrusive/parent_from_member.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/allocator.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/allocation_type.hpp \
-		../../../../boost_1_60_0/boost/container/detail/multiallocation_chain.hpp \
-		../../../../boost_1_60_0/boost/container/detail/transform_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist.hpp \
-		../../../../boost_1_60_0/boost/intrusive/slist_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/circular_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/common_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/linear_slist_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/slist_iterator.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/array_initializer.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/equal_to_value.hpp \
 		../../../../boost_1_60_0/boost/interprocess/allocators/detail/allocator_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/scoped_lock.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/lock_options.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/posix_time_types_wrk.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/simple_swap.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/detail/mem_algo_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/math_functions.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/version_type.hpp \
 		../../../../boost_1_60_0/boost/interprocess/smart_ptr/deleter.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/managed_open_or_create_impl.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/os_thread_functions.hpp \
-		../../../../boost_1_60_0/boost/interprocess/streams/bufferstream.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mapped_region.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/sync_utils.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/mutex.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/atomic.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/detail/common_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/spin/wait.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_semaphore_wrapper.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_wrapper_common.hpp \
-		../../../../boost_1_60_0/boost/interprocess/sync/windows/winapi_mutex_wrapper.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_begin.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map.hpp \
 		../../../../boost_1_60_0/boost/unordered/unordered_map_fwd.hpp \
@@ -40740,27 +40593,7 @@ SrsFec.o: SrsFec.cpp SrsFec.h \
 		../../../../boost_1_60_0/boost/unordered/detail/extract_key.hpp \
 		../../../../boost_1_60_0/boost/unordered/detail/unique.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/config_external_end.hpp \
-		../../../../boost_1_60_0/boost/container/map.hpp \
-		../../../../boost_1_60_0/boost/container/detail/tree.hpp \
-		../../../../boost_1_60_0/boost/container/options.hpp \
-		../../../../boost_1_60_0/boost/container/detail/compare_functors.hpp \
-		../../../../boost_1_60_0/boost/container/detail/node_alloc_holder.hpp \
-		../../../../boost_1_60_0/boost/container/detail/allocator_version_traits.hpp \
-		../../../../boost_1_60_0/boost/container/detail/construct_in_place.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avl_set_hook.hpp \
-		../../../../boost_1_60_0/boost/intrusive/detail/avltree_node.hpp \
-		../../../../boost_1_60_0/boost/intrusive/avltree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/splaytree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree.hpp \
-		../../../../boost_1_60_0/boost/intrusive/sgtree_algorithms.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/windows_intermodule_singleton.hpp \
-		../../../../boost_1_60_0/boost/container/string.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/intermodule_singleton_common.hpp \
 		../../../../boost_1_60_0/boost/interprocess/detail/interprocess_tester.hpp \
-		../../../../boost_1_60_0/boost/interprocess/shared_memory_object.hpp \
-		../../../../boost_1_60_0/boost/interprocess/detail/shared_dir_helpers.hpp \
 		../../../../boost_1_60_0/boost/interprocess/mem_algo/rbtree_best_fit.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/mutex_family.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/interprocess_mutex.hpp \
@@ -40773,34 +40606,6 @@ SrsFec.o: SrsFec.cpp SrsFec.h \
 		../../../../boost_1_60_0/boost/interprocess/sync/windows/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/spin/recursive_mutex.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/null_mutex.hpp \
-		../../../../boost_1_60_0/boost/filesystem.hpp \
-		../../../../boost_1_60_0/boost/filesystem/config.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path.hpp \
-		../../../../boost_1_60_0/boost/filesystem/path_traits.hpp \
-		../../../../boost_1_60_0/boost/io/detail/quoted_manip.hpp \
-		../../../../boost_1_60_0/boost/filesystem/operations.hpp \
-		../../../../boost_1_60_0/boost/detail/scoped_enum_emulation.hpp \
-		../../../../boost_1_60_0/boost/detail/bitmask.hpp \
-		../../../../boost_1_60_0/boost/filesystem/convenience.hpp \
-		../../../../boost_1_60_0/boost/filesystem/string_file.hpp \
-		../../../../boost_1_60_0/boost/filesystem/fstream.hpp \
-		filereader.h \
-		AsioService.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QWaitCondition \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qwaitcondition.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QMutex \
-		ShmemReader.h \
-		DisplayDrawer.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVector \
-		../../../../boost_1_60_0/boost/property_tree/xml_parser.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_write.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_utils.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/file_parser_error.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_writer_settings.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_flags.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/xml_parser_read_rapidxml.hpp \
-		../../../../boost_1_60_0/boost/property_tree/detail/rapidxml.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/string.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/containers_fwd.hpp \
 		../../../../boost_1_60_0/boost/interprocess/sync/named_condition.hpp \
@@ -40843,6 +40648,21 @@ SrsFec.o: SrsFec.cpp SrsFec.h \
 		../../../../boost_1_60_0/boost/algorithm/string/detail/find_iterator.hpp \
 		../../../../boost_1_60_0/boost/algorithm/string/join.hpp \
 		../../../../boost_1_60_0/boost/interprocess/containers/vector.hpp \
+		../../../../boost_1_60_0/boost/program_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/options_description.hpp \
+		../../../../boost_1_60_0/boost/program_options/config.hpp \
+		../../../../boost_1_60_0/boost/program_options/errors.hpp \
+		../../../../boost_1_60_0/boost/program_options/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/value_semantic.hpp \
+		../../../../boost_1_60_0/boost/program_options/positional_options.hpp \
+		../../../../boost_1_60_0/boost/program_options/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/option.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/cmdline.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/parsers.hpp \
+		../../../../boost_1_60_0/boost/program_options/detail/convert.hpp \
+		../../../../boost_1_60_0/boost/program_options/variables_map.hpp \
+		../../../../boost_1_60_0/boost/program_options/version.hpp \
 		mmDaqSettingsWindow.h \
 		ui_mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QVariant \

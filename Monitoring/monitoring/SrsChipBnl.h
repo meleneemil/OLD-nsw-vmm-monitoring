@@ -10,16 +10,7 @@ class TTree;
 namespace online {
    namespace display {
       
-      
-      struct SBnlPedestal {
-         SBnlPedestal() : channel(0), offset(0.0) {}
-         SBnlPedestal(short ch, double off) : channel(ch), offset(off) {}
-         short channel;
-         double offset;
-      };
-      typedef std::vector<SBnlPedestal> BnlPedestalVect;
 
-      
       class CSrsChipBnl : public CSrsChip
       {
          
@@ -28,9 +19,6 @@ namespace online {
          virtual ~CSrsChipBnl();
          virtual bool check_equipment_key(uint32_t eqkey);
 
-
-      protected:
-         BnlPedestalVect m_pedestals;
 
 
       };
