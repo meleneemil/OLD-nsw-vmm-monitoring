@@ -43,8 +43,6 @@ namespace online {
          static void set_pedestal_filename(const std::string& filename);
 
       protected:
-         virtual void calculate_pedestals(const CSrsEventId& srs_event_id, SrsChannelList& channels) { };
-
          BnlPedestalVect m_pedestals;
 
          

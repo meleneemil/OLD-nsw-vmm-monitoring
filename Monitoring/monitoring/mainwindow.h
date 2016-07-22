@@ -32,7 +32,6 @@
 #include <QDebug>
 #include <QFileInfo>
 #ifndef Q_MOC_RUN
-//#include "pedestalsfileloader.h"
 #endif
 
 //#include "DaqServerConfig.h"
@@ -43,7 +42,6 @@
 
 namespace Ui {
 class MainWindow;
-//class pedestalsFileLoader;
 }
 
 class MainWindow : public QMainWindow
@@ -59,11 +57,9 @@ public:
 
     void addTab(QTabWidget *parentTab, QWidget *childWidget, const char* tabTitle);
     QStatusBar* setUpStatusBar();
-    //void setUpRadioBoxSelection();
     void setUpTabEnvironment();
     void setUpTreeEnvironment();
     void setUpFrameEnvironment();
-//    QVBoxLayout *setUpPedestalsFileSelection();
     QVBoxLayout *setUpRunControl();
 
     QGroupBox *setUpVariousSettingsSelection();
@@ -87,8 +83,6 @@ public:
     QLabel *statisticsLabel_update;
     QLabel *commentDaqLabel;
 
-//    QLabel * pedestalSectionLabel;
-//    QLineEdit* pedestalsFile;
     QPushButton* loadFile;
     QPushButton* browseFile;
 
@@ -100,11 +94,9 @@ public:
 
     QGroupBox *runTypeGroupBox;
     QRadioButton *radioPhysics;
-//    QRadioButton *radioPedestals;
 
     QCheckBox *saveCheckBox;
     QPushButton *startButton;
-//    QPushButton *startPedestalsButton;
     QPushButton *stopButton;
     QPushButton *pauseButton;
     QPushButton *configButton;
@@ -136,7 +128,6 @@ public:
     QTabWidget *ApvRaw;
     QTabWidget *CrossTalks;
     QTabWidget *DaqStatistics;
-//    QTabWidget *Pedestals;
     QTabWidget *StatisticsChips;
 
     //tree widgets for selecting different objects of each category
@@ -170,7 +161,6 @@ public:
     frame* apvRawFrame;
     frame* crossTalksFrame;
     frame* daqStatisticsFrame;
-//    frame* pedestalsFrame;
     frame* statisticsChipsFrame;
 
     QString filename;
@@ -187,17 +177,13 @@ public slots:
 
     void openConfigurationPanel_slot();
 
-    //virtual void updateFrameCanvasesDivision_slot(QTreeWidgetItem* parentTreeItem) {}
     virtual void fillStatistics() {}
     virtual void fillStatisticsHistos() {}
     virtual void fillStatisticsAdvancedHistos() {}
     virtual void fillChargeStatisticsHistos() {}
     virtual void fillTimeStatisticsHistos() {}
-    //virtual void displaySrsHistos() {}
     virtual void reset_slot() {}
     virtual void handleBufferedEvent() {}
-//    virtual void openPedestalsFile() {}
-//    virtual void loadPedestalsFile() {}
 
 
 
@@ -207,7 +193,6 @@ signals:
     void pauseDaqMonitoringClicked();
     void configDaqClicked();
 
-    //virtual void pedestalsFileNameIs(std::string filename);
 
 };
 

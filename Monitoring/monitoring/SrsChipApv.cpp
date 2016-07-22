@@ -89,20 +89,6 @@ void CSrsChipApv::set_pedestal(const uint32_t& channel_id,  const std::pair<doub
 }
 
 
-void CSrsChipApv::calculate_pedestals(const CSrsEventId& srs_event_id, SrsChannelList& channels)
-{
-   std::cout << "CSrsChipApv::calculate_pedestals" << std::endl;
-   
-   for (SrsChannelList::iterator chan = channels.begin(); chan != channels.end(); ++chan) {
-      size_t channo = (*chan)->channel_id().channel_no();
-      (*chan)->calculate_channel_pedestal();
-
-   }
-   
-
-}
-
-
 /** 
  clear pedestals and crosstalk definitions
  */

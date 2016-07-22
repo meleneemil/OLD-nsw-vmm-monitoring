@@ -114,8 +114,6 @@ namespace online {
           Q_OBJECT
 
       public:
-//         typedef boost::shared_ptr<CSrsBase> SrsBasePtr;
-
          explicit CDaqServerConfig();
          ~CDaqServerConfig();
          mmDaqStartupWindow *mainStartUpWindow;
@@ -123,21 +121,6 @@ namespace online {
          Ui::MainWindow *ui;
          mmDaqSettingsWindow *settingsWindow;
          boost::asio::io_service io_service;
-
-         //++++++++++++++++client+++++++++++++++++++++
-         typedef enum {
-                     msq_ignore,
-                     msq_heartbeat,
-                     msq_stop,
-                     msq_start,
-                     msq_reset,
-                     msq_configure,
-                     msq_pedestal
-         } ipc_command_type;
-
-
-         //bipc::managed_shared_memory m_shm_manager;
-         //ShmemNamedCondition m_shm_condition;
 
          ShmemReader* memReader;
          DisplayDrawer* drawer;
@@ -153,7 +136,7 @@ namespace online {
          std::vector<std::pair<boost::shared_ptr<CDetChamber>, std::vector<boost::shared_ptr<CDetReadout> > > > chamberElements;
          std::vector<std::string> apvChipsList;
          std::vector<uint32_t> apvChipIdsList;
-         std::vector<std::string> bnlChipsList;
+//         std::vector<std::string> bnlChipsList;
 
          template <class T>
          boost::shared_ptr<T> locate_srs(uint32_t uid) const;
@@ -227,11 +210,7 @@ namespace online {
 //commands for messaging the daq
          QString input_config_path;
          QString input_config_fileName;
-         QString pedestal_path;
-         QString pedestal_path_prefix;
-         QString pedestal_fileName;
          QString message_config_path;
-         QString message_pedestal_path;
          QString message_runType;
          QString message_zsapv;
          QString message_commentForDaq;

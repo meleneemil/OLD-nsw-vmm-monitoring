@@ -1,10 +1,3 @@
-//
-//  DaqServerConfig.cpp
-//  online_display
-//
-//  Created by Konstantinos Ntekas on 06/2012.
-//  Copyright (c) 2012 CERN - PH/UAT. All rights reserved.
-//
 
 #include "DaqServerConfig.h"
 #include "SrsBase.h"
@@ -412,11 +405,6 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
     mappingReadout1dElements.clear();
     mappingReadout2dElements.clear();
 
-    //if(window->statisticsFrame->frameStatisticsHistos.size()!=0) window->statisticsFrame->frameStatisticsHistos.clear();
-    //if(window->eventDisplayFrame->frameEventHistos.size()!=0) window->eventDisplayFrame->frameEventHistos.clear();
-
-//    mainWindow->setUpTabEnvironment();
-//    mainWindow->setUpTreeEnvironment();
     //variables to fill the mapping list
     std::pair < QTreeWidgetItem*, std::pair <std::vector<std::string>, std::vector <TH1D *> > > mappingListElements1d;
     std::pair <std::vector<std::string>, std::vector <TH1D *> > mappingTreeElements1d;
@@ -531,9 +519,7 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
     makeListItemsCheckable(chambersList);
     std::cout<<"Number of Chambers : "<<chambersList.size()<<std::endl;
     std::cout<<"Number of readouts : "<<nOfReadouts<<std::endl;
-//    std::cout<<"Number of VMM1 chips : "<<bnlChipsList.size()<<std::endl;
     std::cout<<"Number of APV chips : "<<apvChipsList.size()<<std::endl;
-    //std::cout<<"Number of APV raw histograms : "<<window->apvRawFrame->frameStatisticsHistos.size()<<std::endl;
 
     return chambersList;
 }
@@ -559,23 +545,15 @@ QList<QTreeWidgetItem*> CDaqServerConfig::classifyChips(std::vector<boost::share
         if(chipvecptr->connector() !=0)  {
             if(DetBasePtr parentChamber = chipvecptr->connector()->parent().lock()) {
                 if(QString(parentChamber->name().c_str()) == QString(chambvecptr->name().c_str()))  {
-                    //std::cout<<parentChamber->name()<<std::endl;
 
                     chamberChips.append(new QTreeWidgetItem(parentChamberElement, QStringList(QString(chipvecptr->name().c_str()))));
                     QVariant chipVar = qVariantFromValue(reinterpret_cast<void*> (chipvecptr.get()));
                     chamberChips.last()->setData(0,Qt::UserRole,chipVar);
-
-                    //choosing APV chips for the moment for APV Raw data
-                    if(QString(chipvecptr->name().c_str()).contains("APV"))   {
-                      apvChipsList.push_back(chipvecptr->name());
-                      apvChipIdsList.push_back(chipvecptr->get_chip_id().chip_id());
-                      window->apvRawFrame->frameStatisticsHistos.push_back(chipvecptr->getRawHisto());
-                    }
-
+/*
                     if(QString(chipvecptr->name().c_str()).contains("VMM2"))   {
                       bnlChipsList.push_back(chipvecptr->name());
                     }
-
+*/
                     for(size_t i=0; i<chipvecptr->chip1dHistos.size(); ++i)
                     {
                         mappingTreeElements1d.first.push_back(chipvecptr->chip1dHistos.at(i)->GetName());

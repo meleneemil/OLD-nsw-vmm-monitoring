@@ -17,8 +17,7 @@ class TTree;
 
 namespace online {
    namespace display {
-      
-      //class CRootTreeFillerMmDaqTest;
+
       class CDaqServerConfig;
 
       
@@ -31,13 +30,6 @@ namespace online {
          
          
          virtual bool check_equipment_key(uint32_t eqkey);
-         /// get correct root tree filler for the chip type
-         ///
-//         virtual void load_pedestal_file(){};
-         
-//      protected:
-//         virtual void calculate_pedestals(const CSrsEventId& srs_event_id, SrsChannelList& channels) {};
-
       };
    }
 } // namespace

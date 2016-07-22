@@ -14,7 +14,6 @@
 #include "DetBase.h"
 #include "DetDetector.h"
 #include "daqclient.h"
-//#include "pedestalsfileloader.h"
 
 #include "QTabWidget"
 #include "QTimer"
@@ -36,7 +35,7 @@ using namespace online::display;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
-    panelLayout(0), /*pedestalsFile(0),*/ loadFile(0), browseFile(0),
+    panelLayout(0), loadFile(0), browseFile(0),
     buttonLayout(0), startButton(0), stopButton(0), pauseButton(0), configButton(0), settingsGeneral(0),
     mainTabs(), rawTabs(), statisticsTabs(), rawChambers(), rawElectronics(), statisticsChambers(), statisticsElectronics(),
     EventDisplay(0), Statistics(0), StatisticsAdvanced(0), ApvRaw(0), CrossTalks(0), DaqStatistics(0),
@@ -295,32 +294,6 @@ void MainWindow::setUpTreeEnvironment()
     chamberTree->setExpanded(1);
 
 }
-/*
-QVBoxLayout* MainWindow::setUpPedestalsFileSelection()
-{
-    QVBoxLayout* pedestalsLayout = new QVBoxLayout();
-    pedestalSectionLabel = new QLabel(QString("Pedestal File Selection")) ;
-
-    pedestalsFile = new QLineEdit("");
-    pedestalsFile->setReadOnly(true);
-
-    QHBoxLayout* pedestalsButtonsLayout = new QHBoxLayout();
-    loadFile = new QPushButton("Load");
-    loadFile->setEnabled(0);
-    browseFile = new QPushButton("Select");
-    pedestalsButtonsLayout->addWidget(browseFile);
-    pedestalsButtonsLayout->addWidget(loadFile);
-
-    pedestalsLayout->addWidget(pedestalsFile);
-    pedestalsLayout->addLayout(pedestalsButtonsLayout);
-
-    connect(this->browseFile,SIGNAL(clicked()),this,SLOT(transmitBrowsePedestalsClickedSignal()));
-    connect(this->loadFile,SIGNAL(clicked()),this,SLOT(transmitLoadPedestalsClickedSignal()));
-
-    return pedestalsLayout;
-
-}
-*/
 void MainWindow::setUpFrameEnvironment()
 {
 
@@ -337,9 +310,6 @@ void MainWindow::setUpFrameEnvironment()
     crossTalksFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     QWidget* daqStatisticsFrameTab = new QWidget();
     daqStatisticsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-//    QWidget* pedestalsFrameTab = new QWidget();
-//    pedestalsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-//    pedestalsFrameTab->setHidden(1);
     QWidget* statisticsChipsFrameTab = new QWidget();
     statisticsChipsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
@@ -352,23 +322,14 @@ void MainWindow::setUpFrameEnvironment()
     addFrameToTabWidget(mainTabs,statisticsFrameTab,statisticsFrame,"Statistics");
     statisticsChipsFrame = new frame(statisticsChipsFrameTab);
     statisticsChipsFrame->frameType ="Chips Statistics";
-//    addFrameToTabWidget(mainTabs,statisticsChipsFrameTab,statisticsChipsFrame,"Statistics Chips");
     statisticsAdvancedFrame = new frame(statisticsAdvancedFrameTab);
     statisticsAdvancedFrame->frameType ="Statistics Advanced";
-//    addFrameToTabWidget(mainTabs,statisticsAdvancedFrameTab,statisticsAdvancedFrame,"Statistics Advanced");
     daqStatisticsFrame = new frame(daqStatisticsFrameTab);
     daqStatisticsFrame->frameType ="DaqStatistics";
-//    addFrameToTabWidget(mainTabs,daqStatisticsFrameTab,daqStatisticsFrame,"DAQ Statistics");
     apvRawFrame = new frame(apvFrameTab);
     apvRawFrame->frameType ="Apv Raw";
-//    addFrameToTabWidget(mainTabs,apvFrameTab,apvRawFrame,"VMM2 Raw");
     crossTalksFrame = new frame(crossTalksFrameTab);
     crossTalksFrame->frameType ="CrossTalks";
-
-//    addFrameToTabWidget(mainTabs,crossTalksFrameTab,crossTalksFrame,"CrossTalks");
-//    pedestalsFrame = new frame(pedestalsFrameTab);
-//    pedestalsFrame->frameType ="Pedestals";
-    //addFrameToTabWidget(mainTabs,pedestalsFrameTab,pedestalsFrame,"Pedestals");
 
 
 }
@@ -378,13 +339,9 @@ QVBoxLayout* MainWindow::setUpRunControl()
     runSettingsLayout = new QHBoxLayout();
     runControlLayout = new QVBoxLayout();
     buttonLayout = new QHBoxLayout();
-//    startButton = new QPushButton(QIcon(QString("button_play_icon.png")),"",0);
     startButton = new QPushButton("START",0);
     startButton->setIconSize(QSize(25,25));
-//    startPedestalsButton = new QPushButton(QIcon(QString("button_pedestals_icon.jpg")),"",0);
-//    startPedestalsButton->setIconSize(QSize(25,25));
     stopButton = new QPushButton("STOP",0);
-//    stopButton = new QPushButton(QIcon(QString("button_stop_icon.png")),"",0);
     stopButton->setIconSize(QSize(25,25));
     pauseButton = new QPushButton(QIcon(QString("button_pause_icon.png")),"",0);
     configButton = new QPushButton(QIcon(QString("button_config_icon.png")),"",0);
@@ -395,17 +352,10 @@ QVBoxLayout* MainWindow::setUpRunControl()
 
     startButton->setEnabled(1);
     stopButton->setEnabled(0);
-    //startPedestalsButton->setEnabled(0);
-    //configButton->setEnabled(1);
     settingsGeneral->setEnabled(1);
 
-    //    buttonLayout->addWidget(saveCheckBox);
     buttonLayout->addWidget(startButton);
-    //buttonLayout->addWidget(startPedestalsButton);
-    //buttonLayout->addWidget(pauseButton);
     buttonLayout->addWidget(stopButton);
-    //buttonLayout->addWidget(configButton);
-    //buttonLayout->addWidget(setUpVariousSettingsSelection());
     runControlLabel = new QLabel(tr("mmDaq Run Control Panel"));
     QFont runControlLabelFont;
     runControlLabelFont.setBold(true);
@@ -415,12 +365,6 @@ QVBoxLayout* MainWindow::setUpRunControl()
     runControlLayout->addWidget(setUpVariousSettingsSelection());
     runControlLayout->addLayout(buttonLayout);
     runControlLayout->addWidget(settingsGeneral);
-    //runControlLayout->
-    //runControlLayout->setStretch(1,4);
-    //runControlLayout->setStretch(2,3);
-    //runControlLayout->setStretch(3,3);
-    //runSettingsLayout->addLayout(runControlLayout);
-    //runSettingsLayout->addWidget(setUpVariousSettingsSelection());
 
     return runControlLayout;
 }
@@ -430,13 +374,11 @@ QGroupBox * MainWindow::setUpVariousSettingsSelection()
     runTypeGroupBox = new QGroupBox();
 
     radioPhysics = new QRadioButton(tr("Physics"));
-//    radioPedestals = new QRadioButton(tr("Pedestals"));
 
     radioPhysics->setChecked(true);
 
     QHBoxLayout *vboxRunType = new QHBoxLayout;
     vboxRunType->addWidget(radioPhysics);
-//    vboxRunType->addWidget(radioPedestals);
     vboxRunType->addStretch(0.5);
     runTypeGroupBox->setLayout(vboxRunType);
     runTypeGroupBox->setStyleSheet("border: 0px solid grey");

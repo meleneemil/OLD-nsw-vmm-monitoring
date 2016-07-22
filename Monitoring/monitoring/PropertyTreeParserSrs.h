@@ -38,7 +38,6 @@ namespace online {
          virtual ~CPropertyTreeParserSrs();
          
          const std::vector<SrsBasePtr>& make_srs_elements() ;
-         void configure_chips(std::vector<SrsChipPtr> chips);
          
       protected:
          
@@ -46,8 +45,6 @@ namespace online {
          template<class T>
          boost::shared_ptr<T>  parse_ptree_srs_node (const boost::property_tree::ptree::value_type& node);
          boost::shared_ptr<CSrsChip> parse_ptree_srs_chip_node(const boost::property_tree::ptree::value_type& node);
-         void parse_ptree_srs_node_apv25(const boost::property_tree::ptree::value_type& node);
-         void parse_ptree_srs_node_bnl(const boost::property_tree::ptree::value_type& node);
 
          template <class T>
          boost::shared_ptr<T> locate_srs(uint32_t uid) const;
@@ -59,8 +56,6 @@ namespace online {
          std::vector<std::string> chip_names_;
          
          double apv25_zero_suppression_threshold_;
-         std::string apv25_pedestal_file_;
-         std::string bnl_pedestal_file_;
       };
       
       

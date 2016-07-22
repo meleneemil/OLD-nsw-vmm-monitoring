@@ -143,7 +143,6 @@ namespace online {
 //         virtual CRootTreeFiller* get_root_tree_filler(CRootWriter* writer);
          
       protected:
-         virtual void calculate_pedestals(const CSrsEventId& srs_event_id, SrsChannelList& channels) ;
          void correct_apv_crosstalk(SrsChannelList& channels);
          
          

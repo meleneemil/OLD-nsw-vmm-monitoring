@@ -37,9 +37,9 @@ m_channel_strip_map(),
 m_chip_raw_histo(new TH1D(name.c_str(),name.c_str(),4000,0,4000)),
   m_chip_statistics_histo(new TH1D(std::string("Statistics_"+name).c_str(),std::string("Statistics_"+name).c_str(),620,0,620)),
   m_chip_charge_statistics_histo(new TH1D(std::string("Charge_"+name).c_str(),std::string("Charge_"+name).c_str(),400,0,2000)),
-  m_chip_time_statistics_histo(new TH1D(std::string("Time_"+name).c_str(),std::string("Time_"+name).c_str(),400,0,800)),
-  m_chip_pedestal_mean(new TH2D(std::string("PedMean_"+name).c_str(),std::string("PedMean_"+name).c_str(),128,1,129,350,0,3500)),
-  m_chip_pedestal_sigma(new TH2D(std::string("PedSigma_"+name).c_str(),std::string("PedSigma_"+name).c_str(),128,1,129,300,0,3000))
+  m_chip_time_statistics_histo(new TH1D(std::string("Time_"+name).c_str(),std::string("Time_"+name).c_str(),400,0,800))
+//  m_chip_pedestal_mean(new TH2D(std::string("PedMean_"+name).c_str(),std::string("PedMean_"+name).c_str(),128,1,129,350,0,3500)),
+//  m_chip_pedestal_sigma(new TH2D(std::string("PedSigma_"+name).c_str(),std::string("PedSigma_"+name).c_str(),128,1,129,300,0,3000))
 {
 
 
@@ -74,8 +74,8 @@ m_chip_raw_histo(new TH1D(name.c_str(),name.c_str(),4000,0,4000)),
     chip1dHistos.push_back(m_chip_time_statistics_histo);
     chip1dHistos.push_back(m_chip_raw_histo);
 
-    chip2dHistos.push_back(m_chip_pedestal_mean);
-    chip2dHistos.push_back(m_chip_pedestal_sigma);
+//    chip2dHistos.push_back(m_chip_pedestal_mean);
+//    chip2dHistos.push_back(m_chip_pedestal_sigma);
 }
 
 CSrsChip::~CSrsChip()
@@ -116,17 +116,6 @@ void CSrsChip::set_chip_id_to_fec(size_t fec_id)
 }
 
 
-void CSrsChip::move_received_event_data(const CSrsEventId& srs_event_id, SrsChannelList& channels )
-{
-   //if runModePhysics
-   move_received_event_channels(srs_event_id, channels); // move and process
-
-   //else if runModePedestals
-   //calculate means, stdev, sigma
-   calculate_pedestals(srs_event_id, channels);
-
-}
-
 
 void CSrsChip::move_received_event_channels(const CSrsEventId& srs_event_id, SrsChannelList& channels)
 {
@@ -163,10 +152,6 @@ void CSrsChip::move_received_event_channels(const CSrsEventId& srs_event_id, Srs
    evtfound->second->process(shared_from_this());
 }
 
-
-void CSrsChip::calculate_pedestals(const CSrsEventId& srs_event_id, SrsChannelList& channels)
-{
-}
 
 
 /**
@@ -299,15 +284,15 @@ TH1D *CSrsChip::getChipTimeStatistcsHisto()
 }
 
 
-TH2D* CSrsChip::getChipPedestalMean()
-{
-    return m_chip_pedestal_mean;
-}
+//TH2D* CSrsChip::getChipPedestalMean()
+//{
+//    return m_chip_pedestal_mean;
+//}
 
-TH2D* CSrsChip::getChipPedestalSigma()
-{
-    return m_chip_pedestal_sigma;
-}
+//TH2D* CSrsChip::getChipPedestalSigma()
+//{
+//    return m_chip_pedestal_sigma;
+//}
 
 
 

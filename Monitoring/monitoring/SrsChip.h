@@ -90,33 +90,21 @@ namespace online {
             virtual bool check_equipment_key(uint32_t eqkey) = 0;
             virtual void process_event( SrsChannelList& ) { };
             /// get correct root tree filler for the chip type
-//            virtual CRootTreeFiller* get_root_tree_filler(CRootWriter* writer) = 0;
 
             virtual void load_pedestal_file() = 0;
 
 
-            void move_received_event_data(const CSrsEventId& srs_event_id, SrsChannelList& channels);
 
-   //         virtual void build_event() = 0;
 
             CSrsChipId get_chip_id() const { return m_chip_id;}
             void set_chip_id_to_fec(size_t fec_id);
 
 
-   //         Srs EventMap get_srs_events(); //must copy
 
             std::string to_string() const { return m_chip_id.get_string(); }
 
             void calculate_channel_qt(SrsChannelList& channels);
-   //         void move_data_to(boost::shared_ptr<CEventBuilderInputBuffer> eb_buffer);
             void insert_eventids_to_eb(boost::shared_ptr<CEventBuilderInputBuffer> eb_buffer);
-
-   //         TTree* handle_run_start(TFile* rootfile);
-   //         void handle_run_stop();
-   //
-            /// fill tree filler with data (from the MMevents in Rootwriter)
-   //         void prefill(const EBEventIdType& evid, CRootWriter* writer);
-   //
 
             size_t total_number_channels();
 
@@ -138,8 +126,8 @@ namespace online {
       TH1D *getChipStatistcsHisto();
       TH1D *getChipChargeStatistcsHisto();
       TH1D *getChipTimeStatistcsHisto();
-      TH2D* getChipPedestalMean();
-      TH2D* getChipPedestalSigma();
+//      TH2D* getChipPedestalMean();
+//      TH2D* getChipPedestalSigma();
 
 
       std::vector <TH1D*> chip1dHistos;
@@ -150,26 +138,11 @@ namespace online {
 
 
    protected:
-      virtual void calculate_pedestals(const CSrsEventId& srs_event_id, SrsChannelList& channels) = 0;
-
-//         /// on run start create tree filler for TFile interaction (makes tree, branches,..)
-//         virtual TTree* create_root_tree_filler(TFile* rootfile) = 0;
-//
-//         /// on run end delete the filler
-//         virtual void delete_root_tree_filler() = 0;
-
 
       void move_received_event_channels(const CSrsEventId& srs_event_id, SrsChannelList& channels);
 
       CSrsChipId m_chip_id;
 
-      ///event data in channels
-//         SrsChannelList m_channels; ///< container of srs channels (id+data)
-
-      /// store for event data map (event with channels from this chip)
-//         SrsEventMap m_event_channels;
-
-      //      typedef std::map<EBEventIdType, SrsEventChannelsPtr>   SrsEventChannelsMap;
       SrsEventChannelsMap m_event_channels_flatmap;
 
       ///locks access to m_event_channels
@@ -187,8 +160,8 @@ namespace online {
       TH1D* m_chip_charge_statistics_histo;
       TH1D* m_chip_time_statistics_histo;
 
-      TH2D *m_chip_pedestal_mean;
-      TH2D *m_chip_pedestal_sigma;
+//      TH2D *m_chip_pedestal_mean;
+//      TH2D *m_chip_pedestal_sigma;
 
       std::vector <TH1D*> chipStatisticsHistos;
       std::vector <TH2D*> chipEventHistos;

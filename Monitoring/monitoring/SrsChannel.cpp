@@ -32,9 +32,3 @@ CSrsChannel::~CSrsChannel()
 {
    
 }
-
-double CSrsChannel::calculate_channel_pedestal()
-{
-   
-
-}

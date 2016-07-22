@@ -33,9 +33,7 @@ CPropertyTreeParserSrs::CPropertyTreeParserSrs(const boost::property_tree::ptree
 CPropertyTreeParser(ptree, daqconfig),
 srs_elements_(),
 chip_names_(),
-apv25_zero_suppression_threshold_(),
-apv25_pedestal_file_(),
-bnl_pedestal_file_()
+apv25_zero_suppression_threshold_()
 {
    
 }
@@ -59,14 +57,6 @@ const std::vector<SrsBasePtr>& CPropertyTreeParserSrs::make_srs_elements()
             throw;
          }
       }
-      else if (v.first == "APV25") {
-         try {
-            parse_ptree_srs_node_apv25(v);
-         } catch (std::exception& e) {
-            std::cout << "ERROR: srs config:  parsing APV25 node" << std::endl;
-            //throw;
-         }
-      }
       else if (v.first == "<xmlcomment>") {
          //         std::cout << "comment in file: " << v.second.data() << std::endl;
       }
@@ -80,12 +70,6 @@ const std::vector<SrsBasePtr>& CPropertyTreeParserSrs::make_srs_elements()
    
    std::cout << "......................................................................." << " check srs" << std::endl;
 
-   //test consistency
-//   Q_FOREACH(std::string& name, chip_names_) {
-//      locate_srs<CSrsChip>(-1, name);
-//   }
-   
-   
    
    return srs_elements_;
 }
@@ -137,105 +121,12 @@ boost::shared_ptr<CSrsChip> CPropertyTreeParserSrs::parse_ptree_srs_chip_node(co
    
    if (typestr == "chip") {
       chipptr.reset(new CSrsChipApv(CSrsChipId(0, id_number_from_string(idstr)), namestr) );   
-   } /*else if (typestr == "VMM1") {
-      chipptr.reset(new CSrsChipBnl(CSrsChipId(0, id_number_from_string(idstr)), namestr) );   
-      //TODO: rename class VMM1 ?
-   }*/
+   }
    else {
       throw std::runtime_error("Unknown SRS chip type");
    }
    
    return chipptr;
    
-}
-
-
-void CPropertyTreeParserSrs::parse_ptree_srs_node_apv25(const boost::property_tree::ptree::value_type& node)
-{
-   std::string str_zsth;
-   std::string pedestal_file;
-   Q_FOREACH(const boost::property_tree::ptree::value_type &v, node.second) {
-      if (v.first == "zero_suppression_threshold") {
-         str_zsth = v.second.data();
-      }
-      else if (v.first == "pedestal_file") {
-         pedestal_file = v.second.data();
-      }
-      else {
-         std::cout << "WARN: bad data in config: unknown key '" << v.first
-         << "' in section " << node.first << std::endl;
-      }
-   }
-   apv25_zero_suppression_threshold_ = boost::lexical_cast<double>(str_zsth);
-   apv25_pedestal_file_ = pedestal_file;
-   
-   boost::filesystem::path ped_path(apv25_pedestal_file_);
-   
-   //make absolute paths for included config files
-   if (!ped_path.has_parent_path() && !ped_path.empty()) {
-      ped_path = daqconfig_.get_config_path().parent_path() / ped_path;
-   }
-   apv25_pedestal_file_ = ped_path.string();
-   std::cout << "CPropertyTreeParserSrs::parse_ptree_srs_node_apv2() APV25 pedestal file is " << apv25_pedestal_file_ << std::endl;
-
-}
-
-
-
-void CPropertyTreeParserSrs::parse_ptree_srs_node_bnl(const boost::property_tree::ptree::value_type& node)
-{
-   std::string str_zsth;
-   std::string pedestal_file;
-   Q_FOREACH(const boost::property_tree::ptree::value_type &v, node.second) {      
-      if (v.first == "zero_suppression_threshold") {
-         str_zsth = v.second.data();
-      }
-      else if (v.first == "pedestal_file") {
-         pedestal_file = v.second.data();
-      }
-      else {
-         std::cout << "WARN: bad data in config: unknown key '" << v.first 
-         << "' in section " << node.first << std::endl;
-      }
-   }
-//   apv25_zero_suppression_threshold_ = boost::lexical_cast<double>(str_zsth);
-   bnl_pedestal_file_ = pedestal_file;
-   
-   boost::filesystem::path ped_path(bnl_pedestal_file_);
-   
-   //make absolute paths for included config files
-   if (!ped_path.has_parent_path() && !ped_path.empty()) {
-      ped_path = daqconfig_.get_config_path().parent_path() / ped_path;
-   }
-   bnl_pedestal_file_ = ped_path.string();
-   std::cout << "CPropertyTreeParserSrs::parse_ptree_srs_node_apv2() BNL pedestal file is " << bnl_pedestal_file_ << std::endl;
-}
-
-
-
-
-void CPropertyTreeParserSrs::configure_chips(std::vector<SrsChipPtr> chips) 
-{
-   bool apv25_done = false;
-   bool bnl_done = false;
-   Q_FOREACH(SrsChipPtr chip, chips) {
-     /* if (boost::shared_ptr<CSrsChipApv> apv = boost::dynamic_pointer_cast<CSrsChipApv>(chip)) {
-         if (!apv25_done) {
-            apv->set_zero_suppression_threshold(apv25_zero_suppression_threshold_);
-            apv->set_pedestal_filename(apv25_pedestal_file_);
-            apv25_done = true;
-         }
-         apv->load_pedestal_file();//apv25_pedestal_file_ 
-      }
-      else */if (boost::shared_ptr<CSrsChipBnl> bnl = boost::dynamic_pointer_cast<CSrsChipBnl>(chip)) {
-         if (!bnl_done) {
-//            bnl->set_zero_suppression_threshold(apv25_zero_suppression_threshold_);
-            bnl->set_pedestal_filename(bnl_pedestal_file_);
-            bnl_done = true;
-         }
-         bnl->load_pedestal_file();//apv25_pedestal_file_ 
-      }
-      
-   }
 }
 

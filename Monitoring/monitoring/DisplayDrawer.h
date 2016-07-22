@@ -111,9 +111,6 @@ public slots:
     void drawHistograms();
     void drawStatisticsHistos();
     void drawEventHistos();
-//    void drawApvRawHistos();
-//    void drawChipStatisticsHistos();
-//    void drawPedestalsHistos();
 
 
     void reset_slot();
