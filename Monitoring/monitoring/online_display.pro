@@ -68,7 +68,6 @@ HEADERS += canvas.h \
     SharedChip.h \
     SharedChannel.h \
     SharedSrsChannelData.h \
-    filereader.h \
     AsioService.h \
     ShmemReader.h \
     mmDaqSettingsWindow.h \
@@ -109,7 +108,6 @@ SOURCES += canvas.cxx main.cpp \
     SharedChip.cpp \
     SharedChannel.cpp \
     SharedSrsChannelData.cpp \
-    filereader.cpp \
     AsioService.cpp \
     ShmemReader.cpp \
     mmDaqSettingsWindow.cpp \

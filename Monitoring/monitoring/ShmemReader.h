@@ -121,12 +121,13 @@ class ShmemReader : public QObject
 
 public:
     ShmemReader(
-                std::vector<std::pair<boost::shared_ptr<online::display::CDetChamber>, std::vector<boost::shared_ptr<online::display::CDetReadout> > > > chamberElements,
-                MainWindow *window/*,
-                std::vector < std::pair < QTreeWidgetItem*, std::pair <std::vector<std::string>, std::vector <TH1D *> > > > mappingChip1dElements,
-                std::vector < std::pair < QTreeWidgetItem*, std::pair <std::vector<std::string>, std::vector <TH2D *> > > > mappingChip2dElements,
-                std::vector < std::pair < QTreeWidgetItem*, std::pair <std::vector<std::string>, std::vector <TH1D *> > > > mappingReadout1dElements,
-                std::vector < std::pair < QTreeWidgetItem*, std::pair <std::vector<std::string>, std::vector <TH2D *> > > > mappingReadout2dElements*/);
+                std::vector<
+                    std::pair<
+                        boost::shared_ptr<online::display::CDetChamber>,
+                        std::vector<boost::shared_ptr<online::display::CDetReadout> >
+                    >
+                > chamberElements,
+                MainWindow *window);
 
     ~ShmemReader();
 
@@ -156,8 +157,6 @@ public:
 
     /// data structure shared by DAQ server
     SPublisherIpcData* m_shm_shared_data;
-    const char *shmem;
-    const char *shCond;
 
     MainWindow *mainWindow;
     DisplayDrawer *mainDrawer;
@@ -166,13 +165,10 @@ public:
     ShmemNamedCondition m_shm_condition;
     bool terminate;
 
-    boost::mutex readMutex;
-    std::string dataLine;
     std::vector<std::string> apvChipsList;
     std::vector<uint32_t> apvChipIdList;
     std::vector<std::pair<boost::shared_ptr<online::display::CDetChamber>, std::vector<boost::shared_ptr<online::display::CDetReadout> > > > configuredChamberElements;
     std::vector <std::string> stripDataEvent;
-    QVector<std::pair<QString, QVector<int> > > rawEvent;
     int eventDisplayed;
 
 
@@ -191,17 +187,14 @@ public slots:
 
     void handleSharedData();
     void read_event_number();
-    void read_raw_data();
     void read_event_strips();
 
-//    void fillApvChipsList(std::vector<uint32_t> apvList,std::vector<std::string > apvChips);
     std::string getNameFromChipId(uint32_t chipId);
 signals:
     void readEvent();
-    void readRaw();
     void readStrip();
 
-    void fillHistograms(QVector<std::pair<QString, QVector<int> > >, std::vector <std::string>, int);
+    void fillHistograms(std::vector <std::string>, int);
 
     void runNumberIs(QString);
     void runReadoutHistoFiller();

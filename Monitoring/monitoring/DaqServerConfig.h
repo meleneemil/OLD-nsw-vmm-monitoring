@@ -20,7 +20,6 @@
 #include "DetTypes.h"
 #include "SrsFec.h"
 #include "SrsChip.h"
-#include "filereader.h"
 #include "ShmemReader.h"
 #include "DisplayDrawer.h"
 #endif
@@ -124,7 +123,6 @@ namespace online {
 
          ShmemReader* memReader;
          DisplayDrawer* drawer;
-         fileReader* dataFile;
          int activeTabIndex;
          QWaitCondition guiUpdateCondition;
          QMutex *guiUpdateMutex;

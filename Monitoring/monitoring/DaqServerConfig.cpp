@@ -84,7 +84,7 @@ namespace bptm = boost::posix_time;
 
 
 CDaqServerConfig::CDaqServerConfig() :
-    mainWindow(),memReader(0), dataFile(0),activeTabIndex(0), eventNumber(0), chamberElementsPairs(), chamberElements(), apvChipsList(),
+    mainWindow(),memReader(0), activeTabIndex(0), eventNumber(0), chamberElementsPairs(), chamberElements(), apvChipsList(),
     m_daq_cfg(),
     m_srs_cfg(),
     m_det_cfg(),
@@ -119,8 +119,6 @@ CDaqServerConfig::CDaqServerConfig() :
 
 CDaqServerConfig::~CDaqServerConfig()
 {
-    delete dataFile;
-    dataFile=0;
    delete mainWindow;
    mainWindow=0;
    delete memReader;
@@ -152,8 +150,7 @@ void CDaqServerConfig::transmitStartSignal()
 {
 
     try{
-        memReader = new ShmemReader(chamberElements,
-                                    mainWindow/*, mappingChip1dElements, mappingChip2dElements, mappingReadout1dElements, mappingReadout2dElements*/);
+        memReader = new ShmemReader(chamberElements,mainWindow);
 
         qRegisterMetaType< QVector<int> >("QVector<int>");
         qRegisterMetaType< std::string >("std::string");

@@ -77,51 +77,28 @@ void fileReader::mainLoop()
     dataLine = "";
     while(!service->stopping()/* && !(file->eof())*/)
     {
-        //std::cout<<"Entering while loop"<<std::endl;
-
-        //if(readCondition.timed_wait(lock, boost::posix_time::millisec(200)))
-        //{
-            //std::cout << "** CPublisherBase::main_loop() notified ! **" << std::endl;
-
-        //}
-        //dataLine = readLine();
-        //if(readLine()!="")  {
-            //emit newLine();
 
             if(readCondition.timed_wait(lock, boost::posix_time::millisec(1000)))
             {
-                //std::cout << "** CPublisherBase::main_loop() notified ! **" << std::endl;
 
             }
-            //dataLine = readLine();
-            //if(readLine()!="")  {
                 emit drawLine();
-        //}
     }
 }
 
 std::string fileReader::readLine()
 {
-    //std::cout<<"Entering read line"<<std::endl;
     std::string line="";
         int lineCounter=0;
 
           if (fileReader::file->is_open())
           {
             lineCounter=0;
-//            std::cout<<"Entering read line 1"<<std::endl;
             while(std::getline(*file,line) && !file->eof())
             {
- //               std::cout<<"Entering read line 2"<<std::endl;
 
                 lineCounter++;
-//                std::cout<<line<<std::endl;
-                //std::cout<<"++++++++++++++++++++++++LINE "<<lineCounter<<"++++++++++++++++++++++++++"<<std::endl;
-                //std::string line_str(line);
                 boost::trim(line);
-        //        if (boost::starts_with(line_str, "#") || line_str.empty()) {
-        //                 continue;
-        //        }
                 return line;
 
             }

@@ -31,7 +31,6 @@
 #include "DetTypes.h"
 #include "SrsFec.h"
 #include "SrsChip.h"
-#include "filereader.h"
 #include "ShmemReader.h"
 #include "DisplayDrawer.h"
 #endif
@@ -64,21 +63,15 @@ DisplayDrawer::~DisplayDrawer()
     service->stop();
 }
 
-void DisplayDrawer::NotifyFill(QVector<std::pair<QString, QVector<int> > > rawData, std::vector <std::string> stripData, int eventNumber)
+void DisplayDrawer::NotifyFill(std::vector <std::string> stripData, int eventNumber)
 {
-//    mem_rawData = rawData; //na figoun ta raw TODO
-
-
     //aikoulou+ntekas: adjust to slot connection.
     mem_stripData.clear();
     for(int i=0;i<stripData.size();i++)
     {
-        //        QString str = QString::fromUtf8(stripData.at(i).c_str());
-
         mem_stripData.push_back(QString::fromUtf8(stripData.at(i).c_str()));
     }
 
-    //    mem_stripData = stripData;
     mem_eventNumber = eventNumber;
 
     fillCondition.wakeOne();
