@@ -16,7 +16,7 @@ mmDaqSettingsWindow::mmDaqSettingsWindow(QWidget *parent)
 
     fileSelectionLayout = new QHBoxLayout();
     fileSelectionLayout->addLayout(mmDaqSettingsWindow::setUpConfigFileSelection());
-    fileSelectionLayout->addLayout(mmDaqSettingsWindow::setUpPedestalsFileSelection());
+//    fileSelectionLayout->addLayout(mmDaqSettingsWindow::setUpPedestalsFileSelection());
 
     settingWindowLayout->addLayout(fileSelectionLayout);
     settingWindowLayout->addLayout(setUpZeroSuppressionSettingsSelection());
@@ -35,40 +35,40 @@ void mmDaqSettingsWindow::transmitConfigFileNameSignal()
 }
 
 
-void mmDaqSettingsWindow::transmitPedestalsFileNameSignal()
-{
-    qDebug()<<"transmiting pedestals file signal";
-    qDebug()<<pedestalsFileFullPath ;
+//void mmDaqSettingsWindow::transmitPedestalsFileNameSignal()
+//{
+//    qDebug()<<"transmiting pedestals file signal";
+//    qDebug()<<pedestalsFileFullPath ;
 
-    //emit configFileNameIs(configFileName);
-    emit pedestalsFilePathIs(pedestalsFileFullPath);
-}
+//    //emit configFileNameIs(configFileName);
+//    emit pedestalsFilePathIs(pedestalsFileFullPath);
+//}
 
-QVBoxLayout* mmDaqSettingsWindow::setUpPedestalsFileSelection()
-{
-    QVBoxLayout* pedestalsLayout = new QVBoxLayout();
-    pedestalSectionLabel = new QLabel(QString("Pedestal File Selection")) ;
+//QVBoxLayout* mmDaqSettingsWindow::setUpPedestalsFileSelection()
+//{
+//    QVBoxLayout* pedestalsLayout = new QVBoxLayout();
+//    pedestalSectionLabel = new QLabel(QString("Pedestal File Selection")) ;
 
-    pedestalsFile = new QLineEdit("");
-    pedestalsFile->setReadOnly(false);
+//    pedestalsFile = new QLineEdit("");
+//    pedestalsFile->setReadOnly(false);
 
-    QHBoxLayout* pedestalsButtonsLayout = new QHBoxLayout();
-    loadPedFile = new QPushButton("Load Pedestals");
-    loadPedFile->setEnabled(0);
-    browsePedFile = new QPushButton("Select Pedestals");
-    pedestalsButtonsLayout->addWidget(browsePedFile);
-    pedestalsButtonsLayout->addWidget(loadPedFile);
+//    QHBoxLayout* pedestalsButtonsLayout = new QHBoxLayout();
+//    loadPedFile = new QPushButton("Load Pedestals");
+//    loadPedFile->setEnabled(0);
+//    browsePedFile = new QPushButton("Select Pedestals");
+//    pedestalsButtonsLayout->addWidget(browsePedFile);
+//    pedestalsButtonsLayout->addWidget(loadPedFile);
 
-    pedestalsLayout->addWidget(pedestalSectionLabel);
-    pedestalsLayout->addWidget(pedestalsFile);
-    pedestalsLayout->addLayout(pedestalsButtonsLayout);
+//    pedestalsLayout->addWidget(pedestalSectionLabel);
+//    pedestalsLayout->addWidget(pedestalsFile);
+//    pedestalsLayout->addLayout(pedestalsButtonsLayout);
 
-    connect(this->browsePedFile,SIGNAL(clicked()),this,SLOT(searchForPedestalsFile()));
-    connect(this->loadPedFile,SIGNAL(clicked()),this,SLOT(transmitPedestalsFileNameSignal()));
+//    connect(this->browsePedFile,SIGNAL(clicked()),this,SLOT(searchForPedestalsFile()));
+//    connect(this->loadPedFile,SIGNAL(clicked()),this,SLOT(transmitPedestalsFileNameSignal()));
 
-    return pedestalsLayout;
+//    return pedestalsLayout;
 
-}
+//}
 
 
 QVBoxLayout* mmDaqSettingsWindow::setUpConfigFileSelection()
@@ -133,23 +133,23 @@ void mmDaqSettingsWindow::searchForConfigFile()
     loadConfigFile->setEnabled(1);
 }
 
-void mmDaqSettingsWindow::searchForPedestalsFile()
-{
-    //quint64 sizeOfFile=0;
-    QDir *currentDir = new QDir(QDir::current());
-    currentDir->cdUp();
-    QString serverPath = currentDir->path();
-    QString configPath = serverPath.append("/mmdaq3-server/config");
-// //   QList<bool> channelChecks;
-// //   channelChecks.clear();
-    pedestalsFileFullPath = QFileDialog::getOpenFileName(this,tr("Select Pedestals File"),configPath,tr("Root files (*.root)"),0);
-    if(!pedestalsFileFullPath.isNull())   {
-        QFileInfo pathInfo( pedestalsFileFullPath );
-        pedestalsFileName = pathInfo.fileName();
-    }
-    pedestalsFile->setText(pedestalsFileName);
-    loadPedFile->setEnabled(1);
-}
+//void mmDaqSettingsWindow::searchForPedestalsFile()
+//{
+//    //quint64 sizeOfFile=0;
+//    QDir *currentDir = new QDir(QDir::current());
+//    currentDir->cdUp();
+//    QString serverPath = currentDir->path();
+//    QString configPath = serverPath.append("/mmdaq3-server/config");
+//// //   QList<bool> channelChecks;
+//// //   channelChecks.clear();
+//    pedestalsFileFullPath = QFileDialog::getOpenFileName(this,tr("Select Pedestals File"),configPath,tr("Root files (*.root)"),0);
+//    if(!pedestalsFileFullPath.isNull())   {
+//        QFileInfo pathInfo( pedestalsFileFullPath );
+//        pedestalsFileName = pathInfo.fileName();
+//    }
+//    pedestalsFile->setText(pedestalsFileName);
+//    loadPedFile->setEnabled(1);
+//}
 
 
 //void mmDaqSettingsWindow::loadPedestalsFile()

@@ -43,7 +43,7 @@
 
 namespace Ui {
 class MainWindow;
-class pedestalsFileLoader;
+//class pedestalsFileLoader;
 }
 
 class MainWindow : public QMainWindow
@@ -63,7 +63,7 @@ public:
     void setUpTabEnvironment();
     void setUpTreeEnvironment();
     void setUpFrameEnvironment();
-    QVBoxLayout *setUpPedestalsFileSelection();
+//    QVBoxLayout *setUpPedestalsFileSelection();
     QVBoxLayout *setUpRunControl();
 
     QGroupBox *setUpVariousSettingsSelection();
@@ -87,8 +87,8 @@ public:
     QLabel *statisticsLabel_update;
     QLabel *commentDaqLabel;
 
-    QLabel * pedestalSectionLabel;
-    QLineEdit* pedestalsFile;
+//    QLabel * pedestalSectionLabel;
+//    QLineEdit* pedestalsFile;
     QPushButton* loadFile;
     QPushButton* browseFile;
 
@@ -100,11 +100,11 @@ public:
 
     QGroupBox *runTypeGroupBox;
     QRadioButton *radioPhysics;
-    QRadioButton *radioPedestals;
+//    QRadioButton *radioPedestals;
 
     QCheckBox *saveCheckBox;
     QPushButton *startButton;
-    QPushButton *startPedestalsButton;
+//    QPushButton *startPedestalsButton;
     QPushButton *stopButton;
     QPushButton *pauseButton;
     QPushButton *configButton;
@@ -136,7 +136,7 @@ public:
     QTabWidget *ApvRaw;
     QTabWidget *CrossTalks;
     QTabWidget *DaqStatistics;
-    QTabWidget *Pedestals;
+//    QTabWidget *Pedestals;
     QTabWidget *StatisticsChips;
 
     //tree widgets for selecting different objects of each category
@@ -170,7 +170,7 @@ public:
     frame* apvRawFrame;
     frame* crossTalksFrame;
     frame* daqStatisticsFrame;
-    frame* pedestalsFrame;
+//    frame* pedestalsFrame;
     frame* statisticsChipsFrame;
 
     QString filename;
@@ -196,7 +196,7 @@ public slots:
     //virtual void displaySrsHistos() {}
     virtual void reset_slot() {}
     virtual void handleBufferedEvent() {}
-    virtual void openPedestalsFile() {}
+//    virtual void openPedestalsFile() {}
 //    virtual void loadPedestalsFile() {}
 
 

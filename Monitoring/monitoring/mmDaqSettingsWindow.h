@@ -40,12 +40,12 @@ public:
     QVBoxLayout *settingWindowLayout;
 
     QHBoxLayout * fileSelectionLayout;
-    QLabel * pedestalSectionLabel;
-    QLineEdit* pedestalsFile;
+//    QLabel * pedestalSectionLabel;
+//    QLineEdit* pedestalsFile;
     QPushButton* loadPedFile;
     QPushButton* browsePedFile;
-    QString pedestalsFileName;
-    QString pedestalsFileFullPath;
+//    QString pedestalsFileName;
+//    QString pedestalsFileFullPath;
 
 
     QLabel * configSectionLabel;
@@ -72,11 +72,11 @@ public slots:
 
     void searchForConfigFile();
     void transmitConfigFileNameSignal();
-    void searchForPedestalsFile();
-    void transmitPedestalsFileNameSignal();
+//    void searchForPedestalsFile();
+//    void transmitPedestalsFileNameSignal();
 
 private:
-    QVBoxLayout* setUpPedestalsFileSelection();
+//    QVBoxLayout* setUpPedestalsFileSelection();
     QVBoxLayout* setUpConfigFileSelection();
     QHBoxLayout *setUpZeroSuppressionSettingsSelection();
     //QGroupBox *setUpVariousSettingsSelection();
@@ -84,10 +84,10 @@ private:
 private slots:
 
 signals:
-    void browsePedestalsClicked();
-    void loadPedestalsClicked();
-    void pedestalsFilePathIs(const QString &);
-    void pedestalsFileNameIs(const QString &);
+//    void browsePedestalsClicked();
+//    void loadPedestalsClicked();
+//    void pedestalsFilePathIs(const QString &);
+//    void pedestalsFileNameIs(const QString &);
 
     void rebrowseConfigClicked();
     void reloadConfigClicked();

@@ -166,8 +166,6 @@ void CSrsChip::move_received_event_channels(const CSrsEventId& srs_event_id, Srs
 
 void CSrsChip::calculate_pedestals(const CSrsEventId& srs_event_id, SrsChannelList& channels)
 {
-   std::cout << "CSrsChip::calculate_pedestals" << std::endl;
-
 }
 
 

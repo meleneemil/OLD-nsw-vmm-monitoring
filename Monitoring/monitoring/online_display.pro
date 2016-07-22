@@ -93,7 +93,6 @@ HEADERS += canvas.h \
     SharedSrsChannelData.h \
 #    UDPFrame.h \
     Logger.h \
-    pedestalsfileloader.h \
     #pedestals.h \
     #apv_raw_ped.h \
     filereader.h \
@@ -151,7 +150,6 @@ SOURCES += canvas.cxx main.cpp \
     SharedSrsChannelData.cpp \
 #    UDPFrame.cpp \
     Logger.cpp \
-    pedestalsfileloader.cpp \
     #pedestals.C \
     #apv_raw_ped.C \
     filereader.cpp \

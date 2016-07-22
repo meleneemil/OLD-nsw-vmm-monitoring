@@ -113,7 +113,7 @@ public slots:
     void drawEventHistos();
     void drawApvRawHistos();
     void drawChipStatisticsHistos();
-    void drawPedestalsHistos();
+//    void drawPedestalsHistos();
 
 
     void reset_slot();

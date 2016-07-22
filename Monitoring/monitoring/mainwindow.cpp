@@ -36,7 +36,7 @@ using namespace online::display;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
-    panelLayout(0), pedestalsFile(0), loadFile(0), browseFile(0),
+    panelLayout(0), /*pedestalsFile(0),*/ loadFile(0), browseFile(0),
     buttonLayout(0), startButton(0), stopButton(0), pauseButton(0), configButton(0), settingsGeneral(0),
     mainTabs(), rawTabs(), statisticsTabs(), rawChambers(), rawElectronics(), statisticsChambers(), statisticsElectronics(),
     EventDisplay(0), Statistics(0), StatisticsAdvanced(0), ApvRaw(0), CrossTalks(0), DaqStatistics(0),
@@ -295,7 +295,7 @@ void MainWindow::setUpTreeEnvironment()
     chamberTree->setExpanded(1);
 
 }
-
+/*
 QVBoxLayout* MainWindow::setUpPedestalsFileSelection()
 {
     QVBoxLayout* pedestalsLayout = new QVBoxLayout();
@@ -320,7 +320,7 @@ QVBoxLayout* MainWindow::setUpPedestalsFileSelection()
     return pedestalsLayout;
 
 }
-
+*/
 void MainWindow::setUpFrameEnvironment()
 {
 
@@ -337,9 +337,9 @@ void MainWindow::setUpFrameEnvironment()
     crossTalksFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     QWidget* daqStatisticsFrameTab = new QWidget();
     daqStatisticsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    QWidget* pedestalsFrameTab = new QWidget();
-    pedestalsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    pedestalsFrameTab->setHidden(1);
+//    QWidget* pedestalsFrameTab = new QWidget();
+//    pedestalsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+//    pedestalsFrameTab->setHidden(1);
     QWidget* statisticsChipsFrameTab = new QWidget();
     statisticsChipsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
@@ -366,8 +366,8 @@ void MainWindow::setUpFrameEnvironment()
     crossTalksFrame->frameType ="CrossTalks";
 
 //    addFrameToTabWidget(mainTabs,crossTalksFrameTab,crossTalksFrame,"CrossTalks");
-    pedestalsFrame = new frame(pedestalsFrameTab);
-    pedestalsFrame->frameType ="Pedestals";
+//    pedestalsFrame = new frame(pedestalsFrameTab);
+//    pedestalsFrame->frameType ="Pedestals";
     //addFrameToTabWidget(mainTabs,pedestalsFrameTab,pedestalsFrame,"Pedestals");
 
 
@@ -381,8 +381,8 @@ QVBoxLayout* MainWindow::setUpRunControl()
 //    startButton = new QPushButton(QIcon(QString("button_play_icon.png")),"",0);
     startButton = new QPushButton("START",0);
     startButton->setIconSize(QSize(25,25));
-    startPedestalsButton = new QPushButton(QIcon(QString("button_pedestals_icon.jpg")),"",0);
-    startPedestalsButton->setIconSize(QSize(25,25));
+//    startPedestalsButton = new QPushButton(QIcon(QString("button_pedestals_icon.jpg")),"",0);
+//    startPedestalsButton->setIconSize(QSize(25,25));
     stopButton = new QPushButton("STOP",0);
 //    stopButton = new QPushButton(QIcon(QString("button_stop_icon.png")),"",0);
     stopButton->setIconSize(QSize(25,25));
@@ -430,13 +430,13 @@ QGroupBox * MainWindow::setUpVariousSettingsSelection()
     runTypeGroupBox = new QGroupBox();
 
     radioPhysics = new QRadioButton(tr("Physics"));
-    radioPedestals = new QRadioButton(tr("Pedestals"));
+//    radioPedestals = new QRadioButton(tr("Pedestals"));
 
     radioPhysics->setChecked(true);
 
     QHBoxLayout *vboxRunType = new QHBoxLayout;
     vboxRunType->addWidget(radioPhysics);
-    vboxRunType->addWidget(radioPedestals);
+//    vboxRunType->addWidget(radioPedestals);
     vboxRunType->addStretch(0.5);
     runTypeGroupBox->setLayout(vboxRunType);
     runTypeGroupBox->setStyleSheet("border: 0px solid grey");

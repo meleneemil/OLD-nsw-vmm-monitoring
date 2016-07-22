@@ -32,7 +32,7 @@
 #include "DetTypes.h"
 #include "SrsFec.h"
 #include "SrsChip.h"
-#include "pedestalsfileloader.h"
+//#include "pedestalsfileloader.h"
 #include "filereader.h"
 #include "ShmemReader.h"
 #include "DisplayDrawer.h"
@@ -467,9 +467,9 @@ void DisplayDrawer::drawChipStatisticsHistos()
 {
 }
 //not used currently, pedestal drawing is done on pedestalFileReader
-void DisplayDrawer::drawPedestalsHistos()
-{
-}
+//void DisplayDrawer::drawPedestalsHistos()
+//{
+//}
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++Histogram Reseters+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
