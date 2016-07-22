@@ -53,7 +53,6 @@ HEADERS += canvas.h \
     SrsChip.h \
     SrsChipApv.h \
     SrsChipBnl.h \
-    SrsChipMmDaqTest.h \
     SrsChannelId.h \
     SrsChannel.h \
     SrsChannelData.h \
@@ -63,7 +62,6 @@ HEADERS += canvas.h \
     SrsFec.h \
     SrsBase.h \
     SrsNetworkDevice.h \
-    SRSEquipmentHeader.h \
     SharedEBBuffer.h \
     SharedBufferHandler.h \
     SharedTypes.h \
@@ -97,7 +95,6 @@ SOURCES += canvas.cxx main.cpp \
     SrsChip.cpp \
     SrsChipApv.cpp \
     SrsChipBnl.cpp \
-    SrsChipMmDaqTest.cpp \
     SrsChipId.cpp \
     SrsChannelId.cpp \
     SrsChannel.cpp \
@@ -107,7 +104,6 @@ SOURCES += canvas.cxx main.cpp \
     SrsFec.cpp \
     SrsBase.cpp \
     SrsNetworkDevice.cpp \
-    SRSEquipmentHeader.cpp \
     SharedEBBuffer.cpp \
     SharedBufferHandler.cpp \
     SharedChip.cpp \

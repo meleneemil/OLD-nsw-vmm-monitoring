@@ -8,7 +8,6 @@
 
 #include "SrsChipBnl.h"
 #include "SrsChannelVmmArizona.h"
-#include "SRSEquipmentHeader.h"
 
 #include <TFile.h>
 
@@ -26,12 +25,5 @@ CSrsChip(chip_id, name)
 CSrsChipBnl::~CSrsChipBnl()
 {
    
-}
-
-
-bool CSrsChipBnl::check_equipment_key(uint32_t eqkey)
-{
-   return SRSEqHdrKeys::SRSEquipmentBnlArizonaCard == eqkey 
-   || SRSEqHdrKeys::SRSEquipmentBnlMiniDaqCard == eqkey;
 }
 

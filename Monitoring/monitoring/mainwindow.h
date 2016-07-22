@@ -158,8 +158,6 @@ public:
     frame* eventDisplayFrame;
     frame* statisticsFrame;
     frame* statisticsAdvancedFrame;
-    frame* apvRawFrame;
-//    frame* crossTalksFrame;
     frame* daqStatisticsFrame;
     frame* statisticsChipsFrame;
 

@@ -494,7 +494,6 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
 
     //chips frame canvases setup
     int nOfChips = mappingChip1dElements.size();
-//    int nOfApvChips = window->apvRawFrame->frameStatisticsHistos.size();
 
     divideFrameCanvases(nOfChips, window->statisticsChipsFrame);
     //make list items checkable boxes
@@ -585,10 +584,8 @@ void CDaqServerConfig::updateFrameCanvasesDivision_slot(QTreeWidgetItem* parentT
     //aikoulou: let's try pausing monitoring here, and start again in the end of this function
     //in order to avoid crash during checking or unchecking.
 //    qDebug("Pausing to avoid teh crash");
-//    transmitStopSignal();
     usleep(100*1000);
 
-    //int numberOfChamberElements;
     int numberOfChipElements;
     int numberOfReadoutElements;
 
@@ -597,8 +594,6 @@ void CDaqServerConfig::updateFrameCanvasesDivision_slot(QTreeWidgetItem* parentT
        selectDeselectChamberChildren(parentTreeItem);
        numberOfChipElements = mainWindow->getElementsNumberOfCheckedChambersApvChips(parentTreeItem);
        numberOfReadoutElements = numberOfReadoutsToDisplay(parentTreeItem->parent());
-//       divideFrameCanvases(numberOfChipElements,mainWindow->apvRawFrame);
-//       divideFrameCanvases(numberOfChipElements,mainWindow->statisticsChipsFrame);
        divideFrameCanvases(numberOfReadoutElements,mainWindow->statisticsFrame);
        divideFrameCanvases(numberOfReadoutElements,mainWindow->eventDisplayFrame);
 
@@ -606,7 +601,6 @@ void CDaqServerConfig::updateFrameCanvasesDivision_slot(QTreeWidgetItem* parentT
     else //changing canvas divisions for chip histos
     {
        numberOfChipElements = mainWindow->getElementsNumberOfCheckedChambersApvChips(parentTreeItem->parent());
-//       divideFrameCanvases(numberOfChipElements,mainWindow->apvRawFrame);
        divideFrameCanvases(numberOfChipElements,mainWindow->statisticsChipsFrame);
     }
 

@@ -28,8 +28,7 @@ namespace online {
          CSrsChipMmDaqTest(const CSrsChipId& chip_id, const std::string& name);
          virtual ~CSrsChipMmDaqTest();
          
-         
-         virtual bool check_equipment_key(uint32_t eqkey);
+
       };
    }
 } // namespace

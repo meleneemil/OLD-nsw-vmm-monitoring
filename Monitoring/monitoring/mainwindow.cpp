@@ -326,10 +326,6 @@ void MainWindow::setUpFrameEnvironment()
     statisticsAdvancedFrame->frameType ="Statistics Advanced";
     daqStatisticsFrame = new frame(daqStatisticsFrameTab);
     daqStatisticsFrame->frameType ="DaqStatistics";
-    apvRawFrame = new frame(apvFrameTab);
-    apvRawFrame->frameType ="Apv Raw";
-//    crossTalksFrame = new frame(crossTalksFrameTab);
-//    crossTalksFrame->frameType ="CrossTalks";
 
 
 }

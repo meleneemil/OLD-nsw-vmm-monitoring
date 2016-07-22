@@ -87,7 +87,6 @@ namespace online {
 
             virtual void reset();
             virtual size_t uid() const;
-            virtual bool check_equipment_key(uint32_t eqkey) = 0;
             virtual void process_event( SrsChannelList& ) { };
             /// get correct root tree filler for the chip type
 

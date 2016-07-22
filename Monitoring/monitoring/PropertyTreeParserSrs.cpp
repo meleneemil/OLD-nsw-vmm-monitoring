@@ -12,7 +12,6 @@
 #include "SrsChipId.h"
 #include "SrsChipApv.h"
 #include "SrsChipBnl.h"
-#include "SrsChipMmDaqTest.h"
 
 
 #include <QObject>

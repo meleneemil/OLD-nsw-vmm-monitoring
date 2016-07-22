@@ -34,8 +34,7 @@ namespace online {
       public:
          CSrsChipApv(const CSrsChipId& chip_id, const std::string& name);
          virtual ~CSrsChipApv();
-         
-         virtual bool check_equipment_key(uint32_t eqkey); 
+
          
          virtual void process_event(SrsChannelList& channels);
 

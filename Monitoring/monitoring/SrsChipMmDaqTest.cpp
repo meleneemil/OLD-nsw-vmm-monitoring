@@ -7,7 +7,6 @@
 //
 
 #include "SrsChipMmDaqTest.h"
-#include "SRSEquipmentHeader.h"
 
 
 #include <iostream>
@@ -23,12 +22,6 @@ CSrsChip(chip_id, name)
 CSrsChipMmDaqTest::~CSrsChipMmDaqTest()
 {
    
-}
-
-bool CSrsChipMmDaqTest::check_equipment_key(uint32_t eqkey)
-{
-   return SRSEqHdrKeys::SRSEquipmentMmDaqTest == eqkey;
-
 }
 
 

@@ -9,7 +9,6 @@
 #include "SrsChipApv.h"
 //#include "SrsChannelApvRaw.h"
 #include "SrsEventChannels.h"
-#include "SRSEquipmentHeader.h"
 
 #include <TFile.h>
 
@@ -36,13 +35,6 @@ CSrsChipApv::~CSrsChipApv()
 {
    
 }
- 
-bool CSrsChipApv::check_equipment_key(uint32_t eqkey)
-{
-   return SRSEqHdrKeys::SRSEquipmentApvRaw == eqkey 
-   || SRSEqHdrKeys::SRSEquipmentApvZeroSuppressed == eqkey;
-}
-
 
 void CSrsChipApv::set_zero_suppression_threshold(double threshold_factor)
 {
