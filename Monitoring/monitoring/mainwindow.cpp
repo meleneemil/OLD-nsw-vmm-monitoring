@@ -35,22 +35,17 @@ using namespace online::display;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
-    panelLayout(0), loadFile(0), browseFile(0),
+    panelLayout(0),
     buttonLayout(0), startButton(0), stopButton(0), pauseButton(0), configButton(0), settingsGeneral(0),
-    mainTabs(), /*rawTabs(),*/ statisticsTabs(), rawChambers(), rawElectronics(), statisticsChambers(), statisticsElectronics(),
-    EventDisplay(0), Statistics(0), StatisticsAdvanced(0), DaqStatistics(0),
-    mainTreeWidget(0), SrsTree(0), chamberTree(0),
-    rawFrame(), eventDisplayFrame_rawChambers(), chipsFrame_rawElectronics(),
-    beamProfileFrame_statisticsChambers(), chargeFrame_statisticsChambers(), timeFrame_statisticsChambers(),chipsFrame_statisticsElectronics()
+    mainTabs(),
+    mainTreeWidget(0), SrsTree(0), chamberTree(0)
 {
     //GUI setup for the main window
     ui->setupUi(this);
     createConfigurationPanel();
     setUpStatusBar();
 
-
     QObject::connect( qApp, SIGNAL(lastWindowClosed()), qApp, SLOT(quit()) );
-
 }
 
 MainWindow::~MainWindow()
@@ -60,25 +55,16 @@ MainWindow::~MainWindow()
 
 void MainWindow::updateTabCanvas(int index)
 {
-
     if(frame* tempFrame = mainTabs->widget(index)->layout()->findChild<frame*>())
+    {
         tempFrame->getFrameCanvas()->update();
+    }
 }
-
-
-QString* MainWindow::getSelectedItem_slot(QAbstractButton* button)
-{
-    QString* selectedItem = new QString(button->text());
-    qDebug()<<"Selected item : "<< button->text();
-    return selectedItem;
-}
-
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //functions for setup of the main window GUI, constant
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-//to be prepared for run control (CURRENTLY NOT WORKING)
 QStatusBar* MainWindow::setUpStatusBar()
 {
     ui->statusbar->setFixedHeight(30);
@@ -90,13 +76,13 @@ QStatusBar* MainWindow::setUpStatusBar()
 
     eventCounterLabel = new QLabel(QString(" Event #  :  "));
     eventCounterLabel->setAlignment(Qt::AlignCenter);
-//    eventCounterLabel->setMinimumSize(runNumberLabel->sizeHint());
+    //    eventCounterLabel->setMinimumSize(runNumberLabel->sizeHint());
     eventCounterLabel->setStyleSheet("border: 0px solid grey");
     eventCounterLabel->setFont(labelFont);
 
     eventCounterLabel_update = new QLabel(QString("..."));
     eventCounterLabel_update->setAlignment(Qt::AlignCenter);
-//    eventCounterLabel_update->setMinimumSize(runNumberLabel->sizeHint());
+    //    eventCounterLabel_update->setMinimumSize(runNumberLabel->sizeHint());
     eventCounterLabel_update->setStyleSheet("border: 0px solid grey");
     eventCounterLabel_update->setFont(labelFont);
 
@@ -114,24 +100,14 @@ void MainWindow::setUpTabEnvironment()
     mainTabs->clear();
 
     tabLayout = new QVBoxLayout();
-
     mainTabs->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-
-    EventDisplay = new QTabWidget();
-    Statistics = new QTabWidget();
-
-    Statistics->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     mainTabs->setCurrentIndex(1);
-
     tabLayout->addWidget(mainTabs);
-
     setUpFrameEnvironment();
-
 }
 
 void MainWindow::setUpTreeEnvironment()
 {
-
     mainTreeWidget = new QTreeWidget();
     mainTreeWidget->setColumnCount(1);
     mainTreeWidget->setUpdatesEnabled(true);
@@ -141,29 +117,24 @@ void MainWindow::setUpTreeEnvironment()
     mainTreeWidget->setHeaderItem(headerItem);
 
     chamberTree = new QTreeWidgetItem(mainTreeWidget);
-    //chamberTree->setFlags(chamberTree->flags()|Qt::ItemIsUserCheckable);
     chamberTree->setText(0,"Chamber Elements");
-    //chamberTree->setCheckState(0, Qt::Checked);
     chamberTree->setExpanded(1);
-
 }
 void MainWindow::setUpFrameEnvironment()
 {
-
-
     QWidget* eventDisplayFrameTab = new QWidget();
     eventDisplayFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+
     QWidget* statisticsFrameTab = new QWidget();
     statisticsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
     eventDisplayFrame = new frame(eventDisplayFrameTab);
     eventDisplayFrame->frameType ="Event Display";
     addFrameToTabWidget(mainTabs,eventDisplayFrameTab,eventDisplayFrame,"Event Display");
+
     statisticsFrame = new frame(statisticsFrameTab);
     statisticsFrame->frameType ="Statistics";
     addFrameToTabWidget(mainTabs,statisticsFrameTab,statisticsFrame,"Statistics");
-
-
 }
 
 QVBoxLayout* MainWindow::setUpRunControl()
@@ -196,8 +167,6 @@ QVBoxLayout* MainWindow::setUpRunControl()
 //functions for modification and control of the main window GUI and its elements, dynamic
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
-
 void MainWindow::addFrameToTabWidget(QTabWidget *parentTab, QWidget *targetWidget, frame *frameForTab, const char* tabTitle)
 {
     QVBoxLayout *l = new QVBoxLayout();
@@ -205,18 +174,15 @@ void MainWindow::addFrameToTabWidget(QTabWidget *parentTab, QWidget *targetWidge
     targetWidget->setLayout(l);
     addTab(parentTab, targetWidget, tabTitle);
     frameForTab->show();
-
 }
 
-void MainWindow::addTab(QTabWidget *parentTab, QWidget *childWidget, const char* tabTitle)  {
-
+void MainWindow::addTab(QTabWidget *parentTab, QWidget *childWidget, const char* tabTitle)
+{
     childWidget->setWindowTitle(tabTitle);
     parentTab->addTab(childWidget, tabTitle);
     childWidget->setUpdatesEnabled(true);
     childWidget->show();
-
 }
-
 
 void MainWindow::createConfigurationPanel()
 {
@@ -230,15 +196,6 @@ void MainWindow::createConfigurationPanel()
     configPanelLayout->addWidget(sendCommand);
 }
 
-void MainWindow::openConfigurationPanel_slot()
-{
-    //if(timer->isActive()) reset_slot();
-    panelLayout->show();
-
-}
-
-//checking the number of chambers that are selected for displaying
-
 
 int MainWindow::getElementsNumberOfCheckedChildren(QTreeWidgetItem* parentTreeWidget)
 {
@@ -250,24 +207,3 @@ int MainWindow::getElementsNumberOfCheckedChildren(QTreeWidgetItem* parentTreeWi
     }
     return numberOfElementsDisplayed;
 }
-
-//checking the number of chips that are selected for displaying
-//int MainWindow::getElementsNumberOfCheckedChambersApvChips(QTreeWidgetItem* parentTreeWidget)
-//{
-//    int numberOfElementsDisplayed=0;
-//    for(int i=0; i<parentTreeWidget->parent()->childCount(); i++)
-//    {   for(int iChip=0; iChip<(parentTreeWidget->parent()->child(i))->childCount();iChip++)    {
-//            if((parentTreeWidget->parent()->child(i))->child(iChip)->text(0).contains("APV", Qt::CaseInsensitive)
-//                    && (parentTreeWidget->parent()->child(i))->child(iChip)->checkState(0)==2)
-//            {
-//                numberOfElementsDisplayed++;
-////                qDebug("CHECK STATE for %s ===  ===  2 ",(parentTreeWidget->parent()->child(i))->child(iChip)->text(0));
-////                mem_stripData.push_back(QString::fromUtf8(stripData.at(i).c_str()));
-
-//                //numberOfElementsDisplayed+=getElementsNumberOfCheckedChildren(parentTreeWidget->parent()->child(i));
-//            }
-//        }
-//    }
-//    qDebug("numberOfElementsDisplayed = %i",numberOfElementsDisplayed);
-//    return numberOfElementsDisplayed;
-//}

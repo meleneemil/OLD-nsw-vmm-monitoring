@@ -20,7 +20,6 @@
 #include <QLayout>
 #include <QDebug>
 #include <QAbstractButton>
-//#include <QRadioButton>
 #include <QPushButton>
 #include <QTextEdit>
 #include <QCheckBox>
@@ -42,7 +41,6 @@
 #include "PropertyTreeParserSrs.h"
 
 #define BOOST_FILESYSTEM_NO_DEPRECATED
-//#include <boost/foreach.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/lexical_cast.hpp>
 #include <boost/property_tree/ptree.hpp>
@@ -70,10 +68,7 @@
 
 #include <iostream>
 #include <stdexcept>
-#include <cstdlib> //std::system
-//#include <cstddef>
-//#include <cassert>
-//#include <utility>
+#include <cstdlib>
 
 using namespace online::display;
 
@@ -84,7 +79,7 @@ namespace bptm = boost::posix_time;
 
 
 CDaqServerConfig::CDaqServerConfig() :
-    mainWindow(),memReader(0), activeTabIndex(0), eventNumber(0), chamberElementsPairs(), chamberElements(), apvChipsList(),
+    mainWindow(),memReader(0), activeTabIndex(0), eventNumber(0), chamberElementsPairs(), chamberElements(),
     m_daq_cfg(),
     m_srs_cfg(),
     m_det_cfg(),
@@ -224,8 +219,6 @@ void CDaqServerConfig::setConfigFileName(const QString &config_fileName)
     input_config_fileName = config_fileName;
 }
 
-
-
 //read configuration file
 void CDaqServerConfig::configure(const QString &configFile)
 {
@@ -289,7 +282,6 @@ void CDaqServerConfig::read_config_file(const std::string& filename)
 
 }
 
-
 void CDaqServerConfig::read_srs_config_file(const std::string& filename)
 {
 
@@ -307,7 +299,6 @@ void CDaqServerConfig::read_srs_config_file(const std::string& filename)
 
 }
 
-
 void CDaqServerConfig::read_detector_config_file(const std::string& filename)
 {
     m_detector.reset();
@@ -322,7 +313,6 @@ void CDaqServerConfig::read_detector_config_file(const std::string& filename)
       std::cout << "Failed configuring detector:\n";
       std::cout << re.what() << std::endl;
    }
-
 }
 
 boost::filesystem::path CDaqServerConfig::get_config_path() const
@@ -341,7 +331,6 @@ std::vector<boost::shared_ptr<CSrsChip> > CDaqServerConfig::locate_srs_chips() c
    }
    return vec;
 }
-
 
 void CDaqServerConfig::configureTreeGui(MainWindow* window)
 {
@@ -377,17 +366,11 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
     chamberElements.clear();
 
     //list with tree widget items for detector chamber
-    QList<QTreeWidgetItem*> parentList;
-    QList<QTreeWidgetItem*> childrenList;
-    QList<QTreeWidgetItem*> grandChildrenList;
     QList<QTreeWidgetItem*> chambersList;
-    QList<QTreeWidgetItem*> multiLayersList;
-    QList<QTreeWidgetItem*> layersList;
-    QList<QTreeWidgetItem*> readoutsList;
+//    QList<QTreeWidgetItem*> readoutsList;
 
     size_t nOfReadouts = 0;
     Q_FOREACH(DetBasePtr chambvecptr, m_detector->get_children()) {
-        multiLayersList.clear();
         chamberElementsPairs.first.reset();
         chamberElementsPairs.second.clear();
 
@@ -405,19 +388,13 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
         boost::shared_ptr<CDetChamber> chamber = boost::dynamic_pointer_cast<CDetChamber>(chambvecptr);
         chamberElementsPairs.first = chamber;
         Q_FOREACH(DetBasePtr mlayervecptr, chambvecptr->get_children()) {
-            layersList.clear();
-            //chambvecptr->
 
-            multiLayersList.append(new QTreeWidgetItem((QTreeWidget*)0, QStringList(QString(mlayervecptr->name().c_str()))));
             Q_FOREACH(DetBasePtr layervecptr, mlayervecptr->get_children()) {
-                readoutsList.clear();
-                layersList.append(new QTreeWidgetItem((QTreeWidget*)0, QStringList(QString(layervecptr->name().c_str()))));
+//                readoutsList.clear();
 
-                //readoutVar.setValue(layervecptr->get_children());
-                //chambersList.last()->setData(1, 0, readoutVar);
                 Q_FOREACH(DetBasePtr baseptr, layervecptr->get_children()) {
 
-                    readoutsList.append(new QTreeWidgetItem((QTreeWidget*)0, QStringList(QString(baseptr->name().c_str()))));
+//                    readoutsList.append(new QTreeWidgetItem((QTreeWidget*)0, QStringList(QString(baseptr->name().c_str()))));
                     //if(CDetReadout currentReadout = readoutvecptr-> lock())
                     boost::shared_ptr<CDetReadout> readout = boost::dynamic_pointer_cast<CDetReadout>(baseptr);
                     chamberElementsPairs.second.push_back(readout);
@@ -437,7 +414,7 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
             }
         }
 
-        makeListItemsCheckable(readoutsList);
+//        makeListItemsCheckable(readoutsList);
         chamberElements.push_back(chamberElementsPairs);
     }
 
@@ -452,7 +429,6 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
 
     return chambersList;
 }
-
 
 //put chip elements under chamber elements (classification)
 QList<QTreeWidgetItem*> CDaqServerConfig::classifyChips(std::vector<boost::shared_ptr<CSrsChip> > chipvec, QTreeWidgetItem* parentChamberElement, DetBasePtr chambvecptr, MainWindow *window)
@@ -478,7 +454,6 @@ QList<QTreeWidgetItem*> CDaqServerConfig::classifyChips(std::vector<boost::share
     makeListItemsCheckable(chamberChips);
     return chamberChips;
 }
-
 
 //function to make QList items checkable
 void  CDaqServerConfig::makeListItemsCheckable(QList<QTreeWidgetItem*> list)
@@ -564,7 +539,6 @@ void CDaqServerConfig::divideFrameCanvases(int numberOfElements, frame* frameFor
     frameForDivide->divideCanvases(width,height);
 
 }
-
 
 //function to get on every chamber element selection change the number of readouts to be displayed
 int CDaqServerConfig::numberOfReadoutsToDisplay(QTreeWidgetItem* parentTreeWidget)

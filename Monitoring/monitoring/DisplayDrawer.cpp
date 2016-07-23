@@ -332,15 +332,11 @@ void DisplayDrawer::drawHistograms()
     }
     else if(monitoringMainWindow->mainTabs->currentIndex()==1)   {
         drawStatisticsHistos();
-        //drawChargeStatisticsHistos();
-        //monitoringMainWindow->statisticsFrame->frameCanvas->getCanvas()->Modified();
-        //monitoringMainWindow->statisticsFrame->frameCanvas->getCanvas()->Update();
     }
 }
 
 void DisplayDrawer::drawStatisticsHistos()
 {
-    //std::cout<<"Drawing statistics"<<std::endl;
     int canvasIndex =1;
     for(size_t i=0; i<monitoringMainWindow->chamberTree->childCount(); ++i)
     {

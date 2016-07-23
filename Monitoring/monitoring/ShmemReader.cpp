@@ -55,7 +55,7 @@ ShmemReader::ShmemReader(
 {
     eventDisplayed = 0;
     if(m_shm_manager.check_sanity())    {
-        //        connect_shared_memory();		ANGELOS
+//        connect_shared_memory(); //doesnt make a difference
         mainDrawer = new DisplayDrawer(mainWindow);
 
         qRegisterMetaType< QString >("QVector<int>");
@@ -101,7 +101,6 @@ void ShmemReader::connect_shared_memory()
         //Get the address of the mapped region
         void * addr = m_shm_mapped_region->get_address();
     }
-
     catch(...) {
         std::cout << "TODO : CShmemReader() connect_shared_memory() *** exception ***" << std::endl;
     }
@@ -132,8 +131,8 @@ void ShmemReader::handleSharedData()
         if(realEvent && stripDataEvent.size()!=0) {
             emit fillHistograms(stripDataEvent, eventDisplayed);
             emit drawHistograms();
-            //aikoulou 8-6-2016
-            stripDataEvent.clear();
+            //aikoulou 8-6-2016 //aikoulou 23/7/2016
+//            stripDataEvent.clear();
         }
     }//while
 
@@ -194,16 +193,4 @@ void ShmemReader::read_event_strips()
     }
 }
 
-
-
-
-std::string ShmemReader::getNameFromChipId(uint32_t chipId)
-{
-    for(int iList=0; iList<apvChipsList.size(); ++iList)
-    {
-        if(apvChipIdList.at(iList)==chipId)
-            return apvChipsList.at(iList);
-    }
-    return std::string();
-}
 

@@ -70,7 +70,7 @@ namespace online {
          typedef std::pair<CSrsChannelId, CDetStripId> ChannelStripPair;
          std::vector<ChannelStripPair> m_channel_strip;
          
-         typedef std::pair<size_t, boost::weak_ptr<CSrsChip>/*CSrsChipId*/> ConnectedChipSeqPair;
+         typedef std::pair<size_t, boost::weak_ptr<CSrsChip>> ConnectedChipSeqPair;
          std::vector<ConnectedChipSeqPair> m_connected_chips;
          
       };

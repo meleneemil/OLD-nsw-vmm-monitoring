@@ -161,17 +161,10 @@ boost::shared_ptr<CDetBase> CPropertyTreeParserDetector::parse_ptree_det_chamber
          config_file = v.second.data();
       }
       else if (v.first == "<xmlcomment>") {
-         //         std::cout << "comment in file: " << v.second.data() << std::endl;
       }
       else if (v.first == "<xmlattr>") {
-         //         std::cout << "<xmlattr>=" << v.second.data() << std::endl;
          name = v.second.get<std::string>("name");
-         //         std::cout << "read name=" << name << std::endl;
       }
-//      else {
-//         std::cout << "WARN: bad data in detector config: unknown key '" 
-//         << v.first << "' in node "   <<  node.first << std::endl;
-//      }
    }
    
    chamber->set(chamber->idnumber(), name, size, pos, rot);
@@ -202,7 +195,6 @@ boost::shared_ptr<CDetBase> CPropertyTreeParserDetector::parse_ptree_det_chamber
 
    
    Q_FOREACH(DetConnPtr conn, connectors) {
-//      std::cout << "TODO:  chamber config: match connectors on chamber to this one (2 instances now!!)" << std::endl;
       //TODO:  match connectors on chamber to this one (2 instances now!!)
       chamber->configure_connector_connection(conn); //will throw if chamber does not have connector
    }

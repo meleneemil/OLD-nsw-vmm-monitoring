@@ -41,7 +41,6 @@
 #include <boost/thread.hpp>
 
 #define BOOST_FILESYSTEM_NO_DEPRECATED
-//#include <boost/foreach.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/lexical_cast.hpp>
 #include <boost/property_tree/ptree.hpp>
@@ -108,9 +107,7 @@ typedef bipc::allocator<ShmemRawMapValueType, ShmemSegmentManagerType> ShmemRawM
 //Note that the third parameter argument is the ordering function
 //of the map, just like with std::map, used to compare the keys.
 
-//typedef map<KeyType, MappedType, std::less<KeyType>, ShmemAllocator> MyMap;
 typedef bipc::map<ShmemRawMapKeyType, ShmemRawMapMappedType, std::less<ShmemRawMapKeyType>, ShmemRawMapAllocator> ShmemRawMap;
-//bool FAKEDATA;
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -164,13 +161,10 @@ public:
     bipc::managed_shared_memory m_shm_manager;
     ShmemNamedCondition m_shm_condition;
 
-    std::vector<std::string> apvChipsList;
     std::vector<uint32_t> apvChipIdList;
     std::vector<std::pair<boost::shared_ptr<online::display::CDetChamber>, std::vector<boost::shared_ptr<online::display::CDetReadout> > > > configuredChamberElements;
     std::vector <std::string> stripDataEvent;
     int eventDisplayed;
-
-
 
     void connect_shared_memory();
     void setCondition();
@@ -187,15 +181,9 @@ public slots:
     void read_event_number();
     void read_event_strips();
 
-    std::string getNameFromChipId(uint32_t chipId);
 signals:
 
     void fillHistograms(std::vector <std::string>, int);
-
-    void runReadoutHistoFiller();
-    void fillReadout(QString line);
-    void newLine();
-    void newEventReceived(QString);
     void drawHistograms();
 };
 

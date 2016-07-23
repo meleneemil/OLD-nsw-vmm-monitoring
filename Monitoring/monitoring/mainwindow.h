@@ -12,20 +12,16 @@
 
 #include <QMainWindow>
 #include "frame.h"
-//#include "testframe.h"
-//#include "daqclient.h"
 #include <QTabWidget>
 #include <QTreeWidget>
 #include <QTimer>
 #include <QButtonGroup>
-//#include <QRadioButton>
 #include <QLayout>
 #include <QLabel>
 #include <QObject>
 #include <QDoubleSpinBox>
 #include <QGroupBox>
 #include <QCheckBox>
-//#include <QRadioButton>
 #include <QList>
 #include <QFileDialog>
 #include <QDir>
@@ -58,9 +54,7 @@ public:
     void setUpFrameEnvironment();
     QVBoxLayout *setUpRunControl();
 
-
     int getElementsNumberOfCheckedChildren(QTreeWidgetItem* parentTreeWidget);
-//    int getElementsNumberOfCheckedChambersApvChips(QTreeWidgetItem* parentTreeWidget);
 
     QWidget *panelLayout;
     void addFrameToTabWidget(QTabWidget *parentTab, QWidget *targetWidget, frame *frameForTab, const char *tabTitle);
@@ -77,18 +71,12 @@ public:
     QLabel *statisticsLabel_update;
     QLabel *commentDaqLabel;
 
-    QPushButton* loadFile;
-    QPushButton* browseFile;
-
-
     QHBoxLayout *runSettingsLayout;
     QVBoxLayout *runControlLayout;
     QHBoxLayout *buttonLayout;
 
     QGroupBox *runTypeGroupBox;
-//    QRadioButton *radioPhysics;
 
-//    QCheckBox *saveCheckBox;
     QPushButton *startButton;
     QPushButton *stopButton;
     QPushButton *pauseButton;
@@ -98,82 +86,27 @@ public:
     QVBoxLayout *tabLayout;
     QVBoxLayout *leftLayout;
 
-//tab widgets for graphics
+    //tab widgets for graphics
     //main tab widget
     QTabWidget *mainTabs;
-    QTabWidget *statisticsTabs;
-
-    //tab widget for layer information
-    QTabWidget *rawChambers;
-    QTabWidget *rawElectronics;
-
-    //tab widget for statistics information
-    QTabWidget *statisticsChambers;
-    QTabWidget *statisticsElectronics;
-
-
-//Actual Tabs
-    QTabWidget *EventDisplay;
-    QTabWidget *Statistics;
-    QTabWidget *StatisticsAdvanced;
-    QTabWidget *DaqStatistics;
-    QTabWidget *StatisticsChips;
 
     //tree widgets for selecting different objects of each category
     QTreeWidget *mainTreeWidget;
     QTreeWidgetItem *SrsTree;
     QTreeWidgetItem *chamberTree;
 
-//frames for canvases to be displayed in each tab
-    frame *simple_frame;//for testing (to be removed)
-    frame *simple_frame1;//for testing (to be removed)
-
-    //frames for Raw Tab
-    //chambers
-    frame *rawFrame;
-    frame *eventDisplayFrame_rawChambers;
-    //electronics
-    frame *chipsFrame_rawElectronics;
-
-    //frames for Statistics Tab
-    //chambers
-    frame *beamProfileFrame_statisticsChambers;
-    frame *chargeFrame_statisticsChambers;
-    frame *timeFrame_statisticsChambers;
-    //electronics
-    frame *chipsFrame_statisticsElectronics;
-
-
     frame* eventDisplayFrame;
     frame* statisticsFrame;
 
     QString filename;
 
-
 public slots:
     void updateTabCanvas(int index);
 
-    QString *getSelectedItem_slot(QAbstractButton* button);
-
-    void openConfigurationPanel_slot();
-
     virtual void fillStatistics() {}
     virtual void fillStatisticsHistos() {}
-    virtual void fillStatisticsAdvancedHistos() {}
-    virtual void fillChargeStatisticsHistos() {}
-    virtual void fillTimeStatisticsHistos() {}
     virtual void reset_slot() {}
     virtual void handleBufferedEvent() {}
-
-
-
-//signals:
-//    void startDaqClicked();
-//    void stopDaqClicked();
-//    void pauseDaqMonitoringClicked();
-//    void configDaqClicked();
-
-
 };
 
 #endif // MAINWINDOW_H

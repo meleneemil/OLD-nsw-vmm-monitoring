@@ -132,16 +132,12 @@ namespace online {
          QTimer *timer;
          std::pair<boost::shared_ptr<CDetChamber>, std::vector<boost::shared_ptr<CDetReadout> > > chamberElementsPairs;
          std::vector<std::pair<boost::shared_ptr<CDetChamber>, std::vector<boost::shared_ptr<CDetReadout> > > > chamberElements;
-         std::vector<std::string> apvChipsList;
-         std::vector<uint32_t> apvChipIdsList;
-//         std::vector<std::string> bnlChipsList;
 
          template <class T>
          boost::shared_ptr<T> locate_srs(uint32_t uid) const;
          template <class CSrsChip>
          boost::shared_ptr<CSrsChip> locate_srs(long uid, const std::string& name) const;
          boost::filesystem::path get_config_path() const;
-         void startDaqClient();
          std::vector<boost::shared_ptr<CSrsChip> > locate_srs_chips() const;
 
 
@@ -150,8 +146,6 @@ namespace online {
          void daqClient();
          void configureTreeGui(MainWindow *window);
          void divideFrameCanvases(int numberOfElements, frame* frameForDivide);
-
-
 
          QList<QTreeWidgetItem *> buildDetectorTreeGui();
          QList<QTreeWidgetItem *> buildChamberTreeGui(MainWindow *window);
