@@ -58,33 +58,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-//++++++++++++++++++++++++++++++++signals' transmitters++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
-
-
-//void MainWindow::transmitStartDaqClickedSignal()
-//{
-//    emit startDaqClicked();
-//}
-
-//void MainWindow::transmitStopDaqClickedSignal()
-//{
-//    emit stopDaqClicked();
-//}
-
-//void MainWindow::transmitPauseMonitoringClickedSignal()
-//{
-//    emit pauseDaqMonitoringClicked();
-//}
-
-//void MainWindow::transmitConfigDaqClickedSignal()
-//{
-//    emit configDaqClicked();
-//}
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 void MainWindow::updateTabCanvas(int index)
 {
 
@@ -109,126 +82,26 @@ QString* MainWindow::getSelectedItem_slot(QAbstractButton* button)
 QStatusBar* MainWindow::setUpStatusBar()
 {
     ui->statusbar->setFixedHeight(30);
+    ui->statusbar->setFixedWidth(300);
 
     QFont labelFont;
     labelFont.setPointSize(10);
     labelFont.setBold(true);
 
-    runNumberLabel = new QLabel(QString(" Run #  :  "));
-    runNumberLabel->setAlignment(Qt::AlignCenter);
-    runNumberLabel->setMinimumSize(runNumberLabel->sizeHint());
-    runNumberLabel->setStyleSheet("border: 0px solid grey");
-    runNumberLabel->setFont(labelFont);
-
-    runNumberLabel_update = new QLabel(QString("..."));
-    runNumberLabel_update->setAlignment(Qt::AlignCenter);
-    runNumberLabel_update->setMinimumSize(runNumberLabel->sizeHint());
-    runNumberLabel_update->setStyleSheet("border: 0px solid grey");
-    runNumberLabel_update->setFont(labelFont);
-
     eventCounterLabel = new QLabel(QString(" Event #  :  "));
     eventCounterLabel->setAlignment(Qt::AlignCenter);
-    eventCounterLabel->setMinimumSize(runNumberLabel->sizeHint());
+//    eventCounterLabel->setMinimumSize(runNumberLabel->sizeHint());
     eventCounterLabel->setStyleSheet("border: 0px solid grey");
     eventCounterLabel->setFont(labelFont);
 
     eventCounterLabel_update = new QLabel(QString("..."));
     eventCounterLabel_update->setAlignment(Qt::AlignCenter);
-    eventCounterLabel_update->setMinimumSize(runNumberLabel->sizeHint());
+//    eventCounterLabel_update->setMinimumSize(runNumberLabel->sizeHint());
     eventCounterLabel_update->setStyleSheet("border: 0px solid grey");
     eventCounterLabel_update->setFont(labelFont);
 
-    mmDaqStatusLabel = new QLabel(QString(" Daq Status  :  "));
-    mmDaqStatusLabel->setAlignment(Qt::AlignCenter);
-    mmDaqStatusLabel->setMinimumSize(runNumberLabel->sizeHint());
-    mmDaqStatusLabel->setStyleSheet("border: 0px solid grey");
-    mmDaqStatusLabel->setFont(labelFont);
-
-    mmDaqStatusLabel_update = new QLabel(QString("..."));
-    mmDaqStatusLabel_update->setAlignment(Qt::AlignCenter);
-    mmDaqStatusLabel_update->setMinimumSize(runNumberLabel->sizeHint());
-    mmDaqStatusLabel_update->setStyleSheet("border: 0px solid grey");
-    mmDaqStatusLabel_update->setFont(labelFont);
-
-    statisticsLabel = new QLabel(QString(" Advanced  :  "));
-    statisticsLabel->setAlignment(Qt::AlignCenter);
-    statisticsLabel->setMinimumSize(runNumberLabel->sizeHint());
-    statisticsLabel->setStyleSheet("border: 0px solid grey");
-    statisticsLabel->setFont(labelFont);
-
-    statisticsLabel_update = new QLabel(QString("..."));
-    statisticsLabel_update->setAlignment(Qt::AlignCenter);
-    statisticsLabel_update->setMinimumSize(runNumberLabel->sizeHint());
-    statisticsLabel_update->setStyleSheet("border: 0px solid grey");
-    statisticsLabel_update->setFont(labelFont);
-
-    //    runNumberLabel = new QLabel(QString("  Run #  :  "));
-    //    runNumberLabel_update = new QLabel();
-    //    eventCounterLabel = new QLabel(QString("               Event #  :        "));
-    //    eventCounterLabel_update = new QLabel();
-    //    mmDaqStatusLabel = new QLabel(QString("                Daq Status  :        "));
-    //    mmDaqStatusLabel_update = new QLabel();
-    //    statisticsLabel = new QLabel(QString("                 Advanced  :       "));
-    //    statisticsLabel_update = new QLabel(QString());
-
-    //    QHBoxLayout *statusBarLayout = new QHBoxLayout;
-    //    statusBarLayout->addWidget(runNumberLabel);
-    //    statusBarLayout->addWidget(runNumberLabel_update);
-    //    statusBarLayout->addWidget(eventCounterLabel);
-    //    statusBarLayout->addWidget(eventCounterLabel_update);
-    //    statusBarLayout->addWidget(mmDaqStatusLabel);
-    //    statusBarLayout->addWidget(mmDaqStatusLabel_update);
-    //    statusBarLayout->addWidget(statisticsLabel);
-    //    statusBarLayout->addWidget(statisticsLabel_update);
-
-    //    QHBoxLayout *runNumberLayout = new QHBoxLayout;
-    //    QGroupBox* runNumberBox = new QGroupBox();
-    //    runNumberLayout->addWidget(runNumberLabel);
-    //    runNumberLayout->addWidget(runNumberLabel_update);
-    //    //runNumberLayout->setStretch(1,5);
-    //    //runNumberLayout->setStretch(2,5);
-    //    runNumberBox->setLayout(runNumberLayout);
-
-    //    QHBoxLayout *eventCounterLayout = new QHBoxLayout;
-    //    QGroupBox* eventCounterBox = new QGroupBox();
-    //    eventCounterLayout->addWidget(eventCounterLabel);
-    //    eventCounterLayout->addWidget(eventCounterLabel_update);
-    //    eventCounterLayout->setStretch(1,5);
-    //    eventCounterLayout->setStretch(2,5);
-    //    eventCounterBox->setLayout(eventCounterLayout);
-
-    //    QHBoxLayout *mmDaqStatusLayout = new QHBoxLayout;
-    //    QGroupBox* mmDaqStatusBox = new QGroupBox();
-    //    mmDaqStatusLayout->addWidget(mmDaqStatusLabel);
-    //    mmDaqStatusLayout->addWidget(mmDaqStatusLabel_update);
-    //    mmDaqStatusLayout->setStretch(1,5);
-    //    mmDaqStatusLayout->setStretch(2,5);
-    //    mmDaqStatusBox->setLayout(mmDaqStatusLayout);
-
-    //    QHBoxLayout *statisticsLayout = new QHBoxLayout;
-    //    QGroupBox* statisticsBox = new QGroupBox();
-    //    statisticsLayout->addWidget(statisticsLabel);
-    //    statisticsLayout->addWidget(statisticsLabel_update);
-    //    statisticsLayout->setStretch(1,5);
-    //    statisticsLayout->setStretch(2,5);
-    //    statisticsBox->setLayout(statisticsLayout);
-
-    //    ui->statusbar->addWidget(runNumberBox);
-    //    ui->statusbar->addWidget(eventCounterBox);
-    //    ui->statusbar->addWidget(mmDaqStatusBox);
-    //    ui->statusbar->addWidget(statisticsBox);
-
-    //    ui->statusbar->setLayout(statusBarLayout);
-    //    ui->statusbar->update();
-
-    ui->statusbar->addPermanentWidget(runNumberLabel,1);
-    ui->statusbar->addPermanentWidget(runNumberLabel_update,1);
     ui->statusbar->addPermanentWidget(eventCounterLabel,1);
     ui->statusbar->addPermanentWidget(eventCounterLabel_update,1);
-    ui->statusbar->addPermanentWidget(mmDaqStatusLabel,2);
-    ui->statusbar->addPermanentWidget(mmDaqStatusLabel_update,3);
-    ui->statusbar->addPermanentWidget(statisticsLabel,2);
-    ui->statusbar->addPermanentWidget(statisticsLabel_update,3);
 
     ui->statusbar->setStyleSheet("border: 1px solid grey");
 
