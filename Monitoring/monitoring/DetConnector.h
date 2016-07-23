@@ -56,7 +56,6 @@ namespace online {
          CDetStripId get_mapped_strip_id(const CSrsChannelId& channel_id) const;
          
          void set_chip_connection_from(DetConnPtr from,  DetConnPtr toconnector);
-         void set_pin_strip_mapping_from(DetConnPtr other);
          
       protected:
                            

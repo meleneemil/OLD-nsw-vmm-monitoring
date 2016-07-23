@@ -375,18 +375,6 @@ void CDaqServerConfig::configureTreeGui(MainWindow* window)
 QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window)
 {
     chamberElements.clear();
-//    mappingChip1dElements.clear();
-//    mappingChip2dElements.clear();
-//    mappingReadout1dElements.clear();
-//    mappingReadout2dElements.clear();
-
-    //variables to fill the mapping list
-    std::pair < QTreeWidgetItem*, std::pair <std::vector<std::string>, std::vector <TH1D *> > > mappingListElements1d;
-    std::pair <std::vector<std::string>, std::vector <TH1D *> > mappingTreeElements1d;
-    std::pair < QTreeWidgetItem*, std::pair <std::vector<std::string>, std::vector <TH2D *> > > mappingListElements2d;
-    std::pair <std::vector<std::string>, std::vector <TH2D *> > mappingTreeElements2d;
-
-    //QTreeWidgetItem* tempTreeWidgetItem = 0;
 
     //list with tree widget items for detector chamber
     QList<QTreeWidgetItem*> parentList;
@@ -399,8 +387,6 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
 
     size_t nOfReadouts = 0;
     Q_FOREACH(DetBasePtr chambvecptr, m_detector->get_children()) {
-        mappingTreeElements1d.first.clear();
-        mappingTreeElements2d.first.clear();
         multiLayersList.clear();
         chamberElementsPairs.first.reset();
         chamberElementsPairs.second.clear();
@@ -414,9 +400,6 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
         chambersList.last()->insertChildren(0,classifyChips(locate_srs_chips(), chambersList.last(), chambvecptr,window));
 
         chambersList.last()->setExpanded(0);
-        //connect(chambersList.last(),SIGNAL(emitDataChanged()),this,SLOT())
-        mappingListElements1d.first = chambersList.last();
-        mappingListElements2d.first = chambersList.last();
 
         //std::cout<<"teake care of the spare ones classification"<<std::endl;
         boost::shared_ptr<CDetChamber> chamber = boost::dynamic_pointer_cast<CDetChamber>(chambvecptr);
@@ -434,8 +417,6 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
                 //chambersList.last()->setData(1, 0, readoutVar);
                 Q_FOREACH(DetBasePtr baseptr, layervecptr->get_children()) {
 
-                    mappingTreeElements1d.second.clear();
-                    mappingTreeElements2d.second.clear();
                     readoutsList.append(new QTreeWidgetItem((QTreeWidget*)0, QStringList(QString(baseptr->name().c_str()))));
                     //if(CDetReadout currentReadout = readoutvecptr-> lock())
                     boost::shared_ptr<CDetReadout> readout = boost::dynamic_pointer_cast<CDetReadout>(baseptr);
@@ -450,24 +431,6 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
                     //2d histos for evenet display
                     window->eventDisplayFrame->frameEventHistos.push_back(readout->getChargeEventHisto());
                     window->eventDisplayFrame->frameEventHistos.push_back(readout->getTimeEventHisto());
-
-                    for(size_t i=0; i<readout->readout1dHistos.size(); ++i)
-                    {
-                        mappingTreeElements1d.first.push_back(readout->readout1dHistos.at(i)->GetName());
-                        mappingTreeElements1d.second.push_back(readout->readout1dHistos.at(i));
-                    }
-
-                    for(size_t j=0; j<readout->readout2dHistos.size(); ++j)
-                    {
-                        mappingTreeElements2d.first.push_back(readout->readout2dHistos.at(j)->GetName());
-                        mappingTreeElements2d.second.push_back(readout->readout2dHistos.at(j));
-                    }
-
-                    mappingListElements1d.second = mappingTreeElements1d;
-                    mappingListElements2d.second = mappingTreeElements2d;
-
-//                    mappingReadout1dElements.push_back(mappingListElements1d);
-//                    mappingReadout2dElements.push_back(mappingListElements2d);
 
                     nOfReadouts++;
                 }
@@ -494,19 +457,10 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
 //put chip elements under chamber elements (classification)
 QList<QTreeWidgetItem*> CDaqServerConfig::classifyChips(std::vector<boost::shared_ptr<CSrsChip> > chipvec, QTreeWidgetItem* parentChamberElement, DetBasePtr chambvecptr, MainWindow *window)
 {
-    //variables to fill the mapping list
-    std::pair < QTreeWidgetItem*, std::pair <std::vector<std::string>, std::vector <TH1D *> > > mappingListElements1d;
-    std::pair <std::vector<std::string>, std::vector <TH1D *> > mappingTreeElements1d;
-    std::pair < QTreeWidgetItem*, std::pair <std::vector<std::string>, std::vector <TH2D *> > > mappingListElements2d;
-    std::pair <std::vector<std::string>, std::vector <TH2D *> > mappingTreeElements2d;
     QList<QTreeWidgetItem*> chamberChips;
 
     Q_FOREACH(boost::shared_ptr<CSrsChip> chipvecptr, chipvec)
     {
-        mappingTreeElements1d.first.clear();
-        mappingTreeElements2d.first.clear();
-        mappingTreeElements1d.second.clear();
-        mappingTreeElements2d.second.clear();
 
         if(chipvecptr->connector() !=0)  {
             if(DetBasePtr parentChamber = chipvecptr->connector()->parent().lock()) {
@@ -515,31 +469,8 @@ QList<QTreeWidgetItem*> CDaqServerConfig::classifyChips(std::vector<boost::share
                     chamberChips.append(new QTreeWidgetItem(parentChamberElement, QStringList(QString(chipvecptr->name().c_str()))));
                     QVariant chipVar = qVariantFromValue(reinterpret_cast<void*> (chipvecptr.get()));
                     chamberChips.last()->setData(0,Qt::UserRole,chipVar);
-/*
-                    if(QString(chipvecptr->name().c_str()).contains("VMM2"))   {
-                      bnlChipsList.push_back(chipvecptr->name());
-                    }
-*/
-                    for(size_t i=0; i<chipvecptr->chip1dHistos.size(); ++i)
-                    {
-                        mappingTreeElements1d.first.push_back(chipvecptr->chip1dHistos.at(i)->GetName());
-                        mappingTreeElements1d.second.push_back(chipvecptr->chip1dHistos.at(i));
-                    }
 
-                    for(size_t j=0; j<chipvecptr->chip2dHistos.size(); ++j)
-                    {
-                        mappingTreeElements2d.first.push_back(chipvecptr->chip2dHistos.at(j)->GetName());
-                        mappingTreeElements2d.second.push_back(chipvecptr->chip2dHistos.at(j));
-                    }
 
-                    mappingListElements1d.first = chamberChips.last();
-                    mappingListElements2d.first = chamberChips.last();
-
-                    mappingListElements1d.second = mappingTreeElements1d;
-                    mappingListElements2d.second = mappingTreeElements2d;
-
-//                    mappingChip1dElements.push_back(mappingListElements1d);
-//                    mappingChip2dElements.push_back(mappingListElements2d);
                 }
             }
         }

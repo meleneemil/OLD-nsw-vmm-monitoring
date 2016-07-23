@@ -201,10 +201,7 @@ void CDetConnector::read_strip_map_file(const std::string& filename)
    m_pin_strip = local_pin_strip;
    
    create_channel_strip_map();
-   
-   std::stringstream ss;
-   ss << "CDetConnector::read_strip_map_file(): read '"<< m_pin_strip.size() << "' pin mappings to strip";
-   std::cout << ss.str() << std::endl;
+
 }
 
 /*
@@ -335,7 +332,6 @@ void CDetConnector::read_chip_connection_map_file(const std::string& filename, c
    create_channel_strip_map();
 
    std::stringstream ss;
-   ss << "CDetConnector::read_chip_connection_map_file(): read for '" << name() << "' " << m_pin_channel.size() << " pin mappings to electronics channels";
    std::cout << ss.str() << std::endl;
 }
 
@@ -446,11 +442,3 @@ void CDetConnector::set_chip_connection_from(DetConnPtr other, DetConnPtr toconn
 
    create_channel_strip_map();
 }
-
-
-void CDetConnector::set_pin_strip_mapping_from(DetConnPtr other)
-{
-   m_pin_strip = other->m_pin_strip;
-   create_channel_strip_map();
-}
-

@@ -1155,9 +1155,6 @@ moc_mainwindow.cpp: ../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMainWindow
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qbasictimer.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QButtonGroup \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qbuttongroup.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLabel \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlabel.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QObject \
@@ -1167,6 +1164,7 @@ moc_mainwindow.cpp: ../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QMainWindow
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qgroupbox.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QCheckBox \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QFileDialog \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qfiledialog.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qdir.h \
@@ -1310,8 +1308,6 @@ moc_DaqServerConfig.cpp: mmDaqStartupWindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QPushButton \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLayout \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayout.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -4933,9 +4929,6 @@ moc_ShmemReader.cpp: AsioService.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qbasictimer.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QButtonGroup \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qbuttongroup.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLabel \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlabel.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QObject \
@@ -4945,6 +4938,7 @@ moc_ShmemReader.cpp: AsioService.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qgroupbox.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QCheckBox \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QFileDialog \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qfiledialog.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qdir.h \
@@ -5838,8 +5832,6 @@ moc_mmDaqSettingsWindow.cpp: ../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QT
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QPushButton \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLayout \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayout.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -6003,8 +5995,6 @@ moc_mmDaqStartupWindow.cpp: ../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QTa
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QPushButton \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLayout \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayout.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -7509,9 +7499,6 @@ moc_DisplayDrawer.cpp: AsioService.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qbasictimer.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QButtonGroup \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qbuttongroup.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLabel \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlabel.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QObject \
@@ -7521,6 +7508,7 @@ moc_DisplayDrawer.cpp: AsioService.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qgroupbox.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QCheckBox \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QFileDialog \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qfiledialog.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qdir.h \
@@ -8598,9 +8586,6 @@ main.o: main.cpp ../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QTimer \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QButtonGroup \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qbuttongroup.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLabel \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlabel.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QObject \
@@ -8610,6 +8595,7 @@ main.o: main.cpp ../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qgroupbox.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QCheckBox \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QFileDialog \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qfiledialog.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qdir.h \
@@ -10881,8 +10867,6 @@ frame.o: frame.cpp frame.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtreewidgetitemiterator.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QButtonGroup \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qbuttongroup.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLabel \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlabel.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QObject \
@@ -11068,8 +11052,6 @@ PropertyTreeParser.o: PropertyTreeParser.cpp PropertyTreeParser.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QPushButton \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLayout \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayout.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -13353,8 +13335,6 @@ PropertyTreeParserDetector.o: PropertyTreeParserDetector.cpp PropertyTreeParserD
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QPushButton \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLayout \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayout.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -15642,8 +15622,6 @@ PropertyTreeParserSrs.o: PropertyTreeParserSrs.cpp PropertyTreeParserSrs.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QPushButton \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLayout \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayout.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -17930,8 +17908,6 @@ PropertyTreeParserChamber.o: PropertyTreeParserChamber.cpp PropertyTreeParserCha
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QPushButton \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLayout \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayout.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -20218,8 +20194,6 @@ DaqServerConfig.o: DaqServerConfig.cpp DaqServerConfig.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QPushButton \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLayout \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayout.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -23661,8 +23635,6 @@ DetChamber.o: DetChamber.cpp DetChamber.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QPushButton \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLayout \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayout.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -25412,8 +25384,6 @@ DetConnector.o: DetConnector.cpp DetConnector.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QPushButton \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLayout \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayout.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -29696,9 +29666,6 @@ SrsChip.o: SrsChip.cpp SrsChip.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qbasictimer.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QButtonGroup \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qbuttongroup.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLabel \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlabel.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QObject \
@@ -29708,6 +29675,7 @@ SrsChip.o: SrsChip.cpp SrsChip.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qgroupbox.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QCheckBox \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QFileDialog \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qfiledialog.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qdir.h \
@@ -37661,8 +37629,6 @@ SrsFec.o: SrsFec.cpp SrsFec.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QPushButton \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLayout \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayout.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -46263,9 +46229,6 @@ ShmemReader.o: ShmemReader.cpp ShmemReader.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qbasictimer.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QButtonGroup \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qbuttongroup.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLabel \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlabel.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QObject \
@@ -46275,6 +46238,7 @@ ShmemReader.o: ShmemReader.cpp ShmemReader.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qgroupbox.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QCheckBox \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QFileDialog \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qfiledialog.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qdir.h \
@@ -47168,8 +47132,6 @@ mmDaqSettingsWindow.o: mmDaqSettingsWindow.cpp mmDaqSettingsWindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QPushButton \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLayout \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayout.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -47333,8 +47295,6 @@ mmDaqStartupWindow.o: mmDaqStartupWindow.cpp mmDaqStartupWindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QPushButton \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLayout \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayout.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -48839,9 +48799,6 @@ DisplayDrawer.o: DisplayDrawer.cpp DisplayDrawer.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qbasictimer.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QButtonGroup \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qbuttongroup.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QRadioButton \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qradiobutton.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QLabel \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qlabel.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QObject \
@@ -48851,6 +48808,7 @@ DisplayDrawer.o: DisplayDrawer.cpp DisplayDrawer.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qgroupbox.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QCheckBox \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QFileDialog \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qfiledialog.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qdir.h \

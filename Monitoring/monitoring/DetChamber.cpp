@@ -111,10 +111,7 @@ void CDetChamber::configure_connector_connection(const boost::shared_ptr<CDetCon
       //chip?
    }
   
-   
-   //move info: chip id, chip mapping 
-   
-   
+
 }
 
 
