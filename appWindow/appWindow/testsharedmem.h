@@ -1,3 +1,6 @@
+
+#include <qlocalserver.h>
+
 #ifndef TESTSHAREDMEM_H
 #define TESTSHAREDMEM_H
 
@@ -42,25 +45,30 @@ typedef boost::interprocess::allocator<ShmemCharString, ShmemSegmentManagerType>
 typedef boost::interprocess::vector<ShmemCharString, ShmemCharVectorAllocator> ShmemCharStringVector;
 
 
-class testSharedMemTool {
-    public :
-        testSharedMemTool();
-        void initializeSharedMemory();
-        void sendData();
-        void sendEventNumber();
-        void sendEventInfo();
-
-        int previous_size;
+class testSharedMemTool{
 
 
-    private :
-        uint64_t* m_shm_eventNumber;
-        uint64_t n_event_counter;
-        
-        ShmemCharStringVector* m_shm_eventinfo_vector;
 
-        boost::interprocess::managed_shared_memory* m_shm_manager;
-        boost::interprocess::named_condition*       m_shm_condition;
+public:
+    testSharedMemTool();
+    void initializeSharedMemory();
+    void sendData();
+    void sendEventNumber();
+    void sendEventInfo();
+
+    int previous_size;
+
+
+private :
+    uint64_t* m_shm_eventNumber;
+    uint64_t n_event_counter;
+
+    ShmemCharStringVector* m_shm_eventinfo_vector;
+
+    boost::interprocess::managed_shared_memory* m_shm_manager;
+    boost::interprocess::named_condition*       m_shm_condition;
+
+    QLocalServer *server;
 
 }; //class
 #endif

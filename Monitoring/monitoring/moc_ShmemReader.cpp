@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_ShmemReader_t {
-    QByteArrayData data[8];
-    char stringdata[121];
+    QByteArrayData data[9];
+    char stringdata[133];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -36,13 +36,14 @@ QT_MOC_LITERAL(3, 28, 24), // "std::vector<std::string>"
 QT_MOC_LITERAL(4, 53, 14), // "drawHistograms"
 QT_MOC_LITERAL(5, 68, 16), // "handleSharedData"
 QT_MOC_LITERAL(6, 85, 17), // "read_event_number"
-QT_MOC_LITERAL(7, 103, 17) // "read_event_strips"
+QT_MOC_LITERAL(7, 103, 17), // "read_event_strips"
+QT_MOC_LITERAL(8, 121, 11) // "readFortune"
 
     },
     "ShmemReader\0fillHistograms\0\0"
     "std::vector<std::string>\0drawHistograms\0"
     "handleSharedData\0read_event_number\0"
-    "read_event_strips"
+    "read_event_strips\0readFortune"
 };
 #undef QT_MOC_LITERAL
 
@@ -52,7 +53,7 @@ static const uint qt_meta_data_ShmemReader[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -60,19 +61,21 @@ static const uint qt_meta_data_ShmemReader[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    2,   39,    2, 0x06 /* Public */,
-       4,    0,   44,    2, 0x06 /* Public */,
+       1,    2,   44,    2, 0x06 /* Public */,
+       4,    0,   49,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       5,    0,   45,    2, 0x0a /* Public */,
-       6,    0,   46,    2, 0x0a /* Public */,
-       7,    0,   47,    2, 0x0a /* Public */,
+       5,    0,   50,    2, 0x0a /* Public */,
+       6,    0,   51,    2, 0x0a /* Public */,
+       7,    0,   52,    2, 0x0a /* Public */,
+       8,    0,   53,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3, QMetaType::Int,    2,    2,
     QMetaType::Void,
 
  // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -90,6 +93,7 @@ void ShmemReader::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 2: _t->handleSharedData(); break;
         case 3: _t->read_event_number(); break;
         case 4: _t->read_event_strips(); break;
+        case 5: _t->readFortune(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -135,13 +139,13 @@ int ShmemReader::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 6)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 5;
+        _id -= 6;
     }
     return _id;
 }

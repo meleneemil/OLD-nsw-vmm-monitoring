@@ -28,6 +28,9 @@
 #include <boost/bind.hpp>
 #include <boost/algorithm/string.hpp>
 
+#include <QtWidgets>
+#include <QtNetwork>
+
 #include <iostream>
 #include <stdexcept>
 
@@ -53,6 +56,27 @@ ShmemReader::ShmemReader(
     m_shm_condition(bipc::open_only, "mmDaqSharedCondition"),
     configuredChamberElements(chamberElements), stripDataEvent(0), realEvent(false)
 {
+
+
+
+    //**********************
+
+    socket = new QLocalSocket();
+
+    connect(socket, SIGNAL(readyRead()), this, SLOT(readFortune()));
+//    connect(socket, SIGNAL(error(QLocalSocket::LocalSocketError)),
+//            this, SLOT(displayError(QLocalSocket::LocalSocketError)));
+
+    blockSize = 0;
+    socket->abort();
+    socket->connectToServer("vmm-mon-server");
+    qDebug() << socket->isOpen();
+
+
+    //**********************
+
+
+
     eventDisplayed = 0;
     if(m_shm_manager.check_sanity())    {
 //        connect_shared_memory(); //doesnt make a difference
@@ -73,6 +97,35 @@ ShmemReader::ShmemReader(
     }
     else
         std::cout<<"Shared Memory not found.../n mmDaq-server probably not running"<<std::endl;
+}
+
+void ShmemReader::readFortune()
+{
+
+    qDebug() << "connectToServer";
+    QDataStream in(socket);
+    in.setVersion(QDataStream::Qt_4_0);
+
+    if (blockSize == 0) {
+        if (socket->bytesAvailable() < (int)sizeof(quint16))
+            return;
+        in >> blockSize;
+    }
+
+    if (in.atEnd())
+        return;
+
+    QString nextFortune;
+    in >> nextFortune;
+
+    if (nextFortune == currentFortune) {
+        QTimer::singleShot(0, this, SLOT(requestNewFortune()));
+        return;
+    }
+
+    currentFortune = nextFortune;
+
+    qDebug() << currentFortune;
 }
 
 ShmemReader::~ShmemReader()

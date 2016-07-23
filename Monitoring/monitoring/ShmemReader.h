@@ -60,6 +60,9 @@
 #include <boost/interprocess/containers/vector.hpp>
 #include <boost/interprocess/allocators/allocator.hpp>
 
+#include <qlocalsocket.h>
+#include <QLocalSocket>
+
 #endif
 //+++++++++++++++++++++++++++namespaces for shared memory data++++++++++++++++++++++++++++++++++++++++++++++++++
 namespace bipc = boost::interprocess;
@@ -185,6 +188,17 @@ signals:
 
     void fillHistograms(std::vector <std::string>, int);
     void drawHistograms();
+
+
+private:
+    QLocalSocket *socket;
+    QString currentFortune;
+    quint16 blockSize;
+
+private slots:
+    void readFortune();
+
+
 };
 
 #endif // SHMEMREADER_H

@@ -5,6 +5,15 @@
 #include <string>
 #include "boost/date_time/posix_time/posix_time.hpp"
 
+#include <QtWidgets>
+#include <QtNetwork>
+#include <stdlib.h>
+#include <QLocalServer>
+#include <QLocalSocket>
+
+#include <qlocalserver.h>
+#include <qlocalsocket.h>
+
 int waiting_time = 10000;
 
 testSharedMemTool::testSharedMemTool() :
@@ -21,78 +30,40 @@ testSharedMemTool::testSharedMemTool() :
 //// initialize the shared memory objects
 void testSharedMemTool::initializeSharedMemory()
 {
-    boost::interprocess::shared_memory_object::remove("mmDaqSharedMemory");
-    boost::interprocess::named_condition::remove("mmDaqSharedCondition");
-    boost::interprocess::named_mutex::remove("mmDaqSharedMutex");
-
-    if(!m_shm_manager)
-        m_shm_manager = new boost::interprocess::managed_shared_memory(boost::interprocess::open_or_create,
-                                                                       "mmDaqSharedMemory",
-                                                                       (104857600 * 10) );
-
-    if(!m_shm_condition)
-        m_shm_condition = new boost::interprocess::named_condition(boost::interprocess::open_or_create,
-                                                                   "mmDaqSharedCondition");
-    m_shm_eventNumber = m_shm_manager->find_or_construct<uint64_t>("mmDaqSharedEventNumber")(0);
-
-    m_shm_eventinfo_vector = m_shm_manager->construct<ShmemCharStringVector>
-            ("mmDaqSharedEventData")
-            (m_shm_manager->get_allocator<ShmemCharVectorAllocator>());
-
-    boost::interprocess::named_mutex shm_mutex(boost::interprocess::open_or_create, "mmDaqSharedMutex");
-    boost::interprocess::scoped_lock< boost::interprocess::named_mutex > lock(shm_mutex,
-                                                                              boost::interprocess::defer_lock_type());
-
+    QLocalServer::removeServer("vmm-mon-server");
+    server = new QLocalServer();
+    if (!server->listen("vmm-mon-server"))
+        qDebug() << "SERVER COM PROBLEM\n";
+    else
+        qDebug() << "NO PROBLEM\n";
 
 }
 
 void testSharedMemTool::sendData()
 {
+qDebug()<< "LETS SEND";
+    QByteArray block;
+    QDataStream out(&block, QIODevice::WriteOnly);
+    qDebug()<< "LETS 1";
+    out.setVersion(QDataStream::Qt_4_0);
+    out << (quint16)0;
+    out << "MESSAGE TO SEND";
+    out.device()->seek(0);
+    out << (quint16)(block.size() - sizeof(quint16));
 
-    boost::interprocess::named_mutex shm_mutex(boost::interprocess::open_or_create, "mmDaqSharedMutex");
-    boost::interprocess::scoped_lock< boost::interprocess::named_mutex > lock(shm_mutex,
-                                                                              boost::interprocess::defer_lock_type());
-    std::cout << "testSharedMemTool::sendData" << std::endl;
+    qDebug()<< "LETS 2";
+    QLocalSocket *clientConnection = server->nextPendingConnection();
+    //TODO: add this connect?
+    //        connect(clientConnection, SIGNAL(disconnected()),
+    //                clientConnection, SLOT(deleteLater()));
 
-    //    m_shm_condition->notify_all();
-
-    int n = 0;
-    while(n<100000) {
-
-//        if(n%1000==0)
-//        std::cout << "Done: "<< 1000/100000*100 <<"%\n";
-        usleep(5000-rand()%1900);
-
-        try {
-//            std::cout << "in try" << std::endl;
-
-            boost::posix_time::ptime timeout(boost::posix_time::second_clock::universal_time() + boost::posix_time::seconds(5));
-            //  if(m_shm_condition->timed_wait(lock, timeout)) {
-            if(!lock.timed_lock(timeout)) {
-//                std::cout << " *** DATAWRITER : LOCK TIMED OUT *** " << std::endl;
-
-                //aikoulou: nah, doesnt work
-//                std::cout << " *** TRYING TO FORCE UNLOCK *** " << std::endl;
-//                lock.unlock();
-            }
-            else
-            {
-                sendEventNumber();
-                sendEventInfo();
-                m_shm_condition->notify_all();
-                //                m_shm_condition->wait(lock);
-            }
-            //    m_shm_condition->wait(lock);
-            if(lock) {
-                lock.unlock();
-            }
-        } // try
-        catch(boost::interprocess::interprocess_exception &e) {
-            std::cout << " *** DATAWRITER : ERROR :: " << e.what() << std::endl;
-        }
-        n++;
-    } // while
-    return;
+    qDebug()<< "LETS 3";
+    clientConnection->write(block);
+    qDebug()<< "LETS 5";
+    clientConnection->flush();
+    qDebug()<< "LETS 6";
+    clientConnection->disconnectFromServer();
+    qDebug()<< "LETS 7";
 }
 
 void testSharedMemTool::sendEventNumber()
@@ -121,7 +92,7 @@ void testSharedMemTool::sendEventInfo()
     }
     ShmemCharString local_string(m_shm_manager->get_allocator<ShmemCharAllocator>());
     if(previous_size >= m_shm_eventinfo_vector->size())
-    previous_size = m_shm_eventinfo_vector->size();
+        previous_size = m_shm_eventinfo_vector->size();
 
     if(m_shm_eventinfo_vector->size() > 200)
     {
