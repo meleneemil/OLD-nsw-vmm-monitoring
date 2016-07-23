@@ -2388,7 +2388,38 @@ main.o: main.cpp mainwindow.h \
 		../../../../ROOT534/include/TObjString.h \
 		../../../../ROOT534/include/ThreadLocalStorage.h \
 		../../../../ROOT534/include/RConfigure.h \
-		../../../../ROOT534/include/TApplicationImp.h
+		../../../../ROOT534/include/TApplicationImp.h \
+		../../../../ROOT534/include/TH1D.h \
+		../../../../ROOT534/include/TH1.h \
+		../../../../ROOT534/include/TAxis.h \
+		../../../../ROOT534/include/TAttAxis.h \
+		../../../../ROOT534/include/TArrayD.h \
+		../../../../ROOT534/include/TArray.h \
+		../../../../ROOT534/include/TAttLine.h \
+		../../../../ROOT534/include/TAttFill.h \
+		../../../../ROOT534/include/TAttMarker.h \
+		../../../../ROOT534/include/TArrayC.h \
+		../../../../ROOT534/include/TArrayS.h \
+		../../../../ROOT534/include/TArrayI.h \
+		../../../../ROOT534/include/TArrayF.h \
+		../../../../ROOT534/include/Foption.h \
+		../../../../ROOT534/include/TVectorFfwd.h \
+		../../../../ROOT534/include/TVectorDfwd.h \
+		../../../../ROOT534/include/TFitResultPtr.h \
+		../../../../ROOT534/include/TCanvas.h \
+		../../../../ROOT534/include/TPad.h \
+		../../../../ROOT534/include/TVirtualPad.h \
+		../../../../ROOT534/include/TAttPad.h \
+		../../../../ROOT534/include/TVirtualX.h \
+		../../../../ROOT534/include/TAttText.h \
+		../../../../ROOT534/include/GuiTypes.h \
+		../../../../ROOT534/include/Buttons.h \
+		../../../../ROOT534/include/TAttBBox2D.h \
+		../../../../ROOT534/include/TPoint.h \
+		../../../../ROOT534/include/TAttCanvas.h \
+		../../../../ROOT534/include/TCanvasImp.h \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QProcess \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qprocess.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 mainwindow.o: mainwindow.cpp mainwindow.h \
@@ -3334,7 +3365,9 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qstatusbar.h \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QToolBar \
 		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/qtoolbar.h \
-		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QWidget
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtWidgets/QWidget \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/QProcess \
+		../../../../Qt5.4.2/5.4/gcc_64/include/QtCore/qprocess.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
 
 testsharedmem.o: testsharedmem.cpp testsharedmem.h \

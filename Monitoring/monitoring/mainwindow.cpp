@@ -63,25 +63,25 @@ MainWindow::~MainWindow()
 
 
 
-void MainWindow::transmitStartDaqClickedSignal()
-{
-    emit startDaqClicked();
-}
+//void MainWindow::transmitStartDaqClickedSignal()
+//{
+//    emit startDaqClicked();
+//}
 
-void MainWindow::transmitStopDaqClickedSignal()
-{
-    emit stopDaqClicked();
-}
+//void MainWindow::transmitStopDaqClickedSignal()
+//{
+//    emit stopDaqClicked();
+//}
 
-void MainWindow::transmitPauseMonitoringClickedSignal()
-{
-    emit pauseDaqMonitoringClicked();
-}
+//void MainWindow::transmitPauseMonitoringClickedSignal()
+//{
+//    emit pauseDaqMonitoringClicked();
+//}
 
-void MainWindow::transmitConfigDaqClickedSignal()
-{
-    emit configDaqClicked();
-}
+//void MainWindow::transmitConfigDaqClickedSignal()
+//{
+//    emit configDaqClicked();
+//}
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

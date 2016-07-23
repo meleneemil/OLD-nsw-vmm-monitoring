@@ -159,10 +159,10 @@ public:
 
 
 public slots:
-    void transmitStartDaqClickedSignal();
-    void transmitStopDaqClickedSignal();
-    void transmitPauseMonitoringClickedSignal();
-    void transmitConfigDaqClickedSignal();
+//    void transmitStartDaqClickedSignal();
+//    void transmitStopDaqClickedSignal();
+//    void transmitPauseMonitoringClickedSignal();
+//    void transmitConfigDaqClickedSignal();
     void updateTabCanvas(int index);
 
     QString *getSelectedItem_slot(QAbstractButton* button);
@@ -179,11 +179,11 @@ public slots:
 
 
 
-signals:
-    void startDaqClicked();
-    void stopDaqClicked();
-    void pauseDaqMonitoringClicked();
-    void configDaqClicked();
+//signals:
+//    void startDaqClicked();
+//    void stopDaqClicked();
+//    void pauseDaqMonitoringClicked();
+//    void configDaqClicked();
 
 
 };

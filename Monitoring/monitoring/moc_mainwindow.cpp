@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[24];
-    char stringdata[465];
+    QByteArrayData data[16];
+    char stringdata[264];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -30,39 +30,26 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 15), // "startDaqClicked"
+QT_MOC_LITERAL(1, 11, 15), // "updateTabCanvas"
 QT_MOC_LITERAL(2, 27, 0), // ""
-QT_MOC_LITERAL(3, 28, 14), // "stopDaqClicked"
-QT_MOC_LITERAL(4, 43, 25), // "pauseDaqMonitoringClicked"
-QT_MOC_LITERAL(5, 69, 16), // "configDaqClicked"
-QT_MOC_LITERAL(6, 86, 29), // "transmitStartDaqClickedSignal"
-QT_MOC_LITERAL(7, 116, 28), // "transmitStopDaqClickedSignal"
-QT_MOC_LITERAL(8, 145, 36), // "transmitPauseMonitoringClicke..."
-QT_MOC_LITERAL(9, 182, 30), // "transmitConfigDaqClickedSignal"
-QT_MOC_LITERAL(10, 213, 15), // "updateTabCanvas"
-QT_MOC_LITERAL(11, 229, 5), // "index"
-QT_MOC_LITERAL(12, 235, 20), // "getSelectedItem_slot"
-QT_MOC_LITERAL(13, 256, 8), // "QString*"
-QT_MOC_LITERAL(14, 265, 16), // "QAbstractButton*"
-QT_MOC_LITERAL(15, 282, 6), // "button"
-QT_MOC_LITERAL(16, 289, 27), // "openConfigurationPanel_slot"
-QT_MOC_LITERAL(17, 317, 14), // "fillStatistics"
-QT_MOC_LITERAL(18, 332, 20), // "fillStatisticsHistos"
-QT_MOC_LITERAL(19, 353, 28), // "fillStatisticsAdvancedHistos"
-QT_MOC_LITERAL(20, 382, 26), // "fillChargeStatisticsHistos"
-QT_MOC_LITERAL(21, 409, 24), // "fillTimeStatisticsHistos"
-QT_MOC_LITERAL(22, 434, 10), // "reset_slot"
-QT_MOC_LITERAL(23, 445, 19) // "handleBufferedEvent"
+QT_MOC_LITERAL(3, 28, 5), // "index"
+QT_MOC_LITERAL(4, 34, 20), // "getSelectedItem_slot"
+QT_MOC_LITERAL(5, 55, 8), // "QString*"
+QT_MOC_LITERAL(6, 64, 16), // "QAbstractButton*"
+QT_MOC_LITERAL(7, 81, 6), // "button"
+QT_MOC_LITERAL(8, 88, 27), // "openConfigurationPanel_slot"
+QT_MOC_LITERAL(9, 116, 14), // "fillStatistics"
+QT_MOC_LITERAL(10, 131, 20), // "fillStatisticsHistos"
+QT_MOC_LITERAL(11, 152, 28), // "fillStatisticsAdvancedHistos"
+QT_MOC_LITERAL(12, 181, 26), // "fillChargeStatisticsHistos"
+QT_MOC_LITERAL(13, 208, 24), // "fillTimeStatisticsHistos"
+QT_MOC_LITERAL(14, 233, 10), // "reset_slot"
+QT_MOC_LITERAL(15, 244, 19) // "handleBufferedEvent"
 
     },
-    "MainWindow\0startDaqClicked\0\0stopDaqClicked\0"
-    "pauseDaqMonitoringClicked\0configDaqClicked\0"
-    "transmitStartDaqClickedSignal\0"
-    "transmitStopDaqClickedSignal\0"
-    "transmitPauseMonitoringClickedSignal\0"
-    "transmitConfigDaqClickedSignal\0"
-    "updateTabCanvas\0index\0getSelectedItem_slot\0"
-    "QString*\0QAbstractButton*\0button\0"
+    "MainWindow\0updateTabCanvas\0\0index\0"
+    "getSelectedItem_slot\0QString*\0"
+    "QAbstractButton*\0button\0"
     "openConfigurationPanel_slot\0fillStatistics\0"
     "fillStatisticsHistos\0fillStatisticsAdvancedHistos\0"
     "fillChargeStatisticsHistos\0"
@@ -77,48 +64,28 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      18,   14, // methods
+      10,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       4,       // signalCount
-
- // signals: name, argc, parameters, tag, flags
-       1,    0,  104,    2, 0x06 /* Public */,
-       3,    0,  105,    2, 0x06 /* Public */,
-       4,    0,  106,    2, 0x06 /* Public */,
-       5,    0,  107,    2, 0x06 /* Public */,
+       0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       6,    0,  108,    2, 0x0a /* Public */,
-       7,    0,  109,    2, 0x0a /* Public */,
-       8,    0,  110,    2, 0x0a /* Public */,
-       9,    0,  111,    2, 0x0a /* Public */,
-      10,    1,  112,    2, 0x0a /* Public */,
-      12,    1,  115,    2, 0x0a /* Public */,
-      16,    0,  118,    2, 0x0a /* Public */,
-      17,    0,  119,    2, 0x0a /* Public */,
-      18,    0,  120,    2, 0x0a /* Public */,
-      19,    0,  121,    2, 0x0a /* Public */,
-      20,    0,  122,    2, 0x0a /* Public */,
-      21,    0,  123,    2, 0x0a /* Public */,
-      22,    0,  124,    2, 0x0a /* Public */,
-      23,    0,  125,    2, 0x0a /* Public */,
-
- // signals: parameters
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
+       1,    1,   64,    2, 0x0a /* Public */,
+       4,    1,   67,    2, 0x0a /* Public */,
+       8,    0,   70,    2, 0x0a /* Public */,
+       9,    0,   71,    2, 0x0a /* Public */,
+      10,    0,   72,    2, 0x0a /* Public */,
+      11,    0,   73,    2, 0x0a /* Public */,
+      12,    0,   74,    2, 0x0a /* Public */,
+      13,    0,   75,    2, 0x0a /* Public */,
+      14,    0,   76,    2, 0x0a /* Public */,
+      15,    0,   77,    2, 0x0a /* Public */,
 
  // slots: parameters
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   11,
-    0x80000000 | 13, 0x80000000 | 14,   15,
+    QMetaType::Void, QMetaType::Int,    3,
+    0x80000000 | 5, 0x80000000 | 6,    7,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -136,64 +103,29 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     if (_c == QMetaObject::InvokeMetaMethod) {
         MainWindow *_t = static_cast<MainWindow *>(_o);
         switch (_id) {
-        case 0: _t->startDaqClicked(); break;
-        case 1: _t->stopDaqClicked(); break;
-        case 2: _t->pauseDaqMonitoringClicked(); break;
-        case 3: _t->configDaqClicked(); break;
-        case 4: _t->transmitStartDaqClickedSignal(); break;
-        case 5: _t->transmitStopDaqClickedSignal(); break;
-        case 6: _t->transmitPauseMonitoringClickedSignal(); break;
-        case 7: _t->transmitConfigDaqClickedSignal(); break;
-        case 8: _t->updateTabCanvas((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 9: { QString* _r = _t->getSelectedItem_slot((*reinterpret_cast< QAbstractButton*(*)>(_a[1])));
+        case 0: _t->updateTabCanvas((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 1: { QString* _r = _t->getSelectedItem_slot((*reinterpret_cast< QAbstractButton*(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString**>(_a[0]) = _r; }  break;
-        case 10: _t->openConfigurationPanel_slot(); break;
-        case 11: _t->fillStatistics(); break;
-        case 12: _t->fillStatisticsHistos(); break;
-        case 13: _t->fillStatisticsAdvancedHistos(); break;
-        case 14: _t->fillChargeStatisticsHistos(); break;
-        case 15: _t->fillTimeStatisticsHistos(); break;
-        case 16: _t->reset_slot(); break;
-        case 17: _t->handleBufferedEvent(); break;
+        case 2: _t->openConfigurationPanel_slot(); break;
+        case 3: _t->fillStatistics(); break;
+        case 4: _t->fillStatisticsHistos(); break;
+        case 5: _t->fillStatisticsAdvancedHistos(); break;
+        case 6: _t->fillChargeStatisticsHistos(); break;
+        case 7: _t->fillTimeStatisticsHistos(); break;
+        case 8: _t->reset_slot(); break;
+        case 9: _t->handleBufferedEvent(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         switch (_id) {
         default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-        case 9:
+        case 1:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<int*>(_a[0]) = -1; break;
             case 0:
                 *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QAbstractButton* >(); break;
             }
             break;
-        }
-    } else if (_c == QMetaObject::IndexOfMethod) {
-        int *result = reinterpret_cast<int *>(_a[0]);
-        void **func = reinterpret_cast<void **>(_a[1]);
-        {
-            typedef void (MainWindow::*_t)();
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&MainWindow::startDaqClicked)) {
-                *result = 0;
-            }
-        }
-        {
-            typedef void (MainWindow::*_t)();
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&MainWindow::stopDaqClicked)) {
-                *result = 1;
-            }
-        }
-        {
-            typedef void (MainWindow::*_t)();
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&MainWindow::pauseDaqMonitoringClicked)) {
-                *result = 2;
-            }
-        }
-        {
-            typedef void (MainWindow::*_t)();
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&MainWindow::configDaqClicked)) {
-                *result = 3;
-            }
         }
     }
 }
@@ -223,38 +155,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 18)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        _id -= 10;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 18)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        _id -= 10;
     }
     return _id;
-}
-
-// SIGNAL 0
-void MainWindow::startDaqClicked()
-{
-    QMetaObject::activate(this, &staticMetaObject, 0, Q_NULLPTR);
-}
-
-// SIGNAL 1
-void MainWindow::stopDaqClicked()
-{
-    QMetaObject::activate(this, &staticMetaObject, 1, Q_NULLPTR);
-}
-
-// SIGNAL 2
-void MainWindow::pauseDaqMonitoringClicked()
-{
-    QMetaObject::activate(this, &staticMetaObject, 2, Q_NULLPTR);
-}
-
-// SIGNAL 3
-void MainWindow::configDaqClicked()
-{
-    QMetaObject::activate(this, &staticMetaObject, 3, Q_NULLPTR);
 }
 QT_END_MOC_NAMESPACE
