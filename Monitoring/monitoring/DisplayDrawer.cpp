@@ -93,11 +93,12 @@ void DisplayDrawer::drawSharedData()
             //aikoulou
             //add here maybe to update the canvases, i order to not lose them all the time.
             //        updateCanvases();
-            if(rand()%100==0)
-            {
-                monitoringMainWindow->statisticsFrame->getFrameCanvas()->update();
-                monitoringMainWindow->eventDisplayFrame->getFrameCanvas()->update();
-            }
+            //EDIT: doesn't really work....
+//            if(rand()%100==0)
+//            {
+//                monitoringMainWindow->statisticsFrame->getFrameCanvas()->update();
+//                monitoringMainWindow->eventDisplayFrame->getFrameCanvas()->update();
+//            }
 
         }
         else    {

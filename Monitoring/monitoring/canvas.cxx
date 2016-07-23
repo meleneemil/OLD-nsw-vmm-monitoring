@@ -59,7 +59,7 @@ void QRootCanvas::mouseMoveEvent(QMouseEvent *e)
 {
    if (fCanvas) {
 //dantrim
-       fCanvas->Update();
+//       fCanvas->Update();
 //      if (e->buttons() & Qt::LeftButton) {
 //         fCanvas->HandleInput(kButton1Motion, e->x(), e->y());
 //      } else if (e->buttons() & Qt::MidButton) {
@@ -100,7 +100,10 @@ void QRootCanvas::mousePressEvent( QMouseEvent *e )
 
 void QRootCanvas::mouseReleaseEvent( QMouseEvent *e )
 {
-//   if (fCanvas) {
+
+   if (fCanvas) {
+       fCanvas->Update();
+   }
 //      switch (e->button()) {
 //         case Qt::LeftButton :
 //            fCanvas->HandleInput(kButton1Up, e->x(), e->y());
@@ -110,9 +113,9 @@ void QRootCanvas::mouseReleaseEvent( QMouseEvent *e )
 //            break;
 //         case Qt::RightButton :
 //            // does not work properly on Linux...
-//#ifdef WIN32
-//            fCanvas->HandleInput(kButton3Up, e->x(), e->y());
-//#endif
+////#ifdef WIN32
+////            fCanvas->HandleInput(kButton3Up, e->x(), e->y());
+////#endif
 //            break;
 //         default:
 //            break;
