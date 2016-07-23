@@ -84,7 +84,6 @@ public:
     int mem_eventNumber;
     QString mem_eventNumber_str;
 
-    TH2D *fillChip2dHisto(std::string chipName, std::string histoType);
 
 public slots:
 
@@ -95,15 +94,15 @@ public slots:
 
     //slot to change active tab to be drawn
 
-    void changeActiveTab(int tabIndex);
+//    void changeActiveTab(int tabIndex);
     void readoutHistoFiller();
     int handleBufferedEvent(QString line_qstr);
     void fillReadoutHistos(std::string chamberName, std::string readoutName, int strip, float charge, float time, int pdo, int tdo);
-    void fillChipHistos(int fecNumber, int chipNumber, int channelNumber, float charge, float time);
 
     //drawers for each kind of the histogram
-    void fillHistograms();
     void drawHistograms();
+//    void updateCanvases();
+
     void drawStatisticsHistos();
     void drawEventHistos();
 

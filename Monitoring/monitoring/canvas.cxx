@@ -42,7 +42,7 @@ QRootCanvas::QRootCanvas(QWidget *parent) :
    //setMinimumSize(parent->width(),parent->height());//original (600,500)
 
    setUpdatesEnabled( kTRUE );
-//   setMouseTracking(kTRUE);
+   setMouseTracking(kTRUE);
 //   setMouseTracking(kFALSE);
 
    //setFocusPolicy( TabFocus );
@@ -58,7 +58,8 @@ QRootCanvas::QRootCanvas(QWidget *parent) :
 void QRootCanvas::mouseMoveEvent(QMouseEvent *e)
 {
    if (fCanvas) {
-//dantrim      fCanvas->Update();
+//dantrim
+       fCanvas->Update();
 //      if (e->buttons() & Qt::LeftButton) {
 //         fCanvas->HandleInput(kButton1Motion, e->x(), e->y());
 //      } else if (e->buttons() & Qt::MidButton) {
@@ -68,6 +69,8 @@ void QRootCanvas::mouseMoveEvent(QMouseEvent *e)
 //      } else {
 //         fCanvas->HandleInput(kMouseMotion, e->x(), e->y());
 //      }
+//       gSystem->ProcessEvents();
+
    }
 }
 

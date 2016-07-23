@@ -44,7 +44,7 @@ DisplayDrawer::DisplayDrawer(
         MainWindow *mainWindow
         ) :
     service(new online::display::CAsioService(1)), monitoringMainWindow(), drawCondition(), drawMutex(),
-    /*mem_rawData(0), */mem_stripData(0), mem_eventNumber(0), mem_eventNumber_str()
+    mem_stripData(0), mem_eventNumber(0), mem_eventNumber_str()
 {
     online::display::CAsioService::MainLoopFunction f = boost::bind(&DisplayDrawer::drawSharedData, this);
     //    if(false)//aikoulou debug
@@ -85,10 +85,20 @@ void DisplayDrawer::drawSharedData()
     while(!service->stopping()) {
         QMutexLocker locker(&drawMutex);
         if(fillCondition.wait(&drawMutex,1000))   {
-            fillHistograms();
+            readoutHistoFiller();
             mem_eventNumber_str.setNum(mem_eventNumber);
             monitoringMainWindow->eventCounterLabel_update->setText(mem_eventNumber_str);
             drawHistograms();
+
+            //aikoulou
+            //add here maybe to update the canvases, i order to not lose them all the time.
+            //        updateCanvases();
+            if(rand()%100==0)
+            {
+                monitoringMainWindow->statisticsFrame->getFrameCanvas()->update();
+                monitoringMainWindow->eventDisplayFrame->getFrameCanvas()->update();
+            }
+
         }
         else    {
             continue;
@@ -96,25 +106,20 @@ void DisplayDrawer::drawSharedData()
     }
 }
 
-void DisplayDrawer::changeActiveTab(int tabIndex)
-{
-    if(monitoringMainWindow->mainTabs->currentIndex()==0)   {
-        drawEventHistos();
-        //monitoringMainWindow->eventDisplayFrame->show();
-    }
-    else if(monitoringMainWindow->mainTabs->currentIndex()==1)  {
-        drawStatisticsHistos();
-    }
-}
+//void DisplayDrawer::changeActiveTab(int tabIndex)
+//{
+//    if(monitoringMainWindow->mainTabs->currentIndex()==0)   {
+//        drawEventHistos();
+//        //monitoringMainWindow->eventDisplayFrame->show();
+//    }
+//    else if(monitoringMainWindow->mainTabs->currentIndex()==1)  {
+//        drawStatisticsHistos();
+//    }
+//}
 
-void DisplayDrawer::fillHistograms()
-{
-    readoutHistoFiller();
-}
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //++++++++++++++++++++++++++++++++++++++++++++++Histogram Fillers+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 
 void DisplayDrawer::readoutHistoFiller()
 {
@@ -123,10 +128,9 @@ void DisplayDrawer::readoutHistoFiller()
     for(int iLine = 0; iLine<mem_stripData.size(); iLine++)
     {
         handleBufferedEvent(mem_stripData.at(iLine));
+
     }
 }
-
-
 
 //Data buffer reader (SLOT)
 int DisplayDrawer::handleBufferedEvent(QString line_qstr)
@@ -165,8 +169,6 @@ int DisplayDrawer::handleBufferedEvent(QString line_qstr)
 
     float charge=0;
     int time=0;
-    int fec=0;
-    int chip=0;
     int channel=0;
 
     column=0;
@@ -243,24 +245,20 @@ int DisplayDrawer::handleBufferedEvent(QString line_qstr)
             std::cout<< "column: " << column << std::endl;
         }
     }
-    if(/*atoi(eventNumstr.c_str())==processedEventNumber ||*/ chamberstr=="unmapped")
+    if(chamberstr=="unmapped")
     {return 0;}
     else {
         processedEventNumber == atoi(eventNumstr.c_str());
-        //std::cout<<"got "<<chamberstr<<std::endl;
+
     }
-    //currentChipId = new CSrsChipId(atoi(fecstr.c_str()),atoi(chipstr.c_str()));
+
     charge = atof(chargestr.c_str());
     time = atof(timestr.c_str());
-    fec = atoi(fecstr.c_str());
-    chip = atoi(chipstr.c_str());
     channel = atoi(channelstr.c_str());
 
     int bcid = atoi(bcid_str.c_str());
     int extra = atoi(extra_str.c_str());
 
-//    int tdo=atof(tdo_str.c_str());
-//    int pdo=atof(pdo_str.c_str());
 
     //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! use atof(strinf.c_str()) to convert string to double for filling values ion the histograms
     //std::cout<<"++++++++++++++++++++++++++++++++++++++++++Filling readout++++++++++++++++++++++++++++++++++++++++++++"<<std::endl;
@@ -270,14 +268,12 @@ int DisplayDrawer::handleBufferedEvent(QString line_qstr)
 
 }
 
-
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++Histogram Fillers+++++++++++++++++++++++++++++++++++++++++++++++++++++
 //Get 1d/2d readout histogram to fill - Selecting from the histograms lists of each frame using a std::string
 //histoType selection key
 
 void DisplayDrawer::fillReadoutHistos(std::string chamberName, std::string readoutName, int strip, float charge, float time, int bcid, int extra)
 {
-
     for(size_t i=0; i<monitoringMainWindow->chamberTree->childCount(); ++i)
     {
 
@@ -309,26 +305,18 @@ void DisplayDrawer::fillReadoutHistos(std::string chamberName, std::string reado
 
 }
 
-void DisplayDrawer::fillChipHistos(int fecNumber, int chipNumber, int channelNumber, float charge, float time)
-{
-}
-
-
-TH2D *DisplayDrawer::fillChip2dHisto(std::string chipName, std::string histoType)
-{
-    return 0;
-}
-
-
 //+++++++++++++++++++++++++++++++++++++++++++++++Histogram drawers++++++++++++++++++++++++++++++++++++++++++++++
 //draw histograms slot for displaying on active tab only
 void DisplayDrawer::drawHistograms()
 {
     if(monitoringMainWindow->mainTabs->currentIndex()==0)   {
         drawEventHistos();
-        //        resetEventHistos_slot();
-        //        monitoringMainWindow->eventDisplayFrame->frameCanvas->getCanvas()->Modified();
-        //        monitoringMainWindow->eventDisplayFrame->frameCanvas->getCanvas()->Update();
+
+        //doesnt make a difference
+        //                resetEventHistos_slot();
+        //                monitoringMainWindow->eventDisplayFrame->frameCanvas->getCanvas()->Modified();
+        //                monitoringMainWindow->eventDisplayFrame->frameCanvas->getCanvas()->Update();
+
     }
     else if(monitoringMainWindow->mainTabs->currentIndex()==1)   {
         drawStatisticsHistos();
@@ -365,7 +353,28 @@ void DisplayDrawer::drawStatisticsHistos()
 
     }
 }
+/*
+void DisplayDrawer::updateCanvases()
+{
+//    int canvasIndex =1;
+    for(size_t i=0; i<monitoringMainWindow->chamberTree->childCount(); ++i)
+    {
+        if(monitoringMainWindow->chamberTree->child(i)->checkState(0)==2)   {
+            QVariant chamberVar = monitoringMainWindow->chamberTree->child(i)->data(0,Qt::UserRole);
+            CDetBase *chambptr = reinterpret_cast<CDetBase *>(chamberVar.value<void*>());
+            Q_FOREACH(DetBasePtr mlayervecptr,chambptr->get_children()) {
+                Q_FOREACH(DetBasePtr layervecptr, mlayervecptr->get_children()) {
+                    Q_FOREACH(DetBasePtr baseptr, layervecptr->get_children()) {
+//                        boost::shared_ptr<CDetReadout> readout = boost::dynamic_pointer_cast<CDetReadout>(baseptr);
+                        monitoringMainWindow->statisticsFrame->getFrameCanvas()->update();
 
+                }
+            }
+        }
+
+    }
+}
+*/
 
 void DisplayDrawer::drawEventHistos()
 {

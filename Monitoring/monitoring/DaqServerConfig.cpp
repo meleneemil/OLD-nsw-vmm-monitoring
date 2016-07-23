@@ -340,7 +340,6 @@ void CDaqServerConfig::configureTreeGui(MainWindow* window)
     mainWindow->setUpTreeEnvironment();
 
         mainWindow->chamberTree->addChildren(buildChamberTreeGui(window));
-        if(mainWindow->chamberTree==NULL) std::cout<<"chamber tree is a null pointer"<<std::endl;
         std::cout<<"====================================Chamber Elements Tree Ready======================================="<<std::endl;
         window->chamberTree->setExpanded(1);
 

@@ -44,7 +44,7 @@ frame::frame(QWidget *parent) : QWidget(parent),
     frameCanvas->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
    fRootTimer = new QTimer(this);
    QObject::connect( fRootTimer, SIGNAL(timeout()), this, SLOT(handle_root_events()) );
-   //fRootTimer->start( 20 );
+//   fRootTimer->start( 20 );
 }
 
 //--------------------------------------------------------------------------------
@@ -81,11 +81,11 @@ void frame::divideCanvases(int height, int width)
     frameCanvas->getCanvas()->Clear();
     frameCanvas->getCanvas()->Divide(height, width);
     frameCanvas->setUpdatesEnabled(kTRUE);
-    //frameCanvas->getCanvas()->GetFrame()->SetFillColor(42);
-    //frameCanvas->getCanvas()->GetFrame()->SetBorderMode(-1);
-    //frameCanvas->getCanvas()->GetFrame()->SetBorderSize(0);
-    //frameCanvas->getCanvas()->Modified();
-    //frameCanvas->getCanvas()->Update();
+//    frameCanvas->getCanvas()->GetFrame()->SetFillColor(42);
+//    frameCanvas->getCanvas()->GetFrame()->SetBorderMode(-1);
+//    frameCanvas->getCanvas()->GetFrame()->SetBorderSize(0);
+//    frameCanvas->getCanvas()->Modified();
+//    frameCanvas->getCanvas()->Update();
 
 }
 
@@ -104,7 +104,7 @@ void frame::draw1dHistogramInCanvas(TH1D *histoToDraw, int canvasIndex)
         histoToDraw->Draw();
         frameCanvas->getCanvas()->Update();
     }
-    else std::cout<<"Canvas index : "<<canvasIndex<<std::endl;
+//    else std::cout<<"Canvas index : "<<canvasIndex<<std::endl;
 }
 
 void frame::draw2dHistogramInCanvas(TH2D *histoToDraw, int canvasIndex)
