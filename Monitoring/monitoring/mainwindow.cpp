@@ -20,7 +20,7 @@
 #include <QLayout>
 #include <QDebug>
 #include <QAbstractButton>
-#include <QRadioButton>
+//#include <QRadioButton>
 #include <QPushButton>
 #include <QTextEdit>
 #include <QLabel>
@@ -114,33 +114,16 @@ void MainWindow::setUpTabEnvironment()
     mainTabs->clear();
 
     tabLayout = new QVBoxLayout();
-    commentLine = new QLineEdit(0);
 
     mainTabs->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
     EventDisplay = new QTabWidget();
     Statistics = new QTabWidget();
-    StatisticsAdvanced = new QTabWidget();
-//    CrossTalks = new QTabWidget();
-    DaqStatistics = new QTabWidget();
-    StatisticsChips = new QTabWidget();
 
     Statistics->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    StatisticsAdvanced->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    DaqStatistics->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    StatisticsChips->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    mainTabs->setCurrentIndex(0);
+    mainTabs->setCurrentIndex(1);
 
-    commentDaqLabel = new QLabel(tr("Comments for Daq"));
-    commentDaqLabel->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
-    QHBoxLayout *commentDaqLayout = new QHBoxLayout();
-    commentDaqLayout->addWidget(commentDaqLabel);
-    commentDaqLayout->addWidget(commentLine);
-    commentDaqLayout->setStretch(0,1);
-    commentDaqLayout->setStretch(1,9);
     tabLayout->addWidget(mainTabs);
-    tabLayout->addLayout(commentDaqLayout);
-    //tabLayout->addWidget(commentLine);
 
     setUpFrameEnvironment();
 
@@ -172,17 +155,6 @@ void MainWindow::setUpFrameEnvironment()
     eventDisplayFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     QWidget* statisticsFrameTab = new QWidget();
     statisticsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    QWidget* statisticsAdvancedFrameTab = new QWidget();
-    statisticsAdvancedFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    QWidget* apvFrameTab = new QWidget();
-    apvFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-//    QWidget* crossTalksFrameTab = new QWidget();
-//    crossTalksFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    QWidget* daqStatisticsFrameTab = new QWidget();
-    daqStatisticsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    QWidget* statisticsChipsFrameTab = new QWidget();
-    statisticsChipsFrameTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-
 
     eventDisplayFrame = new frame(eventDisplayFrameTab);
     eventDisplayFrame->frameType ="Event Display";
@@ -190,12 +162,6 @@ void MainWindow::setUpFrameEnvironment()
     statisticsFrame = new frame(statisticsFrameTab);
     statisticsFrame->frameType ="Statistics";
     addFrameToTabWidget(mainTabs,statisticsFrameTab,statisticsFrame,"Statistics");
-    statisticsChipsFrame = new frame(statisticsChipsFrameTab);
-    statisticsChipsFrame->frameType ="Chips Statistics";
-    statisticsAdvancedFrame = new frame(statisticsAdvancedFrameTab);
-    statisticsAdvancedFrame->frameType ="Statistics Advanced";
-    daqStatisticsFrame = new frame(daqStatisticsFrameTab);
-    daqStatisticsFrame->frameType ="DaqStatistics";
 
 
 }
@@ -213,8 +179,6 @@ QVBoxLayout* MainWindow::setUpRunControl()
     configButton = new QPushButton(QIcon(QString("button_config_icon.png")),"",0);
     configButton->setIconSize(QSize(25,25));
     settingsGeneral = new QPushButton("Run Settings",0);
-    saveCheckBox = new QCheckBox("write", this);
-    saveCheckBox->setVisible(0);
 
     startButton->setEnabled(1);
     stopButton->setEnabled(0);
@@ -222,34 +186,12 @@ QVBoxLayout* MainWindow::setUpRunControl()
 
     buttonLayout->addWidget(startButton);
     buttonLayout->addWidget(stopButton);
-    runControlLabel = new QLabel(tr("mmDaq Run Control Panel"));
-    QFont runControlLabelFont;
-    runControlLabelFont.setBold(true);
-    runControlLabel->setFont(runControlLabelFont);
-    runControlLabel->setAlignment(Qt::AlignCenter);
-    runControlLayout->addWidget(runControlLabel);
-    runControlLayout->addWidget(setUpVariousSettingsSelection());
     runControlLayout->addLayout(buttonLayout);
     runControlLayout->addWidget(settingsGeneral);
 
     return runControlLayout;
 }
 
-QGroupBox * MainWindow::setUpVariousSettingsSelection()
-{
-    runTypeGroupBox = new QGroupBox();
-
-    radioPhysics = new QRadioButton(tr("Physics"));
-
-    radioPhysics->setChecked(true);
-
-    QHBoxLayout *vboxRunType = new QHBoxLayout;
-    vboxRunType->addWidget(radioPhysics);
-    vboxRunType->addStretch(0.5);
-    runTypeGroupBox->setLayout(vboxRunType);
-    runTypeGroupBox->setStyleSheet("border: 0px solid grey");
-    return runTypeGroupBox;
-}
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //functions for modification and control of the main window GUI and its elements, dynamic
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -310,36 +252,22 @@ int MainWindow::getElementsNumberOfCheckedChildren(QTreeWidgetItem* parentTreeWi
 }
 
 //checking the number of chips that are selected for displaying
-int MainWindow::getElementsNumberOfCheckedChambersApvChips(QTreeWidgetItem* parentTreeWidget)
-{
-    int numberOfElementsDisplayed=0;
-    for(int i=0; i<parentTreeWidget->parent()->childCount(); i++)
-    {   for(int iChip=0; iChip<(parentTreeWidget->parent()->child(i))->childCount();iChip++)    {
-            if((parentTreeWidget->parent()->child(i))->child(iChip)->text(0).contains("APV", Qt::CaseInsensitive)
-                    && (parentTreeWidget->parent()->child(i))->child(iChip)->checkState(0)==2)
-            {
-                numberOfElementsDisplayed++;
-//                qDebug("CHECK STATE for %s ===  ===  2 ",(parentTreeWidget->parent()->child(i))->child(iChip)->text(0));
-//                mem_stripData.push_back(QString::fromUtf8(stripData.at(i).c_str()));
+//int MainWindow::getElementsNumberOfCheckedChambersApvChips(QTreeWidgetItem* parentTreeWidget)
+//{
+//    int numberOfElementsDisplayed=0;
+//    for(int i=0; i<parentTreeWidget->parent()->childCount(); i++)
+//    {   for(int iChip=0; iChip<(parentTreeWidget->parent()->child(i))->childCount();iChip++)    {
+//            if((parentTreeWidget->parent()->child(i))->child(iChip)->text(0).contains("APV", Qt::CaseInsensitive)
+//                    && (parentTreeWidget->parent()->child(i))->child(iChip)->checkState(0)==2)
+//            {
+//                numberOfElementsDisplayed++;
+////                qDebug("CHECK STATE for %s ===  ===  2 ",(parentTreeWidget->parent()->child(i))->child(iChip)->text(0));
+////                mem_stripData.push_back(QString::fromUtf8(stripData.at(i).c_str()));
 
-                //numberOfElementsDisplayed+=getElementsNumberOfCheckedChildren(parentTreeWidget->parent()->child(i));
-            }
-        }
-    }
-    qDebug("numberOfElementsDisplayed = %i",numberOfElementsDisplayed);
-    return numberOfElementsDisplayed;
-}
-
-int MainWindow::getElementsNumberOfCheckedChambersVmm1Chips(QTreeWidgetItem* parentTreeWidget)
-{
-    int numberOfElementsDisplayed=0;
-    for(int i=0; i<parentTreeWidget->parent()->childCount(); i++)
-    {   for(int iChip=0; iChip<(parentTreeWidget->parent()->child(i))->childCount();iChip++)    {
-            if((parentTreeWidget->parent()->child(i))->child(iChip)->text(0).contains("VMM", Qt::CaseInsensitive)
-                    && (parentTreeWidget->parent()->child(i))->child(iChip)->checkState(0)==2)
-                numberOfElementsDisplayed++;
-            //numberOfElementsDisplayed+=getElementsNumberOfCheckedChildren(parentTreeWidget->parent()->child(i));
-        }
-    }
-    return numberOfElementsDisplayed;
-}
+//                //numberOfElementsDisplayed+=getElementsNumberOfCheckedChildren(parentTreeWidget->parent()->child(i));
+//            }
+//        }
+//    }
+//    qDebug("numberOfElementsDisplayed = %i",numberOfElementsDisplayed);
+//    return numberOfElementsDisplayed;
+//}

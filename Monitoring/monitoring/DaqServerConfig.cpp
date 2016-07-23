@@ -20,7 +20,7 @@
 #include <QLayout>
 #include <QDebug>
 #include <QAbstractButton>
-#include <QRadioButton>
+//#include <QRadioButton>
 #include <QPushButton>
 #include <QTextEdit>
 #include <QCheckBox>
@@ -157,9 +157,9 @@ void CDaqServerConfig::transmitStartSignal()
 
         mainWindow->stopButton->setEnabled(1);
         mainWindow->startButton->setEnabled(0);
-        mainWindow->saveCheckBox->setEnabled(0);
+//        mainWindow->saveCheckBox->setEnabled(0);
         mainWindow->settingsGeneral->setEnabled(0);
-        mainWindow->runTypeGroupBox->setEnabled(0);
+//        mainWindow->runTypeGroupBox->setEnabled(0);
 
     }
     catch (bip::interprocess_exception & e) {
@@ -192,9 +192,9 @@ void CDaqServerConfig::transmitStopSignal()
     mainWindow->configButton->setEnabled(1);
     mainWindow->stopButton->setEnabled(0);
     mainWindow->startButton->setEnabled(1);
-    mainWindow->saveCheckBox->setEnabled(1);
+//    mainWindow->saveCheckBox->setEnabled(1);
     mainWindow->settingsGeneral->setEnabled(1);
-    mainWindow->runTypeGroupBox->setEnabled(1);
+//    mainWindow->runTypeGroupBox->setEnabled(1);
 
 
 }
@@ -323,8 +323,6 @@ void CDaqServerConfig::read_detector_config_file(const std::string& filename)
       std::cout << re.what() << std::endl;
    }
 
-//   //TODO: check consistency
-//   //TODO: add chips to fecs:  CSrsFec::add_chip(boost::shared_ptr<CSrsChip> chip_ptr)
 }
 
 boost::filesystem::path CDaqServerConfig::get_config_path() const
@@ -377,10 +375,10 @@ void CDaqServerConfig::configureTreeGui(MainWindow* window)
 QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window)
 {
     chamberElements.clear();
-    mappingChip1dElements.clear();
-    mappingChip2dElements.clear();
-    mappingReadout1dElements.clear();
-    mappingReadout2dElements.clear();
+//    mappingChip1dElements.clear();
+//    mappingChip2dElements.clear();
+//    mappingReadout1dElements.clear();
+//    mappingReadout2dElements.clear();
 
     //variables to fill the mapping list
     std::pair < QTreeWidgetItem*, std::pair <std::vector<std::string>, std::vector <TH1D *> > > mappingListElements1d;
@@ -406,8 +404,6 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
         multiLayersList.clear();
         chamberElementsPairs.first.reset();
         chamberElementsPairs.second.clear();
-        //tempTreeWidgetItem = new QTreeWidgetItem(mainWindow->mainTreeWidget,QStringList(QString(chambvecptr->name().c_str())));
-        //new chamber entry in chamber tree list
 
         chambersList.append(new QTreeWidgetItem(mainWindow->chamberTree, QStringList(QString(chambvecptr->name().c_str()))));
         qRegisterMetaType< DetBasePtrCont >("DetBasePtrCont");
@@ -470,8 +466,8 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
                     mappingListElements1d.second = mappingTreeElements1d;
                     mappingListElements2d.second = mappingTreeElements2d;
 
-                    mappingReadout1dElements.push_back(mappingListElements1d);
-                    mappingReadout2dElements.push_back(mappingListElements2d);
+//                    mappingReadout1dElements.push_back(mappingListElements1d);
+//                    mappingReadout2dElements.push_back(mappingListElements2d);
 
                     nOfReadouts++;
                 }
@@ -484,18 +480,12 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
 
     //chamber frame canvases setup
     divideFrameCanvases(nOfReadouts, window->statisticsFrame);
-    divideFrameCanvases(nOfReadouts, window->statisticsAdvancedFrame);
     divideFrameCanvases(nOfReadouts, window->eventDisplayFrame);
 
-    //chips frame canvases setup
-    int nOfChips = mappingChip1dElements.size();
-
-    divideFrameCanvases(nOfChips, window->statisticsChipsFrame);
     //make list items checkable boxes
     makeListItemsCheckable(chambersList);
     std::cout<<"Number of Chambers : "<<chambersList.size()<<std::endl;
     std::cout<<"Number of readouts : "<<nOfReadouts<<std::endl;
-    std::cout<<"Number of APV chips : "<<apvChipsList.size()<<std::endl;
 
     return chambersList;
 }
@@ -548,8 +538,8 @@ QList<QTreeWidgetItem*> CDaqServerConfig::classifyChips(std::vector<boost::share
                     mappingListElements1d.second = mappingTreeElements1d;
                     mappingListElements2d.second = mappingTreeElements2d;
 
-                    mappingChip1dElements.push_back(mappingListElements1d);
-                    mappingChip2dElements.push_back(mappingListElements2d);
+//                    mappingChip1dElements.push_back(mappingListElements1d);
+//                    mappingChip2dElements.push_back(mappingListElements2d);
                 }
             }
         }
@@ -581,34 +571,20 @@ void CDaqServerConfig::updateFrameCanvasesDivision_slot(QTreeWidgetItem* parentT
 //    qDebug("Pausing to avoid teh crash");
     usleep(100*1000);
 
-    int numberOfChipElements;
     int numberOfReadoutElements;
 
     if(parentTreeItem->parent()->text(0) == "Chamber Elements") //changing canvas divisions for readout histos
     {
        selectDeselectChamberChildren(parentTreeItem);
-       numberOfChipElements = mainWindow->getElementsNumberOfCheckedChambersApvChips(parentTreeItem);
        numberOfReadoutElements = numberOfReadoutsToDisplay(parentTreeItem->parent());
        divideFrameCanvases(numberOfReadoutElements,mainWindow->statisticsFrame);
        divideFrameCanvases(numberOfReadoutElements,mainWindow->eventDisplayFrame);
 
     }
-    else //changing canvas divisions for chip histos
-    {
-       numberOfChipElements = mainWindow->getElementsNumberOfCheckedChambersApvChips(parentTreeItem->parent());
-       divideFrameCanvases(numberOfChipElements,mainWindow->statisticsChipsFrame);
-    }
-
-
 
     //aikoulou: let's try pausing monitoring here, and start again in the end of this function
     //in order to avoid crash during checking or unchecking.
     usleep(100*1000);
-//    transmitStartSignal();
-
-
-
-
 }
 
 //frame canvas dividers based on frametype string

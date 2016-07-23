@@ -15,7 +15,7 @@
 #include <QTimer>
 #include <QButtonGroup>
 #include <QPushButton>
-#include <QRadioButton>
+//#include <QRadioButton>
 #include <QLayout>
 #include <QLabel>
 #include <QObject>
@@ -24,7 +24,7 @@
 #include <QHBoxLayout>
 #include <QDoubleSpinBox>
 #include <QGroupBox>
-#include <QRadioButton>
+//#include <QRadioButton>
 #include <QList>
 #include <QFileDialog>
 #include <QDir>

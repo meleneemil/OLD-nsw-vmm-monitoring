@@ -18,14 +18,14 @@
 #include <QTreeWidget>
 #include <QTimer>
 #include <QButtonGroup>
-#include <QRadioButton>
+//#include <QRadioButton>
 #include <QLayout>
 #include <QLabel>
 #include <QObject>
 #include <QDoubleSpinBox>
 #include <QGroupBox>
 #include <QCheckBox>
-#include <QRadioButton>
+//#include <QRadioButton>
 #include <QList>
 #include <QFileDialog>
 #include <QDir>
@@ -58,11 +58,9 @@ public:
     void setUpFrameEnvironment();
     QVBoxLayout *setUpRunControl();
 
-    QGroupBox *setUpVariousSettingsSelection();
 
     int getElementsNumberOfCheckedChildren(QTreeWidgetItem* parentTreeWidget);
-    int getElementsNumberOfCheckedChambersApvChips(QTreeWidgetItem* parentTreeWidget);
-    int getElementsNumberOfCheckedChambersVmm1Chips(QTreeWidgetItem* parentTreeWidget);
+//    int getElementsNumberOfCheckedChambersApvChips(QTreeWidgetItem* parentTreeWidget);
 
     QWidget *panelLayout;
     void addFrameToTabWidget(QTabWidget *parentTab, QWidget *targetWidget, frame *frameForTab, const char *tabTitle);
@@ -83,21 +81,19 @@ public:
     QPushButton* browseFile;
 
 
-    QLabel *runControlLabel;
     QHBoxLayout *runSettingsLayout;
     QVBoxLayout *runControlLayout;
     QHBoxLayout *buttonLayout;
 
     QGroupBox *runTypeGroupBox;
-    QRadioButton *radioPhysics;
+//    QRadioButton *radioPhysics;
 
-    QCheckBox *saveCheckBox;
+//    QCheckBox *saveCheckBox;
     QPushButton *startButton;
     QPushButton *stopButton;
     QPushButton *pauseButton;
     QPushButton *configButton;
     QPushButton *settingsGeneral;
-    QLineEdit* commentLine;
 
     QVBoxLayout *tabLayout;
     QVBoxLayout *leftLayout;
@@ -105,7 +101,6 @@ public:
 //tab widgets for graphics
     //main tab widget
     QTabWidget *mainTabs;
-//    QTabWidget *rawTabs;
     QTabWidget *statisticsTabs;
 
     //tab widget for layer information
@@ -151,18 +146,11 @@ public:
 
     frame* eventDisplayFrame;
     frame* statisticsFrame;
-    frame* statisticsAdvancedFrame;
-    frame* daqStatisticsFrame;
-    frame* statisticsChipsFrame;
 
     QString filename;
 
 
 public slots:
-//    void transmitStartDaqClickedSignal();
-//    void transmitStopDaqClickedSignal();
-//    void transmitPauseMonitoringClickedSignal();
-//    void transmitConfigDaqClickedSignal();
     void updateTabCanvas(int index);
 
     QString *getSelectedItem_slot(QAbstractButton* button);
