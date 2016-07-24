@@ -32,11 +32,9 @@ else:LIBS += -L/home/ak/ROOT534/lib -lCore -lCint -lRIO -lNet \
         -Llib -lRIO -lNet -lHist -lTree -lMatrix -lProof -lThread -lCore -lCint -lMathCore  -lTree -lm -ldl -lrt  -pthread   -rdynamic -g
 
 SOURCES += main.cpp\
-        mainwindow.cpp\
-        testsharedmem.cpp
+    server.cpp
 
-HEADERS  += mainwindow.h \
-            testsharedmem.h\
-            generalheader.h
+HEADERS  += \
+    server.h
 
 FORMS    += mainwindow.ui

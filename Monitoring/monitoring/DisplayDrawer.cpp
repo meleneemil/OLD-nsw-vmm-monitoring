@@ -51,7 +51,7 @@ DisplayDrawer::DisplayDrawer(
     service->post(f);
     monitoringMainWindow = mainWindow;
     //aikoulou: comment outin. don't want to reset when stopping.
-    connect(monitoringMainWindow,SIGNAL(stopDaqClicked()),this,SLOT(reset_slot()));
+//    connect(monitoringMainWindow,SIGNAL(stopDaqClicked()),this,SLOT(reset_slot()));
 }
 
 
