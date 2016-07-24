@@ -1,11 +1,3 @@
-//
-//  ShmemReader.h
-//  online_display
-//
-//  Created by Konstantinos Ntekas on 06/2012.
-//  Copyright (c) 2012 CERN - PH/UAT. All rights reserved.
-//
-
 
 #ifndef SHMEMREADER_H
 #define SHMEMREADER_H
@@ -32,33 +24,6 @@
 #include <vector>
 
 #ifndef Q_MOC_RUN
-#include <boost/program_options.hpp>
-#include <boost/shared_ptr.hpp>
-#include <boost/scoped_ptr.hpp>
-#include <boost/asio/ip/address.hpp>
-//#include <QThread>
-#include <boost/asio.hpp>
-#include <boost/thread.hpp>
-
-#define BOOST_FILESYSTEM_NO_DEPRECATED
-#include <boost/filesystem.hpp>
-#include <boost/lexical_cast.hpp>
-#include <boost/property_tree/ptree.hpp>
-#include <boost/property_tree/xml_parser.hpp>
-#include <boost/interprocess/shared_memory_object.hpp>
-#include <boost/interprocess/managed_shared_memory.hpp>
-#include <boost/interprocess/containers/string.hpp>
-#include <boost/interprocess/sync/scoped_lock.hpp>
-#include <boost/interprocess/sync/named_condition.hpp>
-
-
-#include <boost/interprocess/allocators/allocator.hpp>
-#include <boost/interprocess/containers/map.hpp>
-#include <boost/tokenizer.hpp>
-#include <boost/algorithm/string.hpp>
-#include <boost/lexical_cast.hpp>
-#include <boost/interprocess/containers/vector.hpp>
-#include <boost/interprocess/allocators/allocator.hpp>
 
 #include <qlocalsocket.h>
 #include <QLocalSocket>
@@ -131,61 +96,17 @@ public:
 
     ~ShmemReader();
 
-    struct SPublisherIpcData {
-             boost::interprocess::interprocess_mutex mutex;
-             boost::interprocess::interprocess_condition cond_event;
-             bool flag_new_config;
-             bool flag_new_event_data;
-             int server_state;
-
-             SPublisherIpcData() :
-             mutex(),
-             cond_event(),
-             flag_new_config(false),
-             flag_new_event_data(false),
-             server_state(0)
-             {}
-    };
-
-    /// memory shared by DAQ server
-    typedef boost::interprocess::shared_memory_object IpcShmemObjectType;
-    boost::scoped_ptr<IpcShmemObjectType> m_shm_object;
-
-    /// memory shared by DAQ server
-    typedef boost::interprocess::mapped_region IpcShmemMappedRegion;
-    boost::scoped_ptr<IpcShmemMappedRegion> m_shm_mapped_region;
-
-    /// data structure shared by DAQ server
-    SPublisherIpcData* m_shm_shared_data;
-
     MainWindow *mainWindow;
     DisplayDrawer *mainDrawer;
-    online::display::CAsioService *service;
-    bipc::managed_shared_memory m_shm_manager;
-    ShmemNamedCondition m_shm_condition;
 
-    std::vector<uint32_t> apvChipIdList;
     std::vector<std::pair<boost::shared_ptr<online::display::CDetChamber>, std::vector<boost::shared_ptr<online::display::CDetReadout> > > > configuredChamberElements;
     std::vector <std::string> stripDataEvent;
     int eventDisplayed;
 
-    void connect_shared_memory();
-    void setCondition();
-    std::string getLine();
-    std::string readLine();
-    void notify();
-    void mainLoop();
-
 private:
     bool realEvent;
-public slots:
-
-    void handleSharedData();
-    void read_event_number();
-    void read_event_strips();
 
 signals:
-
     void fillHistograms(std::vector <std::string>, int);
     void drawHistograms();
 

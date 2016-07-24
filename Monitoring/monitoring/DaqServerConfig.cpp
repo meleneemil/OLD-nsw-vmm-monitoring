@@ -175,12 +175,8 @@ void CDaqServerConfig::transmitStopSignal()
     //++++++++++++++++++++++++clearing reader and memory objects for cpu usage 0 on idle++++++++++++++++++
     std::cout<<"Terminating Mem Reading services"<<std::endl;
 
-    memReader->mainDrawer->service->stopping(true);
-    memReader->mainDrawer->service->stop();
     memReader->mainDrawer=0;
 
-    memReader->service->stopping(true);
-    memReader->service->stop();
     memReader=0;
 
     //button status change
