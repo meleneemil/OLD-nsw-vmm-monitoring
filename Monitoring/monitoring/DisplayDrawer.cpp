@@ -419,6 +419,7 @@ void DisplayDrawer::reset_slot()
 
 void DisplayDrawer::resetStatisticsHistos_slot()
 {
+    qDebug() << "RESETTING HISTS";
     for(size_t i=0; i<monitoringMainWindow->chamberTree->childCount(); ++i)
     {
         QVariant chamberVar = monitoringMainWindow->chamberTree->child(i)->data(0,Qt::UserRole);
@@ -429,15 +430,16 @@ void DisplayDrawer::resetStatisticsHistos_slot()
                 Q_FOREACH(DetBasePtr baseptr, layervecptr->get_children()) {
                     boost::shared_ptr<CDetReadout> readout = boost::dynamic_pointer_cast<CDetReadout>(baseptr);
                     readout->getStatisticsHisto()->Reset();
-                    readout->getChargeStatisticsHisto()->Reset();
-                    readout->getTimeStatisticsHisto()->Reset();
-                    readout->getPDOStatisticsHisto()->Reset();
-                    readout->getTDOStatisticsHisto()->Reset();
+//                    readout->getChargeStatisticsHisto()->Reset();
+//                    readout->getTimeStatisticsHisto()->Reset();
+//                    readout->getPDOStatisticsHisto()->Reset();
+//                    readout->getTDOStatisticsHisto()->Reset();
                 }
 
             }
         }
     }
+    qDebug() << "HISTS RESET DONE";
 }
 
 void DisplayDrawer::resetEventHistos_slot()

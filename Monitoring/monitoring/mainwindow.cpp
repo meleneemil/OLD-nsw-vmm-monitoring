@@ -153,10 +153,12 @@ QVBoxLayout* MainWindow::setUpRunControl()
 
     startButton->setEnabled(1);
     stopButton->setEnabled(0);
+    pauseButton->setEnabled(0);
     settingsGeneral->setEnabled(1);
 
     buttonLayout->addWidget(startButton);
     buttonLayout->addWidget(stopButton);
+    buttonLayout->addWidget(pauseButton);
     runControlLayout->addLayout(buttonLayout);
     runControlLayout->addWidget(settingsGeneral);
 

@@ -92,43 +92,43 @@ CDaqServerConfig::CDaqServerConfig() :
 
 {
 
-   mainStartUpWindow = new mmDaqStartupWindow(0);
+    mainStartUpWindow = new mmDaqStartupWindow(0);
 
-   settingsWindow = new mmDaqSettingsWindow();
-   settingsWindow->setUpdatesEnabled(true);
-   settingsWindow->setWindowTitle("mmDaq Settings");
+    settingsWindow = new mmDaqSettingsWindow();
+    settingsWindow->setUpdatesEnabled(true);
+    settingsWindow->setWindowTitle("mmDaq Settings");
 
-   qRegisterMetaType< std::string >("std::string");
-   qRegisterMetaType< QString >("QString");
-   qRegisterMetaType< std::vector<QString> >("std::vector<QString>");
-//connect signals for configuration of the GUI and the DAQ
+    qRegisterMetaType< std::string >("std::string");
+    qRegisterMetaType< QString >("QString");
+    qRegisterMetaType< std::vector<QString> >("std::vector<QString>");
+    //connect signals for configuration of the GUI and the DAQ
 
-   //TODO REMOVE
-//   connect(mainStartUpWindow,SIGNAL(configFileNameIs(QString)), this, SLOT(setConfigFileName(QString)));
-   connect(mainStartUpWindow,SIGNAL(configFilePathIs(QString)), this, SLOT(setConfigFilePath(QString)));
-   connect(settingsWindow,SIGNAL(reconfigFilePathIs(QString)),this,SLOT(setConfigFilePath(QString)));
-   connect(this, SIGNAL(configWithFile(QString)),this,SLOT(configure(QString)));
+    //TODO REMOVE
+    //   connect(mainStartUpWindow,SIGNAL(configFileNameIs(QString)), this, SLOT(setConfigFileName(QString)));
+    connect(mainStartUpWindow,SIGNAL(configFilePathIs(QString)), this, SLOT(setConfigFilePath(QString)));
+    connect(settingsWindow,SIGNAL(reconfigFilePathIs(QString)),this,SLOT(setConfigFilePath(QString)));
+    connect(this, SIGNAL(configWithFile(QString)),this,SLOT(configure(QString)));
 
-   QObject::connect( qApp, SIGNAL(lastWindowClosed()), qApp, SLOT(quit()) );
+    QObject::connect( qApp, SIGNAL(lastWindowClosed()), qApp, SLOT(quit()) );
 }
 
 CDaqServerConfig::~CDaqServerConfig()
 {
-   delete mainWindow;
-   mainWindow=0;
-   delete memReader;
-   memReader=0;
+    delete mainWindow;
+    mainWindow=0;
+    delete memReader;
+    memReader=0;
 }
 
 
 void CDaqServerConfig::clear()
 {
 
-   m_srs_cfg.clear();
-   m_det_cfg.clear();
+    m_srs_cfg.clear();
+    m_det_cfg.clear();
 
-   m_srs_elements.clear();
-   m_detector.reset();
+    m_srs_elements.clear();
+    m_detector.reset();
 }
 
 void CDaqServerConfig::displayStartupWindow()
@@ -150,11 +150,11 @@ void CDaqServerConfig::transmitStartSignal()
         qRegisterMetaType< QVector<int> >("QVector<int>");
         qRegisterMetaType< std::string >("std::string");
 
-        mainWindow->stopButton->setEnabled(1);
+        //aikoulou : leave it disabled until I can fix the hist reset slot.
+//        mainWindow->stopButton->setEnabled(1);
         mainWindow->startButton->setEnabled(0);
-//        mainWindow->saveCheckBox->setEnabled(0);
+        mainWindow->pauseButton->setEnabled(1);
         mainWindow->settingsGeneral->setEnabled(0);
-//        mainWindow->runTypeGroupBox->setEnabled(0);
 
     }
     catch (bip::interprocess_exception & e) {
@@ -176,7 +176,7 @@ void CDaqServerConfig::transmitStopSignal()
     std::cout<<"Terminating Mem Reading services"<<std::endl;
 
     memReader->mainDrawer=0;
-
+    memReader->mainDrawer->resetStatisticsHistos_slot();
     memReader->stopRequests();
     memReader=0;
 
@@ -184,7 +184,30 @@ void CDaqServerConfig::transmitStopSignal()
     mainWindow->configButton->setEnabled(1);
     mainWindow->stopButton->setEnabled(0);
     mainWindow->startButton->setEnabled(1);
+    mainWindow->pauseButton->setEnabled(0);
     mainWindow->settingsGeneral->setEnabled(1);
+
+
+
+}
+
+void CDaqServerConfig::transmitPauseSignal()
+{
+
+    //++++++++++++++++++++++++clearing reader and memory objects for cpu usage 0 on idle++++++++++++++++++
+    std::cout<<"Terminating Mem Reading services"<<std::endl;
+
+    memReader->mainDrawer=0;
+
+    memReader->stopRequests();
+    memReader=0;
+
+    //button status change
+//    mainWindow->configButton->setEnabled(1);
+    mainWindow->stopButton->setEnabled(0);
+    mainWindow->startButton->setEnabled(1);
+    mainWindow->pauseButton->setEnabled(0);
+//    mainWindow->settingsGeneral->setEnabled(1);
 
 
 }
@@ -233,6 +256,7 @@ void CDaqServerConfig::configure(const QString &configFile)
 
     connect(mainWindow->startButton, SIGNAL(clicked()), this, SLOT(transmitStartSignal()));
     connect(mainWindow->stopButton, SIGNAL(clicked()), this, SLOT(transmitStopSignal()));
+    connect(mainWindow->pauseButton, SIGNAL(clicked()), this, SLOT(transmitPauseSignal()));
 
     connect(mainWindow->settingsGeneral, SIGNAL(clicked()),this, SLOT(openSettingsWindow()));
     connect(mainWindow->mainTreeWidget, SIGNAL(itemClicked(QTreeWidgetItem*,int)), this, SLOT(updateFrameCanvasesDivision_slot(QTreeWidgetItem*)));
@@ -245,35 +269,35 @@ void CDaqServerConfig::configure(const QString &configFile)
 void CDaqServerConfig::read_config_file(const std::string& filename)
 {
 
-   read_xml(filename, m_daq_cfg, boost::property_tree::xml_parser::trim_whitespace );
+    read_xml(filename, m_daq_cfg, boost::property_tree::xml_parser::trim_whitespace );
 
 
-   m_srs_config_file = m_daq_cfg.get("daq_config.srs_file", "");
-   m_det_config_file = m_daq_cfg.get("daq_config.detector_file", "");
+    m_srs_config_file = m_daq_cfg.get("daq_config.srs_file", "");
+    m_det_config_file = m_daq_cfg.get("daq_config.detector_file", "");
 
 
-   boost::filesystem::path daq_path(m_config_path);
-   boost::filesystem::path srs_path(m_srs_config_file);
-   boost::filesystem::path det_path(m_det_config_file);
-   
-   std::cout<<"daq path "<<daq_path<<std::endl;
-   std::cout<<"srs path "<<srs_path<<std::endl;
-   std::cout<<"det path "<<det_path<<std::endl;
+    boost::filesystem::path daq_path(m_config_path);
+    boost::filesystem::path srs_path(m_srs_config_file);
+    boost::filesystem::path det_path(m_det_config_file);
 
-   //make absolute paths for included config files
-   if (!srs_path.has_parent_path()) {
-      srs_path = daq_path.parent_path() / srs_path;
-   }
-   
-   if (!det_path.has_parent_path()) {
-      det_path = daq_path.parent_path() / det_path;
-   }
-   
-   std::cout<<srs_path.string()<<std::endl;
-   std::cout<<det_path.string()<<std::endl;
+    std::cout<<"daq path "<<daq_path<<std::endl;
+    std::cout<<"srs path "<<srs_path<<std::endl;
+    std::cout<<"det path "<<det_path<<std::endl;
 
-   read_srs_config_file(srs_path.string());
-   read_detector_config_file(det_path.string());
+    //make absolute paths for included config files
+    if (!srs_path.has_parent_path()) {
+        srs_path = daq_path.parent_path() / srs_path;
+    }
+
+    if (!det_path.has_parent_path()) {
+        det_path = daq_path.parent_path() / det_path;
+    }
+
+    std::cout<<srs_path.string()<<std::endl;
+    std::cout<<det_path.string()<<std::endl;
+
+    read_srs_config_file(srs_path.string());
+    read_detector_config_file(det_path.string());
 
 }
 
@@ -281,50 +305,50 @@ void CDaqServerConfig::read_srs_config_file(const std::string& filename)
 {
 
     m_srs_elements.clear();
-   read_xml(filename, m_srs_cfg, boost::property_tree::xml_parser::trim_whitespace );
-      
-   try {
-      CPropertyTreeParserSrs srsparser(m_srs_cfg, *this);
-      std::vector<SrsBasePtr> elems = srsparser.make_srs_elements();
-      m_srs_elements = elems;
-   } catch (std::runtime_error &re) {
-      std::cout << "Failed configuring srs:\n";
-      std::cout << re.what() << std::endl;
-   }
+    read_xml(filename, m_srs_cfg, boost::property_tree::xml_parser::trim_whitespace );
+
+    try {
+        CPropertyTreeParserSrs srsparser(m_srs_cfg, *this);
+        std::vector<SrsBasePtr> elems = srsparser.make_srs_elements();
+        m_srs_elements = elems;
+    } catch (std::runtime_error &re) {
+        std::cout << "Failed configuring srs:\n";
+        std::cout << re.what() << std::endl;
+    }
 
 }
 
 void CDaqServerConfig::read_detector_config_file(const std::string& filename)
 {
     m_detector.reset();
-   read_xml(filename, m_det_cfg, boost::property_tree::xml_parser::trim_whitespace );
+    read_xml(filename, m_det_cfg, boost::property_tree::xml_parser::trim_whitespace );
 
-   try {
-      CPropertyTreeParserDetector detparser(m_det_cfg, *this);
+    try {
+        CPropertyTreeParserDetector detparser(m_det_cfg, *this);
 
-      boost::shared_ptr<CDetBase> detptr = detparser.build_detector();
-      m_detector = detptr;
-   } catch (std::runtime_error &re) {
-      std::cout << "Failed configuring detector:\n";
-      std::cout << re.what() << std::endl;
-   }
+        boost::shared_ptr<CDetBase> detptr = detparser.build_detector();
+        m_detector = detptr;
+    } catch (std::runtime_error &re) {
+        std::cout << "Failed configuring detector:\n";
+        std::cout << re.what() << std::endl;
+    }
 }
 
 boost::filesystem::path CDaqServerConfig::get_config_path() const
 {
-      return m_config_path;
+    return m_config_path;
 }
 
 std::vector<boost::shared_ptr<CSrsChip> > CDaqServerConfig::locate_srs_chips() const {
-   std::vector<boost::shared_ptr<CSrsChip> > vec;
-   Q_FOREACH(SrsBasePtr sb, m_srs_elements) {
-      boost::shared_ptr<CSrsFec> sf = boost::dynamic_pointer_cast<CSrsFec>(sb);
-      if (sf ) {
-         const std::vector<SrsChipPtr>& chips = sf->get_chips();
-         vec.insert(vec.end(), chips.begin(), chips.end());
-      }
-   }
-   return vec;
+    std::vector<boost::shared_ptr<CSrsChip> > vec;
+    Q_FOREACH(SrsBasePtr sb, m_srs_elements) {
+        boost::shared_ptr<CSrsFec> sf = boost::dynamic_pointer_cast<CSrsFec>(sb);
+        if (sf ) {
+            const std::vector<SrsChipPtr>& chips = sf->get_chips();
+            vec.insert(vec.end(), chips.begin(), chips.end());
+        }
+    }
+    return vec;
 }
 
 void CDaqServerConfig::configureTreeGui(MainWindow* window)
@@ -334,22 +358,22 @@ void CDaqServerConfig::configureTreeGui(MainWindow* window)
     mainWindow->setUpTabEnvironment();
     mainWindow->setUpTreeEnvironment();
 
-        mainWindow->chamberTree->addChildren(buildChamberTreeGui(window));
-        std::cout<<"====================================Chamber Elements Tree Ready======================================="<<std::endl;
-        window->chamberTree->setExpanded(1);
+    mainWindow->chamberTree->addChildren(buildChamberTreeGui(window));
+    std::cout<<"====================================Chamber Elements Tree Ready======================================="<<std::endl;
+    window->chamberTree->setExpanded(1);
 
-        window->leftLayout = new QVBoxLayout();
-        window->leftLayout->addWidget(mainWindow->mainTreeWidget);
-        window->leftLayout->addLayout(mainWindow->setUpRunControl());
-        window->leftLayout->setStretch(0,9);
-        window->leftLayout->setStretch(1,1);
+    window->leftLayout = new QVBoxLayout();
+    window->leftLayout->addWidget(mainWindow->mainTreeWidget);
+    window->leftLayout->addLayout(mainWindow->setUpRunControl());
+    window->leftLayout->setStretch(0,9);
+    window->leftLayout->setStretch(1,1);
 
-        window->ui->horizontalLayout->setSpacing(5);
+    window->ui->horizontalLayout->setSpacing(5);
 
-        window->ui->horizontalLayout->addLayout(mainWindow->leftLayout);
-        window->ui->horizontalLayout->addLayout(mainWindow->tabLayout);
-        window->ui->horizontalLayout->setStretch(0,1);
-        window->ui->horizontalLayout->setStretch(1,8);
+    window->ui->horizontalLayout->addLayout(mainWindow->leftLayout);
+    window->ui->horizontalLayout->addLayout(mainWindow->tabLayout);
+    window->ui->horizontalLayout->setStretch(0,1);
+    window->ui->horizontalLayout->setStretch(1,8);
 
 }
 
@@ -361,7 +385,7 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
 
     //list with tree widget items for detector chamber
     QList<QTreeWidgetItem*> chambersList;
-//    QList<QTreeWidgetItem*> readoutsList;
+    //    QList<QTreeWidgetItem*> readoutsList;
 
     size_t nOfReadouts = 0;
     Q_FOREACH(DetBasePtr chambvecptr, m_detector->get_children()) {
@@ -384,11 +408,11 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
         Q_FOREACH(DetBasePtr mlayervecptr, chambvecptr->get_children()) {
 
             Q_FOREACH(DetBasePtr layervecptr, mlayervecptr->get_children()) {
-//                readoutsList.clear();
+                //                readoutsList.clear();
 
                 Q_FOREACH(DetBasePtr baseptr, layervecptr->get_children()) {
 
-//                    readoutsList.append(new QTreeWidgetItem((QTreeWidget*)0, QStringList(QString(baseptr->name().c_str()))));
+                    //                    readoutsList.append(new QTreeWidgetItem((QTreeWidget*)0, QStringList(QString(baseptr->name().c_str()))));
                     //if(CDetReadout currentReadout = readoutvecptr-> lock())
                     boost::shared_ptr<CDetReadout> readout = boost::dynamic_pointer_cast<CDetReadout>(baseptr);
                     chamberElementsPairs.second.push_back(readout);
@@ -408,7 +432,7 @@ QList<QTreeWidgetItem*> CDaqServerConfig::buildChamberTreeGui(MainWindow *window
             }
         }
 
-//        makeListItemsCheckable(readoutsList);
+        //        makeListItemsCheckable(readoutsList);
         chamberElements.push_back(chamberElementsPairs);
     }
 
@@ -468,17 +492,17 @@ void CDaqServerConfig::updateFrameCanvasesDivision_slot(QTreeWidgetItem* parentT
 
     //aikoulou: let's try pausing monitoring here, and start again in the end of this function
     //in order to avoid crash during checking or unchecking.
-//    qDebug("Pausing to avoid teh crash");
+    //    qDebug("Pausing to avoid teh crash");
     usleep(100*1000);
 
     int numberOfReadoutElements;
 
     if(parentTreeItem->parent()->text(0) == "Chamber Elements") //changing canvas divisions for readout histos
     {
-       selectDeselectChamberChildren(parentTreeItem);
-       numberOfReadoutElements = numberOfReadoutsToDisplay(parentTreeItem->parent());
-       divideFrameCanvases(numberOfReadoutElements,mainWindow->statisticsFrame);
-       divideFrameCanvases(numberOfReadoutElements,mainWindow->eventDisplayFrame);
+        selectDeselectChamberChildren(parentTreeItem);
+        numberOfReadoutElements = numberOfReadoutsToDisplay(parentTreeItem->parent());
+        divideFrameCanvases(numberOfReadoutElements,mainWindow->statisticsFrame);
+        divideFrameCanvases(numberOfReadoutElements,mainWindow->eventDisplayFrame);
 
     }
 
@@ -496,13 +520,13 @@ void CDaqServerConfig::divideFrameCanvases(int numberOfElements, frame* frameFor
     if(frameForDivide->frameType == "Event Display")   {
         //aikoulou: plus two for pdo and tdo
         width=4;
-//        width=2;
+        //        width=2;
         height = numberOfElements;
     }
     else if(frameForDivide->frameType == "Statistics") {
         //aikoulou:
         width=5;
-//        width=3;
+        //        width=3;
         height = numberOfElements;
     }
     else if(frameForDivide->frameType == "Statistics Advanced") {
@@ -512,8 +536,8 @@ void CDaqServerConfig::divideFrameCanvases(int numberOfElements, frame* frameFor
     else if(frameForDivide->frameType == "Apv Raw" || frameForDivide->frameType == "Chips Statistics")    {
         //width=4;
         if(numberOfElements<=width)  {
-                width = numberOfElements;
-                height=1;
+            width = numberOfElements;
+            height=1;
         }
         else    {
             width = (int)TMath::Sqrt(numberOfElements);

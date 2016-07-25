@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_online__display__CDaqServerConfig_t {
-    QByteArrayData data[23];
-    char stringdata[394];
+    QByteArrayData data[24];
+    char stringdata[414];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -45,13 +45,14 @@ QT_MOC_LITERAL(12, 177, 9), // "configure"
 QT_MOC_LITERAL(13, 187, 10), // "configFile"
 QT_MOC_LITERAL(14, 198, 19), // "transmitStartSignal"
 QT_MOC_LITERAL(15, 218, 18), // "transmitStopSignal"
-QT_MOC_LITERAL(16, 237, 18), // "openSettingsWindow"
-QT_MOC_LITERAL(17, 256, 32), // "updateFrameCanvasesDivision_slot"
-QT_MOC_LITERAL(18, 289, 16), // "QTreeWidgetItem*"
-QT_MOC_LITERAL(19, 306, 14), // "parentTreeItem"
-QT_MOC_LITERAL(20, 321, 29), // "selectDeselectChamberChildren"
-QT_MOC_LITERAL(21, 351, 16), // "parentTreeWidget"
-QT_MOC_LITERAL(22, 368, 25) // "numberOfReadoutsToDisplay"
+QT_MOC_LITERAL(16, 237, 19), // "transmitPauseSignal"
+QT_MOC_LITERAL(17, 257, 18), // "openSettingsWindow"
+QT_MOC_LITERAL(18, 276, 32), // "updateFrameCanvasesDivision_slot"
+QT_MOC_LITERAL(19, 309, 16), // "QTreeWidgetItem*"
+QT_MOC_LITERAL(20, 326, 14), // "parentTreeItem"
+QT_MOC_LITERAL(21, 341, 29), // "selectDeselectChamberChildren"
+QT_MOC_LITERAL(22, 371, 16), // "parentTreeWidget"
+QT_MOC_LITERAL(23, 388, 25) // "numberOfReadoutsToDisplay"
 
     },
     "online::display::CDaqServerConfig\0"
@@ -60,8 +61,8 @@ QT_MOC_LITERAL(22, 368, 25) // "numberOfReadoutsToDisplay"
     "setConfigFilePath\0config_filePath\0"
     "setConfigFileName\0config_fileName\0"
     "configure\0configFile\0transmitStartSignal\0"
-    "transmitStopSignal\0openSettingsWindow\0"
-    "updateFrameCanvasesDivision_slot\0"
+    "transmitStopSignal\0transmitPauseSignal\0"
+    "openSettingsWindow\0updateFrameCanvasesDivision_slot\0"
     "QTreeWidgetItem*\0parentTreeItem\0"
     "selectDeselectChamberChildren\0"
     "parentTreeWidget\0numberOfReadoutsToDisplay"
@@ -74,7 +75,7 @@ static const uint qt_meta_data_online__display__CDaqServerConfig[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      13,   14, // methods
+      14,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -82,21 +83,22 @@ static const uint qt_meta_data_online__display__CDaqServerConfig[] = {
        4,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   79,    2, 0x06 /* Public */,
-       5,    1,   82,    2, 0x06 /* Public */,
-       6,    1,   85,    2, 0x06 /* Public */,
-       7,    1,   88,    2, 0x06 /* Public */,
+       1,    1,   84,    2, 0x06 /* Public */,
+       5,    1,   87,    2, 0x06 /* Public */,
+       6,    1,   90,    2, 0x06 /* Public */,
+       7,    1,   93,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       8,    1,   91,    2, 0x0a /* Public */,
-      10,    1,   94,    2, 0x0a /* Public */,
-      12,    1,   97,    2, 0x0a /* Public */,
-      14,    0,  100,    2, 0x0a /* Public */,
-      15,    0,  101,    2, 0x0a /* Public */,
-      16,    0,  102,    2, 0x0a /* Public */,
-      17,    1,  103,    2, 0x0a /* Public */,
-      20,    1,  106,    2, 0x0a /* Public */,
-      22,    1,  109,    2, 0x0a /* Public */,
+       8,    1,   96,    2, 0x0a /* Public */,
+      10,    1,   99,    2, 0x0a /* Public */,
+      12,    1,  102,    2, 0x0a /* Public */,
+      14,    0,  105,    2, 0x0a /* Public */,
+      15,    0,  106,    2, 0x0a /* Public */,
+      16,    0,  107,    2, 0x0a /* Public */,
+      17,    0,  108,    2, 0x0a /* Public */,
+      18,    1,  109,    2, 0x0a /* Public */,
+      21,    1,  112,    2, 0x0a /* Public */,
+      23,    1,  115,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -111,9 +113,10 @@ static const uint qt_meta_data_online__display__CDaqServerConfig[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 18,   19,
-    QMetaType::Void, 0x80000000 | 18,   21,
-    QMetaType::Int, 0x80000000 | 18,   21,
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 19,   20,
+    QMetaType::Void, 0x80000000 | 19,   22,
+    QMetaType::Int, 0x80000000 | 19,   22,
 
        0        // eod
 };
@@ -132,10 +135,11 @@ void online::display::CDaqServerConfig::qt_static_metacall(QObject *_o, QMetaObj
         case 6: _t->configure((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 7: _t->transmitStartSignal(); break;
         case 8: _t->transmitStopSignal(); break;
-        case 9: _t->openSettingsWindow(); break;
-        case 10: _t->updateFrameCanvasesDivision_slot((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1]))); break;
-        case 11: _t->selectDeselectChamberChildren((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1]))); break;
-        case 12: { int _r = _t->numberOfReadoutsToDisplay((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])));
+        case 9: _t->transmitPauseSignal(); break;
+        case 10: _t->openSettingsWindow(); break;
+        case 11: _t->updateFrameCanvasesDivision_slot((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1]))); break;
+        case 12: _t->selectDeselectChamberChildren((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1]))); break;
+        case 13: { int _r = _t->numberOfReadoutsToDisplay((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = _r; }  break;
         default: ;
         }
@@ -194,13 +198,13 @@ int online::display::CDaqServerConfig::qt_metacall(QMetaObject::Call _c, int _id
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 13)
+        if (_id < 14)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 13;
+        _id -= 14;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 13)
+        if (_id < 14)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 13;
+        _id -= 14;
     }
     return _id;
 }

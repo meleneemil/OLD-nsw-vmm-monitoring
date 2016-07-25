@@ -161,6 +161,7 @@ namespace online {
         //++++++++++Slots for client+++++++++++++++++++++++
         void transmitStartSignal();
         void transmitStopSignal();
+        void transmitPauseSignal();
         void openSettingsWindow();
 
 
