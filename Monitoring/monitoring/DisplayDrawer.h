@@ -88,7 +88,7 @@ public:
 public slots:
 
     //slots for manipulating thread
-    void NotifyFill(std::vector <std::string> stripData, int eventNumber);
+    void NotifyFill(std::vector <QString> stripData, int eventNumber);
     void NotifyDraw();
     void drawSharedData();
 

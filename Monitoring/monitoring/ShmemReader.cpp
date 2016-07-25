@@ -11,6 +11,7 @@ ShmemReader::ShmemReader(
     mainWindow(window), mainDrawer(0),
     configuredChamberElements(chamberElements), stripDataEvent(0), realEvent(false)
 {
+    eventCounter = 0;
 
     socket = new QLocalSocket();
 
@@ -29,8 +30,8 @@ ShmemReader::ShmemReader(
     qRegisterMetaType< QVector<QString> >("QVector<QString>");
     qRegisterMetaType< QVector<std::pair<QString, QVector<int> > > >("QVector<std::pair<QString, QVector<int> > >");
 
-    connect(this, SIGNAL(fillHistograms(std::vector<std::string>,int)),
-            mainDrawer,SLOT(NotifyFill(std::vector<std::string>,int)),Qt::DirectConnection);
+    connect(this, SIGNAL(fillHistograms(std::vector<QString>,int)),
+            mainDrawer,SLOT(NotifyFill(std::vector<QString>,int)),Qt::DirectConnection);
     connect(this, SIGNAL(drawHistograms()),
             mainDrawer,SLOT(NotifyDraw()),Qt::DirectConnection);
 
@@ -69,8 +70,14 @@ void ShmemReader::readFortune()
         QTimer::singleShot(0, this, SLOT(connectToServer()));
         return;
     }
-
+    eventCounter++;
     qDebug() << nextFortune;
+    std::vector<QString> eventVector;
+    //IMPORTANT TODO: edit to accomodate for multi hit events...
+    //this now assumes that each packet tha comes is an event.
+    eventVector.push_back(nextFortune);
+    emit fillHistograms(eventVector,eventCounter);
+    emit drawHistograms();
 }
 
 void ShmemReader::startRequests()
@@ -101,10 +108,12 @@ void ShmemReader::displayError(QLocalSocket::LocalSocketError socketError)
 
 ShmemReader::~ShmemReader()
 {
-    stopRequests();
+//    stopRequests();
     //    delete client;
     //    service->stopping(true);
     //    service->stop();
+    delete timer;
+    delete socket;
     delete mainDrawer;
     mainDrawer = 0;
 }

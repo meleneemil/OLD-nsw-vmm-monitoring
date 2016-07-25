@@ -103,9 +103,10 @@ public:
 
 private:
     bool realEvent;
+    int eventCounter;
 
 signals:
-    void fillHistograms(std::vector <std::string>, int);
+    void fillHistograms(std::vector <QString>, int);
     void drawHistograms();
 
 private slots:

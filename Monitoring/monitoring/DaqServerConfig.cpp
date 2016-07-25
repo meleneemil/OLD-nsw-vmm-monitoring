@@ -177,15 +177,14 @@ void CDaqServerConfig::transmitStopSignal()
 
     memReader->mainDrawer=0;
 
+    memReader->stopRequests();
     memReader=0;
 
     //button status change
     mainWindow->configButton->setEnabled(1);
     mainWindow->stopButton->setEnabled(0);
     mainWindow->startButton->setEnabled(1);
-//    mainWindow->saveCheckBox->setEnabled(1);
     mainWindow->settingsGeneral->setEnabled(1);
-//    mainWindow->runTypeGroupBox->setEnabled(1);
 
 
 }

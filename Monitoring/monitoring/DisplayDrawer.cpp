@@ -61,13 +61,13 @@ DisplayDrawer::~DisplayDrawer()
     service->stop();
 }
 
-void DisplayDrawer::NotifyFill(std::vector <std::string> stripData, int eventNumber)
+void DisplayDrawer::NotifyFill(std::vector <QString> stripData, int eventNumber)
 {
     //aikoulou+ntekas: adjust to slot connection.
     mem_stripData.clear();
     for(int i=0;i<stripData.size();i++)
     {
-        mem_stripData.push_back(QString::fromUtf8(stripData.at(i).c_str()));
+        mem_stripData.push_back(stripData.at(i));
     }
 
     mem_eventNumber = eventNumber;
