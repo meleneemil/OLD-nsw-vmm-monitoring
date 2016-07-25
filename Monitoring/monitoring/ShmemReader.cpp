@@ -1,7 +1,5 @@
 #include "ShmemReader.h"
 #include "SrsChipId.h"
-#include <QtWidgets>
-#include <QtNetwork>
 #include <iostream>
 #include <stdexcept>
 using namespace online::display;
@@ -13,16 +11,16 @@ ShmemReader::ShmemReader(
     mainWindow(window), mainDrawer(0),
     configuredChamberElements(chamberElements), stripDataEvent(0), realEvent(false)
 {
-    //**********************
+
     socket = new QLocalSocket();
 
     connect(socket, SIGNAL(readyRead()), this, SLOT(readFortune()));
-    blockSize = 0;
-    socket->abort();
-    socket->connectToServer("vmm-mon-server");
-    if(socket->isOpen())
-        qDebug() << "SOCKET IS OPEN";
-    //**********************
+    connect(socket, SIGNAL(error(QLocalSocket::LocalSocketError)),
+            this, SLOT(displayError(QLocalSocket::LocalSocketError)));
+
+    timer = new QTimer();
+    connect(timer, SIGNAL(timeout()), this, SLOT(connectToServer()));
+
     eventDisplayed = 0;
     mainDrawer = new DisplayDrawer(mainWindow);
 
@@ -35,38 +33,76 @@ ShmemReader::ShmemReader(
             mainDrawer,SLOT(NotifyFill(std::vector<std::string>,int)),Qt::DirectConnection);
     connect(this, SIGNAL(drawHistograms()),
             mainDrawer,SLOT(NotifyDraw()),Qt::DirectConnection);
+
+    startRequests();
+}
+
+void ShmemReader::connectToServer()
+{
+
+    blockSize = 0;
+    socket->abort();
+    socket->connectToServer("vmm-mon-server");
 }
 
 void ShmemReader::readFortune()
 {
-    qDebug() << "connectToServer";
     QDataStream in(socket);
     in.setVersion(QDataStream::Qt_4_0);
 
     if (blockSize == 0) {
         if (socket->bytesAvailable() < (int)sizeof(quint16))
+        {
+            qDebug() << "no bytes available";
             return;
+        }
         in >> blockSize;
     }
 
-    if (in.atEnd()) return;
+    if (in.atEnd())
+        return;
 
     QString nextFortune;
     in >> nextFortune;
 
     if (nextFortune == currentFortune) {
-        QTimer::singleShot(0, this, SLOT(requestNewFortune()));
+        QTimer::singleShot(0, this, SLOT(connectToServer()));
         return;
     }
-
-    currentFortune = nextFortune;
 
     qDebug() << nextFortune;
 }
 
+void ShmemReader::startRequests()
+{
+    timer->start(1);
+}
+
+void ShmemReader::stopRequests()
+{
+    timer->stop();
+}
+
+void ShmemReader::displayError(QLocalSocket::LocalSocketError socketError)
+{
+    switch (socketError) {
+    case QLocalSocket::ServerNotFoundError:
+        qDebug() << "The host was not found. Please check the host name and port settings.";
+        break;
+    case QLocalSocket::ConnectionRefusedError:
+        qDebug() << "The connection was refused by the peer. Make sure the fortune server is running, and check that the host name and port settings are correct.";
+        break;
+    case QLocalSocket::PeerClosedError:
+        break;
+    default:
+        qDebug() << "The following error occurred: %1." <<  (socket->errorString());
+    }
+}
+
 ShmemReader::~ShmemReader()
 {
-    socket->abort();
+    stopRequests();
+    //    delete client;
     //    service->stopping(true);
     //    service->stop();
     delete mainDrawer;

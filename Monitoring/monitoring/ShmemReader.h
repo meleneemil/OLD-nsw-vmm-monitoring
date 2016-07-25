@@ -21,12 +21,13 @@
 #include <QTimer>
 #include <QVector>
 
+#include <QLocalSocket>
+
 #include <vector>
 
 #ifndef Q_MOC_RUN
 
-#include <qlocalsocket.h>
-#include <QLocalSocket>
+
 
 #endif
 //+++++++++++++++++++++++++++namespaces for shared memory data++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -56,7 +57,6 @@ typedef bipc::vector<uint32_t, ShmemUint32Allocator>        ShmemUint32Vector;
 typedef bipc::allocator<int16_t, ShmemSegmentManagerType>  ShmemInt16Allocator;
 typedef bipc::vector<int16_t, ShmemInt16Allocator>        ShmemInt16Vector;
 
-
 //all this to have map of vectors ShmemRawDataMap
 
 //Note that map<Key, MappedType>'s value_type is std::pair<const Key, MappedType>,
@@ -65,12 +65,10 @@ typedef bipc::vector<int16_t, ShmemInt16Allocator>        ShmemInt16Vector;
 typedef uint32_t  ShmemRawMapKeyType;
 typedef ShmemInt16Vector ShmemRawMapMappedType;
 typedef std::pair<const ShmemRawMapKeyType, ShmemRawMapMappedType> ShmemRawMapValueType;
-
 //Alias an STL compatible allocator of for the map.
 //This allocator will allow to place containers
 //in managed shared memory segments
 typedef bipc::allocator<ShmemRawMapValueType, ShmemSegmentManagerType> ShmemRawMapAllocator;
-
 //Alias a map of ints that uses the previous STL-like allocator.
 //Note that the third parameter argument is the ordering function
 //of the map, just like with std::map, used to compare the keys.
@@ -110,14 +108,21 @@ signals:
     void fillHistograms(std::vector <std::string>, int);
     void drawHistograms();
 
+private slots:
+    void readFortune();
 
-private:
+public slots:
+    void connectToServer();
+    void startRequests();
+    void stopRequests();
+    void displayError(QLocalSocket::LocalSocketError socketError);
+
+public:
+    QTimer *timer;
+
     QLocalSocket *socket;
     QString currentFortune;
     quint16 blockSize;
-
-private slots:
-    void readFortune();
 
 
 };
