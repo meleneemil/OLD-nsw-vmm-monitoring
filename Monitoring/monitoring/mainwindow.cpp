@@ -52,9 +52,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     QVBoxLayout *l = new QVBoxLayout(this);
-    l->addWidget(canvas = new QRootCanvas(this));
-    l->addWidget(b = new QPushButton("&Draw Histogram", this));
-    connect(b, SIGNAL(clicked()), this, SLOT(clicked1()));
+    l->addWidget(new QRootCanvas(this));
+//    l->addWidget(b = new QPushButton("&Draw Histogram", this));
+//    connect(b, SIGNAL(clicked()), this, SLOT(clicked1()));
     fRootTimer = new QTimer( this );
     QObject::connect( fRootTimer, SIGNAL(timeout()), this, SLOT(handle_root_events()) );
     fRootTimer->start( 20 );
