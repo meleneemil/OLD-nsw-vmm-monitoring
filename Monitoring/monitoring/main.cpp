@@ -38,6 +38,9 @@ int main(int argc, char** argv)
 
 
     TApplication rootapp("mmDaq Online Monitoring", &argc, argv);
+    rootapp.SetReturnFromRun(true);
+
+
     QApplication app(argc,argv);
     app.setWindowIcon(QIcon("media/display.png"));
 

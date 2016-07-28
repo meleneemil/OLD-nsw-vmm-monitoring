@@ -46,6 +46,20 @@ MainWindow::MainWindow(QWidget *parent) :
     setUpStatusBar();
 
     QObject::connect( qApp, SIGNAL(lastWindowClosed()), qApp, SLOT(quit()) );
+
+
+    // ***************** ROOT SETUP
+
+
+    QVBoxLayout *l = new QVBoxLayout(this);
+    l->addWidget(canvas = new QRootCanvas(this));
+    l->addWidget(b = new QPushButton("&Draw Histogram", this));
+    connect(b, SIGNAL(clicked()), this, SLOT(clicked1()));
+    fRootTimer = new QTimer( this );
+    QObject::connect( fRootTimer, SIGNAL(timeout()), this, SLOT(handle_root_events()) );
+    fRootTimer->start( 20 );
+
+
 }
 
 MainWindow::~MainWindow()
@@ -208,4 +222,12 @@ int MainWindow::getElementsNumberOfCheckedChildren(QTreeWidgetItem* parentTreeWi
             numberOfElementsDisplayed++;
     }
     return numberOfElementsDisplayed;
+}
+
+
+//______________________________________________________________________________
+void MainWindow::handle_root_events()
+{
+   //call the inner loop of ROOT
+   gSystem->ProcessEvents();
 }
