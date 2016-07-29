@@ -1,26 +1,13 @@
-//
-//  canvas.h
-//  online_display
-//
-//  Created by Konstantinos Ntekas on 06/2012.
-//  Copyright (c) 2012 CERN - PH/UAT. All rights reserved.
-//
-
 
 #ifndef EXAMPLE_H
 #define EXAMPLE_H
 
 #include <QWidget>
-#include <TF1.h>
-#include <TH1.h>
 
-
-class QAction;
 class QPaintEvent;
 class QResizeEvent;
 class QMouseEvent;
 class QPushButton;
-class QEvent;
 class QTimer;
 class TCanvas;
 
@@ -31,13 +18,10 @@ class QRootCanvas : public QWidget
 public:
    QRootCanvas( QWidget *parent = 0);
    virtual ~QRootCanvas() {}
-
    TCanvas* getCanvas() { return fCanvas;}
 
 protected:
    TCanvas        *fCanvas;
-   bool fNeedResize;           // Resize flag
-
 
    virtual void    mouseMoveEvent( QMouseEvent *e );
    virtual void    mousePressEvent( QMouseEvent *e );
@@ -46,5 +30,25 @@ protected:
    virtual void    resizeEvent( QResizeEvent *e );
 };
 
+class QMainCanvas : public QWidget
+{
+   Q_OBJECT
+
+public:
+   QMainCanvas( QWidget *parent = 0);
+   virtual ~QMainCanvas() {}
+   virtual void changeEvent(QEvent * e);
+
+public slots:
+   void clicked1();
+   void handle_root_events();
+
+protected:
+   QRootCanvas    *canvas;
+   QPushButton    *b;
+   QTimer         *fRootTimer;
+};
+
 #endif
+
 

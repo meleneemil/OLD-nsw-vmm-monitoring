@@ -27,6 +27,9 @@
 #include <QDir>
 #include <QDebug>
 #include <QFileInfo>
+#include <TApplication.h>
+#include <TSystem.h>
+
 #ifndef Q_MOC_RUN
 #endif
 
@@ -100,10 +103,12 @@ public:
 
     QString filename;
 
-    QTimer fRootTimer;
+    QTimer* fRootTimer;
+    QMainCanvas* testCanvas;
 
 public slots:
     void updateTabCanvas(int index);
+    void handle_root_events();
 
     virtual void fillStatistics() {}
     virtual void fillStatisticsHistos() {}

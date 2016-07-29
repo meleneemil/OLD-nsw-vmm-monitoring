@@ -51,8 +51,17 @@ MainWindow::MainWindow(QWidget *parent) :
     // ***************** ROOT SETUP
 
 
-    QVBoxLayout *l = new QVBoxLayout(this);
-    l->addWidget(new QRootCanvas(this));
+    testCanvas = new QMainCanvas();
+
+    testCanvas->resize(testCanvas->sizeHint());
+    testCanvas->setWindowTitle("Qt Example - Canvas");
+    testCanvas->setGeometry( 100, 100, 700, 500 );
+    testCanvas->show();
+
+    TH1F* myhist = new TH1F("myhist","Test random numbers", 200, 0, 200);
+
+    myhist->FillRandom("gaus",2000);
+    myhist->Draw();
 //    l->addWidget(b = new QPushButton("&Draw Histogram", this));
 //    connect(b, SIGNAL(clicked()), this, SLOT(clicked1()));
     fRootTimer = new QTimer( this );
